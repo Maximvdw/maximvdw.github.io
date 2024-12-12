@@ -1,0 +1,57 @@
+---
+layout: default.njk
+---
+
+<div class="container main" itemscope itemtype="http://schema.org/ScholarlyArticle">
+    <div class="row">
+        <div class="col-sm-3">
+            <nav class="navigation">
+            {% for year, posts in collections.publications_year %}
+                <h3>{{ year }}</h3>
+                <ul>
+                {% for post in posts | reverse %}
+                    <li {% if page.url == post.url %}class="selected"{% endif %}>
+                    <a href="{{ post.url }}" {% if page.url == post.url %}class="current"{% endif %}>{{ post.data.title }}</a>
+                    </li>
+                {% endfor %}
+                </ul>
+            {% endfor %}
+            </nav>
+        </div>
+        <div class="col-sm-9 typography">
+            <h1 itemprop="headline">{{ title }}</h1>
+
+            <a href="{{ pdf }}" class="btn btn-red btn-icon" data-title="Download paper PDF"><i class="fa fa-regular fa-file-pdf"></i></a>
+            {% if presentation %}
+            <a href="{{ presentation }}" class="btn btn-green btn-icon" data-title="Download presentation"><i class="fa fa-regular fa-file-powerpoint"></i></a>
+            {% endif %}
+            {% if video %}
+            <a href="{{ video }}" class="btn btn-blue btn-icon" data-title="Download video"><i class="fa fa-regular fa-file-video"></i></a>
+            {% endif %}
+            {% if link %}
+            <a href="{{ link }}" class="btn btn-yellow btn-icon"><i class="ai ai-{{ publisher }}"></i></a>
+            {% endif %}
+            {% if github %}
+            <a href="{{ github }}" class="btn btn-grey btn-icon"><i class="fa fa-brands fa-github"></i></a>
+            {% endif %}
+
+            <h2>Abstract</h2>
+            <p class="abstract" itemprop="abstract">{{ abstract }}</p>
+
+            <h2>Citation</h2>
+            <p class="cite" itemprop="citation">{{ excerpt }}</p>
+
+            {% if video and show_video %}
+            <h2>Video presentation</h2>
+            <video width="100%" controls preload="auto" itemprop="video">
+                <source src="{{ video }}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <h2>Paper</h2>
+            {% endif %}
+
+            {% pdfembed pdf, 'FULL_WINDOW', 'pdf-viewer' %}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+{
+    "title": "Maxim Van de Wynckel",
+    "url": "https://maximvdw.be",
+    "description": "Maxim Van de Wynckel's personal website",
+    "author": "Maxim Van de Wynckel",
+    "twitter": "MVdWSoftware",
+    "image": "/images/social/summary-large.png",
+    "reply_to": "maxim@mvdw-software.com",
+    "options": {
+      "titleDivider": "|",
+      "imageWithBaseUrl": true,
+      "twitterCardType": "summary_large_image"
+    }
+}

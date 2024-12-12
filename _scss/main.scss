@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+@use "includes/variables";
+@use "includes/normalize";
+@use "includes/grid";
+@use "includes/typography";
+@use "includes/media";
+
+@use "components/header";
+@use "components/footer";
+@use "components/navigation";
+@use "components/posts";
+@use "components/button";
+@use "components/cv";
+
+.main {
+    overflow-x: auto;
+}

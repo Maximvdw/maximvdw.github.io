@@ -1,0 +1,47 @@
+[
+    {
+        "university": "Vrije Universiteit Brussel",
+        "icon": "/images/logo/vub-logo_square.svg",
+        "degree": "PhD, Computer Science",
+        "start": "2019",
+        "end": "present",
+        "location": "Brussels, Belgium",
+        "url": "https://wise.vub.ac.be/member/maxim-van-de-wynckel",
+        "grade": "",
+        "thesis": "",
+        "description": "Researching hybrid- and indoor positioning systems, interoperability of location data and discoverability of services. Expected end date: October 2025. More info: https://wise.vub.ac.be/member/maxim-van-de-wynckel. More info about my research: https://researchportal.vub.be/en/persons/maxim-van-de-wynckel"
+    }, {
+        "university": "Vrije Universiteit Brussel",
+        "icon": "/images/logo/vub-logo_square.svg",
+        "degree": "Master of Science (MSc), Applied Computer Science",
+        "start": "2018",
+        "end": "2019",
+        "location": "Brussels, Belgium",
+        "url": "https://www.vub.be/en",
+        "grade": "Great Distinction",
+        "thesis": "/publications/2019/thesis",
+        "description": "Parallelism, distributed systems, multicore programming (Java, Erlang and GPU with OpenCL), software security and Indoor navigation master thesis"
+    }, {
+        "university": "Vrije Universiteit Brussel",
+        "icon": "/images/logo/vub-logo_square.svg",
+        "degree": "Bridging program, Computer Science",
+        "start": "2016",
+        "end": "2018",
+        "location": "Brussels, Belgium",
+        "url": "https://www.vub.be/en",
+        "grade": "",
+        "thesis": "",
+        "description": ""
+    }, {
+        "university": "Erasmushogeschool Brussel",
+        "icon": "/images/logo/ehb-logo_square.svg",
+        "degree": "Bachelor (Ba), Applied Computer Science",
+        "start": "2013",
+        "end": "2016",
+        "location": "Brussels, Belgium",
+        "url": "https://www.erasmushogeschool.be/en",
+        "grade": "Great Distinction",
+        "thesis": "",
+        "description": "Software Security, Software Development (Java, C++, C#, Objective-C), Agile development"
+    }
+]

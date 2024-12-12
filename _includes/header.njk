@@ -1,0 +1,32 @@
+<header class="site-header">
+    <div class="container">
+        <a href="/" class="logo">Maxim Van de Wynckel</a>
+  
+        <nav class="site-nav">
+          <div class="trigger">
+            {% set navPages = collections.all | eleventyNavigation %}
+            {%- for entry in navPages %}
+            <a class="page-link {% if entry.url == page.url %}active{% endif %}" href="{{ entry.url }}">{{ entry.title }}</a>
+            {%- endfor %}
+          </div>
+          <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+            <div class="mobile-menu">
+                {% for entry in navPages %}
+                <a class="page-link {% if entry.url == page.url %}active{% endif %}" href="{{ entry.url }}">{{ entry.title }}</a>
+                {% endfor %}
+            </div>
+        </nav>
+    </div>
+</header>
+
+<script>
+    function toggleMenu() {
+        document.querySelector('.hamburger').classList.toggle('active');
+        document.querySelector('.mobile-menu').classList.toggle('active');
+    }
+</script>

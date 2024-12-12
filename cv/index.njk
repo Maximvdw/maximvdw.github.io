@@ -1,0 +1,43 @@
+---
+layout: main.njk
+permalink: /cv/
+eleventyNavigation:
+  key: Curriculum Vitae
+  order: 2
+title: 'Curriculum Vitae'
+---
+
+<section class="cv-section">
+  <h1>Education</h1>
+  <div class="education">
+    {%- for entry in education %}
+    <div class="education-item">
+      <img src="{{ entry.icon }}" alt="{{ entry.university }} Logo" class="logo">
+      <div class="details">
+        <h3>{{ entry.university }}</h3>
+        <h4>{{ entry.degree }} </h4>
+        <div class="year">{{ entry.start }} - {{ entry.end }}</div>
+        {% markdown %}
+        {{ entry.description }}
+        {% endmarkdown %}
+      </div>
+    </div>
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="cv-section">
+  <h1>Experience</h1>
+  <div class="employment">
+    {%- for entry in experience %}
+    <div class="employment-item">
+      <img src="{{ entry.icon }}" alt="{{ entry.company }} Logo" class="logo">
+      <div class="details">
+        <h3>{{ entry.company }}</h3>
+        <h4>{{ entry.title }}</h4>
+        <div class="year">{{ entry.start }} - {{ entry.end }}</div>
+      </div>
+    </div>
+    {%- endfor %}
+  </div>
+</section>

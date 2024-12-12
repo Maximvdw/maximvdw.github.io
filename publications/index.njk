@@ -1,0 +1,31 @@
+---
+layout: default.njk
+permalink: /publications/
+title: 'Publications'
+eleventyExcludeFromCollections: ["publications"]
+---
+
+<div class="container main">
+  <div class="row">
+    <div class="col-sm-12 typography">
+        <h1>Publications</h1>
+        <ol reversed class="postlist">
+        {% for year, posts in collections.publications_year %}
+          <h2>{{ year }}</h2>
+          <ul>
+            {% for post in posts | reverse %}
+              <li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}" itemscope itemtype="http://schema.org/ScholarlyArticle">
+                <img class="postlist-image" alt="{{ post.data.title }}" src="{{ post.data.thumbnail }}" itemprop="image"/>
+                <div class="postlist-content">
+                  <a href="{{ post.url | url }}" class="postlist-link" itemprop="url">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
+                  <time class="postlist-date" datetime="{{ post.date | htmlDateString }}" itemprop="datePublished">{{ post.date | readableDate }}</time>
+                  <span class="postlist-description" itemprop="description">{{ post.data.excerpt }}</span>
+                </div>
+              </li>
+            {% endfor %}
+          </ul>
+        {% endfor %}
+        </ol>
+    </div>
+  </div>
+</div>
