@@ -1,3 +1,5 @@
+@use "../includes/variables" as *;
+
 .typography {
     .btn {
         max-width: 220px;
@@ -22,6 +24,16 @@
         margin-right: 4px; 
     }
     
+    .btn-outline-primary {
+        border: solid 1px $primary-color;
+        box-sizing: border-box;
+        color: $primary-color;
+    }
+    .btn-outline-primary:hover {
+        background-color: $primary-color;
+        color: white;
+    }
+
     .btn-red {
         background-color: #9c0000;
         color: white;

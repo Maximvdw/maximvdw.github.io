@@ -34,9 +34,29 @@ layout: default.njk
             {% if github %}
             <a href="{{ github }}" class="btn btn-grey btn-icon"><i class="fa fa-brands fa-github"></i></a>
             {% endif %}
+            <a href="#" class="btn btn-outline-primary btn-icon" onclick="showCitationDialog()"><i class="fa fa-quote-right"></i> Cite this</a>
+
+            <div id="citation-dialog" class="citation-dialog">
+                <div class="citation-dialog-content">
+                    <span class="close" onclick="closeCitationDialog()">&times;</span>
+                    <h2>Citation</h2>
+                    <div class="tabs">
+                        <button class="tablinks" onclick="openTab(event, 'APA')">APA</button>
+                        <button class="tablinks" onclick="openTab(event, 'BibTex')">BibTex</button>
+                    </div>
+                    <div id="APA" class="tabcontent">
+                        <pre id="apaCitation">{{ excerpt }}</pre>
+                        <button class="copy-btn" onclick="copyToClipboard('apaCitation')">Copy</button>
+                    </div>
+                    <div id="BibTex" class="tabcontent">
+                        <pre id="bibtexCitation">{{ bibtex }}</pre>
+                        <button class="copy-btn" onclick="copyToClipboard('bibtexCitation')">Copy</button>
+                    </div>
+                </div>
+            </div>
 
             <h2>Abstract</h2>
-            <p class="abstract" itemprop="abstract">{{ abstract }}</p>
+            <p class="abstract" itemprop="abstract">{{ content | safe }}</p>
 
             <h2>Citation</h2>
             <p class="cite" itemprop="citation">{{ excerpt }}</p>
@@ -51,7 +71,10 @@ layout: default.njk
             <h2>Paper</h2>
             {% endif %}
 
-            {% pdfembed pdf, 'FULL_WINDOW', 'pdf-viewer' %}
+            {% if pdf %}
+                <embed src="{{ pdf }}" class="pdf-viewer" width="100%" height="600px" type="application/pdf">
+            {% endif %}
         </div>
     </div>
 </div>
+<script src="/scripts/publications.js"></script>

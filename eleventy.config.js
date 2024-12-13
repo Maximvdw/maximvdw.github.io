@@ -8,6 +8,7 @@ import pluginSASS from "eleventy-sass";
 import pluginSitemap from "@quasibit/eleventy-plugin-sitemap";
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import pluginNavigation from "@11ty/eleventy-navigation";
+import pluginCite from './_scripts/cite.js';
 
 import { DateTime } from "luxon";
 import fs from 'fs';
@@ -22,6 +23,7 @@ export default async function (el) {
     /* Passthrough Copy */
     el.addPassthroughCopy("fonts");
     el.addPassthroughCopy("CNAME");
+    el.addPassthroughCopy("scripts");
     el.setDataDeepMerge(true);
 
     /* SEO */
@@ -39,6 +41,8 @@ export default async function (el) {
     const socialConfig = JSON.parse(fs.readFileSync('./_data/social.json', 'utf8'));
     /* Social Config */
     el.addGlobalData("social", socialConfig);
+
+    el.addPlugin(pluginCite);
 
     /* PDF Embedding */
     el.addPlugin(pluginPDFEmbed, {

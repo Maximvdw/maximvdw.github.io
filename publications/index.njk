@@ -4,28 +4,78 @@ permalink: /publications/
 title: 'Publications'
 eleventyExcludeFromCollections: ["publications"]
 ---
-
 <div class="container main">
   <div class="row">
-    <div class="col-sm-12 typography">
-        <h1>Publications</h1>
-        <ol reversed class="postlist">
-        {% for year, posts in collections.publications_year %}
-          <h2>{{ year }}</h2>
-          <ul>
-            {% for post in posts | reverse %}
-              <li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}" itemscope itemtype="http://schema.org/ScholarlyArticle">
-                <img class="postlist-image" alt="{{ post.data.title }}" src="{{ post.data.thumbnail }}" itemprop="image"/>
-                <div class="postlist-content">
-                  <a href="{{ post.url | url }}" class="postlist-link" itemprop="url">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
-                  <time class="postlist-date" datetime="{{ post.date | htmlDateString }}" itemprop="datePublished">{{ post.date | readableDate }}</time>
-                  <span class="postlist-description" itemprop="description">{{ post.data.excerpt }}</span>
-                </div>
-              </li>
+    <div class="col-sm-3 filter">
+      <h3>Filter Publications</h3>
+      <form id="filter-form">
+        <div class="form-group">
+          <label for="year-filter">Year</label>
+          <select id="year-filter" class="form-control">
+            <option value="">All</option>
+            {% for year, posts in collections.publications_year %}
+              <option value="{{ year }}">{{ year }}</option>
             {% endfor %}
-          </ul>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="type-filter">Type</label>
+          <select id="type-filter" class="form-control">
+            <option value="">All</option>
+            <option value="conference">Conference</option>
+            <option value="poster">Poster</option>
+            <option value="thesis">Thesis</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Apply Filter</button>
+      </form>
+    </div>
+    <style>
+      .filter {
+        margin-bottom: 20px;
+      }
+      .filter .form-group {
+        margin-bottom: 15px;
+      }
+      .filter .form-control {
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 10px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .filter .btn {
+        width: 100%;
+        background-color: #007bff;
+        border: none;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin-top: 10px;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+      .filter .btn:hover {
+        background-color: #0056b3;
+      }
+    </style>
+    <div class="col-sm-9 typography">
+      <h1>Publications</h1>
+      <ul>
+        {% for post in collections.publications | reverse %}
+          <li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}" itemscope itemtype="http://schema.org/ScholarlyArticle" data-type="{{ post.data.type }}">
+            <img class="postlist-image" alt="{{ post.data.title }}" src="{{ post.data.thumbnail }}" itemprop="image"/>
+            <div class="postlist-content">
+              <a href="{{ post.url | url }}" class="postlist-link" itemprop="url">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
+              <time class="postlist-date" datetime="{{ post.date | htmlDateString }}" itemprop="datePublished">{{ post.date | readableDate }}</time>
+              <span class="postlist-description" itemprop="description">{{ post.data.excerpt }}</span>
+            </div>
+          </li>
         {% endfor %}
-        </ol>
+      </ul>
     </div>
   </div>
 </div>
