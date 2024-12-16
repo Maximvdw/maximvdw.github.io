@@ -5,6 +5,7 @@
 @use "includes/grid";
 @use "includes/typography";
 @use "includes/media";
+@use "includes/margin";
 
 @use "components/cite";
 @use "components/header";
@@ -13,7 +14,17 @@
 @use "components/posts";
 @use "components/button";
 @use "components/cv";
+@use "components/filter";
 
 .main {
     overflow-x: auto;
+}
+
+body {
+    display: flex;
+    flex-flow: column;
+}
+
+#content {
+    flex: 1 auto;
 }

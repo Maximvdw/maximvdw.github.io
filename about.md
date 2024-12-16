@@ -15,6 +15,4 @@ I am a key contributor to the development of the open-source hybrid positioning 
 
 In addition to my PhD research, I serve as a teaching assistant for various bachelor and master courses, including [Web Technologies](https://wise.vub.ac.be/course/web-technologies), Databases, [Next Generation User Interfaces](https://wise.vub.ac.be/course/next-generation-user-interfaces), and [Advanced Topics in Big Data](https://wise.vub.ac.be/course/advanced-topics-big-data). I have also previously assisted in courses such as [Information Visualisation](https://wise.vub.ac.be/course/information-visualisation) and Open Information Systems. Furthermore, I supervise Bachelor and Master theses related to my research domain.
 
-I founded my own company, [MVdW-Software](https://mvdw-software.com) in 2019 where I worked on various projects, including the development of 
-
-My current hobbies include addative manufacturing, electronics, and scuba diving. I am the creator and maintainer of the current website of the V.U.B. Diving Center vzw [https://www.vubdivingcenter.be](https://www.vubdivingcenter.be).
+My current hobbies include addative manufacturing, electronics, and scuba diving. I am the creator and maintainer of the current website of the [V.U.B. Diving Center vzw](https://www.vubdivingcenter.be) and I also help beginning divers to prepare their pool-exercises.

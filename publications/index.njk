@@ -3,6 +3,9 @@ layout: default.njk
 permalink: /publications/
 title: 'Publications'
 eleventyExcludeFromCollections: ["publications"]
+eleventyNavigation:
+  key: Publications
+  order: 3
 ---
 <div class="container main">
   <div class="row">
@@ -30,41 +33,9 @@ eleventyExcludeFromCollections: ["publications"]
         <button type="submit" class="btn btn-primary">Apply Filter</button>
       </form>
     </div>
-    <style>
-      .filter {
-        margin-bottom: 20px;
-      }
-      .filter .form-group {
-        margin-bottom: 15px;
-      }
-      .filter .form-control {
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        padding: 10px;
-        width: 100%;
-        box-sizing: border-box;
-      }
-      .filter .btn {
-        width: 100%;
-        background-color: #007bff;
-        border: none;
-        color: white;
-        padding: 10px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin-top: 10px;
-        cursor: pointer;
-        border-radius: 4px;
-      }
-      .filter .btn:hover {
-        background-color: #0056b3;
-      }
-    </style>
     <div class="col-sm-9 typography">
       <h1>Publications</h1>
-      <ul>
+      <ol reversed class="postlist">
         {% for post in collections.publications | reverse %}
           <li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}" itemscope itemtype="http://schema.org/ScholarlyArticle" data-type="{{ post.data.type }}">
             <img class="postlist-image" alt="{{ post.data.title }}" src="{{ post.data.thumbnail }}" itemprop="image"/>
@@ -75,7 +46,8 @@ eleventyExcludeFromCollections: ["publications"]
             </div>
           </li>
         {% endfor %}
-      </ul>
+      </ol>
     </div>
   </div>
 </div>
+<script src="/scripts/publications.js"></script>

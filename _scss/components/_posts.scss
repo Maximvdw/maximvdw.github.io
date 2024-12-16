@@ -2,6 +2,7 @@
 .postlist {
     list-style: none;
     padding: 0;
+    overflow: hidden;
 }
 .postlist h2 {
     margin-top: 0;
@@ -9,6 +10,7 @@
 }
 .postlist ul {
     padding-left: 0;
+    margin-left: 0;
 }
 .postlist-item {
     margin-bottom: 1em;

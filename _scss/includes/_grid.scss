@@ -6,10 +6,10 @@
     max-width: 1200px;
 
     &.main {
-        padding: 15px 40px;
+        padding: 20px $margin-sides;
 
         @media screen and (max-width: $on-medium) {
-            padding: 15px 20px;
+            padding: 15px $margin-sides-mobile;
         }
     }
 }

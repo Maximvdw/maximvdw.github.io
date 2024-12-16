@@ -23,7 +23,7 @@ header {
         display: none;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: $on-medium) {
         .site-nav .trigger {
             display: none;
             flex-direction: column;
@@ -31,8 +31,9 @@ header {
         .hamburger {
             display: inline-block;
         }
-        .logo {
+        a.logo {
             margin-left: -20px;
+            margin-top: 0;
         }
     }
     
@@ -96,9 +97,9 @@ header {
 .hamburger {
     cursor: pointer;
     width: 30px;
-    height: 30px;
+    height: 25px;
     position: relative;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-right: -20px;
 }
 

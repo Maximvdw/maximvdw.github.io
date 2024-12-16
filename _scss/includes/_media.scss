@@ -35,3 +35,9 @@ video {
 .rounded-circle {
     border-radius: 50%;
 }
+
+@media screen and (max-width: $on-medium) {
+    .rounded-circle {
+        border-radius: 10%;
+    }
+}
