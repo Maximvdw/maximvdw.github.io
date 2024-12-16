@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="en-UK">
+  <title>Maximvdw&#39;s Blog</title>
+  <subtitle>An open-source hybrid positioning system framework.</subtitle>
+  <link href="https://maximvdw.be/feed.xml" rel="self"/>
+  <link href="https://maximvdw.be"/>
+  <updated>2024-12-15T00:00:00Z</updated>
+  <id>https://maximvdw.be</id>
+  <author>
+    <name>Maxim Van de Wynckel</name>
+    <email>maxim.van.de.wynckel@vub.be</email>
+  </author>
+  
+  <entry>
+    <title>FOSDEM presentations</title>
+    <link href="https://maximvdw.be/posts/2024/12/15/"/>
+    <updated>2024-12-15T00:00:00Z</updated>
+    <id>https://maximvdw.be/posts/2024/12/15/</id>
+    <content type="html"></content>
+  </entry>
+</feed>
