@@ -25,8 +25,7 @@
     }
     
     .btn-outline-primary {
-        border: solid 1px $primary-color;
-        box-sizing: border-box;
+        box-shadow:inset 0px 0px 0px 1px $primary-color;
         color: $primary-color;
     }
     .btn-outline-primary:hover {

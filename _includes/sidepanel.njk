@@ -21,6 +21,18 @@
     function toggleSidebar() {
         document.querySelector('aside.sidebar').classList.toggle('open');
         document.querySelector('.content').classList.toggle('shifted');
+          document.querySelector('footer').classList.toggle('shifted');
         document.querySelector('.hamburger').classList.toggle('active');
     }
+    document.addEventListener('swiped-left', function() {
+        document.querySelector('aside.sidebar').classList.remove('open');
+        document.querySelector('.content').classList.remove('shifted');
+        document.querySelector('.hamburger').classList.remove('active');
+    });
+
+    document.addEventListener('swiped-right', function() {
+        document.querySelector('aside.sidebar').classList.add('open');
+        document.querySelector('.content').classList.add('shifted');
+        document.querySelector('.hamburger').classList.add('active');
+    });
 </script>

@@ -2,7 +2,30 @@
 layout: main.njk
 ---
 
-<div class="row" itemscope itemtype="http://schema.org/Person">
+<div itemscope itemtype="http://schema.org/Person">
+<!-- Metadata -->
+<meta itemprop="givenName" content="Maxim" />
+<meta itemprop="familyName" content="Van de Wynckel" />
+<meta itemprop="sameAs" content="https://solid.maximvdw.be/profile/card#me" />
+<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+  <meta itemprop="streetAddress" content="Invalidenlaan 178" />
+  <meta itemprop="addressLocality" content="Oudergem" />
+  <meta itemprop="addressRegion" content="Brussels-capital region" />
+  <meta itemprop="postalCode" content="1160" />
+  <meta itemprop="addressCountry" content="BE" />
+</div>
+<meta itemprop="email" content="me@maximvdw.be" />
+<meta itemprop="jobTitle" content="researcher" />
+<meta itemprop="knowsAbout" content="interoperability" />
+<meta itemprop="knowsAbout" content="indoor positioning" />
+<meta itemprop="knowsAbout" content="hybrid positioning systems" />
+<meta itemprop="knowsAbout" content="location-based services" />
+<meta itemprop="knowsAbout" content="linked data" />
+<meta itemprop="knowsAbout" content="semantic web" />
+<meta itemprop="knowsAbout" content="personal data vaults" />
+<!-- END Metadata -->
+
+<div class="row">
   <div class="col-sm-3">
     <img
       src="{{ profile_image }}"
@@ -15,68 +38,91 @@ layout: main.njk
     {{ content | safe }}
   </div>
 </div>
-
 <div class="row">
-  <div class="col-sm-6"></div>
+  <div class="col-sm-3"></div>
   <div class="col-sm-9">
-    <a
-      class="social-link linkedin"
-      rel="me"
-      href="https://www.linkedin.com/in/maximvdw/"
-    >
-      <i class="fa fa-brands fa-linkedin"></i>
-    </a>
-    <a class="social-link mastodon" rel="me" href="https://mas.to/@maximvdw">
-      <i class="fa fa-brands fa-mastodon"></i>
-    </a>
-    <a class="social-link x" rel="me" href="https://x.com/MVdWSoftware">
-      <i class="fa fa-brands fa-x-twitter"></i>
-    </a>
-    <a class="social-link github" rel="me" href="https://github.com/Maximvdw">
-      <i class="fa fa-brands fa-github"></i>
-    </a>
-    <a
-      class="social-link google-scholar"
-      rel="me"
-      href="https://scholar.google.com/citations?user=NB6760YAAAAJ"
-    >
-      <i class="ai ai-google-scholar"></i>
-    </a>
-    <a
-      class="social-link orcid"
-      rel="me"
-      href="https://orcid.org/0000-0003-0314-7107"
-    >
-      <i class="ai ai-orcid"></i>
-    </a>
-    <a
-      class="social-link researchgate"
-      rel="me"
-      href="https://www.researchgate.net/profile/Maxim-Van-De-Wynckel"
-    >
-      <i class="ai ai-researchgate"></i>
-    </a>
-    <a
-      class="social-link academia"
-      rel="me"
-      href="https://vub.academia.edu/MaximVandeWynckel"
-    >
-      <i class="ai ai-academia"></i>
-    </a>
-    <a
-      class="social-link acm"
-      rel="me"
-      href="https://dl.acm.org/profile/99660619976"
-    >
-      <i class="ai ai-acm"></i>
-    </a>
-    <a
-      class="social-link dblp"
-      rel="me"
-      href="https://dblp.org/pid/283/5794.html"
-    >
-      <i class="ai ai-dblp"></i>
-    </a>
+    <div class="social-links">
+      <a
+        class="social-link linkedin"
+        rel="me"
+        href="{{ social.linkedin }}"
+        itemprop="sameAs"
+      >
+        <i class="fa fa-brands fa-linkedin"></i>
+      </a>
+      <a
+        class="social-link mastodon"
+        rel="me"
+        href="{{ social.mastodon }}"
+        itemprop="sameAs"
+      >
+        <i class="fa fa-brands fa-mastodon"></i>
+      </a>
+      <a
+        class="social-link x"
+        rel="me"
+        href="{{ social.twitter }}"
+        itemprop="sameAs"
+      >
+        <i class="fa fa-brands fa-x-twitter"></i>
+      </a>
+      <a
+        class="social-link github"
+        rel="me"
+        href="{{ social.github }}"
+        itemprop="sameAs"
+      >
+        <i class="fa fa-brands fa-github"></i>
+      </a>
+      <a
+        class="social-link google-scholar"
+        rel="me"
+        href="{{ social.scholar }}"
+        itemprop="sameAs"
+      >
+        <i class="ai ai-google-scholar"></i>
+      </a>
+      <a
+        class="social-link orcid"
+        rel="me"
+        href="{{ social.orcid }}"
+        itemprop="sameAs"
+      >
+        <i class="ai ai-orcid"></i>
+      </a>
+      <a
+        class="social-link researchgate"
+        rel="me"
+        href="{{ social.researchgate }}"
+        itemprop="sameAs"
+      >
+        <i class="ai ai-researchgate"></i>
+      </a>
+      <a
+        class="social-link academia"
+        rel="me"
+        href="{{ social.academia }}"
+        itemprop="sameAs"
+      >
+        <i class="ai ai-academia"></i>
+      </a>
+      <a
+        class="social-link acm"
+        rel="me"
+        href="{{ social.acm }}"
+        itemprop="sameAs"
+      >
+        <i class="ai ai-acm"></i>
+      </a>
+      <a
+        class="social-link dblp"
+        rel="me"
+        href="{{ social.dblp }}"
+        itemprop="sameAs"
+      >
+        <i class="ai ai-dblp"></i>
+      </a>
+    </div>
   </div>
 </div>
 
@@ -86,38 +132,20 @@ layout: main.njk
       <h1>Education</h1>
       <div class="education">
         {%- for entry in education %}
-        <div
-          class="education-item"
-          itemprop="educationalCredentialAwarded"
-          itemscope
-          itemtype="http://schema.org/EducationEvent"
-        >
+        <div class="education-item">
           <img
             src="{{ entry.icon }}"
             alt="{{ entry.university }} Logo"
             class="logo"
-            itemprop="image"
           />
           <div class="details">
-            <h3
-              itemprop="provider"
-              itemscope
-              itemtype="http://schema.org/CollegeOrUniversity"
-            >
-              <span itemprop="name">{{ entry.university }}</span>
-            </h3>
-            <h4 itemprop="educationalCredentialAwarded">{{ entry.degree }}</h4>
+            <h3>{{ entry.university }}</h3>
+            <h4>{{ entry.degree }}</h4>
             <div class="year">
-              <time itemprop="startDate" datetime="{{ entry.start }}"
-                >{{ entry.start }}</time
-              >
-              -
-              <time itemprop="endDate" datetime="{{ entry.end }}"
-                >{{ entry.end }}</time
-              >
+              <time>{{ entry.start }}</time> - <time>{{ entry.end }}</time>
             </div>
             {% markdown %}
-            <div itemprop="description">{{ entry.description }}</div>
+            <div>{{ entry.description }}</div>
             {% endmarkdown %}
           </div>
         </div>
@@ -130,37 +158,20 @@ layout: main.njk
       <h1>Experience</h1>
       <div class="employment">
         {%- for entry in experience %}
-        <div
-          class="employment-item"
-          itemscope
-          itemtype="http://schema.org/OrganizationRole"
-        >
+        <div class="employment-item">
           <img
             src="{{ entry.icon }}"
             alt="{{ entry.company }} Logo"
             class="logo"
-            itemprop="image"
           />
           <div class="details">
-            <h3
-              itemprop="memberOf"
-              itemscope
-              itemtype="http://schema.org/Organization"
-            >
-              <span itemprop="name">{{ entry.company }}</span>
-            </h3>
-            <h4 itemprop="roleName">{{ entry.title }}</h4>
+            <h3>{{ entry.company }}</h3>
+            <h4>{{ entry.title }}</h4>
             <div class="year">
-              <time itemprop="startDate" datetime="{{ entry.start }}"
-                >{{ entry.start }}</time
-              >
-              -
-              <time itemprop="endDate" datetime="{{ entry.end }}"
-                >{{ entry.end }}</time
-              >
+              <time>{{ entry.start }}</time> - <time>{{ entry.end }}</time>
             </div>
             {% markdown %}
-            <div itemprop="description">{{ entry.description }}</div>
+            <div>{{ entry.description }}</div>
             {% endmarkdown %}
           </div>
         </div>
