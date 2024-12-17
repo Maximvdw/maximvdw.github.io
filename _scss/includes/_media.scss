@@ -39,5 +39,6 @@ video {
 @media screen and (max-width: $on-medium) {
     .rounded-circle {
         border-radius: 10%;
+        max-height: 50vh;
     }
 }

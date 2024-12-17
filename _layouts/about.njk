@@ -3,11 +3,80 @@ layout: main.njk
 ---
 
 <div class="row" itemscope itemtype="http://schema.org/Person">
-  <div class="col-sm-2">
-    <img src="{{ profile_image }}" alt="Maxim Van de Wynckel" class="img-fluid rounded-circle" itemprop="image">
+  <div class="col-sm-3">
+    <img
+      src="{{ profile_image }}"
+      alt="Maxim Van de Wynckel"
+      class="img-fluid rounded-circle"
+      itemprop="image"
+    />
   </div>
-  <div class="col-sm-10 biography" itemprop="description">
+  <div class="col-sm-9 biography" itemprop="description">
     {{ content | safe }}
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-6"></div>
+  <div class="col-sm-9">
+    <a
+      class="social-link linkedin"
+      rel="me"
+      href="https://www.linkedin.com/in/maximvdw/"
+    >
+      <i class="fa fa-brands fa-linkedin"></i>
+    </a>
+    <a class="social-link mastodon" rel="me" href="https://mas.to/@maximvdw">
+      <i class="fa fa-brands fa-mastodon"></i>
+    </a>
+    <a class="social-link x" rel="me" href="https://x.com/MVdWSoftware">
+      <i class="fa fa-brands fa-x-twitter"></i>
+    </a>
+    <a class="social-link github" rel="me" href="https://github.com/Maximvdw">
+      <i class="fa fa-brands fa-github"></i>
+    </a>
+    <a
+      class="social-link google-scholar"
+      rel="me"
+      href="https://scholar.google.com/citations?user=NB6760YAAAAJ"
+    >
+      <i class="ai ai-google-scholar"></i>
+    </a>
+    <a
+      class="social-link orcid"
+      rel="me"
+      href="https://orcid.org/0000-0003-0314-7107"
+    >
+      <i class="ai ai-orcid"></i>
+    </a>
+    <a
+      class="social-link researchgate"
+      rel="me"
+      href="https://www.researchgate.net/profile/Maxim-Van-De-Wynckel"
+    >
+      <i class="ai ai-researchgate"></i>
+    </a>
+    <a
+      class="social-link academia"
+      rel="me"
+      href="https://vub.academia.edu/MaximVandeWynckel"
+    >
+      <i class="ai ai-academia"></i>
+    </a>
+    <a
+      class="social-link acm"
+      rel="me"
+      href="https://dl.acm.org/profile/99660619976"
+    >
+      <i class="ai ai-acm"></i>
+    </a>
+    <a
+      class="social-link dblp"
+      rel="me"
+      href="https://dblp.org/pid/283/5794.html"
+    >
+      <i class="ai ai-dblp"></i>
+    </a>
   </div>
 </div>
 
@@ -16,26 +85,43 @@ layout: main.njk
     <section class="cv-section">
       <h1>Education</h1>
       <div class="education">
-      {%- for entry in education %}
-      <div class="education-item" itemprop="educationalCredentialAwarded" itemscope itemtype="http://schema.org/EducationEvent">
-        <img src="{{ entry.icon }}" alt="{{ entry.university }} Logo" class="logo" itemprop="image">
-        <div class="details">
-        <h3 itemprop="provider" itemscope itemtype="http://schema.org/CollegeOrUniversity">
-          <span itemprop="name">{{ entry.university }}</span>
-        </h3>
-        <h4 itemprop="educationalCredentialAwarded">{{ entry.degree }}</h4>
-        <div class="year">
-          <time itemprop="startDate" datetime="{{ entry.start }}">{{ entry.start }}</time> - 
-          <time itemprop="endDate" datetime="{{ entry.end }}">{{ entry.end }}</time>
+        {%- for entry in education %}
+        <div
+          class="education-item"
+          itemprop="educationalCredentialAwarded"
+          itemscope
+          itemtype="http://schema.org/EducationEvent"
+        >
+          <img
+            src="{{ entry.icon }}"
+            alt="{{ entry.university }} Logo"
+            class="logo"
+            itemprop="image"
+          />
+          <div class="details">
+            <h3
+              itemprop="provider"
+              itemscope
+              itemtype="http://schema.org/CollegeOrUniversity"
+            >
+              <span itemprop="name">{{ entry.university }}</span>
+            </h3>
+            <h4 itemprop="educationalCredentialAwarded">{{ entry.degree }}</h4>
+            <div class="year">
+              <time itemprop="startDate" datetime="{{ entry.start }}"
+                >{{ entry.start }}</time
+              >
+              -
+              <time itemprop="endDate" datetime="{{ entry.end }}"
+                >{{ entry.end }}</time
+              >
+            </div>
+            {% markdown %}
+            <div itemprop="description">{{ entry.description }}</div>
+            {% endmarkdown %}
+          </div>
         </div>
-        {% markdown %}
-        <div itemprop="description">
-          {{ entry.description }}
-        </div>
-        {% endmarkdown %}
-        </div>
-      </div>
-      {%- endfor %}
+        {%- endfor %}
       </div>
     </section>
   </div>
@@ -44,22 +130,38 @@ layout: main.njk
       <h1>Experience</h1>
       <div class="employment">
         {%- for entry in experience %}
-        <div class="employment-item" itemscope itemtype="http://schema.org/OrganizationRole">
-          <img src="{{ entry.icon }}" alt="{{ entry.company }} Logo" class="logo" itemprop="image">
+        <div
+          class="employment-item"
+          itemscope
+          itemtype="http://schema.org/OrganizationRole"
+        >
+          <img
+            src="{{ entry.icon }}"
+            alt="{{ entry.company }} Logo"
+            class="logo"
+            itemprop="image"
+          />
           <div class="details">
-        <h3 itemprop="memberOf" itemscope itemtype="http://schema.org/Organization">
-          <span itemprop="name">{{ entry.company }}</span>
-        </h3>
-        <h4 itemprop="roleName">{{ entry.title }}</h4>
-        <div class="year">
-          <time itemprop="startDate" datetime="{{ entry.start }}">{{ entry.start }}</time> - 
-          <time itemprop="endDate" datetime="{{ entry.end }}">{{ entry.end }}</time>
-        </div>
-        {% markdown %}
-        <div itemprop="description">
-          {{ entry.description }}
-        </div>
-        {% endmarkdown %}
+            <h3
+              itemprop="memberOf"
+              itemscope
+              itemtype="http://schema.org/Organization"
+            >
+              <span itemprop="name">{{ entry.company }}</span>
+            </h3>
+            <h4 itemprop="roleName">{{ entry.title }}</h4>
+            <div class="year">
+              <time itemprop="startDate" datetime="{{ entry.start }}"
+                >{{ entry.start }}</time
+              >
+              -
+              <time itemprop="endDate" datetime="{{ entry.end }}"
+                >{{ entry.end }}</time
+              >
+            </div>
+            {% markdown %}
+            <div itemprop="description">{{ entry.description }}</div>
+            {% endmarkdown %}
           </div>
         </div>
         {%- endfor %}
