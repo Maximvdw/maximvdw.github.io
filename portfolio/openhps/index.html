@@ -52,42 +52,38 @@
 
 
   <body>
-    <header class="site-header">
-    <div class="container">
-        <a href="/" class="logo"></a>
-  
-        <nav class="site-nav">
-          <div class="trigger">
-            
-            <a class="page-link " href="/about/">About me</a>
-            <a class="page-link " href="/posts/">Blog</a>
-            <a class="page-link " href="/publications/">Publications</a>
-          </div>
-          <div class="hamburger" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
-            <div class="mobile-menu">
-                
-                <a class="page-link " href="/about/">About me</a>
-                
-                <a class="page-link " href="/posts/">Blog</a>
-                
-                <a class="page-link " href="/publications/">Publications</a>
-                
-            </div>
-        </nav>
+    
+    <aside class="sidebar">
+    <div class="profile">
+        <img src="/images/profile/maxim2.jpg" alt="Maxim Van de Wynckel">
+        <div class="firstname">Maxim</div>
+        <div class="lastname">Van de Wynckel</div>
+        <div class="bio">Researcher, consultant, software engineer</div>
     </div>
-</header>
-
+    <ul class="menu">
+        
+        
+        <li><a  href="/about/">About me</a></li>
+        
+        <li><a  href="/posts/">Blog</a></li>
+        
+        <li><a  href="/publications/">Publications</a></li>
+        
+    </ul>
+</aside>
+<div class="hamburger" onclick="toggleSidebar()">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
 <script>
-    function toggleMenu() {
+    function toggleSidebar() {
+        document.querySelector('aside.sidebar').classList.toggle('open');
+        document.querySelector('.content').classList.toggle('shifted');
         document.querySelector('.hamburger').classList.toggle('active');
-        document.querySelector('.mobile-menu').classList.toggle('active');
     }
 </script>
+
 
     <section class="content" id="content">
       
@@ -110,16 +106,7 @@
     <div class="social">
         <div class="container">
             <div class="row">
-                <div class="col-sm-5">
-                    <h1>Maxim Van de Wynckel</h1>
-                    <h3>Researcher, consultant, software engineer</h3>
-                    <span class="address">
-                        Pleinlaan 2<br>
-                        1050 Brussels<br>
-                        Belgium
-                    </span>
-                </div>
-                <div class="col-sm-3">
+                <div class="col-sm-12">
                     <ul class="social-links">
                         <li><a href="https://mas.to/@maximvdw" rel="me" target="_blank"><i class="fab fa-mastodon"></i></a></li>
                         <li><a href="https://github.com/Maximvdw" rel="me" target="_blank"><i class="fab fa-github"></i></a></li>

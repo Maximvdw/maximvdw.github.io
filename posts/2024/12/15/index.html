@@ -5,26 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>FOSDEM presentations | Maxim Van de Wynckel</title>
+    <title>FOSDEM 2025 | Maxim Van de Wynckel</title>
 
-<meta name="description" content="In this technical report we present our open source hybrid positioning system called OpenHPS.">
+<meta name="description" content="I will be presenting at FOSDEM 2025!">
 <meta name="robots" content="index,follow">
 <meta name="author" content="Maxim Van de Wynckel">
 
 <link rel="canonical" href="https://maximvdw.be/posts/2024/12/15/">
 
-<meta property="og:title" content="FOSDEM presentations | Maxim Van de Wynckel">
+<meta property="og:title" content="FOSDEM 2025 | Maxim Van de Wynckel">
 <meta property="og:type" content="article">
 
 <meta property="og:url" content="https://maximvdw.be/posts/2024/12/15/">
-<meta property="og:description" content="In this technical report we present our open source hybrid positioning system called OpenHPS.">
+<meta property="og:description" content="I will be presenting at FOSDEM 2025!">
 <meta property="og:image" content="https://maximvdw.be/images/social/summary-large.png">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@MVdWSoftware">
 <meta name="twitter:url" content="https://maximvdw.be/posts/2024/12/15/">
-<meta name="twitter:title" content="FOSDEM presentations | Maxim Van de Wynckel">
-<meta name="twitter:description" content="In this technical report we present our open source hybrid positioning system called OpenHPS.">
+<meta name="twitter:title" content="FOSDEM 2025 | Maxim Van de Wynckel">
+<meta name="twitter:description" content="I will be presenting at FOSDEM 2025!">
 <meta name="twitter:image" content="https://maximvdw.be/images/social/summary-large.png">
 
 
@@ -52,42 +52,38 @@
 
 
   <body>
-    <header class="site-header">
-    <div class="container">
-        <a href="/" class="logo"></a>
-  
-        <nav class="site-nav">
-          <div class="trigger">
-            
-            <a class="page-link " href="/about/">About me</a>
-            <a class="page-link " href="/posts/">Blog</a>
-            <a class="page-link " href="/publications/">Publications</a>
-          </div>
-          <div class="hamburger" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
-            <div class="mobile-menu">
-                
-                <a class="page-link " href="/about/">About me</a>
-                
-                <a class="page-link " href="/posts/">Blog</a>
-                
-                <a class="page-link " href="/publications/">Publications</a>
-                
-            </div>
-        </nav>
+    
+    <aside class="sidebar">
+    <div class="profile">
+        <img src="/images/profile/maxim2.jpg" alt="Maxim Van de Wynckel">
+        <div class="firstname">Maxim</div>
+        <div class="lastname">Van de Wynckel</div>
+        <div class="bio">Researcher, consultant, software engineer</div>
     </div>
-</header>
-
+    <ul class="menu">
+        
+        
+        <li><a  href="/about/">About me</a></li>
+        
+        <li><a  href="/posts/">Blog</a></li>
+        
+        <li><a  href="/publications/">Publications</a></li>
+        
+    </ul>
+</aside>
+<div class="hamburger" onclick="toggleSidebar()">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
 <script>
-    function toggleMenu() {
+    function toggleSidebar() {
+        document.querySelector('aside.sidebar').classList.toggle('open');
+        document.querySelector('.content').classList.toggle('shifted');
         document.querySelector('.hamburger').classList.toggle('active');
-        document.querySelector('.mobile-menu').classList.toggle('active');
     }
 </script>
+
 
     <section class="content" id="content">
       
@@ -100,7 +96,7 @@
           <ul>
             
               <li class="selected">
-                <a href="/posts/2024/12/15/" class="current">Sunday, 15 Dec 2024</a>
+                <a href="/posts/2024/12/15/" class="current">Tuesday, 17 Dec 2024</a>
               </li>
             
           </ul>
@@ -108,7 +104,7 @@
       </nav>
     </div>
     <div class="col-sm-10 typography">
-      <h1>FOSDEM presentations</h1>
+      <h1>FOSDEM 2025</h1>
 
       
 
@@ -125,16 +121,7 @@
     <div class="social">
         <div class="container">
             <div class="row">
-                <div class="col-sm-5">
-                    <h1>Maxim Van de Wynckel</h1>
-                    <h3>Researcher, consultant, software engineer</h3>
-                    <span class="address">
-                        Pleinlaan 2<br>
-                        1050 Brussels<br>
-                        Belgium
-                    </span>
-                </div>
-                <div class="col-sm-3">
+                <div class="col-sm-12">
                     <ul class="social-links">
                         <li><a href="https://mas.to/@maximvdw" rel="me" target="_blank"><i class="fab fa-mastodon"></i></a></li>
                         <li><a href="https://github.com/Maximvdw" rel="me" target="_blank"><i class="fab fa-github"></i></a></li>

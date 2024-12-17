@@ -52,42 +52,38 @@
 
 
   <body>
-    <header class="site-header">
-    <div class="container">
-        <a href="/" class="logo"></a>
-  
-        <nav class="site-nav">
-          <div class="trigger">
-            
-            <a class="page-link active" href="/about/">About me</a>
-            <a class="page-link " href="/posts/">Blog</a>
-            <a class="page-link " href="/publications/">Publications</a>
-          </div>
-          <div class="hamburger" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
-            <div class="mobile-menu">
-                
-                <a class="page-link active" href="/about/">About me</a>
-                
-                <a class="page-link " href="/posts/">Blog</a>
-                
-                <a class="page-link " href="/publications/">Publications</a>
-                
-            </div>
-        </nav>
+    
+    <aside class="sidebar">
+    <div class="profile">
+        <img src="/images/profile/maxim2.jpg" alt="Maxim Van de Wynckel">
+        <div class="firstname">Maxim</div>
+        <div class="lastname">Van de Wynckel</div>
+        <div class="bio">Researcher, consultant, software engineer</div>
     </div>
-</header>
-
+    <ul class="menu">
+        
+        
+        <li><a class="active" href="/about/">About me</a></li>
+        
+        <li><a  href="/posts/">Blog</a></li>
+        
+        <li><a  href="/publications/">Publications</a></li>
+        
+    </ul>
+</aside>
+<div class="hamburger" onclick="toggleSidebar()">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
 <script>
-    function toggleMenu() {
+    function toggleSidebar() {
+        document.querySelector('aside.sidebar').classList.toggle('open');
+        document.querySelector('.content').classList.toggle('shifted');
         document.querySelector('.hamburger').classList.toggle('active');
-        document.querySelector('.mobile-menu').classList.toggle('active');
     }
 </script>
+
 
     <section class="content" id="content">
       
@@ -95,27 +91,27 @@
   <div class="row">
     <div class="col-sm-12 typography">
         
-<div class="row">
+<div class="row" itemscope itemtype="http://schema.org/Person">
   <div class="col-sm-2">
-    <img src="/images/profile/maxim.png" alt="Maxim Van de Wynckel" class="img-fluid rounded-circle">
+    <img src="/images/profile/maxim.png" alt="Maxim Van de Wynckel" class="img-fluid rounded-circle" itemprop="image">
   </div>
-  <div class="col-sm-10">
+  <div class="col-sm-10 biography" itemprop="description">
     <h1 id="about-me" tabindex="-1">About me</h1>
-<p>My name is Maxim Van de Wynckel, and I am a PhD candidate at the <a href="https://vub.be">Vrije Universiteit Brussel</a> in the <a href="https://wise.vub.ac.be">Web &amp; Information Systems Engineering (WISE) Lab</a>. My research primarily focuses on <strong>hybrid and indoor positioning</strong>, <strong>interoperability</strong>, <strong>linked data</strong>, and methods for <strong>discovering services</strong>. Early in my career, I developed a fascination for integrating various technologies. Location data, in particular, offers a rich source for implicit human-computer interaction. However, I observed significant challenges in enabling seamless communication between different technologies. My focus on interoperability aims to bridge these gaps, facilitating effective and beneficial connections.</p>
-<p>I graduated with great distinction from the <a href="https://www.erasmushogeschool.be/en">Erasmushogeschool Brussels</a> in 2016, earning a Bachelor's degree in Applied Computer Science. Subsequently, I obtained a Master of Science in Applied Computer Science at the Vrije Universiteit Brussel in 2019, also with great distinction. My Master's thesis, titled <em><a href="/publications/2019/thesis">Indoor Navigation by Centralized Tracking</a></em>, laid the foundation for my PhD research. Under the supervision of Prof. Dr. Beat Signer, I am investigating hybrid positioning systems and the interoperability of these systems.</p>
-<p>I am a key contributor to the development of the open-source hybrid positioning system, <a href="https://openhps.org">OpenHPS</a>, which was launched in 2020. In 2022, I designed the <a href="https://poso.openhps.org">POSO ontology</a>, providing a vocabulary for describing positioning systems, their algorithms, and the data they produce. In 2023, I introduced the <a href="https://sembeacon.org">SemBeacon</a> Bluetooth Low Energy specification, aimed at creating semantic beacons for tracking and describing persons, objects, and environments. I am currently working towards my dissertation on the Discoverability and Interoperability of Indoor Positioning Systems, which I expect to defend before the summer of 2025.</p>
-<p>In addition to my PhD research, I serve as a teaching assistant for various bachelor and master courses, including <a href="https://wise.vub.ac.be/course/web-technologies">Web Technologies</a>, Databases, <a href="https://wise.vub.ac.be/course/next-generation-user-interfaces">Next Generation User Interfaces</a>, and <a href="https://wise.vub.ac.be/course/advanced-topics-big-data">Advanced Topics in Big Data</a>. I have also previously assisted in courses such as <a href="https://wise.vub.ac.be/course/information-visualisation">Information Visualisation</a> and Open Information Systems. Furthermore, I supervise Bachelor and Master theses related to my research domain.</p>
-<p>My current hobbies include addative manufacturing, electronics, and scuba diving. I am the creator and maintainer of the current website of the <a href="https://www.vubdivingcenter.be">V.U.B. Diving Center vzw</a> and I also help beginning divers to prepare their pool-exercises.</p>
+<p>Maxim Van de Wynckel is a PhD candidate at the <a href="https://vub.be">Vrije Universiteit Brussel</a> in the <a href="https://wise.vub.ac.be">Web &amp; Information Systems Engineering (WISE) Lab</a>. His research primarily focuses on <strong>hybrid and indoor positioning</strong>, <strong>interoperability</strong>, <strong>linked data</strong>, and methods for <strong>discovering services</strong>. Early in his career, he developed a fascination for integrating various technologies. Location data, in particular, offers a rich source for implicit human-computer interaction. However, he observed significant challenges in enabling seamless communication between different technologies. His focus on interoperability aims to bridge these gaps, facilitating effective and beneficial connections.</p>
+<p>He graduated with great distinction from the <a href="https://www.erasmushogeschool.be/en">Erasmushogeschool Brussels</a> in 2016, earning a Bachelor's degree in Applied Computer Science. Subsequently, he obtained a Master of Science in Applied Computer Science at the Vrije Universiteit Brussel in 2019, also with great distinction. His Master's thesis, titled <em><a href="/publications/2019/thesis">Indoor Navigation by Centralized Tracking</a></em>, laid the foundation for his PhD research. Under the supervision of Prof. Dr. Beat Signer, he is investigating hybrid positioning systems and the interoperability of these systems.</p>
+<p>Maxim is a key contributor to the development of the open-source hybrid positioning system, <a href="https://openhps.org">OpenHPS</a>, which was launched in 2020. In 2022, he designed the <a href="https://poso.openhps.org">POSO ontology</a>, providing a vocabulary for describing positioning systems, their algorithms, and the data they produce. In 2023, he introduced the <a href="https://sembeacon.org">SemBeacon</a> Bluetooth Low Energy specification, aimed at creating semantic beacons for tracking and describing persons, objects, and environments. He is currently working towards his dissertation on the Discoverability and Interoperability of Indoor Positioning Systems, which he expects to defend before the summer of 2025.</p>
+<p>In addition to his PhD research, Maxim serves as a teaching assistant for various bachelor and master courses, including <a href="https://wise.vub.ac.be/course/web-technologies">Web Technologies</a>, Databases, <a href="https://wise.vub.ac.be/course/next-generation-user-interfaces">Next Generation User Interfaces</a>, and <a href="https://wise.vub.ac.be/course/advanced-topics-big-data">Advanced Topics in Big Data</a>. He has also previously assisted in courses such as <a href="https://wise.vub.ac.be/course/information-visualisation">Information Visualisation</a> and Open Information Systems. Furthermore, he supervises Bachelor and Master theses related to his research domain.</p>
+<p>His current hobbies include additive manufacturing, electronics, and scuba diving. He is the creator and maintainer of the current website of the <a href="https://www.vubdivingcenter.be">V.U.B. Diving Center vzw</a> and also helps beginning divers to prepare their pool exercises.</p>
 
   </div>
 </div>
 
 <div class="row">
   <div class="col-sm-6">
-    <section class="cv-section" itemscope itemtype="http://schema.org/EducationEvent">
+    <section class="cv-section">
       <h1>Education</h1>
       <div class="education">
-      <div class="education-item" itemprop="educationalCredentialAwarded" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+      <div class="education-item" itemprop="educationalCredentialAwarded" itemscope itemtype="http://schema.org/EducationEvent">
         <img src="/images/logo/vub-logo_square.svg" alt="Vrije Universiteit Brussel Logo" class="logo" itemprop="image">
         <div class="details">
         <h3 itemprop="provider" itemscope itemtype="http://schema.org/CollegeOrUniversity">
@@ -132,7 +128,7 @@ Researching hybrid- and indoor positioning systems, interoperability of location
 
         </div>
       </div>
-      <div class="education-item" itemprop="educationalCredentialAwarded" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+      <div class="education-item" itemprop="educationalCredentialAwarded" itemscope itemtype="http://schema.org/EducationEvent">
         <img src="/images/logo/vub-logo_square.svg" alt="Vrije Universiteit Brussel Logo" class="logo" itemprop="image">
         <div class="details">
         <h3 itemprop="provider" itemscope itemtype="http://schema.org/CollegeOrUniversity">
@@ -149,7 +145,7 @@ Parallelism, distributed systems, multicore programming (Java, Erlang and GPU wi
 
         </div>
       </div>
-      <div class="education-item" itemprop="educationalCredentialAwarded" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+      <div class="education-item" itemprop="educationalCredentialAwarded" itemscope itemtype="http://schema.org/EducationEvent">
         <img src="/images/logo/vub-logo_square.svg" alt="Vrije Universiteit Brussel Logo" class="logo" itemprop="image">
         <div class="details">
         <h3 itemprop="provider" itemscope itemtype="http://schema.org/CollegeOrUniversity">
@@ -165,7 +161,7 @@ Parallelism, distributed systems, multicore programming (Java, Erlang and GPU wi
 
         </div>
       </div>
-      <div class="education-item" itemprop="educationalCredentialAwarded" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+      <div class="education-item" itemprop="educationalCredentialAwarded" itemscope itemtype="http://schema.org/EducationEvent">
         <img src="/images/logo/ehb-logo_square.svg" alt="Erasmushogeschool Brussel Logo" class="logo" itemprop="image">
         <div class="details">
         <h3 itemprop="provider" itemscope itemtype="http://schema.org/CollegeOrUniversity">
@@ -236,16 +232,7 @@ Software Security, Software Development (Java, C++, C#, Objective-C), Agile deve
     <div class="social">
         <div class="container">
             <div class="row">
-                <div class="col-sm-5">
-                    <h1>Maxim Van de Wynckel</h1>
-                    <h3>Researcher, consultant, software engineer</h3>
-                    <span class="address">
-                        Pleinlaan 2<br>
-                        1050 Brussels<br>
-                        Belgium
-                    </span>
-                </div>
-                <div class="col-sm-3">
+                <div class="col-sm-12">
                     <ul class="social-links">
                         <li><a href="https://mas.to/@maximvdw" rel="me" target="_blank"><i class="fab fa-mastodon"></i></a></li>
                         <li><a href="https://github.com/Maximvdw" rel="me" target="_blank"><i class="fab fa-github"></i></a></li>
