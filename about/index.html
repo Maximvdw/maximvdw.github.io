@@ -35,7 +35,7 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     <link rel="stylesheet" href="/css/main.css?version=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
     
     <link type="application/atom+xml" title="OpenHPS News Posts" rel="alternate" href="https://maximvdw.be/feed.xml" title="" >
@@ -47,7 +47,15 @@
     
     <meta name="theme-color" content="#284cb5">
 
-    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BQZFG2FMWN"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-BQZFG2FMWN');
+    </script>
 </head>
 
 
@@ -92,10 +100,15 @@
     <div class="col-sm-12 typography">
         
 <div class="row" itemscope itemtype="http://schema.org/Person">
-  <div class="col-sm-2">
-    <img src="/images/profile/maxim.png" alt="Maxim Van de Wynckel" class="img-fluid rounded-circle" itemprop="image">
+  <div class="col-sm-3">
+    <img
+      src="/images/profile/maxim.png"
+      alt="Maxim Van de Wynckel"
+      class="img-fluid rounded-circle"
+      itemprop="image"
+    />
   </div>
-  <div class="col-sm-10 biography" itemprop="description">
+  <div class="col-sm-9 biography" itemprop="description">
     <h1 id="about-me" tabindex="-1">About me</h1>
 <p>Maxim Van de Wynckel is a PhD candidate at the <a href="https://vub.be">Vrije Universiteit Brussel</a> in the <a href="https://wise.vub.ac.be">Web &amp; Information Systems Engineering (WISE) Lab</a>. His research primarily focuses on <strong>hybrid and indoor positioning</strong>, <strong>interoperability</strong>, <strong>linked data</strong>, and methods for <strong>discovering services</strong>. Early in his career, he developed a fascination for integrating various technologies. Location data, in particular, offers a rich source for implicit human-computer interaction. However, he observed significant challenges in enabling seamless communication between different technologies. His focus on interoperability aims to bridge these gaps, facilitating effective and beneficial connections.</p>
 <p>He graduated with great distinction from the <a href="https://www.erasmushogeschool.be/en">Erasmushogeschool Brussels</a> in 2016, earning a Bachelor's degree in Applied Computer Science. Subsequently, he obtained a Master of Science in Applied Computer Science at the Vrije Universiteit Brussel in 2019, also with great distinction. His Master's thesis, titled <em><a href="/publications/2019/thesis">Indoor Navigation by Centralized Tracking</a></em>, laid the foundation for his PhD research. Under the supervision of Prof. Dr. Beat Signer, he is investigating hybrid positioning systems and the interoperability of these systems.</p>
@@ -107,77 +120,210 @@
 </div>
 
 <div class="row">
+  <div class="col-sm-6"></div>
+  <div class="col-sm-9">
+    <a
+      class="social-link linkedin"
+      rel="me"
+      href="https://www.linkedin.com/in/maximvdw/"
+    >
+      <i class="fa fa-brands fa-linkedin"></i>
+    </a>
+    <a class="social-link mastodon" rel="me" href="https://mas.to/@maximvdw">
+      <i class="fa fa-brands fa-mastodon"></i>
+    </a>
+    <a class="social-link x" rel="me" href="https://x.com/MVdWSoftware">
+      <i class="fa fa-brands fa-x-twitter"></i>
+    </a>
+    <a class="social-link github" rel="me" href="https://github.com/Maximvdw">
+      <i class="fa fa-brands fa-github"></i>
+    </a>
+    <a
+      class="social-link google-scholar"
+      rel="me"
+      href="https://scholar.google.com/citations?user=NB6760YAAAAJ"
+    >
+      <i class="ai ai-google-scholar"></i>
+    </a>
+    <a
+      class="social-link orcid"
+      rel="me"
+      href="https://orcid.org/0000-0003-0314-7107"
+    >
+      <i class="ai ai-orcid"></i>
+    </a>
+    <a
+      class="social-link researchgate"
+      rel="me"
+      href="https://www.researchgate.net/profile/Maxim-Van-De-Wynckel"
+    >
+      <i class="ai ai-researchgate"></i>
+    </a>
+    <a
+      class="social-link academia"
+      rel="me"
+      href="https://vub.academia.edu/MaximVandeWynckel"
+    >
+      <i class="ai ai-academia"></i>
+    </a>
+    <a
+      class="social-link acm"
+      rel="me"
+      href="https://dl.acm.org/profile/99660619976"
+    >
+      <i class="ai ai-acm"></i>
+    </a>
+    <a
+      class="social-link dblp"
+      rel="me"
+      href="https://dblp.org/pid/283/5794.html"
+    >
+      <i class="ai ai-dblp"></i>
+    </a>
+  </div>
+</div>
+
+<div class="row">
   <div class="col-sm-6">
     <section class="cv-section">
       <h1>Education</h1>
       <div class="education">
-      <div class="education-item" itemprop="educationalCredentialAwarded" itemscope itemtype="http://schema.org/EducationEvent">
-        <img src="/images/logo/vub-logo_square.svg" alt="Vrije Universiteit Brussel Logo" class="logo" itemprop="image">
-        <div class="details">
-        <h3 itemprop="provider" itemscope itemtype="http://schema.org/CollegeOrUniversity">
-          <span itemprop="name">Vrije Universiteit Brussel</span>
-        </h3>
-        <h4 itemprop="educationalCredentialAwarded">PhD, Computer Science</h4>
-        <div class="year">
-          <time itemprop="startDate" datetime="2019">2019</time> - 
-          <time itemprop="endDate" datetime="present">present</time>
-        </div>
-        <div itemprop="description">
-Researching hybrid- and indoor positioning systems, interoperability of location data and discoverability of services. Expected end date: October 2025.
-</div>
+        <div
+          class="education-item"
+          itemprop="educationalCredentialAwarded"
+          itemscope
+          itemtype="http://schema.org/EducationEvent"
+        >
+          <img
+            src="/images/logo/vub-logo_square.svg"
+            alt="Vrije Universiteit Brussel Logo"
+            class="logo"
+            itemprop="image"
+          />
+          <div class="details">
+            <h3
+              itemprop="provider"
+              itemscope
+              itemtype="http://schema.org/CollegeOrUniversity"
+            >
+              <span itemprop="name">Vrije Universiteit Brussel</span>
+            </h3>
+            <h4 itemprop="educationalCredentialAwarded">PhD, Computer Science</h4>
+            <div class="year">
+              <time itemprop="startDate" datetime="2019"
+                >2019</time
+              >
+              -
+              <time itemprop="endDate" datetime="present"
+                >present</time
+              >
+            </div>
+            <div itemprop="description">Researching hybrid- and indoor positioning systems, interoperability of location data and discoverability of services. Expected end date: October 2025.</div>
 
+          </div>
         </div>
-      </div>
-      <div class="education-item" itemprop="educationalCredentialAwarded" itemscope itemtype="http://schema.org/EducationEvent">
-        <img src="/images/logo/vub-logo_square.svg" alt="Vrije Universiteit Brussel Logo" class="logo" itemprop="image">
-        <div class="details">
-        <h3 itemprop="provider" itemscope itemtype="http://schema.org/CollegeOrUniversity">
-          <span itemprop="name">Vrije Universiteit Brussel</span>
-        </h3>
-        <h4 itemprop="educationalCredentialAwarded">Master of Science (MSc), Applied Computer Science</h4>
-        <div class="year">
-          <time itemprop="startDate" datetime="2018">2018</time> - 
-          <time itemprop="endDate" datetime="2019">2019</time>
-        </div>
-        <div itemprop="description">
-Parallelism, distributed systems, multicore programming (Java, Erlang and GPU with OpenCL), software security and Indoor navigation master thesis
-</div>
+        <div
+          class="education-item"
+          itemprop="educationalCredentialAwarded"
+          itemscope
+          itemtype="http://schema.org/EducationEvent"
+        >
+          <img
+            src="/images/logo/vub-logo_square.svg"
+            alt="Vrije Universiteit Brussel Logo"
+            class="logo"
+            itemprop="image"
+          />
+          <div class="details">
+            <h3
+              itemprop="provider"
+              itemscope
+              itemtype="http://schema.org/CollegeOrUniversity"
+            >
+              <span itemprop="name">Vrije Universiteit Brussel</span>
+            </h3>
+            <h4 itemprop="educationalCredentialAwarded">Master of Science (MSc), Applied Computer Science</h4>
+            <div class="year">
+              <time itemprop="startDate" datetime="2018"
+                >2018</time
+              >
+              -
+              <time itemprop="endDate" datetime="2019"
+                >2019</time
+              >
+            </div>
+            <div itemprop="description">Parallelism, distributed systems, multicore programming (Java, Erlang and GPU with OpenCL), software security and Indoor navigation master thesis</div>
 
+          </div>
         </div>
-      </div>
-      <div class="education-item" itemprop="educationalCredentialAwarded" itemscope itemtype="http://schema.org/EducationEvent">
-        <img src="/images/logo/vub-logo_square.svg" alt="Vrije Universiteit Brussel Logo" class="logo" itemprop="image">
-        <div class="details">
-        <h3 itemprop="provider" itemscope itemtype="http://schema.org/CollegeOrUniversity">
-          <span itemprop="name">Vrije Universiteit Brussel</span>
-        </h3>
-        <h4 itemprop="educationalCredentialAwarded">Bridging program, Computer Science</h4>
-        <div class="year">
-          <time itemprop="startDate" datetime="2016">2016</time> - 
-          <time itemprop="endDate" datetime="2018">2018</time>
-        </div>
-        <div itemprop="description">
-</div>
+        <div
+          class="education-item"
+          itemprop="educationalCredentialAwarded"
+          itemscope
+          itemtype="http://schema.org/EducationEvent"
+        >
+          <img
+            src="/images/logo/vub-logo_square.svg"
+            alt="Vrije Universiteit Brussel Logo"
+            class="logo"
+            itemprop="image"
+          />
+          <div class="details">
+            <h3
+              itemprop="provider"
+              itemscope
+              itemtype="http://schema.org/CollegeOrUniversity"
+            >
+              <span itemprop="name">Vrije Universiteit Brussel</span>
+            </h3>
+            <h4 itemprop="educationalCredentialAwarded">Bridging program, Computer Science</h4>
+            <div class="year">
+              <time itemprop="startDate" datetime="2016"
+                >2016</time
+              >
+              -
+              <time itemprop="endDate" datetime="2018"
+                >2018</time
+              >
+            </div>
+            <div itemprop="description"></div>
 
+          </div>
         </div>
-      </div>
-      <div class="education-item" itemprop="educationalCredentialAwarded" itemscope itemtype="http://schema.org/EducationEvent">
-        <img src="/images/logo/ehb-logo_square.svg" alt="Erasmushogeschool Brussel Logo" class="logo" itemprop="image">
-        <div class="details">
-        <h3 itemprop="provider" itemscope itemtype="http://schema.org/CollegeOrUniversity">
-          <span itemprop="name">Erasmushogeschool Brussel</span>
-        </h3>
-        <h4 itemprop="educationalCredentialAwarded">Bachelor (Ba), Applied Computer Science</h4>
-        <div class="year">
-          <time itemprop="startDate" datetime="2013">2013</time> - 
-          <time itemprop="endDate" datetime="2016">2016</time>
-        </div>
-        <div itemprop="description">
-Software Security, Software Development (Java, C++, C#, Objective-C), Agile development
-</div>
+        <div
+          class="education-item"
+          itemprop="educationalCredentialAwarded"
+          itemscope
+          itemtype="http://schema.org/EducationEvent"
+        >
+          <img
+            src="/images/logo/ehb-logo_square.svg"
+            alt="Erasmushogeschool Brussel Logo"
+            class="logo"
+            itemprop="image"
+          />
+          <div class="details">
+            <h3
+              itemprop="provider"
+              itemscope
+              itemtype="http://schema.org/CollegeOrUniversity"
+            >
+              <span itemprop="name">Erasmushogeschool Brussel</span>
+            </h3>
+            <h4 itemprop="educationalCredentialAwarded">Bachelor (Ba), Applied Computer Science</h4>
+            <div class="year">
+              <time itemprop="startDate" datetime="2013"
+                >2013</time
+              >
+              -
+              <time itemprop="endDate" datetime="2016"
+                >2016</time
+              >
+            </div>
+            <div itemprop="description">Software Security, Software Development (Java, C++, C#, Objective-C), Agile development</div>
 
+          </div>
         </div>
-      </div>
       </div>
     </section>
   </div>
@@ -185,35 +331,69 @@ Software Security, Software Development (Java, C++, C#, Objective-C), Agile deve
     <section class="cv-section">
       <h1>Experience</h1>
       <div class="employment">
-        <div class="employment-item" itemscope itemtype="http://schema.org/OrganizationRole">
-          <img src="/images/logo/vub-logo_square.svg" alt="Vrije Universiteit Brussel Logo" class="logo" itemprop="image">
+        <div
+          class="employment-item"
+          itemscope
+          itemtype="http://schema.org/OrganizationRole"
+        >
+          <img
+            src="/images/logo/vub-logo_square.svg"
+            alt="Vrije Universiteit Brussel Logo"
+            class="logo"
+            itemprop="image"
+          />
           <div class="details">
-        <h3 itemprop="memberOf" itemscope itemtype="http://schema.org/Organization">
-          <span itemprop="name">Vrije Universiteit Brussel</span>
-        </h3>
-        <h4 itemprop="roleName">Teaching Assistant and Researcher</h4>
-        <div class="year">
-          <time itemprop="startDate" datetime="2019">2019</time> - 
-          <time itemprop="endDate" datetime="present">present</time>
-        </div>
-        <div itemprop="description">
-</div>
+            <h3
+              itemprop="memberOf"
+              itemscope
+              itemtype="http://schema.org/Organization"
+            >
+              <span itemprop="name">Vrije Universiteit Brussel</span>
+            </h3>
+            <h4 itemprop="roleName">Teaching Assistant and Researcher</h4>
+            <div class="year">
+              <time itemprop="startDate" datetime="2019"
+                >2019</time
+              >
+              -
+              <time itemprop="endDate" datetime="present"
+                >present</time
+              >
+            </div>
+            <div itemprop="description"></div>
 
           </div>
         </div>
-        <div class="employment-item" itemscope itemtype="http://schema.org/OrganizationRole">
-          <img src="/images/logo/mvdw-logo.svg" alt="MVdW-Software Logo" class="logo" itemprop="image">
+        <div
+          class="employment-item"
+          itemscope
+          itemtype="http://schema.org/OrganizationRole"
+        >
+          <img
+            src="/images/logo/mvdw-logo.svg"
+            alt="MVdW-Software Logo"
+            class="logo"
+            itemprop="image"
+          />
           <div class="details">
-        <h3 itemprop="memberOf" itemscope itemtype="http://schema.org/Organization">
-          <span itemprop="name">MVdW-Software</span>
-        </h3>
-        <h4 itemprop="roleName">Independent professional (self-employed)</h4>
-        <div class="year">
-          <time itemprop="startDate" datetime="2019">2019</time> - 
-          <time itemprop="endDate" datetime="present">present</time>
-        </div>
-        <div itemprop="description">
-</div>
+            <h3
+              itemprop="memberOf"
+              itemscope
+              itemtype="http://schema.org/Organization"
+            >
+              <span itemprop="name">MVdW-Software</span>
+            </h3>
+            <h4 itemprop="roleName">Independent professional (self-employed)</h4>
+            <div class="year">
+              <time itemprop="startDate" datetime="2019"
+                >2019</time
+              >
+              -
+              <time itemprop="endDate" datetime="present"
+                >present</time
+              >
+            </div>
+            <div itemprop="description"></div>
 
           </div>
         </div>
