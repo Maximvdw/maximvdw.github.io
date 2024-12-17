@@ -38,10 +38,13 @@ eleventyNavigation:
       <ol reversed class="postlist">
         {% for post in collections.publications | reverse %}
           <li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}" itemscope itemtype="http://schema.org/ScholarlyArticle" data-type="{{ post.data.type }}">
+            <input type="hidden" itemprop="abstract" value="{{ post.data.content }}">
+            <input type="hidden" itemprop="headline" value="{{ post.data.title }}">
+            <input type="hidden" itemprop="datePublished" value="{{ post.date | htmlDateString }}">
             <img class="postlist-image" alt="{{ post.data.title }}" src="{{ post.data.thumbnail }}" itemprop="image"/>
             <div class="postlist-content">
               <a href="{{ post.url | url }}" class="postlist-link" itemprop="url">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
-              <time class="postlist-date" datetime="{{ post.date | htmlDateString }}" itemprop="datePublished">{{ post.date | readableDate }}</time>
+              <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
               <span class="postlist-description" itemprop="description">{{ post.data.excerpt }}</span>
             </div>
           </li>

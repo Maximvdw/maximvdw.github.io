@@ -8,13 +8,16 @@
 @use "includes/margin";
 
 @use "components/cite";
-@use "components/header";
 @use "components/footer";
 @use "components/navigation";
 @use "components/posts";
 @use "components/button";
 @use "components/cv";
 @use "components/filter";
+
+// Either import the header or the sidebar, not both
+// @use "components/header";
+@use "components/sidebar";
 
 .main {
     overflow-x: auto;
@@ -27,4 +30,10 @@ body {
 
 #content {
     flex: 1 auto;
+}
+
+@media (max-width: 768px) {
+    .mobile-hide {
+        display: none;
+    }
 }

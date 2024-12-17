@@ -1,3 +1,26 @@
-<aside>
-
+<aside class="sidebar">
+    <div class="profile">
+        <img src="/images/profile/maxim2.jpg" alt="Maxim Van de Wynckel">
+        <div class="firstname">Maxim</div>
+        <div class="lastname">Van de Wynckel</div>
+        <div class="bio">Researcher, consultant, software engineer</div>
+    </div>
+    <ul class="menu">
+        {% set navPages = collections.all | eleventyNavigation %}
+        {% for entry in navPages %}
+        <li><a {% if entry.url == page.url %}class="active"{% endif %} href="{{ entry.url }}">{{ entry.title }}</a></li>
+        {% endfor %}
+    </ul>
 </aside>
+<div class="hamburger" onclick="toggleSidebar()">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<script>
+    function toggleSidebar() {
+        document.querySelector('aside.sidebar').classList.toggle('open');
+        document.querySelector('.content').classList.toggle('shifted');
+        document.querySelector('.hamburger').classList.toggle('active');
+    }
+</script>

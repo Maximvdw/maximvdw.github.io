@@ -2,22 +2,22 @@
 layout: main.njk
 ---
 
-<div class="row">
+<div class="row" itemscope itemtype="http://schema.org/Person">
   <div class="col-sm-2">
-    <img src="{{ profile_image }}" alt="Maxim Van de Wynckel" class="img-fluid rounded-circle">
+    <img src="{{ profile_image }}" alt="Maxim Van de Wynckel" class="img-fluid rounded-circle" itemprop="image">
   </div>
-  <div class="col-sm-10">
+  <div class="col-sm-10 biography" itemprop="description">
     {{ content | safe }}
   </div>
 </div>
 
 <div class="row">
   <div class="col-sm-6">
-    <section class="cv-section" itemscope itemtype="http://schema.org/EducationEvent">
+    <section class="cv-section">
       <h1>Education</h1>
       <div class="education">
       {%- for entry in education %}
-      <div class="education-item" itemprop="educationalCredentialAwarded" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+      <div class="education-item" itemprop="educationalCredentialAwarded" itemscope itemtype="http://schema.org/EducationEvent">
         <img src="{{ entry.icon }}" alt="{{ entry.university }} Logo" class="logo" itemprop="image">
         <div class="details">
         <h3 itemprop="provider" itemscope itemtype="http://schema.org/CollegeOrUniversity">

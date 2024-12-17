@@ -8,6 +8,7 @@ video: /media/2020-12_sphero-demo.mp4
 type: thesis
 excerpt: 'Van de Wynckel, M.: "Indoor Navigation by Centralized Tracking", July 2019'
 thumbnail: "/publications/2020/techreport.png"
+eleventyExcludeFromCollections: true
 ---
 The main goal of this thesis is to create an indoor positioning system that guides a patient or visitor through a hospital building. Using only the smartphone of a person, the system should be able to track and guide the user to his/her destination. Unlike other possible solutions that focus on the smartphone application to determine the position, the proposed solution uses a centralized server with Bluetooth scanners.
 
