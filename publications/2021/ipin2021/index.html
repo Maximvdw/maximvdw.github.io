@@ -91,10 +91,21 @@
     function toggleSidebar() {
         document.querySelector('aside.sidebar').classList.toggle('open');
         document.querySelector('.content').classList.toggle('shifted');
+          document.querySelector('footer').classList.toggle('shifted');
         document.querySelector('.hamburger').classList.toggle('active');
     }
-</script>
+    document.addEventListener('swiped-left', function() {
+        document.querySelector('aside.sidebar').classList.remove('open');
+        document.querySelector('.content').classList.remove('shifted');
+        document.querySelector('.hamburger').classList.remove('active');
+    });
 
+    document.addEventListener('swiped-right', function() {
+        document.querySelector('aside.sidebar').classList.add('open');
+        document.querySelector('.content').classList.add('shifted');
+        document.querySelector('.hamburger').classList.add('active');
+    });
+</script>
 
     <section class="content" id="content">
       
@@ -167,7 +178,7 @@
 
             <a href="https://solid.maximvdw.be/publications/indoor-positioning-using-the-openhps-framework.pdf" class="btn btn-red btn-icon" data-title="Download paper PDF"><i class="fa fa-regular fa-file-pdf"></i></a>
             
-            <a href="/slides/ipin2021/ipin2021_presentation.pdf" class="btn btn-green btn-icon" data-title="Download presentation"><i class="fa fa-regular fa-file-powerpoint"></i></a>
+            <a href="https://openhps.org/slides/ipin2021/ipin2021_presentation.pdf" class="btn btn-green btn-icon" data-title="Download presentation"><i class="fa fa-regular fa-file-powerpoint"></i></a>
             
             
             
@@ -184,7 +195,7 @@
                     <h2>Citation</h2>
                     <div class="tabs">
                         <button class="tablinks" onclick="openTab(event, 'APA')">APA</button>
-                        <button class="tablinks" onclick="openTab(event, 'BibTex')">BibTex</button>
+                        <button class="tablinks" onclick="openTab(event, 'BibTeX')">BibTeX</button>
                     </div>
                     <div id="APA" class="tabcontent">
                         <pre id="apaCitation">de Wynckel, M. V., &amp; Signer, B. (2021). Indoor Positioning Using the OpenHPS Framework. 2021 International Conference on Indoor Positioning and Indoor Navigation (IPIN), 1–8. https://doi.org/10.1109/ipin51156.2021.9662569

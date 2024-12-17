@@ -88,10 +88,21 @@
     function toggleSidebar() {
         document.querySelector('aside.sidebar').classList.toggle('open');
         document.querySelector('.content').classList.toggle('shifted');
+          document.querySelector('footer').classList.toggle('shifted');
         document.querySelector('.hamburger').classList.toggle('active');
     }
-</script>
+    document.addEventListener('swiped-left', function() {
+        document.querySelector('aside.sidebar').classList.remove('open');
+        document.querySelector('.content').classList.remove('shifted');
+        document.querySelector('.hamburger').classList.remove('active');
+    });
 
+    document.addEventListener('swiped-right', function() {
+        document.querySelector('aside.sidebar').classList.add('open');
+        document.querySelector('.content').classList.add('shifted');
+        document.querySelector('.hamburger').classList.add('active');
+    });
+</script>
 
     <section class="content" id="content">
       <div class="container main">
@@ -133,9 +144,9 @@
       <ol reversed class="postlist">
         
           <li class="postlist-item" itemscope itemtype="http://schema.org/ScholarlyArticle" data-type="poster">
-            <input type="hidden" itemprop="abstract" value="">
-            <input type="hidden" itemprop="headline" value="Towards Distributed Intelligent Tutoring Systems Based on User-owned Progress and Performance Data">
-            <input type="hidden" itemprop="datePublished" value="2024-05-19">
+            <meta itemprop="abstract" content="">
+            <meta itemprop="headline" content="Towards Distributed Intelligent Tutoring Systems Based on User-owned Progress and Performance Data">
+            <meta itemprop="datePublished" content="2024-05-19">
             <img class="postlist-image" alt="Towards Distributed Intelligent Tutoring Systems Based on User-owned Progress and Performance Data" src="/publications/2024/sosy2024yoshi.png" itemprop="image"/>
             <div class="postlist-content">
               <a href="/publications/2024/sosy2024yoshi/" class="postlist-link" itemprop="url">Towards Distributed Intelligent Tutoring Systems Based on User-owned Progress and Performance Data</a>
@@ -145,9 +156,9 @@
           </li>
         
           <li class="postlist-item" itemscope itemtype="http://schema.org/ScholarlyArticle" data-type="poster">
-            <input type="hidden" itemprop="abstract" value="">
-            <input type="hidden" itemprop="headline" value="Discoverable and Interoperable Augmented Reality Environments Through Solid Pods">
-            <input type="hidden" itemprop="datePublished" value="2024-05-19">
+            <meta itemprop="abstract" content="">
+            <meta itemprop="headline" content="Discoverable and Interoperable Augmented Reality Environments Through Solid Pods">
+            <meta itemprop="datePublished" content="2024-05-19">
             <img class="postlist-image" alt="Discoverable and Interoperable Augmented Reality Environments Through Solid Pods" src="/publications/2024/sosy2024maxim.png" itemprop="image"/>
             <div class="postlist-content">
               <a href="/publications/2024/sosy2024maxim/" class="postlist-link" itemprop="url">Discoverable and Interoperable Augmented Reality Environments Through Solid Pods</a>
@@ -157,9 +168,9 @@
           </li>
         
           <li class="postlist-item" itemscope itemtype="http://schema.org/ScholarlyArticle" data-type="conference">
-            <input type="hidden" itemprop="abstract" value="">
-            <input type="hidden" itemprop="headline" value="FidMark: A Fiducial Marker Ontology for Semantically Describing Visual Markers">
-            <input type="hidden" itemprop="datePublished" value="2024-05-19">
+            <meta itemprop="abstract" content="">
+            <meta itemprop="headline" content="FidMark: A Fiducial Marker Ontology for Semantically Describing Visual Markers">
+            <meta itemprop="datePublished" content="2024-05-19">
             <img class="postlist-image" alt="FidMark: A Fiducial Marker Ontology for Semantically Describing Visual Markers" src="/publications/2024/fidmark-thumb.png" itemprop="image"/>
             <div class="postlist-content">
               <a href="/publications/2024/eswc2024/" class="postlist-link" itemprop="url">FidMark: A Fiducial Marker Ontology for Semantically Describing Visual Markers</a>
@@ -170,9 +181,9 @@
           </li>
         
           <li class="postlist-item" itemscope itemtype="http://schema.org/ScholarlyArticle" data-type="conference">
-            <input type="hidden" itemprop="abstract" value="">
-            <input type="hidden" itemprop="headline" value="SemBeacon: A Semantic Proximity Beacon Solution for Discovering and Detecting the Position of Physical Things">
-            <input type="hidden" itemprop="datePublished" value="2023-11-07">
+            <meta itemprop="abstract" content="">
+            <meta itemprop="headline" content="SemBeacon: A Semantic Proximity Beacon Solution for Discovering and Detecting the Position of Physical Things">
+            <meta itemprop="datePublished" content="2023-11-07">
             <img class="postlist-image" alt="SemBeacon: A Semantic Proximity Beacon Solution for Discovering and Detecting the Position of Physical Things" src="/publications/2023/iot2023.png" itemprop="image"/>
             <div class="postlist-content">
               <a href="/publications/2023/iot2023/" class="postlist-link" itemprop="url">SemBeacon: A Semantic Proximity Beacon Solution for Discovering and Detecting the Position of Physical Things</a>
@@ -183,9 +194,9 @@
           </li>
         
           <li class="postlist-item" itemscope itemtype="http://schema.org/ScholarlyArticle" data-type="conference">
-            <input type="hidden" itemprop="abstract" value="">
-            <input type="hidden" itemprop="headline" value="POSO: A Generic Positioning System Ontology">
-            <input type="hidden" itemprop="datePublished" value="2022-10-23">
+            <meta itemprop="abstract" content="">
+            <meta itemprop="headline" content="POSO: A Generic Positioning System Ontology">
+            <meta itemprop="datePublished" content="2022-10-23">
             <img class="postlist-image" alt="POSO: A Generic Positioning System Ontology" src="/publications/2022/iswc2022.png" itemprop="image"/>
             <div class="postlist-content">
               <a href="/publications/2022/iswc2022/" class="postlist-link" itemprop="url">POSO: A Generic Positioning System Ontology</a>
@@ -196,9 +207,9 @@
           </li>
         
           <li class="postlist-item" itemscope itemtype="http://schema.org/ScholarlyArticle" data-type="conference">
-            <input type="hidden" itemprop="abstract" value="">
-            <input type="hidden" itemprop="headline" value="A Solid-based Architecture for Decentralised Interoperable Location Data">
-            <input type="hidden" itemprop="datePublished" value="2022-09-05">
+            <meta itemprop="abstract" content="">
+            <meta itemprop="headline" content="A Solid-based Architecture for Decentralised Interoperable Location Data">
+            <meta itemprop="datePublished" content="2022-09-05">
             <img class="postlist-image" alt="A Solid-based Architecture for Decentralised Interoperable Location Data" src="/publications/2022/ipin2022.png" itemprop="image"/>
             <div class="postlist-content">
               <a href="/publications/2022/ipin2022/" class="postlist-link" itemprop="url">A Solid-based Architecture for Decentralised Interoperable Location Data</a>
@@ -208,9 +219,9 @@
           </li>
         
           <li class="postlist-item" itemscope itemtype="http://schema.org/ScholarlyArticle" data-type="conference">
-            <input type="hidden" itemprop="abstract" value="">
-            <input type="hidden" itemprop="headline" value="Indoor Positioning Using the OpenHPS Framework">
-            <input type="hidden" itemprop="datePublished" value="2021-12-02">
+            <meta itemprop="abstract" content="">
+            <meta itemprop="headline" content="Indoor Positioning Using the OpenHPS Framework">
+            <meta itemprop="datePublished" content="2021-12-02">
             <img class="postlist-image" alt="Indoor Positioning Using the OpenHPS Framework" src="/publications/2021/ipin2021.png" itemprop="image"/>
             <div class="postlist-content">
               <a href="/publications/2021/ipin2021/" class="postlist-link" itemprop="url">Indoor Positioning Using the OpenHPS Framework</a>
@@ -221,9 +232,9 @@
           </li>
         
           <li class="postlist-item" itemscope itemtype="http://schema.org/ScholarlyArticle" data-type="tech-report">
-            <input type="hidden" itemprop="abstract" value="">
-            <input type="hidden" itemprop="headline" value="OpenHPS: An Open Source Hybrid Positioning System">
-            <input type="hidden" itemprop="datePublished" value="2020-12-29">
+            <meta itemprop="abstract" content="">
+            <meta itemprop="headline" content="OpenHPS: An Open Source Hybrid Positioning System">
+            <meta itemprop="datePublished" content="2020-12-29">
             <img class="postlist-image" alt="OpenHPS: An Open Source Hybrid Positioning System" src="/publications/2020/openhps2020.png" itemprop="image"/>
             <div class="postlist-content">
               <a href="/publications/2020/openhps2020/" class="postlist-link" itemprop="url">OpenHPS: An Open Source Hybrid Positioning System</a>

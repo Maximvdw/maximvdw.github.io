@@ -88,10 +88,21 @@
     function toggleSidebar() {
         document.querySelector('aside.sidebar').classList.toggle('open');
         document.querySelector('.content').classList.toggle('shifted');
+          document.querySelector('footer').classList.toggle('shifted');
         document.querySelector('.hamburger').classList.toggle('active');
     }
-</script>
+    document.addEventListener('swiped-left', function() {
+        document.querySelector('aside.sidebar').classList.remove('open');
+        document.querySelector('.content').classList.remove('shifted');
+        document.querySelector('.hamburger').classList.remove('active');
+    });
 
+    document.addEventListener('swiped-right', function() {
+        document.querySelector('aside.sidebar').classList.add('open');
+        document.querySelector('.content').classList.add('shifted');
+        document.querySelector('.hamburger').classList.add('active');
+    });
+</script>
 
     <section class="content" id="content">
       
@@ -99,7 +110,30 @@
   <div class="row">
     <div class="col-sm-12 typography">
         
-<div class="row" itemscope itemtype="http://schema.org/Person">
+<div itemscope itemtype="http://schema.org/Person">
+<!-- Metadata -->
+<meta itemprop="givenName" content="Maxim" />
+<meta itemprop="familyName" content="Van de Wynckel" />
+<meta itemprop="sameAs" content="https://solid.maximvdw.be/profile/card#me" />
+<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+  <meta itemprop="streetAddress" content="Invalidenlaan 178" />
+  <meta itemprop="addressLocality" content="Oudergem" />
+  <meta itemprop="addressRegion" content="Brussels-capital region" />
+  <meta itemprop="postalCode" content="1160" />
+  <meta itemprop="addressCountry" content="BE" />
+</div>
+<meta itemprop="email" content="me@maximvdw.be" />
+<meta itemprop="jobTitle" content="researcher" />
+<meta itemprop="knowsAbout" content="interoperability" />
+<meta itemprop="knowsAbout" content="indoor positioning" />
+<meta itemprop="knowsAbout" content="hybrid positioning systems" />
+<meta itemprop="knowsAbout" content="location-based services" />
+<meta itemprop="knowsAbout" content="linked data" />
+<meta itemprop="knowsAbout" content="semantic web" />
+<meta itemprop="knowsAbout" content="personal data vaults" />
+<!-- END Metadata -->
+
+<div class="row">
   <div class="col-sm-3">
     <img
       src="/images/profile/maxim.png"
@@ -110,76 +144,99 @@
   </div>
   <div class="col-sm-9 biography" itemprop="description">
     <h1 id="about-me" tabindex="-1">About me</h1>
-<p>Maxim Van de Wynckel is a PhD candidate at the <a href="https://vub.be">Vrije Universiteit Brussel</a> in the <a href="https://wise.vub.ac.be">Web &amp; Information Systems Engineering (WISE) Lab</a>. His research primarily focuses on <strong>hybrid and indoor positioning</strong>, <strong>interoperability</strong>, <strong>linked data</strong>, and methods for <strong>discovering services</strong>. Early in his career, he developed a fascination for integrating various technologies. Location data, in particular, offers a rich source for implicit human-computer interaction. However, he observed significant challenges in enabling seamless communication between different technologies. His focus on interoperability aims to bridge these gaps, facilitating effective and beneficial connections.</p>
-<p>He graduated with great distinction from the <a href="https://www.erasmushogeschool.be/en">Erasmushogeschool Brussels</a> in 2016, earning a Bachelor's degree in Applied Computer Science. Subsequently, he obtained a Master of Science in Applied Computer Science at the Vrije Universiteit Brussel in 2019, also with great distinction. His Master's thesis, titled <em><a href="/publications/2019/thesis">Indoor Navigation by Centralized Tracking</a></em>, laid the foundation for his PhD research. Under the supervision of Prof. Dr. Beat Signer, he is investigating hybrid positioning systems and the interoperability of these systems.</p>
-<p>Maxim is a key contributor to the development of the open-source hybrid positioning system, <a href="https://openhps.org">OpenHPS</a>, which was launched in 2020. In 2022, he designed the <a href="https://poso.openhps.org">POSO ontology</a>, providing a vocabulary for describing positioning systems, their algorithms, and the data they produce. In 2023, he introduced the <a href="https://sembeacon.org">SemBeacon</a> Bluetooth Low Energy specification, aimed at creating semantic beacons for tracking and describing persons, objects, and environments. He is currently working towards his dissertation on the Discoverability and Interoperability of Indoor Positioning Systems, which he expects to defend before the summer of 2025.</p>
-<p>In addition to his PhD research, Maxim serves as a teaching assistant for various bachelor and master courses, including <a href="https://wise.vub.ac.be/course/web-technologies">Web Technologies</a>, Databases, <a href="https://wise.vub.ac.be/course/next-generation-user-interfaces">Next Generation User Interfaces</a>, and <a href="https://wise.vub.ac.be/course/advanced-topics-big-data">Advanced Topics in Big Data</a>. He has also previously assisted in courses such as <a href="https://wise.vub.ac.be/course/information-visualisation">Information Visualisation</a> and Open Information Systems. Furthermore, he supervises Bachelor and Master theses related to his research domain.</p>
-<p>His current hobbies include additive manufacturing, electronics, and scuba diving. He is the creator and maintainer of the current website of the <a href="https://www.vubdivingcenter.be">V.U.B. Diving Center vzw</a> and also helps beginning divers to prepare their pool exercises.</p>
+<p>My name is Maxim Van de Wynckel, and I am a PhD candidate at the <a href="https://vub.be">Vrije Universiteit Brussel</a> in the <a href="https://wise.vub.ac.be">Web &amp; Information Systems Engineering (WISE) Lab</a>. My research primarily focuses on <strong>hybrid and indoor positioning</strong>, <strong>interoperability</strong>, <strong>linked data</strong>, and methods for <strong>discovering services</strong>. Early in my career, I developed a fascination for integrating various technologies. Location data, in particular, offers a rich source for implicit human-computer interaction. However, I observed significant challenges in enabling seamless communication between different technologies. My focus on interoperability aims to bridge these gaps, facilitating effective and beneficial connections.</p>
+<p>I graduated with great distinction from the <a href="https://www.erasmushogeschool.be/en">Erasmushogeschool Brussels</a> in 2016, earning a Bachelor's degree in Applied Computer Science. Subsequently, I obtained a Master of Science in Applied Computer Science at the Vrije Universiteit Brussel in 2019, also with great distinction. My Master's thesis, titled <em><a href="/publications/2019/thesis">Indoor Navigation by Centralized Tracking</a></em>, laid the foundation for my PhD research. Under the supervision of Prof. Dr. Beat Signer, I am investigating hybrid positioning systems and the interoperability of these systems.</p>
+<p>I am a key contributor to the development of the open-source hybrid positioning system, <a href="https://openhps.org">OpenHPS</a>, which was launched in 2020. In 2022, I designed the <a href="https://poso.openhps.org">POSO ontology</a>, providing a vocabulary for describing positioning systems, their algorithms, and the data they produce. In 2023, I introduced the <a href="https://sembeacon.org">SemBeacon</a> Bluetooth Low Energy specification, aimed at creating semantic beacons for tracking and describing persons, objects, and environments. I am currently working towards my dissertation on the Discoverability and Interoperability of Indoor Positioning Systems, which I expect to defend before the summer of 2025.</p>
+<p>In addition to my PhD research, I serve as a teaching assistant for various bachelor and master courses, including <a href="https://wise.vub.ac.be/course/web-technologies">Web Technologies</a>, Databases, <a href="https://wise.vub.ac.be/course/next-generation-user-interfaces">Next Generation User Interfaces</a>, and <a href="https://wise.vub.ac.be/course/advanced-topics-big-data">Advanced Topics in Big Data</a>. I have also previously assisted in courses such as <a href="https://wise.vub.ac.be/course/information-visualisation">Information Visualisation</a> and Open Information Systems. Furthermore, I supervise Bachelor and Master theses related to my research domain.</p>
+<p>My current hobbies include addative manufacturing, electronics, and scuba diving. I am the creator and maintainer of the current website of the <a href="https://www.vubdivingcenter.be">V.U.B. Diving Center vzw</a> and I also help beginning divers to prepare their pool-exercises. I take pictures during some of my dives, for a small selection of those pictures, check my Adobe Portfolio <a href="https://diving.maximvdw.be">here</a>.</p>
 
   </div>
 </div>
-
 <div class="row">
-  <div class="col-sm-6"></div>
+  <div class="col-sm-3"></div>
   <div class="col-sm-9">
-    <a
-      class="social-link linkedin"
-      rel="me"
-      href="https://www.linkedin.com/in/maximvdw/"
-    >
-      <i class="fa fa-brands fa-linkedin"></i>
-    </a>
-    <a class="social-link mastodon" rel="me" href="https://mas.to/@maximvdw">
-      <i class="fa fa-brands fa-mastodon"></i>
-    </a>
-    <a class="social-link x" rel="me" href="https://x.com/MVdWSoftware">
-      <i class="fa fa-brands fa-x-twitter"></i>
-    </a>
-    <a class="social-link github" rel="me" href="https://github.com/Maximvdw">
-      <i class="fa fa-brands fa-github"></i>
-    </a>
-    <a
-      class="social-link google-scholar"
-      rel="me"
-      href="https://scholar.google.com/citations?user=NB6760YAAAAJ"
-    >
-      <i class="ai ai-google-scholar"></i>
-    </a>
-    <a
-      class="social-link orcid"
-      rel="me"
-      href="https://orcid.org/0000-0003-0314-7107"
-    >
-      <i class="ai ai-orcid"></i>
-    </a>
-    <a
-      class="social-link researchgate"
-      rel="me"
-      href="https://www.researchgate.net/profile/Maxim-Van-De-Wynckel"
-    >
-      <i class="ai ai-researchgate"></i>
-    </a>
-    <a
-      class="social-link academia"
-      rel="me"
-      href="https://vub.academia.edu/MaximVandeWynckel"
-    >
-      <i class="ai ai-academia"></i>
-    </a>
-    <a
-      class="social-link acm"
-      rel="me"
-      href="https://dl.acm.org/profile/99660619976"
-    >
-      <i class="ai ai-acm"></i>
-    </a>
-    <a
-      class="social-link dblp"
-      rel="me"
-      href="https://dblp.org/pid/283/5794.html"
-    >
-      <i class="ai ai-dblp"></i>
-    </a>
+    <div class="social-links">
+      <a
+        class="social-link linkedin"
+        rel="me"
+        href="https://linkedin.com/in/maximvdw"
+        itemprop="sameAs"
+      >
+        <i class="fa fa-brands fa-linkedin"></i>
+      </a>
+      <a
+        class="social-link mastodon"
+        rel="me"
+        href="https://mas.to/@maximvdw"
+        itemprop="sameAs"
+      >
+        <i class="fa fa-brands fa-mastodon"></i>
+      </a>
+      <a
+        class="social-link x"
+        rel="me"
+        href="https://twitter.com/MVdWSoftware"
+        itemprop="sameAs"
+      >
+        <i class="fa fa-brands fa-x-twitter"></i>
+      </a>
+      <a
+        class="social-link github"
+        rel="me"
+        href="https://github.com/Maximvdw"
+        itemprop="sameAs"
+      >
+        <i class="fa fa-brands fa-github"></i>
+      </a>
+      <a
+        class="social-link google-scholar"
+        rel="me"
+        href="https://scholar.google.com/citations?user=NB6760YAAAAJ"
+        itemprop="sameAs"
+      >
+        <i class="ai ai-google-scholar"></i>
+      </a>
+      <a
+        class="social-link orcid"
+        rel="me"
+        href="https://orcid.org/0000-0003-0314-7107"
+        itemprop="sameAs"
+      >
+        <i class="ai ai-orcid"></i>
+      </a>
+      <a
+        class="social-link researchgate"
+        rel="me"
+        href="https://www.researchgate.net/profile/Maxim-Van-de-Wynckel"
+        itemprop="sameAs"
+      >
+        <i class="ai ai-researchgate"></i>
+      </a>
+      <a
+        class="social-link academia"
+        rel="me"
+        href="https://vub.academia.edu/MaximVandeWynckel"
+        itemprop="sameAs"
+      >
+        <i class="ai ai-academia"></i>
+      </a>
+      <a
+        class="social-link acm"
+        rel="me"
+        href="https://dl.acm.org/profile/99660619976"
+        itemprop="sameAs"
+      >
+        <i class="ai ai-acm"></i>
+      </a>
+      <a
+        class="social-link dblp"
+        rel="me"
+        href="https://dblp.org/pid/283/5794.html"
+        itemprop="sameAs"
+      >
+        <i class="ai ai-dblp"></i>
+      </a>
+    </div>
   </div>
 </div>
 
@@ -188,139 +245,67 @@
     <section class="cv-section">
       <h1>Education</h1>
       <div class="education">
-        <div
-          class="education-item"
-          itemprop="educationalCredentialAwarded"
-          itemscope
-          itemtype="http://schema.org/EducationEvent"
-        >
+        <div class="education-item">
           <img
             src="/images/logo/vub-logo_square.svg"
             alt="Vrije Universiteit Brussel Logo"
             class="logo"
-            itemprop="image"
           />
           <div class="details">
-            <h3
-              itemprop="provider"
-              itemscope
-              itemtype="http://schema.org/CollegeOrUniversity"
-            >
-              <span itemprop="name">Vrije Universiteit Brussel</span>
-            </h3>
-            <h4 itemprop="educationalCredentialAwarded">PhD, Computer Science</h4>
+            <h3>Vrije Universiteit Brussel</h3>
+            <h4>PhD, Computer Science</h4>
             <div class="year">
-              <time itemprop="startDate" datetime="2019"
-                >2019</time
-              >
-              -
-              <time itemprop="endDate" datetime="present"
-                >present</time
-              >
+              <time>2019</time> - <time>present</time>
             </div>
-            <div itemprop="description">Researching hybrid- and indoor positioning systems, interoperability of location data and discoverability of services. Expected end date: October 2025.</div>
+            <div>Researching hybrid- and indoor positioning systems, interoperability of location data and discoverability of services. Expected end date: October 2025.</div>
 
           </div>
         </div>
-        <div
-          class="education-item"
-          itemprop="educationalCredentialAwarded"
-          itemscope
-          itemtype="http://schema.org/EducationEvent"
-        >
+        <div class="education-item">
           <img
             src="/images/logo/vub-logo_square.svg"
             alt="Vrije Universiteit Brussel Logo"
             class="logo"
-            itemprop="image"
           />
           <div class="details">
-            <h3
-              itemprop="provider"
-              itemscope
-              itemtype="http://schema.org/CollegeOrUniversity"
-            >
-              <span itemprop="name">Vrije Universiteit Brussel</span>
-            </h3>
-            <h4 itemprop="educationalCredentialAwarded">Master of Science (MSc), Applied Computer Science</h4>
+            <h3>Vrije Universiteit Brussel</h3>
+            <h4>Master of Science (MSc), Applied Computer Science</h4>
             <div class="year">
-              <time itemprop="startDate" datetime="2018"
-                >2018</time
-              >
-              -
-              <time itemprop="endDate" datetime="2019"
-                >2019</time
-              >
+              <time>2018</time> - <time>2019</time>
             </div>
-            <div itemprop="description">Parallelism, distributed systems, multicore programming (Java, Erlang and GPU with OpenCL), software security and Indoor navigation master thesis</div>
+            <div>Parallelism, distributed systems, multicore programming (Java, Erlang and GPU with OpenCL), software security and Indoor navigation master thesis</div>
 
           </div>
         </div>
-        <div
-          class="education-item"
-          itemprop="educationalCredentialAwarded"
-          itemscope
-          itemtype="http://schema.org/EducationEvent"
-        >
+        <div class="education-item">
           <img
             src="/images/logo/vub-logo_square.svg"
             alt="Vrije Universiteit Brussel Logo"
             class="logo"
-            itemprop="image"
           />
           <div class="details">
-            <h3
-              itemprop="provider"
-              itemscope
-              itemtype="http://schema.org/CollegeOrUniversity"
-            >
-              <span itemprop="name">Vrije Universiteit Brussel</span>
-            </h3>
-            <h4 itemprop="educationalCredentialAwarded">Bridging program, Computer Science</h4>
+            <h3>Vrije Universiteit Brussel</h3>
+            <h4>Bridging program, Computer Science</h4>
             <div class="year">
-              <time itemprop="startDate" datetime="2016"
-                >2016</time
-              >
-              -
-              <time itemprop="endDate" datetime="2018"
-                >2018</time
-              >
+              <time>2016</time> - <time>2018</time>
             </div>
-            <div itemprop="description"></div>
+            <div></div>
 
           </div>
         </div>
-        <div
-          class="education-item"
-          itemprop="educationalCredentialAwarded"
-          itemscope
-          itemtype="http://schema.org/EducationEvent"
-        >
+        <div class="education-item">
           <img
             src="/images/logo/ehb-logo_square.svg"
             alt="Erasmushogeschool Brussel Logo"
             class="logo"
-            itemprop="image"
           />
           <div class="details">
-            <h3
-              itemprop="provider"
-              itemscope
-              itemtype="http://schema.org/CollegeOrUniversity"
-            >
-              <span itemprop="name">Erasmushogeschool Brussel</span>
-            </h3>
-            <h4 itemprop="educationalCredentialAwarded">Bachelor (Ba), Applied Computer Science</h4>
+            <h3>Erasmushogeschool Brussel</h3>
+            <h4>Bachelor (Ba), Applied Computer Science</h4>
             <div class="year">
-              <time itemprop="startDate" datetime="2013"
-                >2013</time
-              >
-              -
-              <time itemprop="endDate" datetime="2016"
-                >2016</time
-              >
+              <time>2013</time> - <time>2016</time>
             </div>
-            <div itemprop="description">Software Security, Software Development (Java, C++, C#, Objective-C), Agile development</div>
+            <div>Software Security, Software Development (Java, C++, C#, Objective-C), Agile development</div>
 
           </div>
         </div>
@@ -331,69 +316,35 @@
     <section class="cv-section">
       <h1>Experience</h1>
       <div class="employment">
-        <div
-          class="employment-item"
-          itemscope
-          itemtype="http://schema.org/OrganizationRole"
-        >
+        <div class="employment-item">
           <img
             src="/images/logo/vub-logo_square.svg"
             alt="Vrije Universiteit Brussel Logo"
             class="logo"
-            itemprop="image"
           />
           <div class="details">
-            <h3
-              itemprop="memberOf"
-              itemscope
-              itemtype="http://schema.org/Organization"
-            >
-              <span itemprop="name">Vrije Universiteit Brussel</span>
-            </h3>
-            <h4 itemprop="roleName">Teaching Assistant and Researcher</h4>
+            <h3>Vrije Universiteit Brussel</h3>
+            <h4>Teaching Assistant and Researcher</h4>
             <div class="year">
-              <time itemprop="startDate" datetime="2019"
-                >2019</time
-              >
-              -
-              <time itemprop="endDate" datetime="present"
-                >present</time
-              >
+              <time>2019</time> - <time>present</time>
             </div>
-            <div itemprop="description"></div>
+            <div></div>
 
           </div>
         </div>
-        <div
-          class="employment-item"
-          itemscope
-          itemtype="http://schema.org/OrganizationRole"
-        >
+        <div class="employment-item">
           <img
             src="/images/logo/mvdw-logo.svg"
             alt="MVdW-Software Logo"
             class="logo"
-            itemprop="image"
           />
           <div class="details">
-            <h3
-              itemprop="memberOf"
-              itemscope
-              itemtype="http://schema.org/Organization"
-            >
-              <span itemprop="name">MVdW-Software</span>
-            </h3>
-            <h4 itemprop="roleName">Independent professional (self-employed)</h4>
+            <h3>MVdW-Software</h3>
+            <h4>Independent professional (self-employed)</h4>
             <div class="year">
-              <time itemprop="startDate" datetime="2019"
-                >2019</time
-              >
-              -
-              <time itemprop="endDate" datetime="present"
-                >present</time
-              >
+              <time>2019</time> - <time>present</time>
             </div>
-            <div itemprop="description"></div>
+            <div></div>
 
           </div>
         </div>

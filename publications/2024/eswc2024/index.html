@@ -91,10 +91,21 @@
     function toggleSidebar() {
         document.querySelector('aside.sidebar').classList.toggle('open');
         document.querySelector('.content').classList.toggle('shifted');
+          document.querySelector('footer').classList.toggle('shifted');
         document.querySelector('.hamburger').classList.toggle('active');
     }
-</script>
+    document.addEventListener('swiped-left', function() {
+        document.querySelector('aside.sidebar').classList.remove('open');
+        document.querySelector('.content').classList.remove('shifted');
+        document.querySelector('.hamburger').classList.remove('active');
+    });
 
+    document.addEventListener('swiped-right', function() {
+        document.querySelector('aside.sidebar').classList.add('open');
+        document.querySelector('.content').classList.add('shifted');
+        document.querySelector('.hamburger').classList.add('active');
+    });
+</script>
 
     <section class="content" id="content">
       
@@ -182,7 +193,7 @@
                     <h2>Citation</h2>
                     <div class="tabs">
                         <button class="tablinks" onclick="openTab(event, 'APA')">APA</button>
-                        <button class="tablinks" onclick="openTab(event, 'BibTex')">BibTex</button>
+                        <button class="tablinks" onclick="openTab(event, 'BibTeX')">BibTeX</button>
                     </div>
                     <div id="APA" class="tabcontent">
                         <pre id="apaCitation">Van de Wynckel, M., Valadez, I., &amp; Signer, B. (2024). FidMark: A Fiducial Marker Ontology for Semantically Describing Visual Markers. In Lecture Notes in Computer Science (pp. 235–250). Springer Nature Switzerland. https://doi.org/10.1007/978-3-031-60635-9_14
