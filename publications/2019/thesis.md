@@ -4,7 +4,6 @@ title: "Indoor Navigation by Centralized Tracking"
 author: Maxim Van de Wynckel
 date: 2019-07-01
 pdf: https://solid.maximvdw.be/publications/Masterthesis_MaximVandeWynckel.pdf
-video: /media/2020-12_sphero-demo.mp4
 type: thesis
 excerpt: 'Van de Wynckel, M.: "Indoor Navigation by Centralized Tracking", July 2019'
 thumbnail: "/publications/2020/techreport.png"

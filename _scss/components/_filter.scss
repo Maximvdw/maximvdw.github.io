@@ -1,6 +1,14 @@
+@use "../includes/variables" as *;
 .filter {
   margin-bottom: 20px;
 }
+
+.filter label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
 .filter .form-group {
   margin-bottom: 15px;
 }
@@ -13,7 +21,7 @@
 }
 .filter .btn {
   width: 100%;
-  background-color: #007bff;
+  background-color: $primary-color;
   border: none;
   color: white;
   padding: 10px;

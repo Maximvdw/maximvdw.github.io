@@ -9,7 +9,7 @@ doi: 10.48550/arXiv.2101.05198
 publisher: arxiv
 type: tech-report
 github: https://github.com/OpenHPS
-video: /media/2020-12_sphero-demo.mp4
+video: https://openhps.org/media/2020-12_sphero-demo.mp4
 thumbnail: "/publications/2020/openhps2020.png"
 ---
 Positioning systems and frameworks use various techniques to determine the position of an object. Some of the existing solutions combine different sensory data at the time of positioning in order
