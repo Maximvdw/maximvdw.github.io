@@ -71,6 +71,12 @@ layout: default.njk
                     <meta itemprop="givenName" content="{{ author.given }}">
                     <meta itemprop="familyName" content="{{ author.family }}">
                     <span itemprop="name">{{ author.given }} {{ author.family }}</span>
+                    {% if author.given == "Maxim" and author.family == "Van de Wynckel" %}
+                        <meta itemprop="url" content="https://maximvdw.be/about/">
+                        <span itemprop="name me">{{ author.given }} {{ author.family }}</span>
+                    {% else %}
+                        <span itemprop="name">{{ author.given }} {{ author.family }}</span>
+                    {% endif %}
                 </li>
                 {% endfor %}
             </ul>
