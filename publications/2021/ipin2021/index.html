@@ -99,13 +99,14 @@
     let touchendX = 0;
 
     function handleGesture() {
-        if (touchendX < touchstartX) {
+        const threshold = 50; // Minimum swipe distance in pixels
+        if (touchendX < touchstartX - threshold) {
             // Swiped left
             document.querySelector('aside.sidebar').classList.remove('open');
             document.querySelector('.content').classList.remove('shifted');
             document.querySelector('.hamburger').classList.remove('active');
         }
-        if (touchendX > touchstartX) {
+        if (touchendX > touchstartX + threshold) {
             // Swiped right
             document.querySelector('aside.sidebar').classList.add('open');
             document.querySelector('.content').classList.add('shifted');
@@ -124,8 +125,7 @@
 </script>
 
     <section class="content" id="content">
-      
-<div class="container main" itemscope itemtype="http://schema.org/ScholarlyArticle">
+      <div class="container main" itemscope itemtype="http://schema.org/ScholarlyArticle">
     <meta itemprop="author" content="Maxim Van de Wynckel, Beat Signer">
     <meta itemprop="citation" content="de Wynckel, M. V., &amp; Signer, B. (2021). Indoor Positioning Using the OpenHPS Framework. 2021 International Conference on Indoor Positioning and Indoor Navigation (IPIN), 1–8. https://doi.org/10.1109/ipin51156.2021.9662569
 ">
@@ -265,7 +265,16 @@ trajectories that include IMU data.</p>
             
 
             
-                <embed src="https://solid.maximvdw.be/publications/indoor-positioning-using-the-openhps-framework.pdf" class="pdf-viewer" width="100%" height="600px" type="application/pdf">
+                <script src='/scripts/lib/webviewer.min.js'></script>
+                <div id='viewer' class="pdf-viewer" style="width: 100%; height: 600px; margin: 0 auto"></div>
+                <script>
+                WebViewer({
+                    path: '/scripts/lib/webviewer',
+                    licenseKey: 'Hw7fR9cVRfJEuOO8GEcp',
+                    initialDoc: "https://solid.maximvdw.be/publications/indoor-positioning-using-the-openhps-framework.pdf",
+                    css: "/css/pdf.css"
+                }, document.getElementById('viewer'));
+                </script>
             
         </div>
     </div>
