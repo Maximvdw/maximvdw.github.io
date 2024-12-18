@@ -10,7 +10,7 @@ if (filterForm) {
             var postYear = post.querySelector('.postlist-date').getAttribute('datetime').split('-')[0];
             var postType = post.getAttribute('data-type').toLowerCase();
             
-            if ((year === "" || postYear === year) && (type === "" || postType === type)) {
+            if ((year === "" || postYear >= year) && (type === "" || postType === type)) {
                 post.style.display = '';
             } else {
                 post.style.display = 'none';

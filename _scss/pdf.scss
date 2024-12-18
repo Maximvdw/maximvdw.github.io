@@ -5,6 +5,7 @@
 :root {
     --primary-color: #{ $primary-color };
     --secondary-color: #{ $secondary-color };
+    --view-header-background: #{ $primary-color };
     --text-color: #FFFFFF;
     --button-hover-color: #{ color.adjust($primary-color, $lightness: -10%) };
     --button-active-color: #{ color.adjust($primary-color, $lightness: -20%) };

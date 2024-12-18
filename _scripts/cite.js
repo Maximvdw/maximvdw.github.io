@@ -36,6 +36,10 @@ async function generateCitation(item) {
         })
         // Set the excerpt to the formatted bibliography
         item.excerpt = apa;
+
+        // Get the authors from the citation
+        const authors = citation.get().map(entry => entry.author).flat();
+        item.authors = authors;
     }
 }
 

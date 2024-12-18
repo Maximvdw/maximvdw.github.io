@@ -13,7 +13,7 @@ eleventyNavigation:
       <h3>Filter Publications</h3>
       <form id="filter-form">
         <div class="form-group">
-          <label for="year-filter">Year</label>
+          <label for="year-filter">Since</label>
           <select id="year-filter" class="form-control">
             <option value="">All</option>
             {% for year, posts in collections.publications_year %}
@@ -28,6 +28,8 @@ eleventyNavigation:
             <option value="conference">Conference</option>
             <option value="poster">Poster</option>
             <option value="thesis">Thesis</option>
+            <option value="dataset">Dataset</option>
+            <option value="tech-report">Technical report</option>
           </select>
         </div>
         <button type="submit" class="btn btn-primary">Apply Filter</button>
@@ -40,12 +42,16 @@ eleventyNavigation:
           <li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}" itemscope itemtype="http://schema.org/ScholarlyArticle" data-type="{{ post.data.type }}">
             <meta itemprop="abstract" content="{{ post.data.content }}">
             <meta itemprop="headline" content="{{ post.data.title }}">
-            <meta itemprop="datePublished" content="{{ post.date | htmlDateString }}">
+            <meta itemprop="datePublished" content="{{ post.date | htmlDateString }}T00:00:00Z">
             <img class="postlist-image" alt="{{ post.data.title }}" src="{{ post.data.thumbnail }}" itemprop="image"/>
             <div class="postlist-content">
               <a href="{{ post.url | url }}" class="postlist-link" itemprop="url">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
               <span class="badge badge-{{ post.data.type }}">{{ post.data.type }}</span><time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
               <span class="postlist-description" itemprop="description">{{ post.data.excerpt }}</span>
+            </div>
+            <div itemprop="author" itemscope itemtype="http://schema.org/Person">
+              <meta itemprop="givenName" content="{{ author.given }}">
+              <meta itemprop="familyName" content="{{ author.family }}">
             </div>
           </li>
         {% endfor %}
