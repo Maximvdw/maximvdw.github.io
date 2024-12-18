@@ -3,6 +3,9 @@ layout: default.njk
 ---
 
 <div class="container main" itemscope itemtype="http://schema.org/ScholarlyArticle">
+    <meta itemprop="author" content="{{ author }}">
+    <meta itemprop="citation" content="{{ excerpt }}">
+    <meta itemprop="image" content="{{ thumbnail }}">
     <div class="row">
         <div class="col-sm-3 mobile-hide">
             <nav class="navigation">
@@ -48,7 +51,7 @@ layout: default.njk
                         <pre id="apaCitation">{{ excerpt }}</pre>
                         <button class="copy-btn" onclick="copyToClipboard('apaCitation')">Copy</button>
                     </div>
-                    <div id="BibTex" class="tabcontent">
+                    <div id="BibTeX" class="tabcontent">
                         <pre id="bibtexCitation">{{ bibtex }}</pre>
                         <button class="copy-btn" onclick="copyToClipboard('bibtexCitation')">Copy</button>
                     </div>
@@ -57,9 +60,6 @@ layout: default.njk
 
             <h2>Abstract</h2>
             <p class="abstract" itemprop="abstract">{{ content | safe }}</p>
-
-            <h2>Citation</h2>
-            <p class="cite" itemprop="citation">{{ excerpt }}</p>
 
             {% if video and show_video %}
             <h2>Video presentation</h2>

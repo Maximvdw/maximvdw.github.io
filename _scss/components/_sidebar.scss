@@ -23,9 +23,13 @@ aside.sidebar {
 
     img {
       border-radius: 50%;
-      border: 3px solid #fff;
+      border: 3px solid $primary-color;
       width: 100px;
       height: 100px;
+
+      &:hover {
+        border-color: color.adjust($primary-color, $lightness: -10%);
+      }
     }
 
     .firstname {
@@ -80,8 +84,8 @@ aside.sidebar {
 .hamburger span {
   background: #fff; /* Change color to white */
   display: block;
-  height: 5px;
-  width: 24px;
+  height: 6px;
+  width: 28px;
   margin-left: 8px;
   margin-right: 8px;
   position: absolute;
@@ -141,8 +145,8 @@ aside.sidebar {
 
   .hamburger {
     display: block;
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
   }
   .hamburger:not(.active) {
     background-color: $primary-color;

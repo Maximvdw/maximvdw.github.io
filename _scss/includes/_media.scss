@@ -38,7 +38,9 @@ video {
 
 @media screen and (max-width: $on-medium) {
     .rounded-circle {
-        border-radius: 10%;
-        max-height: 50vh;
+        border-radius: 1em;
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
     }
 }
