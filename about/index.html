@@ -63,7 +63,7 @@
     
     <aside class="sidebar">
     <div class="profile">
-        <img src="/images/profile/maxim2.jpg" alt="Maxim Van de Wynckel">
+        <a href="/"><img src="/images/profile/maxim2.jpg" alt="Maxim Van de Wynckel"></a>
         <div class="firstname">Maxim</div>
         <div class="lastname">Van de Wynckel</div>
         <div class="bio">Researcher, consultant, software engineer</div>
@@ -88,20 +88,36 @@
     function toggleSidebar() {
         document.querySelector('aside.sidebar').classList.toggle('open');
         document.querySelector('.content').classList.toggle('shifted');
-          document.querySelector('footer').classList.toggle('shifted');
+        document.querySelector('footer').classList.toggle('shifted');
         document.querySelector('.hamburger').classList.toggle('active');
     }
-    document.addEventListener('swiped-left', function() {
-        document.querySelector('aside.sidebar').classList.remove('open');
-        document.querySelector('.content').classList.remove('shifted');
-        document.querySelector('.hamburger').classList.remove('active');
-    });
 
-    document.addEventListener('swiped-right', function() {
-        document.querySelector('aside.sidebar').classList.add('open');
-        document.querySelector('.content').classList.add('shifted');
-        document.querySelector('.hamburger').classList.add('active');
-    });
+    let touchstartX = 0;
+    let touchendX = 0;
+
+    function handleGesture() {
+        if (touchendX < touchstartX) {
+            // Swiped left
+            document.querySelector('aside.sidebar').classList.remove('open');
+            document.querySelector('.content').classList.remove('shifted');
+            document.querySelector('.hamburger').classList.remove('active');
+        }
+        if (touchendX > touchstartX) {
+            // Swiped right
+            document.querySelector('aside.sidebar').classList.add('open');
+            document.querySelector('.content').classList.add('shifted');
+            document.querySelector('.hamburger').classList.add('active');
+        }
+    }
+
+    document.addEventListener('touchstart', function(event) {
+        touchstartX = event.changedTouches[0].screenX;
+    }, false);
+
+    document.addEventListener('touchend', function(event) {
+        touchendX = event.changedTouches[0].screenX;
+        handleGesture();
+    }, false);
 </script>
 
     <section class="content" id="content">
@@ -142,14 +158,16 @@
       itemprop="image"
     />
   </div>
-  <div class="col-sm-9 biography" itemprop="description">
-    <h1 id="about-me" tabindex="-1">About me</h1>
-<p>My name is Maxim Van de Wynckel, and I am a PhD candidate at the <a href="https://vub.be">Vrije Universiteit Brussel</a> in the <a href="https://wise.vub.ac.be">Web &amp; Information Systems Engineering (WISE) Lab</a>. My research primarily focuses on <strong>hybrid and indoor positioning</strong>, <strong>interoperability</strong>, <strong>linked data</strong>, and methods for <strong>discovering services</strong>. Early in my career, I developed a fascination for integrating various technologies. Location data, in particular, offers a rich source for implicit human-computer interaction. However, I observed significant challenges in enabling seamless communication between different technologies. My focus on interoperability aims to bridge these gaps, facilitating effective and beneficial connections.</p>
+  <div class="col-sm-9">
+    <h1>About me</h1>
+    <span itemprop="description">
+    <p>My name is Maxim Van de Wynckel, and I am a PhD candidate at the <a href="https://vub.be">Vrije Universiteit Brussel</a> in the <a href="https://wise.vub.ac.be">Web &amp; Information Systems Engineering (WISE) Lab</a>. I live in Brussels, Belgium. My research primarily focuses on <strong>hybrid and indoor positioning</strong>, <strong>interoperability</strong>, <strong>linked data</strong>, and methods for <strong>discovering services</strong>. Early in my career, I developed a fascination for integrating various technologies. Location data, in particular, offers a rich source for implicit human-computer interaction. However, I observed significant challenges in enabling seamless communication between different technologies. My focus on interoperability aims to bridge these gaps, facilitating effective and beneficial connections.</p>
 <p>I graduated with great distinction from the <a href="https://www.erasmushogeschool.be/en">Erasmushogeschool Brussels</a> in 2016, earning a Bachelor's degree in Applied Computer Science. Subsequently, I obtained a Master of Science in Applied Computer Science at the Vrije Universiteit Brussel in 2019, also with great distinction. My Master's thesis, titled <em><a href="/publications/2019/thesis">Indoor Navigation by Centralized Tracking</a></em>, laid the foundation for my PhD research. Under the supervision of Prof. Dr. Beat Signer, I am investigating hybrid positioning systems and the interoperability of these systems.</p>
 <p>I am a key contributor to the development of the open-source hybrid positioning system, <a href="https://openhps.org">OpenHPS</a>, which was launched in 2020. In 2022, I designed the <a href="https://poso.openhps.org">POSO ontology</a>, providing a vocabulary for describing positioning systems, their algorithms, and the data they produce. In 2023, I introduced the <a href="https://sembeacon.org">SemBeacon</a> Bluetooth Low Energy specification, aimed at creating semantic beacons for tracking and describing persons, objects, and environments. I am currently working towards my dissertation on the Discoverability and Interoperability of Indoor Positioning Systems, which I expect to defend before the summer of 2025.</p>
 <p>In addition to my PhD research, I serve as a teaching assistant for various bachelor and master courses, including <a href="https://wise.vub.ac.be/course/web-technologies">Web Technologies</a>, Databases, <a href="https://wise.vub.ac.be/course/next-generation-user-interfaces">Next Generation User Interfaces</a>, and <a href="https://wise.vub.ac.be/course/advanced-topics-big-data">Advanced Topics in Big Data</a>. I have also previously assisted in courses such as <a href="https://wise.vub.ac.be/course/information-visualisation">Information Visualisation</a> and Open Information Systems. Furthermore, I supervise Bachelor and Master theses related to my research domain.</p>
 <p>My current hobbies include addative manufacturing, electronics, and scuba diving. I am the creator and maintainer of the current website of the <a href="https://www.vubdivingcenter.be">V.U.B. Diving Center vzw</a> and I also help beginning divers to prepare their pool-exercises. I take pictures during some of my dives, for a small selection of those pictures, check my Adobe Portfolio <a href="https://diving.maximvdw.be">here</a>.</p>
 
+    </span>
   </div>
 </div>
 <div class="row">

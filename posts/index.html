@@ -63,7 +63,7 @@
     
     <aside class="sidebar">
     <div class="profile">
-        <img src="/images/profile/maxim2.jpg" alt="Maxim Van de Wynckel">
+        <a href="/"><img src="/images/profile/maxim2.jpg" alt="Maxim Van de Wynckel"></a>
         <div class="firstname">Maxim</div>
         <div class="lastname">Van de Wynckel</div>
         <div class="bio">Researcher, consultant, software engineer</div>
@@ -88,20 +88,36 @@
     function toggleSidebar() {
         document.querySelector('aside.sidebar').classList.toggle('open');
         document.querySelector('.content').classList.toggle('shifted');
-          document.querySelector('footer').classList.toggle('shifted');
+        document.querySelector('footer').classList.toggle('shifted');
         document.querySelector('.hamburger').classList.toggle('active');
     }
-    document.addEventListener('swiped-left', function() {
-        document.querySelector('aside.sidebar').classList.remove('open');
-        document.querySelector('.content').classList.remove('shifted');
-        document.querySelector('.hamburger').classList.remove('active');
-    });
 
-    document.addEventListener('swiped-right', function() {
-        document.querySelector('aside.sidebar').classList.add('open');
-        document.querySelector('.content').classList.add('shifted');
-        document.querySelector('.hamburger').classList.add('active');
-    });
+    let touchstartX = 0;
+    let touchendX = 0;
+
+    function handleGesture() {
+        if (touchendX < touchstartX) {
+            // Swiped left
+            document.querySelector('aside.sidebar').classList.remove('open');
+            document.querySelector('.content').classList.remove('shifted');
+            document.querySelector('.hamburger').classList.remove('active');
+        }
+        if (touchendX > touchstartX) {
+            // Swiped right
+            document.querySelector('aside.sidebar').classList.add('open');
+            document.querySelector('.content').classList.add('shifted');
+            document.querySelector('.hamburger').classList.add('active');
+        }
+    }
+
+    document.addEventListener('touchstart', function(event) {
+        touchstartX = event.changedTouches[0].screenX;
+    }, false);
+
+    document.addEventListener('touchend', function(event) {
+        touchendX = event.changedTouches[0].screenX;
+        handleGesture();
+    }, false);
 </script>
 
     <section class="content" id="content">

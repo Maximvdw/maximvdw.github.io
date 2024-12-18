@@ -63,7 +63,7 @@
     
     <aside class="sidebar">
     <div class="profile">
-        <img src="/images/profile/maxim2.jpg" alt="Maxim Van de Wynckel">
+        <a href="/"><img src="/images/profile/maxim2.jpg" alt="Maxim Van de Wynckel"></a>
         <div class="firstname">Maxim</div>
         <div class="lastname">Van de Wynckel</div>
         <div class="bio">Researcher, consultant, software engineer</div>
@@ -88,25 +88,44 @@
     function toggleSidebar() {
         document.querySelector('aside.sidebar').classList.toggle('open');
         document.querySelector('.content').classList.toggle('shifted');
-          document.querySelector('footer').classList.toggle('shifted');
+        document.querySelector('footer').classList.toggle('shifted');
         document.querySelector('.hamburger').classList.toggle('active');
     }
-    document.addEventListener('swiped-left', function() {
-        document.querySelector('aside.sidebar').classList.remove('open');
-        document.querySelector('.content').classList.remove('shifted');
-        document.querySelector('.hamburger').classList.remove('active');
-    });
 
-    document.addEventListener('swiped-right', function() {
-        document.querySelector('aside.sidebar').classList.add('open');
-        document.querySelector('.content').classList.add('shifted');
-        document.querySelector('.hamburger').classList.add('active');
-    });
+    let touchstartX = 0;
+    let touchendX = 0;
+
+    function handleGesture() {
+        if (touchendX < touchstartX) {
+            // Swiped left
+            document.querySelector('aside.sidebar').classList.remove('open');
+            document.querySelector('.content').classList.remove('shifted');
+            document.querySelector('.hamburger').classList.remove('active');
+        }
+        if (touchendX > touchstartX) {
+            // Swiped right
+            document.querySelector('aside.sidebar').classList.add('open');
+            document.querySelector('.content').classList.add('shifted');
+            document.querySelector('.hamburger').classList.add('active');
+        }
+    }
+
+    document.addEventListener('touchstart', function(event) {
+        touchstartX = event.changedTouches[0].screenX;
+    }, false);
+
+    document.addEventListener('touchend', function(event) {
+        touchendX = event.changedTouches[0].screenX;
+        handleGesture();
+    }, false);
 </script>
 
     <section class="content" id="content">
       
 <div class="container main" itemscope itemtype="http://schema.org/ScholarlyArticle">
+    <meta itemprop="author" content="Maxim Van de Wynckel">
+    <meta itemprop="citation" content="Van de Wynckel, M.: &quot;Indoor Navigation by Centralized Tracking&quot;, July 2019">
+    <meta itemprop="image" content="/publications/2020/techreport.png">
     <div class="row">
         <div class="col-sm-3 mobile-hide">
             <nav class="navigation">
@@ -192,7 +211,7 @@
                         <pre id="apaCitation">Van de Wynckel, M.: &quot;Indoor Navigation by Centralized Tracking&quot;, July 2019</pre>
                         <button class="copy-btn" onclick="copyToClipboard('apaCitation')">Copy</button>
                     </div>
-                    <div id="BibTex" class="tabcontent">
+                    <div id="BibTeX" class="tabcontent">
                         <pre id="bibtexCitation"></pre>
                         <button class="copy-btn" onclick="copyToClipboard('bibtexCitation')">Copy</button>
                     </div>
@@ -206,9 +225,6 @@
 <p>Starting from a comparison of existing positioning techniques, such as beacons or Wi-Fi positioning, this thesis gradually explains how the system can track a smartphone; how both visual and textual navigation instructions are created and the pros and cons of using this system in a hospital environment.</p>
 <p>To achieve the goal of the thesis, first theoretical research was needed to come to a possible solution. Next, the solution was implemented, i.e. software was created. The software implementation shows the feasibility of the positioning approach as well as the navigation approach.</p>
 </p>
-
-            <h2>Citation</h2>
-            <p class="cite" itemprop="citation">Van de Wynckel, M.: &quot;Indoor Navigation by Centralized Tracking&quot;, July 2019</p>
 
             
 
