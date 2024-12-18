@@ -29,13 +29,14 @@
     let touchendX = 0;
 
     function handleGesture() {
-        if (touchendX < touchstartX) {
+        const threshold = 50; // Minimum swipe distance in pixels
+        if (touchendX < touchstartX - threshold) {
             // Swiped left
             document.querySelector('aside.sidebar').classList.remove('open');
             document.querySelector('.content').classList.remove('shifted');
             document.querySelector('.hamburger').classList.remove('active');
         }
-        if (touchendX > touchstartX) {
+        if (touchendX > touchstartX + threshold) {
             // Swiped right
             document.querySelector('aside.sidebar').classList.add('open');
             document.querySelector('.content').classList.add('shifted');

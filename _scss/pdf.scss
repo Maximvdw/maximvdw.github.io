@@ -1,0 +1,12 @@
+@use "sass:color";
+
+@use "includes/variables" as *;
+
+:root {
+    --primary-color: #{ $primary-color };
+    --secondary-color: #{ $secondary-color };
+    --text-color: #FFFFFF;
+    --button-hover-color: #{ color.adjust($primary-color, $lightness: -10%) };
+    --button-active-color: #{ color.adjust($primary-color, $lightness: -20%) };
+    --icon-color: #FFFFFF;
+}

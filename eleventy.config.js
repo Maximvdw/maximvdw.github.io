@@ -25,6 +25,9 @@ export default async function (el) {
     el.addPassthroughCopy("CNAME");
     el.addPassthroughCopy("scripts");
     el.setDataDeepMerge(true);
+    el.addPassthroughCopy({
+        "node_modules/@pdftron/pdfjs-express-viewer/public/": "scripts/lib/webviewer/",
+    });
 
     /* SEO */
     const seoConfig = JSON.parse(fs.readFileSync('./_data/seo.json', 'utf8'));
