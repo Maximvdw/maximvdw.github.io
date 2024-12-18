@@ -85,6 +85,10 @@
     <span></span>
 </div>
 <script>
+    function isOpen() {
+        return document.querySelector('aside.sidebar').classList.contains('open');
+    }
+
     function toggleSidebar() {
         document.querySelector('aside.sidebar').classList.toggle('open');
         document.querySelector('.content').classList.toggle('shifted');
@@ -99,15 +103,15 @@
         const threshold = 50; // Minimum swipe distance in pixels
         if (touchendX < touchstartX - threshold) {
             // Swiped left
-            document.querySelector('aside.sidebar').classList.remove('open');
-            document.querySelector('.content').classList.remove('shifted');
-            document.querySelector('.hamburger').classList.remove('active');
+            if (isOpen()) {
+                toggleSidebar();
+            }
         }
         if (touchendX > touchstartX + threshold) {
             // Swiped right
-            document.querySelector('aside.sidebar').classList.add('open');
-            document.querySelector('.content').classList.add('shifted');
-            document.querySelector('.hamburger').classList.add('active');
+            if (!isOpen()) {
+                toggleSidebar();
+            }
         }
     }
 
