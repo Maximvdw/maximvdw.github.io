@@ -27,6 +27,7 @@ export default async function (el) {
     el.setDataDeepMerge(true);
     el.addPassthroughCopy({
         "node_modules/@pdftron/pdfjs-express-viewer/public/": "scripts/lib/webviewer/",
+        "node_modules/@pdftron/pdfjs-express-viewer/webviewer.min.js": "scripts/lib/webviewer/webviewer.min.js",
     });
 
     /* SEO */
