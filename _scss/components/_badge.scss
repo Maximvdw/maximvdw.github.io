@@ -1,0 +1,77 @@
+@use "../includes/variables" as *;
+
+.badge {
+    display: inline-block;
+    padding: 0.25em 0.4em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+    color: #fff;
+    margin-right: 1em;
+
+    &.badge-primary {
+        background-color: $primary-color;
+    }
+
+    &.badge-secondary {
+        background-color: $secondary-color;
+    }
+
+    &.badge-success {
+        background-color: #28a745;
+    }
+
+    &.badge-danger {
+        background-color: #dc3545;
+    }
+
+    &.badge-warning {
+        background-color: #ffc107;
+        color: #212529;
+    }
+
+    &.badge-info {
+        background-color: #17a2b8;
+    }
+
+    &.badge-light {
+        background-color: #f8f9fa;
+        color: #212529;
+    }
+
+    &.badge-dark {
+        background-color: #343a40;
+    }
+
+    &.badge-conference {
+        background-color: #007bff;
+    }
+
+    &.badge-journal {
+        background-color: #6c757d;
+    }
+
+    &.badge-dataset {
+        background-color: #28a745;
+    }
+
+    &.badge-software {
+        background-color: #17a2b8;
+    }
+
+    &.badge-poster {
+        background-color: #ff5722;
+    }
+
+    &.badge-thesis {
+        background-color: #6f42c1;
+    }
+
+    &.badge-tech-report {
+        background-color: #795548;
+    }
+}

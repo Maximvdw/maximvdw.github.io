@@ -33,7 +33,7 @@
     let touchendX = 0;
 
     function handleGesture() {
-        const threshold = 50; // Minimum swipe distance in pixels
+        const threshold = 100; // Minimum swipe distance in pixels
         if (touchendX < touchstartX - threshold) {
             // Swiped left
             if (isOpen()) {

@@ -16,7 +16,7 @@ import nunjucks from "nunjucks";
 import markdown from 'nunjucks-markdown';
 import markdownItAttrs from 'markdown-it-attrs';
 import pluginPDFEmbed from 'eleventy-plugin-pdfembed';
-import pluginFavicon from "./_scripts/favicon.js";
+import pluginFavicon from "eleventy-plugin-gen-favicons";
 import _ from "lodash";
 
 export default async function (el) {

@@ -5,7 +5,8 @@ author: Maxim Van de Wynckel, Beat Signer
 date: 2020-12-29
 pdf: https://solid.maximvdw.be/publications/openhps-an-open-source-hybrid-positioning-system.pdf
 link: https://arxiv.org/abs/2101.05198
-doi: 10.48550/arXiv.2101.05198
+bib: /publications/2020/vandewynckel2020.bib
+website: https://openhps.org
 publisher: arxiv
 type: tech-report
 github: https://github.com/OpenHPS

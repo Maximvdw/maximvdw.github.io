@@ -44,7 +44,7 @@ eleventyNavigation:
             <img class="postlist-image" alt="{{ post.data.title }}" src="{{ post.data.thumbnail }}" itemprop="image"/>
             <div class="postlist-content">
               <a href="{{ post.url | url }}" class="postlist-link" itemprop="url">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
-              <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+              <span class="badge badge-{{ post.data.type }}">{{ post.data.type }}</span><time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
               <span class="postlist-description" itemprop="description">{{ post.data.excerpt }}</span>
             </div>
           </li>

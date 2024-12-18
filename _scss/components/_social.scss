@@ -1,3 +1,5 @@
+@use "sass:color";
+
 // Define color variables
 $social-colors: (
     mastodon: #6364ff,
@@ -16,8 +18,8 @@ $social-colors: (
 // Mixin for hover effect
 @mixin hover-effect($color) {
     &:hover {
-        background-color: lighten($color, 10%);
-        border-color: lighten($color, 10%);
+        background-color: color.scale($color, $lightness: 10%);
+        border-color: color.scale($color, $lightness: 10%);
     }
 }
 
@@ -53,7 +55,7 @@ a.social-link.academia {
     border: 1px solid black;
     color: black;
     &:hover {
-        background-color: lighten(#fff, 10%);
-        border-color: lighten(black, 10%);
+        background-color: color.scale(#fff, $lightness: 10%);
+        border-color: color.scale(black, $lightness: 10%);
     }
 }

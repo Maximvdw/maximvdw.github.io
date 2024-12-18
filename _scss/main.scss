@@ -7,6 +7,7 @@
 @use "includes/media";
 @use "includes/margin";
 
+@use "components/badge";
 @use "components/cite";
 @use "components/footer";
 @use "components/navigation";
@@ -15,6 +16,7 @@
 @use "components/cv";
 @use "components/filter";
 @use "components/social";
+@use "components/blockquote";
 
 // Either import the header or the sidebar, not both
 // @use "components/header";

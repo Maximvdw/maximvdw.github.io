@@ -5,6 +5,8 @@ import { Cite } from '@citation-js/core';
 import '@citation-js/plugin-doi';
 import '@citation-js/plugin-bibtex';
 import '@citation-js/plugin-csl';
+import * as fs from 'fs';
+import * as path from 'path';
 
 export default function (config, options = defaultOptions) {
     // Loop through each publication (collection) and generate citation information
@@ -16,15 +18,18 @@ export default function (config, options = defaultOptions) {
 }
 
 async function generateCitation(item) {
-    const doi = item.doi;
-    if (doi) {
-        const data = await Cite.async(doi);
-        console.log("Generating citation for", doi);
-        const bibtex = data.format('bibtex');
+    const bib = item.bib;
+    if (bib) {
+        // Get bibtex data from bib path
+        const __dirname = path.dirname(new URL(import.meta.url).pathname);
+        const data = fs.readFileSync(path.join(__dirname, "..", bib), 'utf8');
+        const citation = await Cite.async(data, { forceType: '@bibtex/text' });
+        console.log("Generating citation for", bib);
+        const bibtex = citation.format('bibtex');
         item.bibtex = bibtex;
 
         // Format output
-        const apa = data.format('bibliography', {
+        const apa = citation.format('bibliography', {
             format: 'text',
             template: 'apa',
             lang: 'en-US'

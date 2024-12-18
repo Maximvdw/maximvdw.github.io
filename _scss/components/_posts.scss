@@ -20,14 +20,14 @@
 .postlist-item:before {
     font-size: 0.8125em; /* 13px /16 */
     color: rgb(158, 158, 158);
-    display: block;
+    display: inline-block;
 }
 .postlist-date {
     word-spacing: -0.5px;
 }
 .postlist-link {
     padding-bottom: 0.15em;
-    display: inline-block;
+    display: block;
 }
 .postlist-item-active .postlist-link {
     font-weight: bold;
