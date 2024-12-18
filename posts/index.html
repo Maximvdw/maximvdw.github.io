@@ -38,13 +38,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
     
-    <link type="application/atom+xml" title="OpenHPS News Posts" rel="alternate" href="https://maximvdw.be/feed.xml" title="" >
+    <link type="application/atom+xml" title="Maxim Van de Wynckel" rel="alternate" href="https://maximvdw.be/feed.xml" title="" >
 
     
-<link rel="icon" href="/favicon.ico">
-
+<link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    
+<link rel="manifest" href="/manifest.webmanifest">
+
     <meta name="theme-color" content="#284cb5">
 
     <!-- Google tag (gtag.js) -->
@@ -100,7 +100,7 @@
     let touchendX = 0;
 
     function handleGesture() {
-        const threshold = 50; // Minimum swipe distance in pixels
+        const threshold = 100; // Minimum swipe distance in pixels
         if (touchendX < touchstartX - threshold) {
             // Swiped left
             if (isOpen()) {
@@ -134,11 +134,11 @@
         <ol reversed class="postlist">
         
           <li class="postlist-item">
-            <img class="postlist-image" alt="FOSDEM 2025" src=""/>
+            <img class="postlist-image" alt="FOSDEM 2025: Discovering indoor environments and positioning systems" src="/posts/2024/12/18.png"/>
             <div class="postlist-content">
-              <a href="/posts/2024/12/15/" class="postlist-link">FOSDEM 2025</a>
-              <time class="postlist-date" datetime="2024-12-17">Tuesday, 17 Dec 2024</time>
-              <span class="postlist-description">I will be presenting at FOSDEM 2025!</span>
+              <a href="/posts/2024/12/18/" class="postlist-link">FOSDEM 2025: Discovering indoor environments and positioning systems</a>
+              <time class="postlist-date" datetime="2024-12-18">Wednesday, 18 Dec 2024</time>
+              <span class="postlist-description">Ever gotten lost in a building and wished for a navigation system but did not know where to find it? Discover how we can retrieve data from a building at FOSDEM 2025.</span>
             </div>
           </li>
         

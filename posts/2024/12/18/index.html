@@ -5,26 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>FOSDEM 2025 | Maxim Van de Wynckel</title>
+    <title>FOSDEM 2025: Discovering indoor environments and positioning systems | Maxim Van de Wynckel</title>
 
-<meta name="description" content="I will be presenting at FOSDEM 2025!">
+<meta name="description" content="Ever gotten lost in a building and wished for a navigation system but did not know where to find it? Discover how we can retrieve data from a building at FOSDEM 2025.">
 <meta name="robots" content="index,follow">
 <meta name="author" content="Maxim Van de Wynckel">
 
-<link rel="canonical" href="https://maximvdw.be/posts/2024/12/15/">
+<link rel="canonical" href="https://maximvdw.be/posts/2024/12/18/">
 
-<meta property="og:title" content="FOSDEM 2025 | Maxim Van de Wynckel">
+<meta property="og:title" content="FOSDEM 2025: Discovering indoor environments and positioning systems | Maxim Van de Wynckel">
 <meta property="og:type" content="article">
 
-<meta property="og:url" content="https://maximvdw.be/posts/2024/12/15/">
-<meta property="og:description" content="I will be presenting at FOSDEM 2025!">
+<meta property="og:url" content="https://maximvdw.be/posts/2024/12/18/">
+<meta property="og:description" content="Ever gotten lost in a building and wished for a navigation system but did not know where to find it? Discover how we can retrieve data from a building at FOSDEM 2025.">
 <meta property="og:image" content="https://maximvdw.be/images/social/summary-large.png">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@MVdWSoftware">
-<meta name="twitter:url" content="https://maximvdw.be/posts/2024/12/15/">
-<meta name="twitter:title" content="FOSDEM 2025 | Maxim Van de Wynckel">
-<meta name="twitter:description" content="I will be presenting at FOSDEM 2025!">
+<meta name="twitter:url" content="https://maximvdw.be/posts/2024/12/18/">
+<meta name="twitter:title" content="FOSDEM 2025: Discovering indoor environments and positioning systems | Maxim Van de Wynckel">
+<meta name="twitter:description" content="Ever gotten lost in a building and wished for a navigation system but did not know where to find it? Discover how we can retrieve data from a building at FOSDEM 2025.">
 <meta name="twitter:image" content="https://maximvdw.be/images/social/summary-large.png">
 
 
@@ -38,13 +38,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
     
-    <link type="application/atom+xml" title="OpenHPS News Posts" rel="alternate" href="https://maximvdw.be/feed.xml" title="" >
+    <link type="application/atom+xml" title="Maxim Van de Wynckel" rel="alternate" href="https://maximvdw.be/feed.xml" title="" >
 
     
-<link rel="icon" href="/favicon.ico">
-
+<link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    
+<link rel="manifest" href="/manifest.webmanifest">
+
     <meta name="theme-color" content="#284cb5">
 
     <!-- Google tag (gtag.js) -->
@@ -100,7 +100,7 @@
     let touchendX = 0;
 
     function handleGesture() {
-        const threshold = 50; // Minimum swipe distance in pixels
+        const threshold = 100; // Minimum swipe distance in pixels
         if (touchendX < touchstartX - threshold) {
             // Swiped left
             if (isOpen()) {
@@ -136,7 +136,7 @@
           <ul>
             
               <li class="selected">
-                <a href="/posts/2024/12/15/" class="current">Tuesday, 17 Dec 2024</a>
+                <a href="/posts/2024/12/18/" class="current">Wednesday, 18 Dec 2024</a>
               </li>
             
           </ul>
@@ -144,9 +144,10 @@
       </nav>
     </div>
     <div class="col-sm-10 typography">
-      <h1>FOSDEM 2025</h1>
+      <h1>FOSDEM 2025: Discovering indoor environments and positioning systems</h1>
 
-      
+      <p>Have you ever gotten lost in a building and wished they had some sort of navigation system or at least a floor plan? I have, unfortunately, and it was only later that I realised that not only they had a floor plan online - but they had a navigation app for that building. The reality is that a user who is not familiar with a building will not find such an app until it's too late. Indoor environments sometimes have public floorplans available via some service. Similarly, more and more indoor positioning systems are being deployed in buildings to provide navigation services or asset tracking. However, as a person visiting a building, you are often not aware that these services exist or where to find them. Even if some global registry exists to discover this data, it is often proprietary, discouraging developers from interfacing with such systems. I want to bring a shift into the landscape of indoor positioning systems and services and solve this! In this presentation, I will talk about discovering indoor environments and positioning systems through local and global discovery methods, linked data and personal data vaults. How nice would it be, that instead of downloading the FOSDEM app, you simply use Google Maps or any open-source navigation application to find the location of this talk?</p>
+
 
       <hr>
       <ul>
