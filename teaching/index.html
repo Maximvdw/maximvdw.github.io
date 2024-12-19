@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Teaching | Maxim Van de Wynckel</title>
+
+<meta name="description" content="Maxim Van de Wynckel&apos;s personal website">
+<meta name="robots" content="index,follow">
+<meta name="author" content="Maxim Van de Wynckel">
+
+<link rel="canonical" href="https://maximvdw.be/teaching/">
+
+<meta property="og:title" content="Teaching | Maxim Van de Wynckel">
+<meta property="og:type" content="article">
+
+<meta property="og:url" content="https://maximvdw.be/teaching/">
+<meta property="og:description" content="Maxim Van de Wynckel&apos;s personal website">
+<meta property="og:image" content="https://maximvdw.be/images/social/summary-large.png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@MVdWSoftware">
+<meta name="twitter:url" content="https://maximvdw.be/teaching/">
+<meta name="twitter:title" content="Teaching | Maxim Van de Wynckel">
+<meta name="twitter:description" content="Maxim Van de Wynckel&apos;s personal website">
+<meta name="twitter:image" content="https://maximvdw.be/images/social/summary-large.png">
+
+
+
+    <meta name="keywords" content="maxim van de wynckel, researcher, indoor positioning, navigation systems, interoperability, linked data, semantic web, location-based services">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="/css/main.css?version=">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+    
+    <link type="application/atom+xml" title="Maxim Van de Wynckel" rel="alternate" href="https://maximvdw.be/feed.xml" title="" >
+
+    
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+
+    <meta name="theme-color" content="#284cb5">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BQZFG2FMWN"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-BQZFG2FMWN');
+    </script>
+</head>
+
+
+  <body>
+    
+    <aside class="sidebar">
+    <div class="profile">
+        <a href="/"><img src="/images/profile/maxim2.jpg" alt="Maxim Van de Wynckel"></a>
+        <div class="firstname">Maxim</div>
+        <div class="lastname">Van de Wynckel</div>
+        <div class="bio">Researcher, consultant, software engineer</div>
+    </div>
+    <ul class="menu">
+        
+        
+        <li><a  href="/about/">About me</a></li>
+        
+        <li><a  href="/posts/">Blog</a></li>
+        
+        <li><a  href="/publications/">Publications</a></li>
+        
+        <li><a class="active" href="/teaching/">Teaching</a></li>
+        
+    </ul>
+</aside>
+<div class="hamburger" onclick="toggleSidebar()">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<script>
+    function isOpen() {
+        return document.querySelector('aside.sidebar').classList.contains('open');
+    }
+
+    function toggleSidebar() {
+        document.querySelector('aside.sidebar').classList.toggle('open');
+        document.querySelector('.content').classList.toggle('shifted');
+        document.querySelector('footer').classList.toggle('shifted');
+        document.querySelector('.hamburger').classList.toggle('active');
+    }
+
+    let touchstartX = 0;
+    let touchendX = 0;
+
+    function handleGesture() {
+        const threshold = 100; // Minimum swipe distance in pixels
+        if (touchendX < touchstartX - threshold) {
+            // Swiped left
+            if (isOpen()) {
+                toggleSidebar();
+            }
+        }
+        if (touchendX > touchstartX + threshold) {
+            // Swiped right
+            if (!isOpen()) {
+                toggleSidebar();
+            }
+        }
+    }
+
+    document.addEventListener('touchstart', function(event) {
+        touchstartX = event.changedTouches[0].screenX;
+    }, false);
+
+    document.addEventListener('touchend', function(event) {
+        touchendX = event.changedTouches[0].screenX;
+        handleGesture();
+    }, false);
+</script>
+
+    <section class="content" id="content">
+      
+<div class="container main">
+  <div class="row">
+    <div class="col-sm-12 typography">
+        <blockquote>
+<p>I am currently a <strong>full-time teaching assistant</strong> at the Vrije Universiteit Brussel. I have taught several courses and supervised bachelor and master theses. Below you can find an overview of the courses I have taught and the theses I have supervised.
+In total, I have spend more than <strong>4000 hours</strong> teaching, preparing course material and supervising thesis students.</p>
+
+</blockquote>
+
+<h1>Courses</h1>
+<ul class="teaching">
+    
+    <li itemscope itemtype="http://schema.org/Course">
+        <div class="year">
+            <span class="start">2019</span>
+            <span class="end">2025</span>
+        </div>
+        <div class="details">
+            <h2 itemprop="name">Next Generation User Interfaces</h2><span class="code" itemprop="courseCode">4018166FNR</span>
+            <p><strong>Level:</strong> <span itemprop="educationalLevel">master</span></p>
+            <p class="description" itemprop="description">Teaching hardware development, micro-controllers, Human-Computer Interaction and user-centered design. Guiding students in the design and development of group projects.</p>
+        </div>
+    </li>
+    
+    <li itemscope itemtype="http://schema.org/Course">
+        <div class="year">
+            <span class="start">2019</span>
+            <span class="end">2025</span>
+        </div>
+        <div class="details">
+            <h2 itemprop="name">Web Technologies</h2><span class="code" itemprop="courseCode">1019888BNR</span>
+            <p><strong>Level:</strong> <span itemprop="educationalLevel">bachelor</span></p>
+            <p class="description" itemprop="description">Basic Web technologies, social web, search algorithms, Semantic Web and security. Guiding students in the design and development of group projects.</p>
+        </div>
+    </li>
+    
+    <li itemscope itemtype="http://schema.org/Course">
+        <div class="year">
+            <span class="start">2019</span>
+            <span class="end">2023</span>
+        </div>
+        <div class="details">
+            <h2 itemprop="name">Web Technologies</h2><span class="code" itemprop="courseCode">4019862ANR</span>
+            <p><strong>Level:</strong> <span itemprop="educationalLevel">master</span></p>
+            <p class="description" itemprop="description">Basic Web technologies, social web, search algorithms, Semantic Web and security.</p>
+        </div>
+    </li>
+    
+    <li itemscope itemtype="http://schema.org/Course">
+        <div class="year">
+            <span class="start">2019</span>
+            <span class="end">2025</span>
+        </div>
+        <div class="details">
+            <h2 itemprop="name">Databanken</h2><span class="code" itemprop="courseCode">1007156ANR</span>
+            <p><strong>Level:</strong> <span itemprop="educationalLevel">bachelor</span></p>
+            <p class="description" itemprop="description">ER modelling, relational algebra, normalisation, transactions, SQL and other related topics.</p>
+        </div>
+    </li>
+    
+    <li itemscope itemtype="http://schema.org/Course">
+        <div class="year">
+            <span class="start">2019</span>
+            <span class="end">2022</span>
+        </div>
+        <div class="details">
+            <h2 itemprop="name">Databases</h2><span class="code" itemprop="courseCode">4019814ENR</span>
+            <p><strong>Level:</strong> <span itemprop="educationalLevel">master</span></p>
+            <p class="description" itemprop="description">ER modelling, relational algebra, normalisation, transactions, SQL and other related topics.</p>
+        </div>
+    </li>
+    
+    <li itemscope itemtype="http://schema.org/Course">
+        <div class="year">
+            <span class="start">2021</span>
+            <span class="end">2022</span>
+        </div>
+        <div class="details">
+            <h2 itemprop="name">Advanced Topics in Big Data</h2><span class="code" itemprop="courseCode">4023256FNR</span>
+            <p><strong>Level:</strong> <span itemprop="educationalLevel">master</span></p>
+            <p class="description" itemprop="description">Guiding students in preparing reviews on scientific papers related to indoor positioning systems and presenting these papers.</p>
+        </div>
+    </li>
+    
+    <li itemscope itemtype="http://schema.org/Course">
+        <div class="year">
+            <span class="start">2019</span>
+            <span class="end">2021</span>
+        </div>
+        <div class="details">
+            <h2 itemprop="name">Advanced Topics in Information Systems</h2><span class="code" itemprop="courseCode">4016792ENR</span>
+            <p><strong>Level:</strong> <span itemprop="educationalLevel">master</span></p>
+            <p class="description" itemprop="description">Guiding students in preparing reviews on scientific papers related to indoor positioning systems and presenting these papers.</p>
+        </div>
+    </li>
+    
+    <li itemscope itemtype="http://schema.org/Course">
+        <div class="year">
+            <span class="start">2019</span>
+            <span class="end">2021</span>
+        </div>
+        <div class="details">
+            <h2 itemprop="name">Information Visualisation</h2><span class="code" itemprop="courseCode">4019538FNR</span>
+            <p><strong>Level:</strong> <span itemprop="educationalLevel">master</span></p>
+            <p class="description" itemprop="description">Information visualisation techniques and frameworks. Web-based visualisation applications.</p>
+        </div>
+    </li>
+    
+    <li itemscope itemtype="http://schema.org/Course">
+        <div class="year">
+            <span class="start">2019</span>
+            <span class="end">2021</span>
+        </div>
+        <div class="details">
+            <h2 itemprop="name">Open Information Systems</h2><span class="code" itemprop="courseCode">4020612FNW</span>
+            <p><strong>Level:</strong> <span itemprop="educationalLevel">master</span></p>
+            <p class="description" itemprop="description">Semantic Web, SPARQL querying, ontology design and validation, and other related topics.</p>
+        </div>
+    </li>
+    
+</ul>
+
+<h1>Supervised Bachelor and Master Theses</h1>
+<ul class="teaching">
+    
+    <li itemscope itemtype="http://schema.org/Thesis">
+        <div class="year">
+            <span class="start">2023</span>
+            <span class="end">2024</span>
+        </div>
+        <div class="details">
+            <h2 itemprop="name">LiDAR Indoor Map Matching for Autonomous Robots</h2>
+            <p><strong>Student:</strong> <a class="person" rel="nofollow" href="https://www.linkedin.com/in/jordan-shittu-a52b80258/" itemprop="author">Jordan Shittu</a></p>
+            <p><strong>Grade:</strong> bachelor</p>
+            <strong>Supervisors:</strong>
+            <ul class="supervisors">
+                
+                <li><a class="person" rel="nofollow" href="https://beatsigner.com" itemprop="supervisor">Prof. Dr. Beat Signer</a></li>
+                
+                <li><a class="person" rel="nofollow" href="https://maximvdw.be" itemprop="supervisor">Maxim Van de Wynckel</a></li>
+                
+            </ul>
+            <p><a href="https://wise.vub.ac.be/thesis/lidar-indoor-map-matching-autonomous-robots" itemprop="url">More details ...</a></p>
+        </div>
+    </li>
+    
+    <li itemscope itemtype="http://schema.org/Thesis">
+        <div class="year">
+            <span class="start">2022</span>
+            <span class="end">2023</span>
+        </div>
+        <div class="details">
+            <h2 itemprop="name">Identifying Devices Based on MAC Layer Properties</h2>
+            <p><strong>Student:</strong> <a class="person" rel="nofollow" href="https://www.linkedin.com/in/benjaminver/" itemprop="author">Benjamin Vermunicht</a></p>
+            <p><strong>Grade:</strong> master</p>
+            <strong>Supervisors:</strong>
+            <ul class="supervisors">
+                
+                <li><a class="person" rel="nofollow" href="https://beatsigner.com" itemprop="supervisor">Prof. Dr. Beat Signer</a></li>
+                
+                <li><a class="person" rel="nofollow" href="https://maximvdw.be" itemprop="supervisor">Maxim Van de Wynckel</a></li>
+                
+            </ul>
+            <p><a href="https://wise.vub.ac.be/index.php/thesis/identifying-devices-based-mac-layer-properties" itemprop="url">More details ...</a></p>
+        </div>
+    </li>
+    
+    <li itemscope itemtype="http://schema.org/Thesis">
+        <div class="year">
+            <span class="start">2022</span>
+            <span class="end">2023</span>
+        </div>
+        <div class="details">
+            <h2 itemprop="name">Heuristic Real-Time Trajectory Prediction Using Spatio-temporal Databases</h2>
+            <p><strong>Student:</strong> <a class="person" rel="nofollow" href="https://www.linkedin.com/in/ahmed-barhdadi-07510a183/" itemprop="author">Ahmed Barhdadi</a></p>
+            <p><strong>Grade:</strong> master</p>
+            <strong>Supervisors:</strong>
+            <ul class="supervisors">
+                
+                <li><a class="person" rel="nofollow" href="https://beatsigner.com" itemprop="supervisor">Prof. Dr. Beat Signer</a></li>
+                
+                <li><a class="person" rel="nofollow" href="https://maximvdw.be" itemprop="supervisor">Maxim Van de Wynckel</a></li>
+                
+            </ul>
+            <p><a href="https://wise.vub.ac.be/thesis/heuristic-real-time-trajectory-prediction-using-spatio-temporal-databases" itemprop="url">More details ...</a></p>
+        </div>
+    </li>
+    
+    <li itemscope itemtype="http://schema.org/Thesis">
+        <div class="year">
+            <span class="start">2022</span>
+            <span class="end">2023</span>
+        </div>
+        <div class="details">
+            <h2 itemprop="name">Location Tracking on a Physical Game Board</h2>
+            <p><strong>Student:</strong> <a class="person" rel="nofollow" href="https://www.linkedin.com/in/nathan-hoebeke-703551235/" itemprop="author">Nathan Hoebeke</a></p>
+            <p><strong>Grade:</strong> bachelor</p>
+            <strong>Supervisors:</strong>
+            <ul class="supervisors">
+                
+                <li><a class="person" rel="nofollow" href="https://beatsigner.com" itemprop="supervisor">Prof. Dr. Beat Signer</a></li>
+                
+                <li><a class="person" rel="nofollow" href="https://maximvdw.be" itemprop="supervisor">Maxim Van de Wynckel</a></li>
+                
+            </ul>
+            <p><a href="https://wise.vub.ac.be/thesis/location-tracking-physical-game-board" itemprop="url">More details ...</a></p>
+        </div>
+    </li>
+    
+    <li itemscope itemtype="http://schema.org/Thesis">
+        <div class="year">
+            <span class="start">2022</span>
+            <span class="end">2023</span>
+        </div>
+        <div class="details">
+            <h2 itemprop="name">End-User Authoring for Location-based Implicit Human-Computer Interaction</h2>
+            <p><strong>Student:</strong> <a class="person" rel="nofollow" href="https://www.linkedin.com/in/stoffel-oostvogels-9244481b7/" itemprop="author">Stoffel Oostvogels</a></p>
+            <p><strong>Grade:</strong> bachelor</p>
+            <strong>Supervisors:</strong>
+            <ul class="supervisors">
+                
+                <li><a class="person" rel="nofollow" href="https://beatsigner.com" itemprop="supervisor">Prof. Dr. Beat Signer</a></li>
+                
+                <li><a class="person" rel="nofollow" href="https://maximvdw.be" itemprop="supervisor">Maxim Van de Wynckel</a></li>
+                
+            </ul>
+            <p><a href="https://wise.vub.ac.be/index.php/thesis/end-user-authoring-location-based-implicit-human-computer-interaction" itemprop="url">More details ...</a></p>
+        </div>
+    </li>
+    
+    <li itemscope itemtype="http://schema.org/Thesis">
+        <div class="year">
+            <span class="start">2020</span>
+            <span class="end">2021</span>
+        </div>
+        <div class="details">
+            <h2 itemprop="name">Wi-Fi Fingerprinting: Signal Visualisation and Crowd-sourcing</h2>
+            <p><strong>Student:</strong> <a class="person" rel="nofollow" href="https://www.linkedin.com/in/ahmed-barhdadi-07510a183/" itemprop="author">Ahmed Barhdadi</a></p>
+            <p><strong>Grade:</strong> bachelor</p>
+            <strong>Supervisors:</strong>
+            <ul class="supervisors">
+                
+                <li><a class="person" rel="nofollow" href="https://beatsigner.com" itemprop="supervisor">Prof. Dr. Beat Signer</a></li>
+                
+                <li><a class="person" rel="nofollow" href="https://maximvdw.be" itemprop="supervisor">Maxim Van de Wynckel</a></li>
+                
+            </ul>
+            <p><a href="https://wise.vub.ac.be/thesis/wi-fi-fingerprinting-signal-visualisation-and-crowdsourcing" itemprop="url">More details ...</a></p>
+        </div>
+    </li>
+    
+    <li itemscope itemtype="http://schema.org/Thesis">
+        <div class="year">
+            <span class="start">2020</span>
+            <span class="end">2021</span>
+        </div>
+        <div class="details">
+            <h2 itemprop="name">Indoor Positioning by Visible Light Communication</h2>
+            <p><strong>Student:</strong> <a class="person" rel="nofollow" href="https://www.linkedin.com/in/ronald-michiels-706795115/" itemprop="author">Ronald Michiels</a></p>
+            <p><strong>Grade:</strong> master</p>
+            <strong>Supervisors:</strong>
+            <ul class="supervisors">
+                
+                <li><a class="person" rel="nofollow" href="https://beatsigner.com" itemprop="supervisor">Prof. Dr. Beat Signer</a></li>
+                
+                <li><a class="person" rel="nofollow" href="https://maximvdw.be" itemprop="supervisor">Maxim Van de Wynckel</a></li>
+                
+            </ul>
+            <p><a href="https://researchportal.vub.be/en/publications/indoor-positioning-by-visible-light-communication" itemprop="url">More details ...</a></p>
+        </div>
+    </li>
+    
+    <li itemscope itemtype="http://schema.org/Thesis">
+        <div class="year">
+            <span class="start">2020</span>
+            <span class="end">2021</span>
+        </div>
+        <div class="details">
+            <h2 itemprop="name">Anonymous Contact Tracing Fusion</h2>
+            <p><strong>Student:</strong> <a class="person" rel="nofollow" href="https://www.linkedin.com/in/yassinebouagaz/" itemprop="author">Yassine Bouagaz</a></p>
+            <p><strong>Grade:</strong> master</p>
+            <strong>Supervisors:</strong>
+            <ul class="supervisors">
+                
+                <li><a class="person" rel="nofollow" href="https://beatsigner.com" itemprop="supervisor">Prof. Dr. Beat Signer</a></li>
+                
+                <li><a class="person" rel="nofollow" href="https://maximvdw.be" itemprop="supervisor">Maxim Van de Wynckel</a></li>
+                
+            </ul>
+            <p><a href="https://researchportal.vub.be/en/publications/anonymous-contact-tracing-fusion-2" itemprop="url">More details ...</a></p>
+        </div>
+    </li>
+    
+    <li itemscope itemtype="http://schema.org/Thesis">
+        <div class="year">
+            <span class="start">2020</span>
+            <span class="end">2021</span>
+        </div>
+        <div class="details">
+            <h2 itemprop="name">Comparison of SLAM Solutions with Exclusive Usage of LIDAR Observation Data</h2>
+            <p><strong>Student:</strong> <a class="person" rel="nofollow" href="https://www.linkedin.com/in/ben-bergs-724a8174/" itemprop="author">Ben Bergs</a></p>
+            <p><strong>Grade:</strong> master</p>
+            <strong>Supervisors:</strong>
+            <ul class="supervisors">
+                
+                <li><a class="person" rel="nofollow" href="https://beatsigner.com" itemprop="supervisor">Prof. Dr. Beat Signer</a></li>
+                
+                <li><a class="person" rel="nofollow" href="https://maximvdw.be" itemprop="supervisor">Maxim Van de Wynckel</a></li>
+                
+            </ul>
+            <p><a href="https://researchportal.vub.be/en/publications/comparison-of-slam-solutions-with-exclusive-usage-of-lidar-observ" itemprop="url">More details ...</a></p>
+        </div>
+    </li>
+    
+    <li itemscope itemtype="http://schema.org/Thesis">
+        <div class="year">
+            <span class="start">2020</span>
+            <span class="end">2021</span>
+        </div>
+        <div class="details">
+            <h2 itemprop="name">Design Guidelines for IoT Systems in Smart Companies</h2>
+            <p><strong>Student:</strong> <a class="person" rel="nofollow" href="https://www.linkedin.com/in/jeroen-gr%C3%A9goire-36738532/" itemprop="author">Jeroen Grégoire</a></p>
+            <p><strong>Grade:</strong> master</p>
+            <strong>Supervisors:</strong>
+            <ul class="supervisors">
+                
+                <li><a class="person" rel="nofollow" href="https://beatsigner.com" itemprop="supervisor">Prof. Dr. Beat Signer</a></li>
+                
+                <li><a class="person" rel="nofollow" href="https://maximvdw.be" itemprop="supervisor">Maxim Van de Wynckel</a></li>
+                
+            </ul>
+            <p><a href="https://researchportal.vub.be/en/publications/design-guidelines-for-iot-systems-in-smart-companies" itemprop="url">More details ...</a></p>
+        </div>
+    </li>
+    
+</ul>
+
+
+    </div>
+  </div>
+</div>
+
+    </section>
+
+    <footer>
+    <div class="social">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <ul class="social-links">
+                        <li><a href="https://mas.to/@maximvdw" rel="me" target="_blank"><i class="fab fa-mastodon"></i></a></li>
+                        <li><a href="https://github.com/Maximvdw" rel="me" target="_blank"><i class="fab fa-github"></i></a></li>
+                        <li><a href="mailto:me@maximvdw.be"><i class="fas fa-envelope"></i></a></li>
+                        <li><a href="https://twitter.com/MVdWSoftware" rel="me" target="_blank"><i class="fab fa-x-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        &copy; Copyright 2024 - 2025
+    </div>
+</footer>
+
+  </body>
+</html>
