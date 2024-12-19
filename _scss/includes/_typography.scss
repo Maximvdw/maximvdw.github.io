@@ -24,7 +24,6 @@ body p {
 
 .typography h1 {
     position: relative;
-    left: -3px;
     font-weight: 400;
     font-size: 2em;
     color: $primary-color;
@@ -34,20 +33,16 @@ body p {
 
 .typography h2 {
     position: relative;
-    left: -2px;
-    font-weight: 300;
     font-size: 1.5em;
-    color: $secondary-color;
-    margin: 1em 0 0.5em 0;
+    color: $primary-color;
+    margin: 0.4em 0 0.4em 0;
 }
 
 .typography h3 {
     position: relative;
-    left: -2px;
-    font-weight: 300;
     font-size: 1.17em;
     color: $secondary-color;
-    margin: 1em 0 0.5em 0;
+    margin: 0.4em 0 0.4em 0;
 }
 
 .typography p {

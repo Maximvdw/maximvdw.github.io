@@ -1,0 +1,24 @@
+{
+    "firstName": "Maxim",
+    "lastName": "Van de Wynckel",
+    "name": "Maxim Van de Wynckel",
+    "birthPlace": {
+        "city": "Antwerp (Wilrijk)",
+        "country": "Belgium"
+    },
+    "email": {
+        "academic": "maxim.van.de.wynckel@vub.be",
+        "work": "maxim@mvdw-software.com",
+        "personal": "me@maximvdw.be"
+    },
+    "phone": {
+        "work": "+32 472 57 79 00",
+        "mobile": "+32 489 86 18 48"
+    },
+    "address": {
+        "street": "Invalidenlaan 178/5",
+        "city": "Oudergem",
+        "postalCode": "1160",
+        "country": "Belgium"
+    }
+}

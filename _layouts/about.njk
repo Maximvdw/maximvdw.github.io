@@ -100,7 +100,7 @@ layout: main.njk
 <div class="row">
   <div class="col-sm-6">
     <section class="cv-section">
-      <h1>Education</h1>
+      <h2>Education</h2>
       <div class="education">
         {%- for entry in education %}
         <div class="education-item">
@@ -126,18 +126,18 @@ layout: main.njk
   </div>
   <div class="col-sm-6">
     <section class="cv-section">
-      <h1>Experience</h1>
+      <h2>Experience</h2>
       <div class="employment">
         {%- for entry in experience %}
         <div class="employment-item">
           <img
-            src="{{ entry.icon }}"
-            alt="{{ entry.company }} Logo"
+            src="{{ entry.company.icon }}"
+            alt="{{ entry.company.name }} Logo"
             class="logo"
           />
           <div class="details">
-            <h3>{{ entry.company }}</h3>
-            <h4>{{ entry.title }}</h4>
+            <h3>{{ entry.company.name }}</h3>
+            <h4>{{ entry.title }}{% if entry.note %} <small>({{ entry.note }})</small>{% endif %}</h4>
             <div class="year">
               <time>{{ entry.start }}</time> - <time>{{ entry.end }}</time>
             </div>

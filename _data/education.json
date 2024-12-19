@@ -4,7 +4,7 @@
         "icon": "/images/logo/vub-logo_square.svg",
         "degree": "PhD, Computer Science",
         "start": "2019",
-        "end": "present",
+        "end": "now",
         "location": "Brussels, Belgium",
         "url": "https://wise.vub.ac.be/member/maxim-van-de-wynckel",
         "grade": "",
@@ -20,7 +20,7 @@
         "url": "https://www.vub.be/en",
         "grade": "Great Distinction",
         "thesis": "/publications/2019/thesis",
-        "description": "Parallelism, distributed systems, multicore programming (Java, Erlang and GPU with OpenCL), software security and Indoor navigation master thesis"
+        "description": "Parallelism, distributed systems, multicore programming (Java, Erlang and GPU with OpenCL), software security and Indoor navigation master thesis."
     }, {
         "university": "Vrije Universiteit Brussel",
         "icon": "/images/logo/vub-logo_square.svg",
@@ -31,17 +31,18 @@
         "url": "https://www.vub.be/en",
         "grade": "",
         "thesis": "",
-        "description": ""
+        "description": "Bridging program from professional bachelor to academic bachelor."
     }, {
         "university": "Erasmushogeschool Brussel",
         "icon": "/images/logo/ehb-logo_square.svg",
         "degree": "Bachelor (Ba), Applied Computer Science",
+        "specialization": "Software Engineering",
         "start": "2013",
         "end": "2016",
         "location": "Brussels, Belgium",
         "url": "https://www.erasmushogeschool.be/en",
         "grade": "Great Distinction",
         "thesis": "",
-        "description": "Software Security, Software Development (Java, C++, C#, Objective-C), Agile development"
+        "description": "Software Security, Software Development (Java, C++, C#, Objective-C), Agile development."
     }
 ]

@@ -13,7 +13,8 @@
                 "dbaeumer.vscode-eslint",
                 "esbenp.prettier-vscode",
                 "syler.sass-indented",
-                "guapibai.nunjucks-prettier"
+                "guapibai.nunjucks-prettier",
+                "jock.svg"
             ]
         }
     },

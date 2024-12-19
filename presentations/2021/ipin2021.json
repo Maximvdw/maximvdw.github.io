@@ -1,0 +1,13 @@
+{
+    "layout": "presentation.njk",
+    "title": "Indoor Positioning Using the OpenHPS Framework",
+    "author": "Maxim Van de Wynckel",
+    "date": "2019-07-01",
+    "venue": "IPIN 2021",
+    "type": "conference",
+    "event": "https://ipin-conference.org/2021/",
+    "video": "https://youtu.be/fMFZu4Z49SU",
+    "slides": "https://openhps.org/slides/ipin2021",
+    "thumbnail": "/presentations/2021/ipin2021.gif",
+    "publication": "/publications/2021/ipin2021"
+}

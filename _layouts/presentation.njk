@@ -1,0 +1,24 @@
+---
+layout: default.njk
+---
+<div class="container main">
+    <div class="row">
+        <div class="col-sm-3 mobile-hide">
+            <nav class="navigation">
+            {% for year, posts in collections.publications_year %}
+                <h3>{{ year }}</h3>
+                <ul>
+                {% for post in posts | reverse %}
+                    <li {% if page.url == post.url %}class="selected"{% endif %}>
+                    <a href="{{ post.url }}" {% if page.url == post.url %}class="current"{% endif %}>{{ post.data.title }}</a>
+                    </li>
+                {% endfor %}
+                </ul>
+            {% endfor %}
+            </nav>
+        </div>
+        <div class="col-sm-9 typography">
+            <h1 itemprop="headline">{{ title }}</h1>
+        </div>
+    </div>
+</div>

@@ -1,17 +1,72 @@
 [
     {
         "title": "Teaching Assistant and Researcher",
-        "company": "Vrije Universiteit Brussel",
-        "icon": "/images/logo/vub-logo_square.svg",
+        "company": {
+            "name": "Vrije Universiteit Brussel",
+            "url": "https://vub.be",
+            "icon": "/images/logo/vub-logo_square.svg"
+        },
         "start": "2019",
-        "end": "present",
-        "description": ""
+        "end": "now",
+        "description": "6-year Ph.D grant on indoor positioning and interoperability. Teaching assistant for various Bachelor and Master courses."
     }, {
-        "title": "Independent professional (self-employed)",
-        "company": "MVdW-Software",
-        "icon": "/images/logo/mvdw-logo.svg",
+        "title": "Independent professional",
+        "company": {
+            "name": "MVdW-Software",
+            "url": "https://mvdw-software.com",
+            "icon": "/images/logo/mvdw-logo.svg"
+        },
+        "note": "self-employed",
         "start": "2019",
-        "end": "present",
-        "description": ""
+        "end": "now",
+        "description": "Freelance software development and consultancy. Projects spanning from web development to IoT and AI implementation in business processes."
+    }, {
+        "title": "Software Engineer",
+        "student": true,
+        "note": "student job",
+        "company": {
+            "name": "ChemStream BV.",
+            "url": "https://chemstream.be",
+            "icon": "/images/logo/chemstream-logo.svg"
+        },
+        "start": "2014",
+        "end": "2018",
+        "description": "Development and design of chemical database software."
+    }, {
+        "title": "Software Developer Internship",
+        "student": true,
+        "note": "student job",
+        "company": {
+            "name": "UZ Brussel",
+            "url": "https://uzbrussel.be/",
+            "icon": "/images/logo/uzbrussel-logo.png"
+        },
+        "start": "Feb 2016",
+        "end": "May 2016",
+        "description": "Development of QR-code based appointment system. Google Fit integration for patients. Healthcare software development."
+    }, {
+        "title": "Software Developer",
+        "student": true,
+        "note": "student job",
+        "company": {
+            "name": "BITPOWER BV.",
+            "url": "https://www.nieuwsblad.be/cnt/dmf20150604_01714431",
+            "icon": "/images/logo/bitpower-logo.jpg"
+        },
+        "start": "Aug 2015",
+        "end": "Sep 2015",
+        "description": "eID cloud authentication and security penetration testing."
+    },  {
+        "title": "Software Developer",
+        "student": true,
+        "note": "student job",
+        "company": {
+            "name": "VDW-Consulting BV.",
+            "url": "https://vdw-consulting.com/",
+            "icon": "/images/logo/vdwconsulting-logo.svg"
+        },
+        "start": "2013",
+        "end": "2014",
+        "description": "Web UI for print management software. File server deployment and print job submitting in C#."
     }
 ]
