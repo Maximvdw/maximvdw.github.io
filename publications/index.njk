@@ -32,7 +32,6 @@ eleventyNavigation:
             <option value="tech-report">Technical report</option>
           </select>
         </div>
-        <button type="submit" class="btn btn-primary">Apply Filter</button>
       </form>
     </div>
     <div class="col-sm-9 typography">
@@ -49,18 +48,20 @@ eleventyNavigation:
               <span class="badge badge-{{ post.data.type }}">{{ post.data.type }}</span><time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
               <span class="postlist-description" itemprop="description">{{ post.data.excerpt }}</span>
             </div>
-            <div itemprop="author" itemscope itemtype="http://schema.org/Person">
-              <meta itemprop="name" content="{{ author.given }} {{ author.family }}">
-              <meta itemprop="givenName" content="{{ author.given }}">
-              <meta itemprop="familyName" content="{{ author.family }}">
-              {% if author.given == "Maxim" and author.family == "Van de Wynckel" %}
-                <meta itemprop="url" content="https://maximvdw.be/about/">
-              {% endif %}
-            </div>
+            {% for author in post.data.authors %}
+              <div itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <meta itemprop="name" content="{{ author.given }} {{ author.family }}">
+                <meta itemprop="givenName" content="{{ author.given }}">
+                <meta itemprop="familyName" content="{{ author.family }}">
+                {% if author.given == "Maxim" and author.family == "Van de Wynckel" %}
+                  <meta itemprop="url" content="https://maximvdw.be/about/">
+                {% endif %}
+              </div>
+            {% endfor %}
           </li>
         {% endfor %}
       </ol>
     </div>
   </div>
 </div>
-<script src="/scripts/publications.js"></script>
+<script src="/scripts/publications.js?version={{ build.timestamp }}"></script>

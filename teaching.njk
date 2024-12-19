@@ -1,0 +1,55 @@
+---
+layout: main.njk
+title: 'Teaching'
+eleventyNavigation:
+  key: Teaching
+  order: 4
+---
+<blockquote>
+{% markdown %}
+I am currently a **full-time teaching assistant** at the Vrije Universiteit Brussel. I have taught several courses and supervised bachelor and master theses. Below you can find an overview of the courses I have taught and the theses I have supervised.
+In total, I have spend more than **4000 hours** teaching, preparing course material and supervising thesis students.
+{% endmarkdown %}
+</blockquote>
+
+<h1>Courses</h1>
+<ul class="teaching">
+    {% for course in teaching.courses %}
+    <li itemscope itemtype="http://schema.org/Course">
+        <div class="year">
+            <span class="start">{{ course.start }}</span>
+            <span class="end">{{ course.end }}</span>
+        </div>
+        <div class="details">
+            <h2 itemprop="name">{{ course.course }}</h2><span class="code" itemprop="courseCode">{{ course.code }}</span>
+            <p><strong>Level:</strong> <span itemprop="educationalLevel">{{ course.level }}</span></p>
+            <p class="description" itemprop="description">{{ course.description }}</p>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
+
+<h1>Supervised Bachelor and Master Theses</h1>
+<ul class="teaching">
+    {% for thesis in teaching.theses %}
+    <li itemscope itemtype="http://schema.org/Thesis">
+        <div class="year">
+            <span class="start">{{ thesis.start }}</span>
+            <span class="end">{{ thesis.end }}</span>
+        </div>
+        <div class="details">
+            <h2 itemprop="name">{{ thesis.title }}</h2>
+            <p><strong>Student:</strong> <a class="person" rel="nofollow" href="{{ thesis.student.url }}" itemprop="author">{{ thesis.student.name }}</a></p>
+            <p><strong>Grade:</strong> {{ thesis.grade }}</p>
+            <strong>Supervisors:</strong>
+            <ul class="supervisors">
+                {% for supervisor in thesis.supervisors %}
+                <li><a class="person" rel="nofollow" href="{{ supervisor.url }}" itemprop="supervisor">{{ supervisor.name }}</a></li>
+                {% endfor %}
+            </ul>
+            <p><a href="{{ thesis.url }}" itemprop="url">More details ...</a></p>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
+

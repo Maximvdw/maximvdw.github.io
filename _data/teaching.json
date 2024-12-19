@@ -1,8 +1,271 @@
 {
     "courses": [
-        
+        {
+            "course": "Next Generation User Interfaces",
+            "code": "4018166FNR",
+            "level": "master",
+            "start": "2019",
+            "end": "2025",
+            "description": "Teaching hardware development, micro-controllers, Human-Computer Interaction and user-centered design. Guiding students in the design and development of group projects."
+        }, {
+            "course": "Web Technologies",
+            "code": "1019888BNR",
+            "level": "bachelor",
+            "start": "2019",
+            "end": "2025",
+            "description": "Basic Web technologies, social web, search algorithms, Semantic Web and security. Guiding students in the design and development of group projects."
+        }, {
+            "course": "Web Technologies",
+            "code": "4019862ANR",
+            "level": "master",
+            "start": "2019",
+            "end": "2023",
+            "description": "Basic Web technologies, social web, search algorithms, Semantic Web and security."
+        }, {
+            "course": "Databanken",
+            "code": "1007156ANR",
+            "level": "bachelor",
+            "start": "2019",
+            "end": "2025",
+            "description": "ER modelling, relational algebra, normalisation, transactions, SQL and other related topics."
+        }, {
+            "course": "Databases",
+            "code": "4019814ENR",
+            "level": "master",
+            "start": "2019",
+            "end": "2022",
+            "description": "ER modelling, relational algebra, normalisation, transactions, SQL and other related topics."
+        }, {
+            "course": "Advanced Topics in Big Data",
+            "code": "4023256FNR",
+            "level": "master",
+            "start": "2021",
+            "end": "2022",
+            "description": "Guiding students in preparing reviews on scientific papers related to indoor positioning systems and presenting these papers."
+        }, {
+            "course": "Advanced Topics in Information Systems",
+            "code": "4016792ENR",
+            "level": "master",
+            "start": "2019",
+            "end": "2021",
+            "description": "Guiding students in preparing reviews on scientific papers related to indoor positioning systems and presenting these papers."
+        }, {
+            "course": "Information Visualisation",
+            "code": "4019538FNR",
+            "level": "master",
+            "start": "2019",
+            "end": "2021",
+            "description": "Information visualisation techniques and frameworks. Web-based visualisation applications."
+        }, {
+            "course": "Open Information Systems",
+            "code": "4020612FNW",
+            "level": "master",
+            "start": "2019",
+            "end": "2021",
+            "description": "Semantic Web, SPARQL querying, ontology design and validation, and other related topics."
+        }
     ],
-    "thesis": [
-
+    "theses": [
+        {
+            "title": "LiDAR Indoor Map Matching for Autonomous Robots",
+            "student": {
+                "name": "Jordan Shittu",
+                "url": "https://www.linkedin.com/in/jordan-shittu-a52b80258/"
+            },
+            "grade": "bachelor",
+            "start": "2023",
+            "end": "2024",
+            "url": "https://wise.vub.ac.be/thesis/lidar-indoor-map-matching-autonomous-robots",
+            "supervisors": [
+                {
+                    "name": "Prof. Dr. Beat Signer",
+                    "url": "https://beatsigner.com"
+                },
+                {
+                    "name": "Maxim Van de Wynckel",
+                    "url": "https://maximvdw.be"
+                }
+            ]
+        }, {
+            "title": "Identifying Devices Based on MAC Layer Properties",
+            "student": {
+                "name": "Benjamin Vermunicht",
+                "url": "https://www.linkedin.com/in/benjaminver/"
+            },
+            "grade": "master",
+            "start": "2022",
+            "end": "2023",
+            "url": "https://wise.vub.ac.be/index.php/thesis/identifying-devices-based-mac-layer-properties",
+            "supervisors": [
+                {
+                    "name": "Prof. Dr. Beat Signer",
+                    "url": "https://beatsigner.com"
+                },
+                {
+                    "name": "Maxim Van de Wynckel",
+                    "url": "https://maximvdw.be"
+                }
+            ]
+        }, {
+            "title": "Heuristic Real-Time Trajectory Prediction Using Spatio-temporal Databases",
+            "student": {
+                "name": "Ahmed Barhdadi",
+                "url": "https://www.linkedin.com/in/ahmed-barhdadi-07510a183/"
+            },
+            "grade": "master",
+            "start": "2022",
+            "end": "2023",
+            "url": "https://wise.vub.ac.be/thesis/heuristic-real-time-trajectory-prediction-using-spatio-temporal-databases",
+            "supervisors": [
+                {
+                    "name": "Prof. Dr. Beat Signer",
+                    "url": "https://beatsigner.com"
+                },
+                {
+                    "name": "Maxim Van de Wynckel",
+                    "url": "https://maximvdw.be"
+                }
+            ]
+        }, {
+            "title": "Location Tracking on a Physical Game Board",
+            "student": {
+                "name": "Nathan Hoebeke",
+                "url": "https://www.linkedin.com/in/nathan-hoebeke-703551235/"
+            },
+            "grade": "bachelor",
+            "start": "2022",
+            "end": "2023",
+            "url": "https://wise.vub.ac.be/thesis/location-tracking-physical-game-board",
+            "supervisors": [
+                {
+                    "name": "Prof. Dr. Beat Signer",
+                    "url": "https://beatsigner.com"
+                },
+                {
+                    "name": "Maxim Van de Wynckel",
+                    "url": "https://maximvdw.be"
+                }
+            ]
+        }, {
+            "title": "End-User Authoring for Location-based Implicit Human-Computer Interaction",
+            "student": {
+                "name": "Stoffel Oostvogels",
+                "url": "https://www.linkedin.com/in/stoffel-oostvogels-9244481b7/"
+            },
+            "grade": "bachelor",
+            "start": "2022",
+            "end": "2023",
+            "url": "https://wise.vub.ac.be/index.php/thesis/end-user-authoring-location-based-implicit-human-computer-interaction",
+            "supervisors": [
+                {
+                    "name": "Prof. Dr. Beat Signer",
+                    "url": "https://beatsigner.com"
+                },
+                {
+                    "name": "Maxim Van de Wynckel",
+                    "url": "https://maximvdw.be"
+                }
+            ]
+        }, {
+            "title": "Wi-Fi Fingerprinting: Signal Visualisation and Crowd-sourcing",
+            "student": {
+                "name": "Ahmed Barhdadi",
+                "url": "https://www.linkedin.com/in/ahmed-barhdadi-07510a183/"
+            },
+            "grade": "bachelor",
+            "start": "2020",
+            "end": "2021",
+            "url": "https://wise.vub.ac.be/thesis/wi-fi-fingerprinting-signal-visualisation-and-crowdsourcing",
+            "supervisors": [
+                {
+                    "name": "Prof. Dr. Beat Signer",
+                    "url": "https://beatsigner.com"
+                },
+                {
+                    "name": "Maxim Van de Wynckel",
+                    "url": "https://maximvdw.be"
+                }
+            ]
+        }, {
+            "title": "Indoor Positioning by Visible Light Communication",
+            "student": {
+                "name": "Ronald Michiels",
+                "url": "https://www.linkedin.com/in/ronald-michiels-706795115/"
+            },
+            "grade": "master",
+            "start": "2020",
+            "end": "2021",
+            "url": "https://researchportal.vub.be/en/publications/indoor-positioning-by-visible-light-communication",
+            "supervisors": [
+                {
+                    "name": "Prof. Dr. Beat Signer",
+                    "url": "https://beatsigner.com"
+                },
+                {
+                    "name": "Maxim Van de Wynckel",
+                    "url": "https://maximvdw.be"
+                }
+            ]
+        }, {
+            "title": "Anonymous Contact Tracing Fusion",
+            "student": {
+                "name": "Yassine Bouagaz",
+                "url": "https://www.linkedin.com/in/yassinebouagaz/"
+            },
+            "grade": "master",
+            "start": "2020",
+            "end": "2021",
+            "url": "https://researchportal.vub.be/en/publications/anonymous-contact-tracing-fusion-2",
+            "supervisors": [
+                {
+                    "name": "Prof. Dr. Beat Signer",
+                    "url": "https://beatsigner.com"
+                },
+                {
+                    "name": "Maxim Van de Wynckel",
+                    "url": "https://maximvdw.be"
+                }
+            ]
+        }, {
+            "title": "Comparison of SLAM Solutions with Exclusive Usage of LIDAR Observation Data",
+            "student": {
+                "name": "Ben Bergs",
+                "url": "https://www.linkedin.com/in/ben-bergs-724a8174/"
+            },
+            "grade": "master",
+            "start": "2020",
+            "end": "2021",
+            "url": "https://researchportal.vub.be/en/publications/comparison-of-slam-solutions-with-exclusive-usage-of-lidar-observ",
+            "supervisors": [
+                {
+                    "name": "Prof. Dr. Beat Signer",
+                    "url": "https://beatsigner.com"
+                },
+                {
+                    "name": "Maxim Van de Wynckel",
+                    "url": "https://maximvdw.be"
+                }
+            ]
+        }, {
+            "title": "Design Guidelines for IoT Systems in Smart Companies",
+            "student": {
+                "name": "Jeroen Grégoire",
+                "url": "https://www.linkedin.com/in/jeroen-gr%C3%A9goire-36738532/"
+            },
+            "grade": "master",
+            "start": "2020",
+            "end": "2021",
+            "url": "https://researchportal.vub.be/en/publications/design-guidelines-for-iot-systems-in-smart-companies",
+            "supervisors": [
+                {
+                    "name": "Prof. Dr. Beat Signer",
+                    "url": "https://beatsigner.com"
+                },
+                {
+                    "name": "Maxim Van de Wynckel",
+                    "url": "https://maximvdw.be"
+                }
+            ]
+        }
     ]
 }

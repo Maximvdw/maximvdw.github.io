@@ -1,4 +1,5 @@
 @use "../includes/variables" as *;
+@use "sass:color";
 
 section.cv-section {
     margin-bottom: 2em;
@@ -47,4 +48,104 @@ section.cv-section {
       border-radius: 8px;
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     }
+}
+
+ul.teaching {
+  list-style: none;
+  padding: 0;
+}
+ul.teaching li {
+  margin: 10px 0;
+}
+ul.teaching li h2 {
+  margin-top: 0;
+  display: inline-block;
+  font-size: 1.1em;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+ul.teaching li p {
+  margin: 5px 0;
+}
+ul.teaching li a {
+  color: #3498db;
+  text-decoration: none;
+}
+ul.teaching li a:hover {
+  text-decoration: underline;
+}
+
+ul.teaching li {
+  display: flex;
+  flex-wrap: wrap;
+}
+ul.teaching .year {
+  flex: 0 0 100px;
+}
+ul.teaching .details {
+  flex: 1;
+  padding: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+ul.teaching .code {
+  font-size: 0.8em;
+  color: #999;
+  margin-left: 10px;
+}
+ul.teaching .code::before {
+  content: '(';
+}
+ul.teaching .code::after {
+  content: ')';
+}
+ul.teaching .year {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: white;
+}
+
+ul.teaching .year span {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 100%;
+  text-align: center;
+}
+
+ul.teaching .year .start {
+  background-color: $primary-color;
+  z-index: 9;
+  position: relative;
+}
+
+ul.teaching .year .end {
+  background-color: color.adjust($primary-color, $lightness: -15%);
+  box-shadow: 0 -10px 10px -10px $primary-color;
+  z-index: 10;
+  position: relative;
+}
+
+ul.teaching p.description {
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+ul.teaching ul.supervisors {
+  list-style: none;
+  display: inline-block;
+  padding: 0;
+}
+ul.teaching ul.supervisors li {
+  display: inline;
+}
+ul.teaching ul.supervisors li:not(:last-child)::after {
+  content: ', ';
+}
+ul.teaching a.person {
+  color: inherit;
+  text-decoration: underline dotted;
 }

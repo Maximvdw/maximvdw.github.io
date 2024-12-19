@@ -1,20 +1,22 @@
 const filterForm = document.getElementById('filter-form');
 if (filterForm) {
-    filterForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-        var year = document.getElementById('year-filter').value;
-        var type = document.getElementById('type-filter').value.toLowerCase();
-        var posts = document.querySelectorAll('.postlist-item');
-        
-        posts.forEach(function(post) {
-            var postYear = post.querySelector('.postlist-date').getAttribute('datetime').split('-')[0];
-            var postType = post.getAttribute('data-type').toLowerCase();
+    const formControls = document.querySelectorAll('.form-control');
+    formControls.forEach(function(control) {
+        control.addEventListener('input', function() {
+            var year = document.getElementById('year-filter').value;
+            var type = document.getElementById('type-filter').value.toLowerCase();
+            var posts = document.querySelectorAll('.postlist-item');
             
-            if ((year === "" || postYear >= year) && (type === "" || postType === type)) {
-                post.style.display = '';
-            } else {
-                post.style.display = 'none';
-            }
+            posts.forEach(function(post) {
+                var postYear = post.querySelector('.postlist-date').getAttribute('datetime').split('-')[0];
+                var postType = post.getAttribute('data-type').toLowerCase();
+                
+                if ((year === "" || postYear >= year) && (type === "" || postType === type)) {
+                    post.style.display = '';
+                } else {
+                    post.style.display = 'none';
+                }
+            });
         });
     });
 }
