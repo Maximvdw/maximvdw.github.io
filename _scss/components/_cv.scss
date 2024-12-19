@@ -21,8 +21,10 @@ section.cv-section {
 
     .logo {
       width: 50px;
+      margin-top: 0.5em;
       margin-right: 1em;
-      margin-left: 0;
+      margin-left: 0.5em;
+      align-self: flex-start;
     }
   
     .details {
