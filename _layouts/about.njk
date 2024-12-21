@@ -41,7 +41,8 @@ layout: main.njk
     </span>
   </div>
 </div>
-<div class="row">
+
+<div class="row mt-3 mb-3">
   <div class="col-sm-3"></div>
   <div class="col-sm-9">
     <div class="social-links">
@@ -104,11 +105,12 @@ layout: main.njk
       <div class="education">
         {%- for entry in education %}
         <div class="education-item">
-          <img
-            src="{{ entry.icon }}"
-            alt="{{ entry.university }} Logo"
-            class="logo"
-          />
+          <a class="logo" href="{{ entry.url }}" target="_blank" rel="nofollow">
+            <img
+              src="{{ entry.icon }}"
+              alt="{{ entry.university }} Logo"
+            />
+          </a>
           <div class="details">
             <h3>{{ entry.university }}</h3>
             <h4>{{ entry.degree }}</h4>
@@ -130,11 +132,12 @@ layout: main.njk
       <div class="employment">
         {%- for entry in experience %}
         <div class="employment-item">
-          <img
-            src="{{ entry.company.icon }}"
-            alt="{{ entry.company.name }} Logo"
-            class="logo"
-          />
+            <a class="logo" href="{{ entry.company.url }}" target="_blank" rel="{{ entry.company.rel | default('nofollow') }}">
+            <img
+              src="{{ entry.company.icon }}"
+              alt="{{ entry.company.name }} Logo"
+            />
+            </a>
           <div class="details">
             <h3>{{ entry.company.name }}</h3>
             <h4>{{ entry.title }}{% if entry.note %} <small>({{ entry.note }})</small>{% endif %}</h4>

@@ -14,7 +14,8 @@
         "company": {
             "name": "MVdW-Software",
             "url": "https://mvdw-software.com",
-            "icon": "/images/logo/mvdw-logo.svg"
+            "icon": "/images/logo/mvdw-logo.svg",
+            "rel": "author"
         },
         "note": "self-employed",
         "start": "2019",

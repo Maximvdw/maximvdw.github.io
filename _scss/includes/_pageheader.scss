@@ -1,0 +1,34 @@
+@use "variables" as *;
+
+div.page-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 1em;
+    margin-right: 1em;
+
+    .icon {
+        width: 150px;
+    }
+    
+    .description {
+        flex: 1;
+    }
+
+    i {
+        width: 100%;
+        text-align: center;
+        color: darkgray;
+    }
+
+    p {
+        font-style: italic;
+    }
+
+    @media screen and (max-width: $on-medium) {
+        .icon {
+            display: none;
+        }
+    }
+}

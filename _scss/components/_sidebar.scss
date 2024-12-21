@@ -26,6 +26,7 @@ aside.sidebar {
       border: 3px solid $primary-color;
       width: 100px;
       height: 100px;
+      object-fit: cover;
 
       &:hover {
         border-color: color.adjust($primary-color, $lightness: -10%);

@@ -26,6 +26,7 @@ section.cv-section {
       margin-right: 1em;
       margin-left: 0.5em;
       align-self: flex-start;
+      flex-shrink: 0;
     }
   
     .details {
@@ -148,4 +149,23 @@ ul.teaching ul.supervisors li:not(:last-child)::after {
 ul.teaching a.person {
   color: inherit;
   text-decoration: underline dotted;
+}
+
+@media screen and (max-width: $on-medium) {
+  ul.teaching .year {
+    flex: 0 0 50px;
+  }
+  ul.teaching .details {
+    flex: 1;
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  ul.teaching .code {
+    font-size: 0.7em;
+  }
+  ul.teaching .year span {
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
 }
