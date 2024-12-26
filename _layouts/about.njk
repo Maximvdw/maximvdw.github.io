@@ -142,7 +142,7 @@ layout: main.njk
             <h3>{{ entry.company.name }}</h3>
             <h4>{{ entry.title }}{% if entry.note %} <small>({{ entry.note }})</small>{% endif %}</h4>
             <div class="year">
-              <time>{{ entry.start }}</time> - <time>{{ entry.end }}</time>
+                <time>{{ entry.start }}</time>{% if entry.start != entry.end %} - <time>{{ entry.end }}</time>{% endif %}
             </div>
             {% markdown %}
             <div>{{ entry.description }}</div>

@@ -1,38 +1,57 @@
+---
+sitemap: false
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
         <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+        <link href="https://fonts.cdnfonts.com/css/itc-avant-garde-gothic-std-book" rel="stylesheet">
         <style>
                 @page {
                         size: A4;
-                        margin: 5mm;
+                        margin: 0;
                         background: #f7f7f7;
+                }
+
+                @media print {
+                        * {
+                                -webkit-print-color-adjust: exact;
+                                print-color-adjust: exact;
+                        }
                 }
 
                 body {
-                        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+                        font-family: 'ITC Avant Garde Gothic Std Book', sans-serif;
                         line-height: 1.4;
                         color: #333;
+                        margin: 0;
                         background: #f7f7f7;
-                        padding: 10px;
+                        padding: 0;
                 }
 
                 header {
-                        text-align: center;
+                        padding: 1em;
                         margin-bottom: 10px;
+                        background-color: #284cb5;
+                        color: white;
+                        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+                }
+
+                header .links {
+                        display: flex;
+                        justify-content: space-between;
                 }
 
                 header h1 {
                         font-size: 2em;
                         margin-bottom: 5px;
-                        color: #2c3e50;
+                        text-align: center;
                 }
 
                 header p {
                         margin: 0;
                         font-size: 1em;
-                        color: #7f8c8d;
                 }
 
                 p {
@@ -40,18 +59,17 @@
                 }
 
                 section {
-                        margin-bottom: 10px;
                         padding: 10px;
-                        background: #fff;
-                        border-radius: 8px;
-                        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                        padding-left: 5mm;
+                        padding-right: 5mm;
                 }
 
                 h2 {
                         font-size: 1.5em;
+                        margin-top: 0;
                         margin-bottom: 5px;
-                        color: #2c3e50;
-                        border-bottom: 2px solid #2c3e50;
+                        color: #284cb5;
+                        border-bottom: 2px solid #284cb5;
                         padding-bottom: 3px;
                 }
 
@@ -65,10 +83,6 @@
                         justify-content: space-between;
                         align-items: flex-start;
                         margin-bottom: 10px;
-                        padding: 5px;
-                        background: #f9f9f9;
-                        border-radius: 8px;
-                        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
                 }
 
                 .date {
@@ -76,7 +90,7 @@
                         text-align: center;
                         margin-right: 10px;
                         color: #fff;
-                        background: #2c3e50;
+                        background: #284cb5;
                         padding: 3px 5px;
                         border-radius: 5px;
                         font-style: italic;
@@ -89,42 +103,35 @@
                 h3 {
                         margin: 0;
                         font-size: 1.2em;
-                        color: #2c3e50;
+                        color: #284cb5;
                 }
 
                 strong {
-                        display: block;
+                        display: inline-block;
                         font-weight: bold;
-                        color: #2c3e50;
+                        color:rgb(17, 34, 83);
                         margin-top: 3px;
-                }
-
-                .skills {
-                        display: flex;
-                        flex-wrap: wrap;
-                }
-
-                .skill {
-                        background: #2c3e50;
-                        color: #fff;
-                        padding: 3px 5px;
-                        border-radius: 5px;
-                        margin: 3px;
-                        font-size: 0.8em;
                 }
         </style>
 </head>
 <body>
         <header>
                 <h1>{{ personal.firstName }} {{ personal.lastName }}</h1>
-                <p><i class="fas fa-map-marker-alt"></i> {{ personal.address.street }}, {{ personal.address.postalCode }} {{ personal.address.city }}, {{ personal.address.country }}</p>
-                <p><i class="fas fa-envelope"></i> {{ personal.email.academic }}</p>
-                <p><i class="fas fa-birthday-cake"></i> {{ personal.birthPlace.city }}, {{ personal.birthPlace.country }}</p>
-                <p><i class="fas fa-mobile-alt"></i> {{ personal.phone.mobile }}</p>
-                <p>
-                        <a href="{{ social.orcid }}"><i class="ai ai-orcid"></i> {{ social.orcid }}</a>
-                        <a href="{{ social.linkedin }}"><i class="fab fa-linkedin"></i> {{ social.linkedin }}</a>
-                </p>
+                <div style="display: flex; justify-content: space-between;">
+                        <div>
+                                <p><i class="fas fa-map-marker-alt"></i> {{ personal.address.street }}, {{ personal.address.postalCode }} {{ personal.address.city }}, {{ personal.address.country }}</p>
+                        </div>
+                        <div>
+                                <p><i class="fas fa-envelope"></i> {{ personal.email.academic }}</p>
+                                <p><i class="fas fa-birthday-cake"></i> {{ personal.birthPlace.city }}, {{ personal.birthPlace.country }}</p>
+                                <p><i class="fas fa-mobile-alt"></i> {{ personal.phone.mobile }}</p>
+                                <p class="links">
+                                        <a href="{{ social.orcid }}"><i class="ai ai-orcid"></i> {{ social.orcid | replace("https://orcid.org/", "") }}</a>
+                                        <a href="{{ social.linkedin }}"><i class="fab fa-linkedin"></i> {{ social.linkedin | replace("https://linkedin.com", "") }}</a>
+                                        <a href="https://github.com/Maximvdw"><i class="fab fa-github"></i> github.com/Maximvdw</a>
+                                </p>
+                        </div>
+                </div>
         </header>
 
         <section>
@@ -153,7 +160,7 @@
                         {% for job in experience %}
                         <li>
                                 <div class="date">
-                                        <span>{{ job.start }} - {{ job.end }}</span>
+                                        <span>{{ job.start }}{% if job.start != job.end %} - {{ job.end }}{% endif %}</span>
                                 </div>
                                 <div class="content">
                                         <h3>{{ job.title }}</h3>
@@ -179,12 +186,33 @@
         </section>
 
         <section>
-                <h2>Skills</h2>
-                <div class="skills">
-                        {% for skill in skills %}
-                        <div class="skill">{{ skill }}</div>
+                <h2>Presentations</h2>
+                <ul>
+                        {% set presentations = collections.presentations | reverse %}
+                        {% for presentation in presentations %}
+                        <li>
+                                <div class="content">
+                                        {{ presentation.data.date }}
+                                </div>
+                        </li>
                         {% endfor %}
-                </div>
+                </ul>
+        </section>
+
+        <section>
+                <h2>Teached Courses</h2>
+                <ul>
+                        {% for course in teaching.courses %}
+                        <li>
+                                <div class="date">
+                                        <span>{{ course.start }} - {{ course.end }}</span>
+                                </div>
+                                <div class="content">
+                                        <h3>{{ course.course }} <small>({{ course.code }})</small></h3>
+                                </div>
+                        </li>
+                        {% endfor %}
+                </ul>
         </section>
 
         <section>
