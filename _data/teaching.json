@@ -6,6 +6,12 @@
             "level": "master",
             "start": "2019",
             "end": "2025",
+            "titulars": [
+                {
+                    "name": "Prof. Dr. Beat Signer",
+                    "url": "https://beatsigner.com"
+                }
+            ],
             "description": "Teaching hardware development, micro-controllers, Human-Computer Interaction and user-centered design. Guiding students in the design and development of group projects."
         }, {
             "course": "Web Technologies",
@@ -13,6 +19,12 @@
             "level": "bachelor",
             "start": "2019",
             "end": "2025",
+            "titulars": [
+                {
+                    "name": "Prof. Dr. Beat Signer",
+                    "url": "https://beatsigner.com"
+                }
+            ],
             "description": "Basic Web technologies, social web, search algorithms, Semantic Web and security. Guiding students in the design and development of group projects."
         }, {
             "course": "Web Technologies",
@@ -20,6 +32,12 @@
             "level": "master",
             "start": "2019",
             "end": "2023",
+            "titulars": [
+                {
+                    "name": "Prof. Dr. Beat Signer",
+                    "url": "https://beatsigner.com"
+                }
+            ],
             "description": "Basic Web technologies, social web, search algorithms, Semantic Web and security."
         }, {
             "course": "Databanken",
@@ -27,6 +45,12 @@
             "level": "bachelor",
             "start": "2019",
             "end": "2025",
+            "titulars": [
+                {
+                    "name": "Prof. Dr. Bas Ketsman",
+                    "url": "https://www.basketsman.com"
+                }
+            ],
             "description": "ER modelling, relational algebra, normalisation, transactions, SQL and other related topics."
         }, {
             "course": "Databases",
@@ -34,6 +58,12 @@
             "level": "master",
             "start": "2019",
             "end": "2022",
+            "titulars": [
+                {
+                    "name": "Prof. Dr. Bas Ketsman",
+                    "url": "https://www.basketsman.com"
+                }
+            ],
             "description": "ER modelling, relational algebra, normalisation, transactions, SQL and other related topics."
         }, {
             "course": "Advanced Topics in Big Data",
@@ -41,6 +71,15 @@
             "level": "master",
             "start": "2021",
             "end": "2022",
+            "titulars": [
+                {
+                    "name": "Prof. Dr. Beat Signer",
+                    "url": "https://beatsigner.com"
+                }, {
+                    "name": "Prof. Dr. Bas Ketsman",
+                    "url": "https://www.basketsman.com"
+                }
+            ],
             "description": "Guiding students in preparing reviews on scientific papers related to indoor positioning systems and presenting these papers."
         }, {
             "course": "Advanced Topics in Information Systems",
@@ -48,6 +87,12 @@
             "level": "master",
             "start": "2019",
             "end": "2021",
+            "titulars": [
+                {
+                    "name": "Prof. Dr. Beat Signer",
+                    "url": "https://beatsigner.com"
+                }
+            ],
             "description": "Guiding students in preparing reviews on scientific papers related to indoor positioning systems and presenting these papers."
         }, {
             "course": "Information Visualisation",
@@ -55,13 +100,41 @@
             "level": "master",
             "start": "2019",
             "end": "2021",
+            "titulars": [
+                {
+                    "name": "Prof. Dr. Beat Signer",
+                    "url": "https://beatsigner.com"
+                }
+            ],
             "description": "Information visualisation techniques and frameworks. Web-based visualisation applications."
         }, {
             "course": "Open Information Systems",
             "code": "4020612FNW",
             "level": "master",
             "start": "2019",
+            "end": "2020",
+            "titulars": [
+                {
+                    "name": "Prof. Dr. Christophe Debruyne",
+                    "url": "https://chrdebru.github.io"
+                }
+            ],
+            "description": "Semantic Web, SPARQL querying, ontology design and validation, and other related topics."
+        }, {
+            "course": "Open Information Systems",
+            "code": "4020612FNW",
+            "level": "master",
+            "start": "2020",
             "end": "2021",
+            "titulars": [
+                {
+                    "name": "Prof. Dr. Bart Bogaerts",
+                    "url": "https://www.kuleuven.be/wieiswie/nl/person/00078511"
+                }, {
+                    "name": "Prof. Dr. Bas Ketsman",
+                    "url": "https://www.basketsman.com"
+                }
+            ],
             "description": "Semantic Web, SPARQL querying, ontology design and validation, and other related topics."
         }
     ],

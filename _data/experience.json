@@ -4,7 +4,8 @@
         "company": {
             "name": "Vrije Universiteit Brussel",
             "url": "https://vub.be",
-            "icon": "/images/logo/vub-logo_square.svg"
+            "icon": "/images/logo/vub-logo_square.svg",
+            "location": "Brussels, Belgium"
         },
         "start": "2019",
         "end": "now",
@@ -15,7 +16,8 @@
             "name": "MVdW-Software",
             "url": "https://mvdw-software.com",
             "icon": "/images/logo/mvdw-logo.svg",
-            "rel": "author"
+            "rel": "author",
+            "location": "Brussels, Belgium"
         },
         "note": "self-employed",
         "start": "2019",
@@ -28,7 +30,8 @@
         "company": {
             "name": "ChemStream BV.",
             "url": "https://chemstream.be",
-            "icon": "/images/logo/chemstream-logo.svg"
+            "icon": "/images/logo/chemstream-logo.svg",
+            "location": "Edegem, Belgium"
         },
         "start": "2014",
         "end": "2018",
@@ -40,7 +43,8 @@
         "company": {
             "name": "UZ Brussel",
             "url": "https://uzbrussel.be/",
-            "icon": "/images/logo/uzbrussel-logo.png"
+            "icon": "/images/logo/uzbrussel-logo.png",
+            "location": "Brussels, Belgium"
         },
         "start": "2016",
         "end": "2016",
@@ -52,7 +56,8 @@
         "company": {
             "name": "BITPOWER BV.",
             "url": "https://www.nieuwsblad.be/cnt/dmf20150604_01714431",
-            "icon": "/images/logo/bitpower-logo.jpg"
+            "icon": "/images/logo/bitpower-logo.jpg",
+            "location": "Evergem, Belgium"
         },
         "start": "2015",
         "end": "2015",
@@ -64,7 +69,8 @@
         "company": {
             "name": "VDW-Consulting BV.",
             "url": "https://vdw-consulting.com/",
-            "icon": "/images/logo/vdwconsulting-logo.svg"
+            "icon": "/images/logo/vdwconsulting-logo.svg",
+            "location": "Grimbergen, Belgium"
         },
         "start": "2013",
         "end": "2014",

@@ -184,6 +184,13 @@ async function configureCollections(el) {
             .reverse()
             .value();
     });
+    el.addCollection("presentations_year", (collection) => {
+        return _.chain(collection.getFilteredByTag("presentations").sort((a, b) => a.date - b.date))
+            .groupBy((post) => post.date.getFullYear())
+            .toPairs()
+            .reverse()
+            .value();
+    });
 }
 
 async function configureFilters(el) {

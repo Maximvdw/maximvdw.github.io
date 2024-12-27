@@ -1,0 +1,31 @@
+[
+    {
+        "type": "reviewer",
+        "name": "Interactive, Mobile, Wearable and Ubiquitous Technologies (Journal)",
+        "start": "2022",
+        "end": "2022"
+    }, {
+        "type": "reviewer",
+        "name": "Proceedings of the 15th International Conference on Tangible, Embedded and Embodied Interaction",
+        "start": "2020",
+        "end": "2020"
+    }, {
+        "type": "university",
+        "name": "Faculty Research Comittee",
+        "start": "2020",
+        "end": "now",
+        "description": "Other academic staff (OAP) representative of the faculty of science and engineering."
+    }, {
+        "type": "university",
+        "name": "Department Council",
+        "start": "2019",
+        "end": "now",
+        "description": "Other academic staff (OAP) representative of the department of computer science."
+    }, {
+        "type": "university",
+        "name": "Bachelor Program Committee",
+        "start": "2019",
+        "end": "now",
+        "description": "Other academic staff (OAP) representative of the Bachelor program of computer science."
+    }
+]

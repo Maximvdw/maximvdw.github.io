@@ -2,53 +2,74 @@
 @use "sass:color";
 
 section.cv-section {
-    margin-bottom: 2em;
-    border-radius: 8px;
-  
+  margin-bottom: 2em;
+  border-radius: 8px;
+
+  p {
+    color: black;
+    font-style: italic;
+    font-size: small;
+  }
+
+  h3,
+  h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .year {
+    color: #666;
+    margin-left: auto;
+    align-self: flex-start;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .logo {
+    width: 50px;
+    margin-top: 0.5em;
+    margin-right: 1em;
+    margin-left: 0.5em;
+    align-self: flex-start;
+    flex-shrink: 0;
+  }
+
+  .details {
+    display: inline-block;
+    vertical-align: top;
+    flex: 1;
+    position: relative;
+
     p {
-      color: black;
-      font-style: italic;
-      font-size: small;
+      margin: 0.2em 0;
+      color: #666;
     }
+  }
 
-    h3, h4 {
-      margin-top: 0;
-      margin-bottom: 0;
-    }
+  .education-item,
+  .employment-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1em;
+    padding: 0.5em;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
 
-    .year {
-        color: #666;
-    }
+  .detail-line {
+    display: block;
+  }
 
-    .logo {
-      width: 50px;
-      margin-top: 0.5em;
-      margin-right: 1em;
-      margin-left: 0.5em;
-      align-self: flex-start;
-      flex-shrink: 0;
-    }
-  
-    .details {
-      display: inline-block;
-      vertical-align: top;
-  
-      p {
-        margin: 0.2em 0;
-        color: #666;
-      }
-    }
-  
-    .education-item,
-    .employment-item {
-      display: flex;
-      align-items: center;
-      margin-bottom: 1em;
-      padding: 0.5em;
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    }
+  .detail-line.italic {
+    font-style: italic;
+  }
+}
+
+ul.teaching .detail-line {
+  display: block;
 }
 
 ul.teaching {
@@ -98,10 +119,10 @@ ul.teaching .code {
   margin-left: 10px;
 }
 ul.teaching .code::before {
-  content: '(';
+  content: "(";
 }
 ul.teaching .code::after {
-  content: ')';
+  content: ")";
 }
 ul.teaching .year {
   display: flex;
@@ -144,11 +165,17 @@ ul.teaching ul.supervisors li {
   display: inline;
 }
 ul.teaching ul.supervisors li:not(:last-child)::after {
-  content: ', ';
+  content: ", ";
 }
 ul.teaching a.person {
   color: inherit;
   text-decoration: underline dotted;
+}
+
+@media screen and (max-width: 1200px) {
+  section.cv-section .year {
+    position: inherit;
+  }
 }
 
 @media screen and (max-width: $on-medium) {

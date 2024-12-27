@@ -19,7 +19,8 @@ eleventyNavigation:
 
 <h2>Courses</h2>
 <ul class="teaching">
-    {% for course in teaching.courses %}
+    {% set sorted_courses = teaching.courses | sort(attribute='end', reverse=true) %}
+    {% for course in sorted_courses %}
     <li itemscope itemtype="http://schema.org/Course">
         <div class="year">
             <span class="start">{{ course.start }}</span>
@@ -27,7 +28,15 @@ eleventyNavigation:
         </div>
         <div class="details">
             <h2 itemprop="name">{{ course.course }}</h2><span class="code" itemprop="courseCode">{{ course.code }}</span>
-            <p><strong>Level:</strong> <span itemprop="educationalLevel">{{ course.level }}</span></p>
+            <span class="detail-line">
+                <strong>Level:</strong> <span itemprop="educationalLevel">{{ course.level }}</span>
+                <strong>Titular{% if course.titulars | length > 1 %}s{% endif %}:</strong>
+                <ul class="supervisors">
+                    {% for titular in course.titulars %}
+                    <li><a class="person" rel="nofollow" href="{{ titular.url }}" itemprop="titular">{{ titular.name }}</a></li>
+                    {% endfor %}
+                </ul>
+            </span>
             <p class="description" itemprop="description">{{ course.description }}</p>
         </div>
     </li>
@@ -44,15 +53,17 @@ eleventyNavigation:
         </div>
         <div class="details">
             <h2 itemprop="name">{{ thesis.title }}</h2>
-            <p><strong>Student:</strong> <a class="person" rel="nofollow" href="{{ thesis.student.url }}" itemprop="author">{{ thesis.student.name }}</a></p>
-            <p><strong>Grade:</strong> {{ thesis.grade }}</p>
-            <strong>Supervisors:</strong>
-            <ul class="supervisors">
-                {% for supervisor in thesis.supervisors %}
-                <li><a class="person" rel="nofollow" href="{{ supervisor.url }}" itemprop="supervisor">{{ supervisor.name }}</a></li>
-                {% endfor %}
-            </ul>
-            <p><a href="{{ thesis.url }}" itemprop="url">More details ...</a></p>
+            <span class="detail-line">
+                <strong>Student:</strong> <a class="person" rel="nofollow" href="{{ thesis.student.url }}" itemprop="author">{{ thesis.student.name }}</a>
+                <strong>Supervisors:</strong>
+                <ul class="supervisors">
+                    {% for supervisor in thesis.supervisors %}
+                    <li><a class="person" rel="nofollow" href="{{ supervisor.url }}" itemprop="supervisor">{{ supervisor.name }}</a></li>
+                    {% endfor %}
+                </ul>
+            </span>
+            <span class="detail-line"><strong>Grade:</strong> {{ thesis.grade }}</span>
+            <span class="detail-line"><a href="{{ thesis.url }}" itemprop="url">More details ...</a></span>
         </div>
     </li>
     {% endfor %}
