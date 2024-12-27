@@ -139,6 +139,10 @@ export default async function (el) {
         ghostMode: false
     });
 
+    el.addGlobalData("build", {
+        timestamp: DateTime.now().toISO()
+    });
+
     return {
         templateFormats: [
             "ico",
