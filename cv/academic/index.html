@@ -1,925 +1,997 @@
+
 <!DOCTYPE html>
 <html lang="en">
-        <head>
-                <link
-                        rel="stylesheet"
-                        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-                />
-                <link
-                        rel="stylesheet"
-                        href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css"
-                />
-                <link
-                        href="https://fonts.cdnfonts.com/css/itc-avant-garde-gothic-std-book"
-                        rel="stylesheet"
-                />
-                <style>
-                        @page {
-                                size: A4;
-                                margin: 5mm;
-                                background: #f7f7f7;
-                        }
+  <head>
+    <title>
+      Maxim Van de Wynckel - Curriculum Vitae
+    </title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css"
+    />
+    <link
+      href="https://fonts.cdnfonts.com/css/itc-avant-garde-gothic-std-book"
+      rel="stylesheet"
+    />
+    <style>
+      @page {
+        size: A4;
+        background: #ffffff;
+        margin: 5mm;
+        margin-top: 10mm;
+        margin-bottom: 10mm;
+      }
 
-                        @media print {
-                                * {
-                                        -webkit-print-color-adjust: exact;
-                                        print-color-adjust: exact;
-                                }
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
 
-                                header {
-                                        margin: -5mm; padding: 1em 5mm;
-                                }
-                        }
+      body {
+        font-family: "ITC Avant Garde Gothic Std Book", sans-serif;
+        line-height: 1.4;
+        color: #333;
+        margin: 0;
+        background: #ffffff;
+        padding: 5mm;
+      }
 
-                        body {
-                                font-family: "ITC Avant Garde Gothic Std Book", sans-serif;
-                                line-height: 1.4;
-                                color: #333;
-                                margin: 0;
-                                background: #f7f7f7;
-                                padding: 5mm;
-                        }
+    header {
+      margin-bottom: 0;
+      margin-top: 0;
+      padding-top: 0;
+      padding-bottom: 10px;
+      background-color: #ffffff;
+      color: #284cb5;
+      padding-left: 1em;
+      padding-right: 1em;
+      border-bottom: 2px solid #284cb5;
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+      position: relative;
+      overflow: hidden;
+      clip-path: inset(0 0 -30px 0);
+    }
 
-                        header {
-                                padding: 1em;
-                                margin-bottom: 10px;
-                                background-color: #284cb5;
-                                color: white;
-                                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-                        }
+      header .container {
+        display: flex;
+        justify-content: space-between;
+      }
 
-                        header .links {
-                                display: flex;
-                                justify-content: space-between;
-                        }
+      header .container div:first-child {
+        flex: 2;
+      }
+      header .container div:last-child {
+        flex: 1;
+      }
 
-                        header .links a {
-                                display: block;
-                        }
+      header .links a {
+        display: block;
+      }
 
-                        header a {
-                                color: white;
-                                text-decoration: none;
-                        }
+      header a {
+        color: #284cb5;
+        text-decoration: none;
+      }
 
-                        header i {
-                                width: 1.2em;
-                                text-align: center;
-                        }
+      header i {
+        width: 1.2em;
+        text-align: center;
+      }
 
-                        header h1 {
-                                font-size: 2em;
-                                margin-bottom: 5px;
-                                text-align: center;
-                        }
+      header h1 {
+        font-size: 2em;
+        margin-bottom: 10px;
+        text-align: center;
+      }
 
-                        header p {
-                                margin: 0;
-                                font-size: 1em;
-                        }
+      header p {
+        margin: 0;
+        font-size: 1em;
+      }
 
-                        p {
-                                margin: 0;
-                        }
+      p {
+        margin: 0;
+      }
 
-                        section {
-                                padding: 10px;
-                                padding-left: 5mm;
-                                padding-right: 5mm;
-                        }
+      section {
+        margin-top: 1em;
+        padding-left: 5mm;
+        padding-right: 5mm;
+      }
 
-                        h2 {
-                                font-size: 1.5em;
-                                margin-top: 0;
-                                margin-bottom: 5px;
-                                color: #284cb5;
-                                border-bottom: 2px solid #284cb5;
-                                padding-bottom: 3px;
-                        }
+      h2 {
+        font-size: 1.5em;
+        margin-top: 0;
+        margin-bottom: 5px;
+        color: rgb(32, 38, 58);
+        border-bottom: 2px solid rgb(32, 38, 58);
+        padding-bottom: 3px;
+      }
 
-                        ul {
-                                list-style-type: none;
-                                padding: 0;
-                        }
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
 
-                        li {
-                                display: flex;
-                                justify-content: space-between;
-                                align-items: flex-start;
-                                margin-bottom: 10px;
-                        }
+      li {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 10px;
+      }
 
-                        .date {
-                                flex: 0 0 100px;
-                                text-align: center;
-                                margin-left: 10px;
-                                color: #fff;
-                                background:rgb(32, 38, 58);
-                                padding: 2px 3px;
-                                border-radius: 3px;
-                                font-style: italic;
-                                font-size: 0.9em;
-                        }
+      .date {
+        flex: 0 0 100px;
+        text-align: center;
+        margin-left: 10px;
+        color: #fff;
+        background: rgb(32, 38, 58);
+        padding: 2px 3px;
+        border-radius: 3px;
+        font-style: italic;
+        font-size: 0.9em;
+      }
 
-                        .content {
-                                flex: 1;
-                        }
+      .content {
+        flex: 1;
+      }
 
-                        h3 {
-                                margin: 0;
-                                font-size: 1.2em;
-                                color: rgb(35, 65, 153);
-                                border-bottom: 1px solid rgb(35, 65, 153);
-                        }
+      h3 {
+        margin: 0;
+        font-size: 1.2em;
+        color: rgb(35, 65, 153);
+        border-bottom: 1px solid rgb(35, 65, 153);
+      }
 
-                        h4 {
-                                margin: 0;
-                                font-size: 1.1em;
-                                font-weight: 300;
-                                color: #284cb5;
-                        }
+      h4 {
+        margin: 0;
+        font-size: 1.1em;
+        font-weight: 300;
+        color: #284cb5;
+      }
 
-                        strong {
-                                display: inline-block;
-                                font-weight: bold;
-                                color: rgb(17, 34, 83);
-                                margin-top: 3px;
-                        }
+      strong {
+        display: inline-block;
+        font-weight: bold;
+        color: rgb(17, 34, 83);
+        margin-top: 3px;
+      }
 
-                        .detail-line {
-                                display: block;
-                        }
+      .detail-line {
+        display: block;
+      }
 
-                        ul.names {
-                                list-style: none;
-                                display: inline-block;
-                                padding: 0;
-                        }
-                        ul.names li {
-                                display: inline;
-                        }
-                        ul.names li:not(:last-child)::after {
-                                content: ", ";
-                        }
-                        ul.names a.person {
-                                color: inherit;
-                                text-decoration: underline dotted;
-                        }
-                </style>
-        </head>
-        <body>
-                <header>
-                        <h1>Maxim Van de Wynckel</h1>
-                        <div style="display: flex; justify-content: space-between">
-                                <div>
-                                        <p>
-                                                <i class="fas fa-map-marker-alt"></i> Invalidenlaan 178/5,
-                                                1160 Oudergem, Belgium
-                                        </p>
-                                        <p><i class="fas fa-envelope"></i> maxim.van.de.wynckel@vub.be</p>
-                                        <p><i class="fas fa-globe"></i> <a href="https://maximvdw.be">maximvdw.be</a></p>
-                                        <p><i class="fas fa-mobile-alt"></i> +32 489 86 18 48</p>
-                                </div>
-                                <div>
-                                        <p class="links">
-                                                <a href="https://orcid.org/0000-0003-0314-7107"
-                                                        ><i class="ai ai-orcid"></i> 0000-0003-0314-7107</a
-                                                >
-                                                <a href="https://linkedin.com/in/maximvdw"
-                                                        ><i class="fab fa-linkedin"></i> /in/maximvdw</a
-                                                >
-                                                <a href="https://github.com/Maximvdw"
-                                                        ><i class="fab fa-github"></i> github.com/Maximvdw</a
-                                                >
-                                        </p>
-                                </div>
-                        </div>
-                </header>
+      ul.names {
+        list-style: none;
+        display: inline-block;
+        padding: 0;
+      }
 
-                <section>
-                        <h2>Education</h2>
-                        <ul>
-                                
-                                <li>
-                                        <div class="content">
-                                                <h4>PhD, Computer Science</h4>
-                                                <strong>Vrije Universiteit Brussel</strong> (Brussels, Belgium)  
-                                        </div>
-                                        <div class="date">
-                                                
-                                                <span>2019 - now</span>
-                                                
-                                        </div>
-                                </li>
-                                
-                                <li>
-                                        <div class="content">
-                                                <h4>Master of Science (MSc), Applied Computer Science</h4>
-                                                <strong>Vrije Universiteit Brussel</strong> (Brussels, Belgium) 
-                                                <p><strong>Graduated with:</strong> Great Distinction</p>
-                                                 
-                                                <p><strong>Thesis:</strong> Indoor Navigation by Centralized Tracking</p>
-                                                
-                                        </div>
-                                        <div class="date">
-                                                
-                                                <span>July 2019</span>
-                                                
-                                        </div>
-                                </li>
-                                
-                                <li>
-                                        <div class="content">
-                                                <h4>Bridging program, Computer Science</h4>
-                                                <strong>Vrije Universiteit Brussel</strong> (Brussels, Belgium)  
-                                        </div>
-                                        <div class="date">
-                                                
-                                                <span>2016 - 2018</span>
-                                                
-                                        </div>
-                                </li>
-                                
-                                <li>
-                                        <div class="content">
-                                                <h4>Bachelor (Ba), Applied Computer Science</h4>
-                                                <strong>Erasmushogeschool Brussel</strong> (Brussels, Belgium) 
-                                                <p><strong>Graduated with:</strong> Great Distinction</p>
-                                                 
-                                                <p><strong>Thesis:</strong> eID IO - Applicatie Besturing</p>
-                                                
-                                        </div>
-                                        <div class="date">
-                                                
-                                                <span>June 2016</span>
-                                                
-                                        </div>
-                                </li>
-                                
-                        </ul>
-                </section>
+      ul.names li {
+        display: inline;
+      }
 
-                <section>
-                        <h2>Experience</h2>
-                        <ul>
-                                
-                                <li>
-                                        <div class="content">
-                                                <h4>Teaching Assistant and Researcher</h4>
-                                                <strong
-                                                        >Vrije Universiteit Brussel</strong
-                                                >
-                                        </div>
-                                        <div class="date">
-                                                <span
-                                                        >2019 - now</span
-                                                >
-                                        </div>
-                                </li>
-                                
-                                <li>
-                                        <div class="content">
-                                                <h4>Independent professional</h4>
-                                                <strong
-                                                        >MVdW-Software
-                                                        <small>(self-employed)</small></strong
-                                                >
-                                        </div>
-                                        <div class="date">
-                                                <span
-                                                        >2019 - now</span
-                                                >
-                                        </div>
-                                </li>
-                                
-                                <li>
-                                        <div class="content">
-                                                <h4>Software Engineer</h4>
-                                                <strong
-                                                        >ChemStream BV.
-                                                        <small>(student job)</small></strong
-                                                >
-                                        </div>
-                                        <div class="date">
-                                                <span
-                                                        >2014 - 2018</span
-                                                >
-                                        </div>
-                                </li>
-                                
-                                <li>
-                                        <div class="content">
-                                                <h4>Software Developer Internship</h4>
-                                                <strong
-                                                        >UZ Brussel
-                                                        <small>(student job)</small></strong
-                                                >
-                                        </div>
-                                        <div class="date">
-                                                <span
-                                                        >2016</span
-                                                >
-                                        </div>
-                                </li>
-                                
-                                <li>
-                                        <div class="content">
-                                                <h4>Software Developer</h4>
-                                                <strong
-                                                        >BITPOWER BV.
-                                                        <small>(student job)</small></strong
-                                                >
-                                        </div>
-                                        <div class="date">
-                                                <span
-                                                        >2015</span
-                                                >
-                                        </div>
-                                </li>
-                                
-                                <li>
-                                        <div class="content">
-                                                <h4>Software Developer</h4>
-                                                <strong
-                                                        >VDW-Consulting BV.
-                                                        <small>(student job)</small></strong
-                                                >
-                                        </div>
-                                        <div class="date">
-                                                <span
-                                                        >2013 - 2014</span
-                                                >
-                                        </div>
-                                </li>
-                                
-                        </ul>
-                </section>
+      ul.names li:not(:last-child)::after {
+        content: ", ";
+      }
 
-                <section>
-                        <h2>Publications</h2>
-                        <ul>
-                                 
-                                <li>
-                                        <div class="content">
-                                                Malaise, Y., <strong
-                                                        >Van de Wynckel, M.</strong
-                                                >, & Signer, B. (2024, May). Towards Distributed Intelligent Tutoring Systems Based on User-owned Progress and Performance Data. Proceedings of SoSy 2024 (Poster), 2nd Solid Symposium, Leuven, Belgium, May 2024. https://events.vito.be/sosy2024
+      ul.names a.person {
+        color: inherit;
+        text-decoration: underline dotted;
+      }
 
-                                        </div>
-                                </li>
-                                
-                                <li>
-                                        <div class="content">
-                                                <strong
-                                                        >Van de Wynckel, M.</strong
-                                                >, & Signer, B. (2024, May). Discoverable and Interoperable Augmented Reality Environments Through Solid Pods. Proceedings of SoSy 2024 (Poster), 2nd Solid Symposium, Leuven, Belgium, May 2024. https://events.vito.be/sosy2024
+      @media screen {
+        body {
+          width: 210mm;
+          margin: auto;
+          background: #fff;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+      }
+      @media print {
+        body {
+          padding: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Maxim Van de Wynckel</h1>
+      <div class="container">
+        <div>
+          <p>
+            <i class="fas fa-map-marker-alt"></i> Invalidenlaan 178/5,
+            1160 Oudergem, Belgium
+          </p>
+          <p><i class="fas fa-envelope"></i> maxim.van.de.wynckel@vub.be</p>
+          <p>
+            <i class="fas fa-globe"></i>
+            <a href="https://maximvdw.be">maximvdw.be</a>
+          </p>
+          <p><i class="fas fa-mobile-alt"></i> +32 489 86 18 48</p>
+        </div>
+        <div>
+          <p class="links">
+            <a href="https://orcid.org/0000-0003-0314-7107"
+              ><i class="ai ai-orcid"></i> 0000-0003-0314-7107</a
+            >
+            <a href="https://linkedin.com/in/maximvdw"
+              ><i class="fab fa-linkedin"></i> /in/maximvdw</a
+            >
+            <a href="https://github.com/Maximvdw"
+              ><i class="fab fa-github"></i> github.com/Maximvdw</a
+            >
+          </p>
+        </div>
+      </div>
+    </header>
 
-                                        </div>
-                                </li>
-                                
-                                <li>
-                                        <div class="content">
-                                                <strong
-                                                        >Van de Wynckel, M.</strong
-                                                >, Valadez, I., & Signer, B. (2024). FidMark: A Fiducial Marker Ontology for Semantically Describing Visual Markers. Proceedings of The Semantic Web (ESWC 2024), 235–250.
+    <section>
+      <h2>Education</h2>
+      <ul>
+        
+        <li>
+          <div class="content">
+            <h4>PhD, Computer Science</h4>
+            <strong>Vrije Universiteit Brussel</strong> (Brussels, Belgium)  
+          </div>
+          <div class="date">
+            
+            <span>2019 - now</span>
+            
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <h4>Master of Science (MSc), Applied Computer Science</h4>
+            <strong>Vrije Universiteit Brussel</strong> (Brussels, Belgium) 
+            <p><strong>Graduated with:</strong> Great Distinction</p>
+             
+            <p><strong>Thesis:</strong> Indoor Navigation by Centralized Tracking</p>
+            
+          </div>
+          <div class="date">
+            
+            <span>July 2019</span>
+            
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <h4>Bridging program, Computer Science</h4>
+            <strong>Vrije Universiteit Brussel</strong> (Brussels, Belgium)  
+          </div>
+          <div class="date">
+            
+            <span>2016 - 2018</span>
+            
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <h4>Bachelor (Ba), Applied Computer Science</h4>
+            <strong>Erasmushogeschool Brussel</strong> (Brussels, Belgium) 
+            <p><strong>Graduated with:</strong> Great Distinction</p>
+             
+            <p><strong>Thesis:</strong> eID IO - Applicatie Besturing</p>
+            
+          </div>
+          <div class="date">
+            
+            <span>June 2016</span>
+            
+          </div>
+        </li>
+        
+      </ul>
+    </section>
 
-                                        </div>
-                                </li>
-                                
-                                <li>
-                                        <div class="content">
-                                                <strong
-                                                        >Van de Wynckel, M.</strong
-                                                >, & Signer, B. (2024). SemBeacon: A Semantic Proximity Beacon Solution for Discovering and Detecting the Position of Physical Things. Proceedings of the 13th International Conference on the Internet of Things, 9–16. https://doi.org/10.1145/3627050.3627060
+    <section>
+      <h2>Experience</h2>
+      <ul>
+        
+        <li>
+          <div class="content">
+            <h4>Teaching Assistant and Researcher</h4>
+            <strong
+              >Vrije Universiteit Brussel</strong
+            >
+          </div>
+          <div class="date">
+            <span
+              >2019 - now</span
+            >
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <h4>Independent professional</h4>
+            <strong
+              >MVdW-Software
+              <small>(self-employed)</small></strong
+            >
+          </div>
+          <div class="date">
+            <span
+              >2019 - now</span
+            >
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <h4>Software Engineer</h4>
+            <strong
+              >ChemStream BV.
+              <small>(student job)</small></strong
+            >
+          </div>
+          <div class="date">
+            <span
+              >2014 - 2018</span
+            >
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <h4>Software Developer Internship</h4>
+            <strong
+              >UZ Brussel
+              <small>(student job)</small></strong
+            >
+          </div>
+          <div class="date">
+            <span
+              >2016</span
+            >
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <h4>Software Developer</h4>
+            <strong
+              >BITPOWER BV.
+              <small>(student job)</small></strong
+            >
+          </div>
+          <div class="date">
+            <span
+              >2015</span
+            >
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <h4>Software Developer</h4>
+            <strong
+              >VDW-Consulting BV.
+              <small>(student job)</small></strong
+            >
+          </div>
+          <div class="date">
+            <span
+              >2013 - 2014</span
+            >
+          </div>
+        </li>
+        
+      </ul>
+    </section>
 
-                                        </div>
-                                </li>
-                                
-                                <li>
-                                        <div class="content">
-                                                <strong
-                                                        >Van de Wynckel, M.</strong
-                                                >, & Signer, B. (2022). POSO: A Generic Positioning System Ontology. The Semantic Web – ISWC 2022, 231–247.
+    <section>
+      <h2>Publications</h2>
+      <ul>
+         
+        <li>
+          <div class="content">
+            Malaise, Y., <strong
+              >Van de Wynckel, M.</strong
+            >, & Signer, B. (2024, May). Towards Distributed Intelligent Tutoring Systems Based on User-owned Progress and Performance Data. Proceedings of SoSy 2024 (Poster), 2nd Solid Symposium, Leuven, Belgium, May 2024. https://events.vito.be/sosy2024
 
-                                        </div>
-                                </li>
-                                
-                                <li>
-                                        <div class="content">
-                                                <strong
-                                                        >Van de Wynckel, M.</strong
-                                                >, & Signer, B. (2022). A Solid-based Architecture for Decentralised Interoperable Location Data. Proceedings of the 12th International Conference on Indoor Positioning and Indoor Navigation (IPIN), CEUR Workshop Proceedings.
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <strong
+              >Van de Wynckel, M.</strong
+            >, & Signer, B. (2024, May). Discoverable and Interoperable Augmented Reality Environments Through Solid Pods. Proceedings of SoSy 2024 (Poster), 2nd Solid Symposium, Leuven, Belgium, May 2024. https://events.vito.be/sosy2024
 
-                                        </div>
-                                </li>
-                                
-                                <li>
-                                        <div class="content">
-                                                <strong
-                                                        >Van de Wynckel, M.</strong
-                                                >, & Signer, B. (2021). Indoor Positioning Using the OpenHPS Framework. 2021 International Conference on Indoor Positioning and Indoor Navigation (IPIN), 1–8. https://doi.org/10.1109/IPIN51156.2021.9662569
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <strong
+              >Van de Wynckel, M.</strong
+            >, Valadez, I., & Signer, B. (2024). FidMark: A Fiducial Marker Ontology for Semantically Describing Visual Markers. Proceedings of The Semantic Web (ESWC 2024), 235–250.
 
-                                        </div>
-                                </li>
-                                
-                                <li>
-                                        <div class="content">
-                                                <strong
-                                                        >Van de Wynckel, M.</strong
-                                                >, & Signer, B. (2021). OpenHPS: Single Floor Fingerprinting and Trajectory Dataset. https://doi.org/10.5281/zenodo.4744380
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <strong
+              >Van de Wynckel, M.</strong
+            >, & Signer, B. (2023). SemBeacon: A Semantic Proximity Beacon Solution for Discovering and Detecting the Position of Physical Things. Proceedings of the 13th International Conference on the Internet of Things, 9–16. https://doi.org/10.1145/3627050.3627060
 
-                                        </div>
-                                </li>
-                                
-                                <li>
-                                        <div class="content">
-                                                <strong
-                                                        >Van de Wynckel, M.</strong
-                                                >, & Signer, B. (2020). OpenHPS: An Open Source Hybrid Positioning System (\mboxWISE-2020-01). Vrije Universiteit Brussel. https://doi.org/10.48550/ARXIV.2101.05198
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <strong
+              >Van de Wynckel, M.</strong
+            >, & Signer, B. (2022). POSO: A Generic Positioning System Ontology. The Semantic Web – ISWC 2022, 231–247.
 
-                                        </div>
-                                </li>
-                                
-                                <li>
-                                        <div class="content">
-                                                <strong
-                                                        >Van de Wynckel, M.</strong
-                                                > (2019). Indoor Navigation by Centralized Tracking [Master’s thesis, Vrije Universiteit Brussel]. https://researchportal.vub.be/en/studentTheses/indoor-navigation-by-centralized-tracking
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <strong
+              >Van de Wynckel, M.</strong
+            >, & Signer, B. (2022). A Solid-based Architecture for Decentralised Interoperable Location Data. Proceedings of the 12th International Conference on Indoor Positioning and Indoor Navigation (IPIN), CEUR Workshop Proceedings.
 
-                                        </div>
-                                </li>
-                                
-                        </ul>
-                </section>
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <strong
+              >Van de Wynckel, M.</strong
+            >, & Signer, B. (2021). Indoor Positioning Using the OpenHPS Framework. 2021 International Conference on Indoor Positioning and Indoor Navigation (IPIN), 1–8. https://doi.org/10.1109/IPIN51156.2021.9662569
 
-                <section>
-                        <h2>Presentations</h2>
-                        <ul>
-                                 
-                                <li>
-                                         <div class="content">
-                                               <h4>Presentation at FOSDEM 2025</h4>
-                                                <p><strong>Venue:</strong> FOSDEM 2025, Brussels, Belgium</p>
-                                                <p>Presentation titled &#39;Discovering Indoor Environments and Positioning Systems&#39;</p>
-                                        </div>
-                                        <div class="date">
-                                                <span>2025-02-01</span>
-                                        </div>
-                                </li>
-                                
-                                <li>
-                                         <div class="content">
-                                               <h4>Conference presentation at ESWC 2024</h4>
-                                                <p><strong>Venue:</strong> The Semantic Web. ESWC 2024, Hersonissos, Crete, Greece</p>
-                                                <p>Paper presentation titled &#39;FidMark: A Fiducial Marker Ontology for Semantically Describing Visual Markers&#39;</p>
-                                        </div>
-                                        <div class="date">
-                                                <span>2024-05-28</span>
-                                        </div>
-                                </li>
-                                
-                                <li>
-                                         <div class="content">
-                                               <h4>Poster presentation at SoSy 2024</h4>
-                                                <p><strong>Venue:</strong> The 2nd Solid Symposium, Leuven, Belgium</p>
-                                                <p>Poster presentation titled &#39;Discoverable and Interoperable Augmented Reality Environments Through Solid Pods&#39;</p>
-                                        </div>
-                                        <div class="date">
-                                                <span>2024-05-02</span>
-                                        </div>
-                                </li>
-                                
-                                <li>
-                                         <div class="content">
-                                               <h4>Conference presentation at IoT 2023</h4>
-                                                <p><strong>Venue:</strong> 13th International Conference on the Internet of Things, Nagoya, Japan</p>
-                                                <p>Paper presentation titled &#39;SemBeacon: A Semantic Proximity Beacon Solution for Discovering and Detecting the Position of Physical Things&#39;</p>
-                                        </div>
-                                        <div class="date">
-                                                <span>2023-11-08</span>
-                                        </div>
-                                </li>
-                                
-                                <li>
-                                         <div class="content">
-                                               <h4>Poster presentation at BeJS conf 2023</h4>
-                                                <p><strong>Venue:</strong> Belgian JavaScript Conference (BeJS conf), Brussels, Belgium</p>
-                                                <p>Poster presentation of the OpenHPS framework</p>
-                                        </div>
-                                        <div class="date">
-                                                <span>2023-02-06</span>
-                                        </div>
-                                </li>
-                                
-                                <li>
-                                         <div class="content">
-                                               <h4>Conference presentation at ISWC 2022</h4>
-                                                <p><strong>Venue:</strong> The 21st International Semantic Web Conference, Hangzhou, China</p>
-                                                <p>Paper presentation titled &#39;POSO: A Generic Positioning System Ontology&#39;</p>
-                                        </div>
-                                        <div class="date">
-                                                <span>2022-10-26</span>
-                                        </div>
-                                </li>
-                                
-                                <li>
-                                         <div class="content">
-                                               <h4>Conference presentation at IPIN 2022</h4>
-                                                <p><strong>Venue:</strong> 12th International Conference on Indoor Positioning and Indoor Navigation, Beijing, China</p>
-                                                <p>Paper presentation titled &#39;A Solid-based Architecture for Decentralised Interoperable Location Data&#39;</p>
-                                        </div>
-                                        <div class="date">
-                                                <span>2022-02-06</span>
-                                        </div>
-                                </li>
-                                
-                                <li>
-                                         <div class="content">
-                                               <h4>Presentation at FOSDEM 2022</h4>
-                                                <p><strong>Venue:</strong> FOSDEM 2022, Brussels, Belgium</p>
-                                                <p>Presentation titled &#39;Rapid Prototyping of a Positioning System Using the OpenHPS Framework&#39;</p>
-                                        </div>
-                                        <div class="date">
-                                                <span>2022-02-06</span>
-                                        </div>
-                                </li>
-                                
-                                <li>
-                                         <div class="content">
-                                               <h4>Conference presentation at IPIN 2021</h4>
-                                                <p><strong>Venue:</strong> 11th International Conference on Indoor Positioning and Indoor Navigation, Lloret de Mar, Spain</p>
-                                                <p>Paper presentation titled &#39;Indoor Positioning Using the OpenHPS Framework&#39;</p>
-                                        </div>
-                                        <div class="date">
-                                                <span>2021-12-01</span>
-                                        </div>
-                                </li>
-                                
-                        </ul>
-                </section>
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <strong
+              >Van de Wynckel, M.</strong
+            >, & Signer, B. (2021). OpenHPS: Single Floor Fingerprinting and Trajectory Dataset. https://doi.org/10.5281/zenodo.4744380
 
-                <section>
-                        <h2>Teaching Experience</h2>
-                        <h3>Courses</h3>
-                        <ul>
-                                
-                                
-                                <li>
-                                        <div class="content">
-                                                <h4>Next Generation User Interfaces <small>(4018166FNR)</small></h4>
-                                                <span class="detail-line">
-                                                        <strong>Level:</strong> <span itemprop="educationalLevel">master</span>
-                                                        <strong>Titular:</strong>
-                                                        <ul class="names">
-                                                                
-                                                                <li>Prof. Dr. Beat Signer</li>
-                                                                
-                                                        </ul>
-                                                </span>
-                                        </div>
-                                        <div class="date">
-                                                <span>2019 - 2025</span>
-                                        </div>
-                                </li>
-                                
-                                <li>
-                                        <div class="content">
-                                                <h4>Web Technologies <small>(1019888BNR)</small></h4>
-                                                <span class="detail-line">
-                                                        <strong>Level:</strong> <span itemprop="educationalLevel">bachelor</span>
-                                                        <strong>Titular:</strong>
-                                                        <ul class="names">
-                                                                
-                                                                <li>Prof. Dr. Beat Signer</li>
-                                                                
-                                                        </ul>
-                                                </span>
-                                        </div>
-                                        <div class="date">
-                                                <span>2019 - 2025</span>
-                                        </div>
-                                </li>
-                                
-                                <li>
-                                        <div class="content">
-                                                <h4>Databanken <small>(1007156ANR)</small></h4>
-                                                <span class="detail-line">
-                                                        <strong>Level:</strong> <span itemprop="educationalLevel">bachelor</span>
-                                                        <strong>Titular:</strong>
-                                                        <ul class="names">
-                                                                
-                                                                <li>Prof. Dr. Bas Ketsman</li>
-                                                                
-                                                        </ul>
-                                                </span>
-                                        </div>
-                                        <div class="date">
-                                                <span>2019 - 2025</span>
-                                        </div>
-                                </li>
-                                
-                                <li>
-                                        <div class="content">
-                                                <h4>Web Technologies <small>(4019862ANR)</small></h4>
-                                                <span class="detail-line">
-                                                        <strong>Level:</strong> <span itemprop="educationalLevel">master</span>
-                                                        <strong>Titular:</strong>
-                                                        <ul class="names">
-                                                                
-                                                                <li>Prof. Dr. Beat Signer</li>
-                                                                
-                                                        </ul>
-                                                </span>
-                                        </div>
-                                        <div class="date">
-                                                <span>2019 - 2023</span>
-                                        </div>
-                                </li>
-                                
-                                <li>
-                                        <div class="content">
-                                                <h4>Databases <small>(4019814ENR)</small></h4>
-                                                <span class="detail-line">
-                                                        <strong>Level:</strong> <span itemprop="educationalLevel">master</span>
-                                                        <strong>Titular:</strong>
-                                                        <ul class="names">
-                                                                
-                                                                <li>Prof. Dr. Bas Ketsman</li>
-                                                                
-                                                        </ul>
-                                                </span>
-                                        </div>
-                                        <div class="date">
-                                                <span>2019 - 2022</span>
-                                        </div>
-                                </li>
-                                
-                                <li>
-                                        <div class="content">
-                                                <h4>Advanced Topics in Big Data <small>(4023256FNR)</small></h4>
-                                                <span class="detail-line">
-                                                        <strong>Level:</strong> <span itemprop="educationalLevel">master</span>
-                                                        <strong>Titulars:</strong>
-                                                        <ul class="names">
-                                                                
-                                                                <li>Prof. Dr. Beat Signer</li>
-                                                                
-                                                                <li>Prof. Dr. Bas Ketsman</li>
-                                                                
-                                                        </ul>
-                                                </span>
-                                        </div>
-                                        <div class="date">
-                                                <span>2021 - 2022</span>
-                                        </div>
-                                </li>
-                                
-                                <li>
-                                        <div class="content">
-                                                <h4>Advanced Topics in Information Systems <small>(4016792ENR)</small></h4>
-                                                <span class="detail-line">
-                                                        <strong>Level:</strong> <span itemprop="educationalLevel">master</span>
-                                                        <strong>Titular:</strong>
-                                                        <ul class="names">
-                                                                
-                                                                <li>Prof. Dr. Beat Signer</li>
-                                                                
-                                                        </ul>
-                                                </span>
-                                        </div>
-                                        <div class="date">
-                                                <span>2019 - 2021</span>
-                                        </div>
-                                </li>
-                                
-                                <li>
-                                        <div class="content">
-                                                <h4>Information Visualisation <small>(4019538FNR)</small></h4>
-                                                <span class="detail-line">
-                                                        <strong>Level:</strong> <span itemprop="educationalLevel">master</span>
-                                                        <strong>Titular:</strong>
-                                                        <ul class="names">
-                                                                
-                                                                <li>Prof. Dr. Beat Signer</li>
-                                                                
-                                                        </ul>
-                                                </span>
-                                        </div>
-                                        <div class="date">
-                                                <span>2019 - 2021</span>
-                                        </div>
-                                </li>
-                                
-                                <li>
-                                        <div class="content">
-                                                <h4>Open Information Systems <small>(4020612FNW)</small></h4>
-                                                <span class="detail-line">
-                                                        <strong>Level:</strong> <span itemprop="educationalLevel">master</span>
-                                                        <strong>Titulars:</strong>
-                                                        <ul class="names">
-                                                                
-                                                                <li>Prof. Dr. Bart Bogaerts</li>
-                                                                
-                                                                <li>Prof. Dr. Bas Ketsman</li>
-                                                                
-                                                        </ul>
-                                                </span>
-                                        </div>
-                                        <div class="date">
-                                                <span>2020 - 2021</span>
-                                        </div>
-                                </li>
-                                
-                                <li>
-                                        <div class="content">
-                                                <h4>Open Information Systems <small>(4020612FNW)</small></h4>
-                                                <span class="detail-line">
-                                                        <strong>Level:</strong> <span itemprop="educationalLevel">master</span>
-                                                        <strong>Titular:</strong>
-                                                        <ul class="names">
-                                                                
-                                                                <li>Prof. Dr. Christophe Debruyne</li>
-                                                                
-                                                        </ul>
-                                                </span>
-                                        </div>
-                                        <div class="date">
-                                                <span>2019 - 2020</span>
-                                        </div>
-                                </li>
-                                
-                        </ul>
-                        <h3>Supervised Theses</h3>
-                        <ul>
-                                
-                                <li>
-                                        <div class="content">
-                                                <h4>LiDAR Indoor Map Matching for Autonomous Robots</h4>
-                                                <p><strong>Student:</strong> Jordan Shittu</p>
-                                        </div>
-                                        <div class="date">
-                                                <span>2023 - 2024</span>
-                                        </div>
-                                </li>
-                                
-                                <li>
-                                        <div class="content">
-                                                <h4>Identifying Devices Based on MAC Layer Properties</h4>
-                                                <p><strong>Student:</strong> Benjamin Vermunicht</p>
-                                        </div>
-                                        <div class="date">
-                                                <span>2022 - 2023</span>
-                                        </div>
-                                </li>
-                                
-                                <li>
-                                        <div class="content">
-                                                <h4>Heuristic Real-Time Trajectory Prediction Using Spatio-temporal Databases</h4>
-                                                <p><strong>Student:</strong> Ahmed Barhdadi</p>
-                                        </div>
-                                        <div class="date">
-                                                <span>2022 - 2023</span>
-                                        </div>
-                                </li>
-                                
-                                <li>
-                                        <div class="content">
-                                                <h4>Location Tracking on a Physical Game Board</h4>
-                                                <p><strong>Student:</strong> Nathan Hoebeke</p>
-                                        </div>
-                                        <div class="date">
-                                                <span>2022 - 2023</span>
-                                        </div>
-                                </li>
-                                
-                                <li>
-                                        <div class="content">
-                                                <h4>End-User Authoring for Location-based Implicit Human-Computer Interaction</h4>
-                                                <p><strong>Student:</strong> Stoffel Oostvogels</p>
-                                        </div>
-                                        <div class="date">
-                                                <span>2022 - 2023</span>
-                                        </div>
-                                </li>
-                                
-                                <li>
-                                        <div class="content">
-                                                <h4>Wi-Fi Fingerprinting: Signal Visualisation and Crowd-sourcing</h4>
-                                                <p><strong>Student:</strong> Ahmed Barhdadi</p>
-                                        </div>
-                                        <div class="date">
-                                                <span>2020 - 2021</span>
-                                        </div>
-                                </li>
-                                
-                                <li>
-                                        <div class="content">
-                                                <h4>Indoor Positioning by Visible Light Communication</h4>
-                                                <p><strong>Student:</strong> Ronald Michiels</p>
-                                        </div>
-                                        <div class="date">
-                                                <span>2020 - 2021</span>
-                                        </div>
-                                </li>
-                                
-                                <li>
-                                        <div class="content">
-                                                <h4>Anonymous Contact Tracing Fusion</h4>
-                                                <p><strong>Student:</strong> Yassine Bouagaz</p>
-                                        </div>
-                                        <div class="date">
-                                                <span>2020 - 2021</span>
-                                        </div>
-                                </li>
-                                
-                                <li>
-                                        <div class="content">
-                                                <h4>Comparison of SLAM Solutions with Exclusive Usage of LIDAR Observation Data</h4>
-                                                <p><strong>Student:</strong> Ben Bergs</p>
-                                        </div>
-                                        <div class="date">
-                                                <span>2020 - 2021</span>
-                                        </div>
-                                </li>
-                                
-                                <li>
-                                        <div class="content">
-                                                <h4>Design Guidelines for IoT Systems in Smart Companies</h4>
-                                                <p><strong>Student:</strong> Jeroen Grégoire</p>
-                                        </div>
-                                        <div class="date">
-                                                <span>2020 - 2021</span>
-                                        </div>
-                                </li>
-                                
-                        </ul>
-                </section>
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <strong
+              >Van de Wynckel, M.</strong
+            >, & Signer, B. (2020). OpenHPS: An Open Source Hybrid Positioning System (WISE-2020-01). Vrije Universiteit Brussel. https://doi.org/10.48550/ARXIV.2101.05198
 
-                <section>
-                        <h2>Academic Service</h2>
-                        <ul>
-                                
-                                <li>
-                                        <div class="content">
-                                                <h4>reviewer</h4>
-                                                , <strong>Interactive, Mobile, Wearable and Ubiquitous Technologies (Journal)</strong>
-                                        </div>
-                                        <div class="date">
-                                                <span
-                                                        >2022</span
-                                                >
-                                        </div>
-                                </li>
-                                
-                                <li>
-                                        <div class="content">
-                                                <h4>reviewer</h4>
-                                                , <strong>Proceedings of the 15th International Conference on Tangible, Embedded and Embodied Interaction</strong>
-                                        </div>
-                                        <div class="date">
-                                                <span
-                                                        >2020</span
-                                                >
-                                        </div>
-                                </li>
-                                
-                                <li>
-                                        <div class="content">
-                                                <h4>university</h4>
-                                                , <strong>Faculty Research Comittee</strong>
-                                        </div>
-                                        <div class="date">
-                                                <span
-                                                        >2020 - now</span
-                                                >
-                                        </div>
-                                </li>
-                                
-                                <li>
-                                        <div class="content">
-                                                <h4>university</h4>
-                                                , <strong>Department Council</strong>
-                                        </div>
-                                        <div class="date">
-                                                <span
-                                                        >2019 - now</span
-                                                >
-                                        </div>
-                                </li>
-                                
-                                <li>
-                                        <div class="content">
-                                                <h4>university</h4>
-                                                , <strong>Bachelor Program Committee</strong>
-                                        </div>
-                                        <div class="date">
-                                                <span
-                                                        >2019 - now</span
-                                                >
-                                        </div>
-                                </li>
-                                
-                        </ul>
-                </section>
-        </body>
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <strong
+              >Van de Wynckel, M.</strong
+            > (2019). Indoor Navigation by Centralized Tracking [Master’s thesis, Vrije Universiteit Brussel]. https://researchportal.vub.be/en/studentTheses/indoor-navigation-by-centralized-tracking
+
+          </div>
+        </li>
+        
+      </ul>
+    </section>
+
+    <section>
+      <h2>Presentations</h2>
+      <ul>
+         
+        <li>
+          <div class="content">
+            <h4>Presentation at FOSDEM 2025</h4>
+            <p>
+              <strong>Venue:</strong> FOSDEM 2025, Brussels, Belgium
+            </p>
+            <p>Presentation titled &#39;Discovering Indoor Environments and Positioning Systems&#39;</p>
+          </div>
+          <div class="date">
+            <span>2025-02-01</span>
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <h4>Conference presentation at ESWC 2024</h4>
+            <p>
+              <strong>Venue:</strong> The Semantic Web. ESWC 2024, Hersonissos, Crete, Greece
+            </p>
+            <p>Paper presentation titled &#39;FidMark: A Fiducial Marker Ontology for Semantically Describing Visual Markers&#39;</p>
+          </div>
+          <div class="date">
+            <span>2024-05-28</span>
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <h4>Poster presentation at SoSy 2024</h4>
+            <p>
+              <strong>Venue:</strong> The 2nd Solid Symposium, Leuven, Belgium
+            </p>
+            <p>Poster presentation titled &#39;Discoverable and Interoperable Augmented Reality Environments Through Solid Pods&#39;</p>
+          </div>
+          <div class="date">
+            <span>2024-05-02</span>
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <h4>Conference presentation at IoT 2023</h4>
+            <p>
+              <strong>Venue:</strong> 13th International Conference on the Internet of Things, Nagoya, Japan
+            </p>
+            <p>Paper presentation titled &#39;SemBeacon: A Semantic Proximity Beacon Solution for Discovering and Detecting the Position of Physical Things&#39;</p>
+          </div>
+          <div class="date">
+            <span>2023-11-08</span>
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <h4>Poster presentation at BeJS conf 2023</h4>
+            <p>
+              <strong>Venue:</strong> Belgian JavaScript Conference (BeJS conf), Brussels, Belgium
+            </p>
+            <p>Poster presentation of the OpenHPS framework</p>
+          </div>
+          <div class="date">
+            <span>2023-02-06</span>
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <h4>Conference presentation at ISWC 2022</h4>
+            <p>
+              <strong>Venue:</strong> The 21st International Semantic Web Conference, Hangzhou, China
+            </p>
+            <p>Paper presentation titled &#39;POSO: A Generic Positioning System Ontology&#39;</p>
+          </div>
+          <div class="date">
+            <span>2022-10-26</span>
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <h4>Conference presentation at IPIN 2022</h4>
+            <p>
+              <strong>Venue:</strong> 12th International Conference on Indoor Positioning and Indoor Navigation, Beijing, China
+            </p>
+            <p>Paper presentation titled &#39;A Solid-based Architecture for Decentralised Interoperable Location Data&#39;</p>
+          </div>
+          <div class="date">
+            <span>2022-02-06</span>
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <h4>Presentation at FOSDEM 2022</h4>
+            <p>
+              <strong>Venue:</strong> FOSDEM 2022, Brussels, Belgium
+            </p>
+            <p>Presentation titled &#39;Rapid Prototyping of a Positioning System Using the OpenHPS Framework&#39;</p>
+          </div>
+          <div class="date">
+            <span>2022-02-06</span>
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <h4>Conference presentation at IPIN 2021</h4>
+            <p>
+              <strong>Venue:</strong> 11th International Conference on Indoor Positioning and Indoor Navigation, Lloret de Mar, Spain
+            </p>
+            <p>Paper presentation titled &#39;Indoor Positioning Using the OpenHPS Framework&#39;</p>
+          </div>
+          <div class="date">
+            <span>2021-12-01</span>
+          </div>
+        </li>
+        
+      </ul>
+    </section>
+
+    <section>
+      <h2>Teaching Experience</h2>
+      <h3>Courses</h3>
+      <ul>
+         
+        <li>
+          <div class="content">
+            <h4>Next Generation User Interfaces <small>(4018166FNR)</small></h4>
+            <div class="detail-line">
+              <strong>Level:</strong> <span>master</span>
+              <strong
+                >Titular:</strong
+              >
+              <ul class="names">
+                
+                <li>Prof. Dr. Beat Signer</li>
+                
+              </ul>
+            </div>
+          </div>
+          <div class="date">
+            <span>2019 - 2025</span>
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <h4>Web Technologies <small>(1019888BNR)</small></h4>
+            <div class="detail-line">
+              <strong>Level:</strong> <span>bachelor</span>
+              <strong
+                >Titular:</strong
+              >
+              <ul class="names">
+                
+                <li>Prof. Dr. Beat Signer</li>
+                
+              </ul>
+            </div>
+          </div>
+          <div class="date">
+            <span>2019 - 2025</span>
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <h4>Databanken <small>(1007156ANR)</small></h4>
+            <div class="detail-line">
+              <strong>Level:</strong> <span>bachelor</span>
+              <strong
+                >Titular:</strong
+              >
+              <ul class="names">
+                
+                <li>Prof. Dr. Bas Ketsman</li>
+                
+              </ul>
+            </div>
+          </div>
+          <div class="date">
+            <span>2019 - 2025</span>
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <h4>Web Technologies <small>(4019862ANR)</small></h4>
+            <div class="detail-line">
+              <strong>Level:</strong> <span>master</span>
+              <strong
+                >Titular:</strong
+              >
+              <ul class="names">
+                
+                <li>Prof. Dr. Beat Signer</li>
+                
+              </ul>
+            </div>
+          </div>
+          <div class="date">
+            <span>2019 - 2023</span>
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <h4>Databases <small>(4019814ENR)</small></h4>
+            <div class="detail-line">
+              <strong>Level:</strong> <span>master</span>
+              <strong
+                >Titular:</strong
+              >
+              <ul class="names">
+                
+                <li>Prof. Dr. Bas Ketsman</li>
+                
+              </ul>
+            </div>
+          </div>
+          <div class="date">
+            <span>2019 - 2022</span>
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <h4>Advanced Topics in Big Data <small>(4023256FNR)</small></h4>
+            <div class="detail-line">
+              <strong>Level:</strong> <span>master</span>
+              <strong
+                >Titulars:</strong
+              >
+              <ul class="names">
+                
+                <li>Prof. Dr. Beat Signer</li>
+                
+                <li>Prof. Dr. Bas Ketsman</li>
+                
+              </ul>
+            </div>
+          </div>
+          <div class="date">
+            <span>2021 - 2022</span>
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <h4>Advanced Topics in Information Systems <small>(4016792ENR)</small></h4>
+            <div class="detail-line">
+              <strong>Level:</strong> <span>master</span>
+              <strong
+                >Titular:</strong
+              >
+              <ul class="names">
+                
+                <li>Prof. Dr. Beat Signer</li>
+                
+              </ul>
+            </div>
+          </div>
+          <div class="date">
+            <span>2019 - 2021</span>
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <h4>Information Visualisation <small>(4019538FNR)</small></h4>
+            <div class="detail-line">
+              <strong>Level:</strong> <span>master</span>
+              <strong
+                >Titular:</strong
+              >
+              <ul class="names">
+                
+                <li>Prof. Dr. Beat Signer</li>
+                
+              </ul>
+            </div>
+          </div>
+          <div class="date">
+            <span>2019 - 2021</span>
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <h4>Open Information Systems <small>(4020612FNW)</small></h4>
+            <div class="detail-line">
+              <strong>Level:</strong> <span>master</span>
+              <strong
+                >Titulars:</strong
+              >
+              <ul class="names">
+                
+                <li>Prof. Dr. Bart Bogaerts</li>
+                
+                <li>Prof. Dr. Bas Ketsman</li>
+                
+              </ul>
+            </div>
+          </div>
+          <div class="date">
+            <span>2020 - 2021</span>
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <h4>Open Information Systems <small>(4020612FNW)</small></h4>
+            <div class="detail-line">
+              <strong>Level:</strong> <span>master</span>
+              <strong
+                >Titular:</strong
+              >
+              <ul class="names">
+                
+                <li>Prof. Dr. Christophe Debruyne</li>
+                
+              </ul>
+            </div>
+          </div>
+          <div class="date">
+            <span>2019 - 2020</span>
+          </div>
+        </li>
+        
+      </ul>
+      <h3>Supervised Theses</h3>
+      <ul>
+        
+        <li>
+          <div class="content">
+            <h4>LiDAR Indoor Map Matching for Autonomous Robots</h4>
+            <p><strong>Student:</strong> Jordan Shittu</p>
+          </div>
+          <div class="date">
+            <span>2023 - 2024</span>
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <h4>Identifying Devices Based on MAC Layer Properties</h4>
+            <p><strong>Student:</strong> Benjamin Vermunicht</p>
+          </div>
+          <div class="date">
+            <span>2022 - 2023</span>
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <h4>Heuristic Real-Time Trajectory Prediction Using Spatio-temporal Databases</h4>
+            <p><strong>Student:</strong> Ahmed Barhdadi</p>
+          </div>
+          <div class="date">
+            <span>2022 - 2023</span>
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <h4>Location Tracking on a Physical Game Board</h4>
+            <p><strong>Student:</strong> Nathan Hoebeke</p>
+          </div>
+          <div class="date">
+            <span>2022 - 2023</span>
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <h4>End-User Authoring for Location-based Implicit Human-Computer Interaction</h4>
+            <p><strong>Student:</strong> Stoffel Oostvogels</p>
+          </div>
+          <div class="date">
+            <span>2022 - 2023</span>
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <h4>Wi-Fi Fingerprinting: Signal Visualisation and Crowd-sourcing</h4>
+            <p><strong>Student:</strong> Ahmed Barhdadi</p>
+          </div>
+          <div class="date">
+            <span>2020 - 2021</span>
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <h4>Indoor Positioning by Visible Light Communication</h4>
+            <p><strong>Student:</strong> Ronald Michiels</p>
+          </div>
+          <div class="date">
+            <span>2020 - 2021</span>
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <h4>Anonymous Contact Tracing Fusion</h4>
+            <p><strong>Student:</strong> Yassine Bouagaz</p>
+          </div>
+          <div class="date">
+            <span>2020 - 2021</span>
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <h4>Comparison of SLAM Solutions with Exclusive Usage of LIDAR Observation Data</h4>
+            <p><strong>Student:</strong> Ben Bergs</p>
+          </div>
+          <div class="date">
+            <span>2020 - 2021</span>
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <h4>Design Guidelines for IoT Systems in Smart Companies</h4>
+            <p><strong>Student:</strong> Jeroen Grégoire</p>
+          </div>
+          <div class="date">
+            <span>2020 - 2021</span>
+          </div>
+        </li>
+        
+      </ul>
+    </section>
+
+    <section>
+      <h2>Academic Services</h2>
+      <ul>
+        
+        <li>
+          <div class="content">
+            <h4>Reviewer of the Interactive, Mobile, Wearable and Ubiquitous Technologies (Journal)</h4>
+            <p></p>
+          </div>
+          <div class="date">
+            <span
+              >2022</span
+            >
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <h4>Reviewer of the Proceedings of the 15th International Conference on Tangible, Embedded and Embodied Interaction</h4>
+            <p></p>
+          </div>
+          <div class="date">
+            <span
+              >2020</span
+            >
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <h4>OAP representative of the Faculty Research Comittee</h4>
+            <p>Other academic staff (OAP) representative of the faculty of science and engineering.</p>
+          </div>
+          <div class="date">
+            <span
+              >2020 - now</span
+            >
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <h4>OAP representative of the Department Council</h4>
+            <p>Other academic staff (OAP) representative of the department of computer science.</p>
+          </div>
+          <div class="date">
+            <span
+              >2019 - now</span
+            >
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <h4>OAP representative of the Bachelor Program Committee</h4>
+            <p>Other academic staff (OAP) representative of the Bachelor program of computer science.</p>
+          </div>
+          <div class="date">
+            <span
+              >2019 - now</span
+            >
+          </div>
+        </li>
+        
+      </ul>
+    </section>
+  </body>
 </html>
