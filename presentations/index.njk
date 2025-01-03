@@ -3,6 +3,9 @@ layout: default.njk
 permalink: /presentations/
 title: 'Presentations'
 eleventyExcludeFromCollections: ["presentations"]
+eleventyNavigation:
+  key: Talks
+  order: 4
 ---
 <div class="container main">
   <div class="row">
@@ -31,7 +34,10 @@ eleventyExcludeFromCollections: ["presentations"]
             <img class="postlist-image" alt="{{ post.data.title }}" src="{{ post.data.thumbnail }}" itemprop="thumbnailUrl"/>
             <div class="postlist-content">
               <a href="{{ post.url | url }}" class="postlist-link" itemprop="url">{% if post.data.title %}<span itemprop="name">{{ post.data.title }}</span>{% else %}<code>{{ post.url }}</code>{% endif %}</a>
-              <time class="postlist-date" datetime="{{ post.date | htmlDateString }}" itemprop="datePublished">{{ post.date | readableDate }}</time>
+                {% if post.data.scheduled %}
+                <span class="badge badge-primary">scheduled</span>
+                {% endif %}
+                <time class="postlist-date" datetime="{{ post.date | htmlDateString }}" itemprop="datePublished">{{ post.date | readableDate }}</time>
               <span class="postlist-description" itemprop="description">{{ post.data.excerpt }}</span>
             </div>
           </li>

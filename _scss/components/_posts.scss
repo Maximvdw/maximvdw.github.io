@@ -14,7 +14,9 @@
 }
 .postlist-item {
     margin-bottom: 1em;
-    display: inline-flex;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
 }
 .postlist-date,
 .postlist-item:before {
@@ -55,9 +57,19 @@ img.postlist-image {
     background-color: white;
     float: left;
     margin-right: 1em;
+    margin-left: 0;
 }
 
 #viewer iframe {
     border: 0;
     border-radius: 1em;
+}
+.publication-content {
+    font-weight: bold;
+    font-style: italic;
+}
+.post-details {
+    p {
+        margin: 0;
+    }
 }

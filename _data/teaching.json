@@ -1,4 +1,12 @@
 {
+    "workshops": [
+        {
+            "title": "3D Modelling for 3D Printing",
+            "audience": "PhD students",
+            "year": "2024",
+            "description": "Workshop on 3D modelling in Autodesk Fusion 360 for designing functional and moving parts for 3D printing."
+        }
+    ],
     "courses": [
         {
             "course": "Next Generation User Interfaces",

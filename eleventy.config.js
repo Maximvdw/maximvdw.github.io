@@ -216,4 +216,8 @@ async function configureFilters(el) {
     el.addFilter("min", (...numbers) => {
         return Math.min.apply(null, numbers);
     });
+
+    el.addFilter('urlmatch', function(array, value) {
+        return array.filter(item => item['url'].startsWith(value));
+    });
 }

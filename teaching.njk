@@ -17,6 +17,24 @@ eleventyNavigation:
     </div>
 </div>
 
+<h2>Workshops</h2>
+<ul class="teaching">
+    {% for workshop in teaching.workshops %}
+    <li itemscope itemtype="http://schema.org/Event">
+        <div class="year">
+            <span class="start">{{ workshop.year }}</span>
+        </div>
+        <div class="details">
+            <h2 itemprop="name">{{ workshop.title }}</h2>
+            <span class="detail-line">
+                <strong>Audience:</strong> <span itemprop="audience">{{ workshop.audience }}</span>
+            </span>
+            <p class="description" itemprop="description">{{ workshop.description }}</p>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
+
 <h2>Courses</h2>
 <ul class="teaching">
     {% set sorted_courses = teaching.courses | sort(attribute='end', reverse=true) %}

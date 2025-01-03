@@ -19,34 +19,68 @@ layout: default.njk
         </div>
         <div class="col-sm-9 typography">
             <h1 itemprop="headline">{{ title }}</h1>
+
+            {% if publication %}
+            <a href="{{ publication }}" class="btn btn-red btn-icon" data-title="Publication"><i class="fa fa-regular fa-file-pdf"></i> Publication</a>
+            {% endif %}
+            {% if video %}
+            <a href="{{ video }}" class="btn btn-blue btn-icon" data-title="Video"><i class="fa fa-regular fa-file-video"></i> Recording</a>
+            {% endif %}
+            {% if event %}
+            <a href="{{ event }}" class="btn btn-yellow btn-icon"><i class="fa fa-calendar"></i> Event link</a>
+            {% endif %}
+            
+            <h2>Details</h2>
+            <div class="post-details">
+                <p><strong>Speaker:</strong> {{ speaker }}</p>
+                <p><strong>Date:</strong> {{ date }}</p>
+                {% if scheduled %}
+                <p><strong>Status:</strong> Scheduled</p>
+                {% endif %}
+                <p><strong>Venue:</strong> {{ venue.name }}, {{ venue.location }}</p>
+            </div>
+
+            {% if publication and not content %}
+            {% set publicationContent = collections.all | urlmatch(publication) | first %}
+            {% if publicationContent %}
+            <h2>Abstract</h2>
+            <div class="publication-content">
+                {{ publicationContent.templateContent | safe }}
+            </div>
+            {% endif %}
+            {% else %}
+            {{ content | safe }}
+            {% endif %}
+
+            {% if video %}
+            {% if video.startsWith('https://videolectures.net') %}
+            <iframe src="{{ video }}" width="100%" frameborder="0" allowfullscreen style="aspect-ratio:16/9"></iframe>
+            {% elif video.endsWith('mp4') %}
+            <video width="100%" controls preload="auto" itemprop="video">
+                <source src="{{ video }}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            {% elif video.endsWith('webm') %}
+            <video width="100%" controls preload="auto" itemprop="video">
+                <source src="{{ video }}" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
+            {% endif %}
+            {% endif %}
+
             <div class="gallery">
-                {% for image in post.data.images %}
+                {% for image in images %}
                     <div class="gallery-item">
-                        <img src="{{ image }}" alt="Gallery image">
+                        <img src="{{ image }}" alt="Gallery image" onclick="enlargeImage(this)">
                     </div>
                 {% endfor %}
             </div>
-            <style>
-                .gallery {
-                    display: grid;
-                    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-                    gap: 1rem;
+            <script>
+                function enlargeImage(img) {
+                    const galleryItem = img.parentElement;
+                    galleryItem.classList.toggle('enlarged');
                 }
-
-                .gallery-item {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    height: 200px;
-                    overflow: hidden;
-                }
-
-                .gallery-item img {
-                    max-width: 100%;
-                    max-height: 100%;
-                    object-fit: cover;
-                }
-            </style>
+            </script>
         </div>
     </div>
 </div>
