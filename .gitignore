@@ -8,3 +8,6 @@ npm-debug.log
 
 # Eleventy
 _site/
+
+# Yarn
+yarn-error.log

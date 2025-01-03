@@ -54,9 +54,9 @@ export default async function (el) {
         key: 'd53c00f0cb1a4ff7970bfcacf82145aa'
     });
 
-    // el.addPlugin(pluginHTMLValidate, {
-    //     validator: 'http://localhost:8888',
-    // });
+    el.addPlugin(pluginHTMLValidate, {
+        // validator: 'http://localhost:8888',
+    });
 
     /* Markdown */
     const md = markdownIt({ html: true });

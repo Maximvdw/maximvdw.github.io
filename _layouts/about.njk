@@ -3,25 +3,25 @@ layout: main.njk
 ---
 <div itemscope itemtype="http://schema.org/Person">
   <!-- Metadata -->
-  <meta itemprop="givenName" content="Maxim" />
-  <meta itemprop="familyName" content="Van de Wynckel" />
-  <meta itemprop="sameAs" content="https://solid.maximvdw.be/profile/card#me" />
+  <meta itemprop="givenName" content="Maxim">
+  <meta itemprop="familyName" content="Van de Wynckel">
+  <meta itemprop="sameAs" content="https://solid.maximvdw.be/profile/card#me">
   <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-    <meta itemprop="streetAddress" content="Invalidenlaan 178" />
-    <meta itemprop="addressLocality" content="Oudergem" />
-    <meta itemprop="addressRegion" content="Brussels-capital region" />
-    <meta itemprop="postalCode" content="1160" />
-    <meta itemprop="addressCountry" content="BE" />
+    <meta itemprop="streetAddress" content="Invalidenlaan 178">
+    <meta itemprop="addressLocality" content="Oudergem">
+    <meta itemprop="addressRegion" content="Brussels-capital region">
+    <meta itemprop="postalCode" content="1160">
+    <meta itemprop="addressCountry" content="BE">
   </div>
-  <meta itemprop="email" content="me@maximvdw.be" />
-  <meta itemprop="jobTitle" content="researcher" />
-  <meta itemprop="knowsAbout" content="interoperability" />
-  <meta itemprop="knowsAbout" content="indoor positioning" />
-  <meta itemprop="knowsAbout" content="hybrid positioning systems" />
-  <meta itemprop="knowsAbout" content="location-based services" />
-  <meta itemprop="knowsAbout" content="linked data" />
-  <meta itemprop="knowsAbout" content="semantic web" />
-  <meta itemprop="knowsAbout" content="personal data vaults" />
+  <meta itemprop="email" content="me@maximvdw.be">
+  <meta itemprop="jobTitle" content="researcher">
+  <meta itemprop="knowsAbout" content="interoperability">
+  <meta itemprop="knowsAbout" content="indoor positioning">
+  <meta itemprop="knowsAbout" content="hybrid positioning systems">
+  <meta itemprop="knowsAbout" content="location-based services">
+  <meta itemprop="knowsAbout" content="linked data">
+  <meta itemprop="knowsAbout" content="semantic web">
+  <meta itemprop="knowsAbout" content="personal data vaults">
   <!-- END Metadata -->
 
   <div class="row">
@@ -35,9 +35,9 @@ layout: main.njk
     </div>
     <div class="col-sm-9">
       <h1>About me</h1>
-      <span itemprop="description">
+      <div itemprop="description">
       {{ content | safe }}
-      </span>
+      </div>
     </div>
   </div>
 
@@ -118,7 +118,7 @@ layout: main.njk
               <span class="detail-line italic">Graduated with {{ entry.grade }}</span>
               {%- endif %}
               <div class="year">
-                <time>{{ entry.graduation | default(entry.start + " - " + entry.end) }}</time>
+                <span>{{ entry.graduation | default(entry.start + " - " + entry.end) }}</span>
               </div>
               {% markdown %}
               <div>{{ entry.description }}</div>
@@ -146,7 +146,7 @@ layout: main.njk
               <h3>{{ entry.company.name }}</h3>
               <h4>{{ entry.title }}{% if entry.note %} <small>({{ entry.note }})</small>{% endif %}</h4>
               <div class="year">
-                  <time>{{ entry.start }}</time>{% if entry.start != entry.end %} - <time>{{ entry.end }}</time>{% endif %}
+                  <span>{{ entry.start }}</span>{% if entry.start != entry.end %} - <span>{{ entry.end }}</span>{% endif %}
               </div>
               {% markdown %}
               <div>{{ entry.description }}</div>

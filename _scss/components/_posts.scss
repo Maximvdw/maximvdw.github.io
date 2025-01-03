@@ -60,6 +60,12 @@ img.postlist-image {
     margin-left: 0;
 }
 
+img.postlist-image.padding {
+    width: 3em;
+    height: 3em;
+    padding: 0.5em;
+}
+
 #viewer iframe {
     border: 0;
     border-radius: 1em;
@@ -72,4 +78,8 @@ img.postlist-image {
     p {
         margin: 0;
     }
+}
+iframe.video, video.video {
+    width: 100%;
+    border: none;
 }
