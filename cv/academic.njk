@@ -1,7 +1,7 @@
 ---
 sitemap: false
+eleventyExcludeFromCollections: true
 ---
-
 <!DOCTYPE html>
 <html lang="en">
         <head>
@@ -274,7 +274,14 @@ sitemap: false
                                 {% set presentations = collections.presentations | reverse %} {% for
                                 presentation in presentations %}
                                 <li>
-                                        <div class="content">{{ presentation.data.date }}</div>
+                                         <div class="content">
+                                               <h4>{{ presentation.data.title }}</h4>
+                                                <p><strong>Venue:</strong> {{ presentation.data.venue.name }}, {{ presentation.data.venue.location }}</p>
+                                                <p>{{ presentation.data.excerpt }}</p>
+                                        </div>
+                                        <div class="date">
+                                                <span>{{ presentation.data.date }}</span>
+                                        </div>
                                 </li>
                                 {% endfor %}
                         </ul>
