@@ -60,7 +60,7 @@ eleventyNavigation:
             <meta itemprop="abstract" content="{{ post.data.content }}">
             <meta itemprop="headline" content="{{ post.data.title }}">
             <meta itemprop="datePublished" content="{{ post.date | htmlDateString }}T00:00:00Z">
-            <img class="postlist-image" alt="{{ post.data.title }}" src="{{ post.data.thumbnail }}" itemprop="image"/>
+            <img class="postlist-image" alt="{{ post.data.title }}" src="{{ post.data.thumbnail }}" itemprop="image">
             <div class="postlist-content">
               <a href="{{ post.url | url }}" class="postlist-link" itemprop="url">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
               <span class="badge badge-{{ post.data.type }}">{{ post.data.type }}</span><time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>

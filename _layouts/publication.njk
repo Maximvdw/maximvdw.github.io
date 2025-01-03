@@ -81,7 +81,7 @@ layout: default.njk
             </ul>
 
             <h2>Abstract</h2>
-            <p class="abstract" itemprop="abstract">{{ content | safe }}</p>
+            <div class="abstract" itemprop="abstract">{{ content | safe }}</div>
 
             {% if pdf %}
                 <script src='/scripts/lib/webviewer/webviewer.min.js'></script>

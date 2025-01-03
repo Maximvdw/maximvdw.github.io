@@ -26,9 +26,9 @@ eleventyNavigation:
         </div>
         <div class="details">
             <h2 itemprop="name">{{ workshop.title }}</h2>
-            <span class="detail-line">
+            <div class="detail-line">
                 <strong>Audience:</strong> <span itemprop="audience">{{ workshop.audience }}</span>
-            </span>
+            </div>
             <p class="description" itemprop="description">{{ workshop.description }}</p>
         </div>
     </li>
@@ -46,7 +46,7 @@ eleventyNavigation:
         </div>
         <div class="details">
             <h2 itemprop="name">{{ course.course }}</h2><span class="code" itemprop="courseCode">{{ course.code }}</span>
-            <span class="detail-line">
+            <div class="detail-line">
                 <strong>Level:</strong> <span itemprop="educationalLevel">{{ course.level }}</span>
                 <strong>Titular{% if course.titulars | length > 1 %}s{% endif %}:</strong>
                 <ul class="supervisors">
@@ -54,7 +54,7 @@ eleventyNavigation:
                     <li><a class="person" rel="nofollow" href="{{ titular.url }}" itemprop="titular">{{ titular.name }}</a></li>
                     {% endfor %}
                 </ul>
-            </span>
+            </div>
             <p class="description" itemprop="description">{{ course.description }}</p>
         </div>
     </li>
@@ -71,7 +71,7 @@ eleventyNavigation:
         </div>
         <div class="details">
             <h2 itemprop="name">{{ thesis.title }}</h2>
-            <span class="detail-line">
+            <div class="detail-line">
                 <strong>Student:</strong> <a class="person" rel="nofollow" href="{{ thesis.student.url }}" itemprop="author">{{ thesis.student.name }}</a>
                 <strong>Supervisors:</strong>
                 <ul class="supervisors">
@@ -79,7 +79,7 @@ eleventyNavigation:
                     <li><a class="person" rel="nofollow" href="{{ supervisor.url }}" itemprop="supervisor">{{ supervisor.name }}</a></li>
                     {% endfor %}
                 </ul>
-            </span>
+            </div>
             <span class="detail-line"><strong>Grade:</strong> {{ thesis.grade }}</span>
             <span class="detail-line"><a href="{{ thesis.url }}" itemprop="url">More details ...</a></span>
         </div>

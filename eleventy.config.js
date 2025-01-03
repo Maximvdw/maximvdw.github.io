@@ -18,6 +18,7 @@ import markdownItAttrs from 'markdown-it-attrs';
 import pluginPDFEmbed from 'eleventy-plugin-pdfembed';
 import pluginFavicon from "eleventy-plugin-gen-favicons";
 import _ from "lodash";
+import pluginHTMLValidate from "./scripts/validator.js";
 
 export default async function (el) {
     /* Passthrough Copy */
@@ -52,6 +53,10 @@ export default async function (el) {
     el.addPlugin(pluginPDFEmbed, {
         key: 'd53c00f0cb1a4ff7970bfcacf82145aa'
     });
+
+    // el.addPlugin(pluginHTMLValidate, {
+    //     validator: 'http://localhost:8888',
+    // });
 
     /* Markdown */
     const md = markdownIt({ html: true });

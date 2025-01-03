@@ -8,7 +8,7 @@
     <ul class="menu">
         {% set navPages = collections.all | eleventyNavigation %}
         {% for entry in navPages %}
-        <li><a {% if entry.url == page.url %}class="active"{% endif %} href="{{ entry.url }}">{{ entry.title }}</a></li>
+        <li><a {% if entry.url == page.url or (entry.url != '/' and page.url.startsWith(entry.url)) %}class="active"{% endif %} href="{{ entry.url }}">{{ entry.title }}</a></li>
         {% endfor %}
     </ul>
 </aside>

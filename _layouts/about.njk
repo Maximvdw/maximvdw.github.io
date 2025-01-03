@@ -1,161 +1,161 @@
 ---
 layout: main.njk
 ---
-
 <div itemscope itemtype="http://schema.org/Person">
-<!-- Metadata -->
-<meta itemprop="givenName" content="Maxim" />
-<meta itemprop="familyName" content="Van de Wynckel" />
-<meta itemprop="sameAs" content="https://solid.maximvdw.be/profile/card#me" />
-<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-  <meta itemprop="streetAddress" content="Invalidenlaan 178" />
-  <meta itemprop="addressLocality" content="Oudergem" />
-  <meta itemprop="addressRegion" content="Brussels-capital region" />
-  <meta itemprop="postalCode" content="1160" />
-  <meta itemprop="addressCountry" content="BE" />
-</div>
-<meta itemprop="email" content="me@maximvdw.be" />
-<meta itemprop="jobTitle" content="researcher" />
-<meta itemprop="knowsAbout" content="interoperability" />
-<meta itemprop="knowsAbout" content="indoor positioning" />
-<meta itemprop="knowsAbout" content="hybrid positioning systems" />
-<meta itemprop="knowsAbout" content="location-based services" />
-<meta itemprop="knowsAbout" content="linked data" />
-<meta itemprop="knowsAbout" content="semantic web" />
-<meta itemprop="knowsAbout" content="personal data vaults" />
-<!-- END Metadata -->
-
-<div class="row">
-  <div class="col-sm-3">
-    <img
-      src="{{ profile_image }}"
-      alt="Maxim Van de Wynckel"
-      class="img-fluid rounded-circle"
-      itemprop="image"
-    />
+  <!-- Metadata -->
+  <meta itemprop="givenName" content="Maxim" />
+  <meta itemprop="familyName" content="Van de Wynckel" />
+  <meta itemprop="sameAs" content="https://solid.maximvdw.be/profile/card#me" />
+  <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+    <meta itemprop="streetAddress" content="Invalidenlaan 178" />
+    <meta itemprop="addressLocality" content="Oudergem" />
+    <meta itemprop="addressRegion" content="Brussels-capital region" />
+    <meta itemprop="postalCode" content="1160" />
+    <meta itemprop="addressCountry" content="BE" />
   </div>
-  <div class="col-sm-9">
-    <h1>About me</h1>
-    <span itemprop="description">
-    {{ content | safe }}
-    </span>
-  </div>
-</div>
+  <meta itemprop="email" content="me@maximvdw.be" />
+  <meta itemprop="jobTitle" content="researcher" />
+  <meta itemprop="knowsAbout" content="interoperability" />
+  <meta itemprop="knowsAbout" content="indoor positioning" />
+  <meta itemprop="knowsAbout" content="hybrid positioning systems" />
+  <meta itemprop="knowsAbout" content="location-based services" />
+  <meta itemprop="knowsAbout" content="linked data" />
+  <meta itemprop="knowsAbout" content="semantic web" />
+  <meta itemprop="knowsAbout" content="personal data vaults" />
+  <!-- END Metadata -->
 
-<div class="row mt-3 mb-3">
-  <div class="col-sm-3"></div>
-  <div class="col-sm-9">
-    <div class="social-links">
-      <a
-        class="social-link linkedin"
-        rel="me"
-        href="{{ social.linkedin }}"
-        itemprop="sameAs"
-      >
-        <i class="fa fa-brands fa-linkedin"></i>
-      </a>
-      <a
-        class="social-link mastodon"
-        rel="me"
-        href="{{ social.mastodon }}"
-        itemprop="sameAs"
-      >
-        <i class="fa fa-brands fa-mastodon"></i>
-      </a>
-      <a
-        class="social-link x"
-        rel="me"
-        href="{{ social.twitter }}"
-        itemprop="sameAs"
-      >
-        <i class="fa fa-brands fa-x-twitter"></i>
-      </a>
-      <a
-        class="social-link github"
-        rel="me"
-        href="{{ social.github }}"
-        itemprop="sameAs"
-      >
-        <i class="fa fa-brands fa-github"></i>
-      </a>
-      <a
-        class="social-link google-scholar"
-        rel="me"
-        href="{{ social.scholar }}"
-        itemprop="sameAs"
-      >
-        <i class="ai ai-google-scholar"></i>
-      </a>
-      <a
-        class="social-link orcid"
-        rel="me"
-        href="{{ social.orcid }}"
-        itemprop="sameAs"
-      >
-        <i class="ai ai-orcid"></i>
-      </a>
+  <div class="row">
+    <div class="col-sm-3">
+      <img
+        src="{{ profile_image }}"
+        alt="Maxim Van de Wynckel"
+        class="img-fluid rounded-circle"
+        itemprop="image"
+      />
+    </div>
+    <div class="col-sm-9">
+      <h1>About me</h1>
+      <span itemprop="description">
+      {{ content | safe }}
+      </span>
     </div>
   </div>
-</div>
 
-<div class="row">
-  <div class="col-sm-6">
-    <section class="cv-section">
-      <h2>Education</h2>
-      <div class="education">
-        {%- for entry in education %}
-        {%- if entry.visible != false %}
-        <div class="education-item">
-          <a class="logo" href="{{ entry.url }}" target="_blank" rel="nofollow">
-            <img
-              src="{{ entry.icon }}"
-              alt="{{ entry.university }} Logo"
-            />
-          </a>
-          <div class="details">
-            <h3>{{ entry.university }}</h3>
-            <h4>{{ entry.degree }}</h4>
-            {%- if entry.grade %}
-            <span class="detail-line italic">Graduated with {{ entry.grade }}</span>
-            {%- endif %}
-            <div class="year">
-              <time>{{ entry.graduation | default(entry.start + " - " + entry.end) }}</time>
-            </div>
-            {% markdown %}
-            <div>{{ entry.description }}</div>
-            {% endmarkdown %}
-          </div>
-        </div>
-        {%- endif %}
-        {%- endfor %}
+  <div class="row mt-3 mb-3">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-9">
+      <div class="social-links">
+        <a
+          class="social-link linkedin"
+          rel="me"
+          href="{{ social.linkedin }}"
+          itemprop="sameAs"
+        >
+          <i class="fa fa-brands fa-linkedin"></i>
+        </a>
+        <a
+          class="social-link mastodon"
+          rel="me"
+          href="{{ social.mastodon }}"
+          itemprop="sameAs"
+        >
+          <i class="fa fa-brands fa-mastodon"></i>
+        </a>
+        <a
+          class="social-link x"
+          rel="me"
+          href="{{ social.twitter }}"
+          itemprop="sameAs"
+        >
+          <i class="fa fa-brands fa-x-twitter"></i>
+        </a>
+        <a
+          class="social-link github"
+          rel="me"
+          href="{{ social.github }}"
+          itemprop="sameAs"
+        >
+          <i class="fa fa-brands fa-github"></i>
+        </a>
+        <a
+          class="social-link google-scholar"
+          rel="me"
+          href="{{ social.scholar }}"
+          itemprop="sameAs"
+        >
+          <i class="ai ai-google-scholar"></i>
+        </a>
+        <a
+          class="social-link orcid"
+          rel="me"
+          href="{{ social.orcid }}"
+          itemprop="sameAs"
+        >
+          <i class="ai ai-orcid"></i>
+        </a>
       </div>
-    </section>
+    </div>
   </div>
-  <div class="col-sm-6">
-    <section class="cv-section">
-      <h2>Experience</h2>
-      <div class="employment">
-        {%- for entry in experience %}
-        <div class="employment-item">
-            <a class="logo" href="{{ entry.company.url }}" target="_blank" rel="{{ entry.company.rel | default('nofollow') }}">
-            <img
-              src="{{ entry.company.icon }}"
-              alt="{{ entry.company.name }} Logo"
-            />
+
+  <div class="row">
+    <div class="col-sm-6">
+      <section class="cv-section">
+        <h2>Education</h2>
+        <div class="education">
+          {%- for entry in education %}
+          {%- if entry.visible != false %}
+          <div class="education-item">
+            <a class="logo" href="{{ entry.url }}" target="_blank" rel="nofollow">
+              <img
+                src="{{ entry.icon }}"
+                alt="{{ entry.university }} Logo"
+              />
             </a>
-          <div class="details">
-            <h3>{{ entry.company.name }}</h3>
-            <h4>{{ entry.title }}{% if entry.note %} <small>({{ entry.note }})</small>{% endif %}</h4>
-            <div class="year">
-                <time>{{ entry.start }}</time>{% if entry.start != entry.end %} - <time>{{ entry.end }}</time>{% endif %}
+            <div class="details">
+              <h3>{{ entry.university }}</h3>
+              <h4>{{ entry.degree }}</h4>
+              {%- if entry.grade %}
+              <span class="detail-line italic">Graduated with {{ entry.grade }}</span>
+              {%- endif %}
+              <div class="year">
+                <time>{{ entry.graduation | default(entry.start + " - " + entry.end) }}</time>
+              </div>
+              {% markdown %}
+              <div>{{ entry.description }}</div>
+              {% endmarkdown %}
             </div>
-            {% markdown %}
-            <div>{{ entry.description }}</div>
-            {% endmarkdown %}
           </div>
+          {%- endif %}
+          {%- endfor %}
         </div>
-        {%- endfor %}
-      </div>
-    </section>
+      </section>
+    </div>
+    <div class="col-sm-6">
+      <section class="cv-section">
+        <h2>Experience</h2>
+        <div class="employment">
+          {%- for entry in experience %}
+          <div class="employment-item">
+              <a class="logo" href="{{ entry.company.url }}" target="_blank" rel="{{ entry.company.rel | default('nofollow') }}">
+              <img
+                src="{{ entry.company.icon }}"
+                alt="{{ entry.company.name }} Logo"
+              />
+              </a>
+            <div class="details">
+              <h3>{{ entry.company.name }}</h3>
+              <h4>{{ entry.title }}{% if entry.note %} <small>({{ entry.note }})</small>{% endif %}</h4>
+              <div class="year">
+                  <time>{{ entry.start }}</time>{% if entry.start != entry.end %} - <time>{{ entry.end }}</time>{% endif %}
+              </div>
+              {% markdown %}
+              <div>{{ entry.description }}</div>
+              {% endmarkdown %}
+            </div>
+          </div>
+          {%- endfor %}
+        </div>
+      </section>
+    </div>
   </div>
 </div>

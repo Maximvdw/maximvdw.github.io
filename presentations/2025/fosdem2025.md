@@ -7,7 +7,7 @@ speaker: "Maxim Van de Wynckel"
 date: "2025-02-01"
 scheduled: true
 venue:
-    name: "FOSDEM 2022"
+    name: "FOSDEM 2025"
     location: "Brussels, Belgium"
 event: "https://fosdem.org/2025/schedule/event/fosdem-2025-4526-discovering-indoor-environments-and-positioning-systems/"
 thumbnail: "/presentations/2025/fosdem.svg"

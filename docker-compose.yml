@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  validator:
+    image: ghcr.io/validator/validator:latest
+    ports:
+      - "8888:8888"
+    stdin_open: true
+    tty: true
