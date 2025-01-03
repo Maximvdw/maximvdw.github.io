@@ -1,0 +1,166 @@
+---
+sitemap: false
+eleventyExcludeFromCollections: true
+permalink: cv/europass.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<SkillsPassport
+  xmlns="http://europass.cedefop.europa.eu/Europass"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://europass.cedefop.europa.eu/Europass http://europass.cedefop.europa.eu/xml/EuropassSchema_V3.0.xsd"
+  locale="en"
+>
+  <DocumentInfo>
+    <DocumentType>ECV</DocumentType>
+    <CreationDate>{{ creationDate }}</CreationDate>
+    <LastUpdateDate>{{ lastUpdateDate }}</LastUpdateDate>
+    <XSDVersion>V3.0</XSDVersion>
+    <Generator>https://maximvdw.be</Generator>
+    <Comment>Europass CV</Comment>
+  </DocumentInfo>
+  <PrintingPreferences>
+    <Document type="ECV">
+      <Field
+        name="LearnerInfo"
+        show="true"
+        order="Identification Headline WorkExperience Education Skills Achievement ReferenceTo"
+      />
+      <!-- Add other fields as needed -->
+    </Document>
+  </PrintingPreferences>
+  <LearnerInfo>
+    <Identification>
+      <PersonName>
+        <FirstName>{{ personal.firstName }}</FirstName>
+        <Surname>{{ personal.lastName }}</Surname>
+      </PersonName>
+      <ContactInfo>
+        <address>
+          <Contact>
+            <AddressLine>{{ personal.address.street }}</AddressLine>
+            <PostalCode>{{ personal.address.postalCode }}</PostalCode>
+            <Municipality>{{ personal.address.city }}</Municipality>
+            <Country>
+              <label>{{ personal.address.country }}</label>
+            </Country>
+          </Contact>
+        </address>
+        <Photo>{{ personal.imageUrl | base64 }}</Photo>
+        <Email>
+          <Contact>{{ personal.email.personal }}</Contact>
+        </Email>
+        <Website>
+          <Url>https://maximvdw.be</Url>
+        </Website>
+      </ContactInfo>
+      <Demographics>
+        <Birthdate
+          year="1995"
+          month="--03"
+          day="---10"
+        />
+        <Gender>
+            <Code>M</Code>
+            <Label>Male</Label>
+        </Gender>
+        <Nationality>
+            <Code>BE</Code>
+            <Label>Belgian</Label>
+        </Nationality>
+      </Demographics>
+    </Identification>
+    <WorkExperienceList>
+      {% for job in experience %}
+      <WorkExperience>
+        <Period>
+          <From year="{{ job.start }}" />
+          {% if job.end != 'now' %}
+          <To year="{{ job.end }}" />
+          {% endif %}
+          <Current>{{ job.end == 'now' }}</Current>
+        </Period>
+        <Position>
+          <Label>{{ job.title }}</Label>
+        </Position>
+        <Employer>
+            <Name>{{ job.company.name }}</Name>
+            <Contact>
+                <AddressLine>{{ job.company.address.street }}</AddressLine>
+                <PostalCode>{{ job.company.address.postalCode }}</PostalCode>
+                <Municipality>{{ job.company.address.city }}</Municipality>
+                <Country>
+                    <Code>{{ job.company.address.country.code }}</Code>
+                    <Label>{{ job.company.address.country.label }}</Label>
+                </Country>
+            </Contact>
+            <Website>
+                <Url>{{ job.company.url }}</Url>
+            </Website>
+        </Employer>
+        <JobDescription>{{ job.description }}</JobDescription>
+      </WorkExperience>
+      {% endfor %}
+    </WorkExperienceList>
+    <EducationList>
+      {% for edu in education %}
+      <Education>
+        <Period>
+          <From year="{{ edu.start }}" />
+          {% if edu.end != 'now' %}
+          <To year="{{ edu.end }}" />
+          {% endif %}
+          <Current>{{ edu.end == 'now' }}</Current>
+        </Period>
+        <Title>{{ edu.degree }}</Title>
+        <Organisation>
+            <Name>{{ edu.university.name }}</Name>
+            <ContactInfo>
+                <AddressLine>{{ edu.university.address.street }}</AddressLine>
+                <PostalCode>{{ edu.university.address.postalCode }}</PostalCode>
+                <Municipality>{{ edu.university.address.city }}</Municipality>
+                <Country>
+                    <Code>{{ edu.university.country.code }}</Code>
+                    <Label>{{ edu.university.country.label }}</Label>
+                </Country>
+            </ContactInfo>
+        </Organisation>
+        {% if edu.grade %}
+        <FinalGrade>{{ edu.grade }}</FinalGrade>
+        {% endif %}
+        <Description>{{ edu.description }}</Description>
+        {% if edu.eqfLevel %}
+        <Level>
+            <Code>{{ edu.eqfLevel }}</Code>
+            <Label>EQF {{ edu.eqfLabel }}</Label>
+        </Level>
+        {% endif %}
+      </Education>
+      {% endfor %}
+    </EducationList>
+    <AchievementList>
+        <!-- Publications -->
+        {% for publication in collections.publications %}
+        <Achievement>
+            <Title>
+                <Label>{{ publication.data.title }}</Label>
+                <Code>publications</Code>
+            </Title>
+            <Description>{{ publication.data.excerpt }}</Description>
+            <Date>{{ publication.date }}</Date>
+        </Achievement>
+        {% endfor %}
+
+        <!-- Presentations -->
+        {% for presentation in collections.presentations %}
+        <Achievement>
+            <Title>
+                <Label>{{ presentation.data.title }}</Label>
+                <Code>conferences</Code>
+            </Title>
+            <Description>{{ presentation.data.excerpt }}</Description>
+            <Date>{{ presentation.date }}</Date>
+        </Achievement>
+        {% endfor %}
+    </AchievementList>
+  </LearnerInfo>
+</SkillsPassport>

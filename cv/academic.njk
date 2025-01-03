@@ -2,7 +2,6 @@
 sitemap: false
 eleventyExcludeFromCollections: true
 ---
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -245,7 +244,7 @@ eleventyExcludeFromCollections: true
         <li>
           <div class="content">
             <h4>{{ edu.degree }}</h4>
-            <strong>{{ edu.university }}</strong> ({{ edu.location }}) {% if
+            <strong>{{ edu.university.name }}</strong> ({{ edu.university.address.city }}, {{ edu.university.address.country.label }}) {% if
             edu.grade %}
             <p><strong>Graduated with:</strong> {{ edu.grade }}</p>
             {% endif %} {% if edu.thesis %}

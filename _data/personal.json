@@ -2,6 +2,7 @@
     "firstName": "Maxim",
     "lastName": "Van de Wynckel",
     "name": "Maxim Van de Wynckel",
+    "imageUrl": "https://maximvdw.be/images/profile/maxim.png",
     "birthPlace": {
         "city": "Antwerp (Wilrijk)",
         "country": "Belgium"
@@ -19,6 +20,19 @@
         "street": "Invalidenlaan 178/5",
         "city": "Oudergem",
         "postalCode": "1160",
-        "country": "Belgium"
-    }
+        "country": "Belgium",
+        "type": "Home"
+    },
+    "description": "I am a software engineer and researcher",
+    "hobbies": [
+        {
+            "title": "Scuba diving",
+            "description": "3* (Bachelor) diver at the VUB Diving Center",
+            "link": "https://www.vubdivingcenter.be"
+        }, {
+            "title": "Scuba diving",
+            "description": "2* CMAS diver",
+            "link": "https://www.nelos.be"
+        }
+    ]
 }

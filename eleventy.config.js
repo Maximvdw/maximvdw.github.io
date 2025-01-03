@@ -19,6 +19,7 @@ import pluginPDFEmbed from 'eleventy-plugin-pdfembed';
 import pluginFavicon from "eleventy-plugin-gen-favicons";
 import _ from "lodash";
 import pluginHTMLValidate from "./scripts/validator.js";
+import axios from 'axios';
 
 export default async function (el) {
     /* Passthrough Copy */
@@ -224,5 +225,20 @@ async function configureFilters(el) {
 
     el.addFilter('urlmatch', function(array, value) {
         return array.filter(item => item['url'].startsWith(value));
+    });
+
+    el.addFilter("padStart", (value, length, char) => {
+        return String(value).padStart(length, char);
+    });
+
+    el.addFilter("base64", async (url) => {
+        try {
+            const response = await axios.get(url, { responseType: 'arraybuffer' });
+            const base64 = Buffer.from(response.data, 'binary').toString('base64');
+            return `data:${response.headers['content-type']};base64,${base64}`;
+        } catch (error) {
+            console.error("Error fetching image for base64 filter:", error);
+            return null;
+        }
     });
 }

@@ -105,14 +105,14 @@ layout: main.njk
           {%- for entry in education %}
           {%- if entry.visible != false %}
           <div class="education-item">
-            <a class="logo" href="{{ entry.url }}" target="_blank" rel="nofollow">
+            <a class="logo" href="{{ entry.university.url }}" target="_blank" rel="nofollow">
               <img
                 src="{{ entry.icon }}"
-                alt="{{ entry.university }} Logo"
+                alt="{{ entry.university.name }} Logo"
               />
             </a>
             <div class="details">
-              <h3>{{ entry.university }}</h3>
+              <h3>{{ entry.university.name }}</h3>
               <h4>{{ entry.degree }}</h4>
               {%- if entry.grade %}
               <span class="detail-line italic">Graduated with {{ entry.grade }}</span>

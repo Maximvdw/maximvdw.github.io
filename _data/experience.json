@@ -1,79 +1,164 @@
 [
     {
-        "title": "Teaching Assistant and Researcher",
+        "title": "University teaching assistant and researcher",
         "company": {
             "name": "Vrije Universiteit Brussel",
             "url": "https://vub.be",
             "icon": "/images/logo/vub-logo_square.svg",
-            "location": "Brussels, Belgium"
+            "unit": "Department of Computer Science",
+            "address": {
+                "street": "Pleinlaan 2",
+                "city": "Elsene",
+                "postalCode": "1050",
+                "country": {
+                    "code": "BE",
+                    "label": "Belgium"
+                }
+            }
         },
         "start": "2019",
         "end": "now",
-        "description": "6-year Ph.D grant on indoor positioning and interoperability. Teaching assistant for various Bachelor and Master courses."
-    }, {
-        "title": "Independent professional",
+        "contact": {
+            "email": "maxim.van.de.wynckel@vub.be"
+        },
+        "description": "6-year Ph.D grant on indoor positioning and interoperability. Teaching assistant for various Bachelor and Master courses.",
+        "sector": {
+            "code": "85.42",
+            "label": "Higher education"
+        }
+    },
+    {
+        "title": "Software consultant",
         "company": {
             "name": "MVdW-Software",
             "url": "https://mvdw-software.com",
             "icon": "/images/logo/mvdw-logo.svg",
             "rel": "author",
-            "location": "Brussels, Belgium"
+            "address": {
+                "street": "Invalidenlaan 178/5",
+                "city": "Oudergem",
+                "postalCode": "1160",
+                "country": {
+                    "code": "BE",
+                    "label": "Belgium"
+                }
+            }
         },
         "note": "self-employed",
         "start": "2019",
         "end": "now",
-        "description": "Freelance software development and consultancy. Projects spanning from web development to IoT and AI implementation in business processes."
-    }, {
-        "title": "Software Engineer",
+        "contact": {
+            "email": "maxim@mvdw-software.com"
+        },
+        "description": "Freelance software development and consultancy. Projects spanning from web development to IoT and AI implementation in business processes.",
+        "sector": {
+            "code": "62.01",
+            "label": "Computer programming activities"
+        }
+    },
+    {
+        "title": "Software engineer",
         "student": true,
         "note": "student job",
         "company": {
             "name": "ChemStream BV.",
             "url": "https://chemstream.be",
             "icon": "/images/logo/chemstream-logo.svg",
-            "location": "Edegem, Belgium"
+            "address": {
+                "street": "Drie Eikenstraat 661",
+                "city": "Edegem",
+                "postalCode": "2650",
+                "country": {
+                    "code": "BE",
+                    "label": "Belgium"
+                }
+            }
         },
         "start": "2014",
         "end": "2018",
-        "description": "Development and design of chemical database software."
-    }, {
-        "title": "Software Developer Internship",
+        "description": "Development and design of chemical database software.",
+        "sector": {
+            "code": "20.59",
+            "label": "Manufacture of other chemical products n.e.c."
+        }
+    },
+    {
+        "title": "Software developer internship",
         "student": true,
         "note": "student job",
         "company": {
             "name": "UZ Brussel",
             "url": "https://uzbrussel.be/",
             "icon": "/images/logo/uzbrussel-logo.png",
-            "location": "Brussels, Belgium"
+            "address": {
+                "street": "Laarbeeklaan 101",
+                "city": "Jette",
+                "postalCode": "1090",
+                "country": {
+                    "code": "BE",
+                    "label": "Belgium"
+                }
+            }
         },
         "start": "2016",
         "end": "2016",
-        "description": "Development of QR-code based appointment system. Google Fit integration for patients. Healthcare software development."
-    }, {
-        "title": "Software Developer",
+        "description": "Development of QR-code based appointment system. Google Fit integration for patients. Healthcare software development.",
+        "sector": {
+            "code": "86.10",
+            "label": "Hospital activities"
+        }
+    },
+    {
+        "title": "Software developer",
         "student": true,
         "note": "student job",
         "company": {
             "name": "BITPOWER BV.",
             "url": "https://www.nieuwsblad.be/cnt/dmf20150604_01714431",
             "icon": "/images/logo/bitpower-logo.jpg",
-            "location": "Evergem, Belgium"
+            "location": "Evergem, Belgium",
+            "address": {
+                "city": "Evergem",
+                "postalCode": "9940",
+                "country": {
+                    "code": "BE",
+                    "label": "Belgium"
+                }
+            }
         },
         "start": "2015",
         "end": "2015",
-        "description": "eID cloud authentication and security penetration testing."
-    },  {
-        "title": "Software Developer",
+        "description": "eID cloud authentication and security penetration testing.",
+        "sector": {
+            "code": "62.09",
+            "label": "Other information technology and computer service activities"
+        }
+    },
+    {
+        "title": "Software developer",
         "student": true,
         "note": "student job",
         "company": {
             "name": "VDW-Consulting BV.",
             "url": "https://vdw-consulting.com/",
             "icon": "/images/logo/vdwconsulting-logo.svg",
-            "location": "Grimbergen, Belgium"
+            "location": "Grimbergen, Belgium",
+            "address": {
+                "street": "Dijkstraat 17",
+                "city": "Humbeek",
+                "postalCode": "1851",
+                "country": {
+                    "code": "BE",
+                    "label": "Belgium"
+                }
+            }
         },
         "start": "2013",
         "end": "2014",
-        "description": "Web UI for print management software. File server deployment and print job submitting in C#."
+        "description": "Web UI for print management software. File server deployment and print job submitting in C#.",
+        "sector": {
+            "code": "62.01",
+            "label": "Computer programming activities"
+        }
     }
 ]
