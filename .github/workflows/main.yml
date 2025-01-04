@@ -43,6 +43,7 @@ jobs:
         node ./_scripts/europass.js - name: Deploy to GitHub Pages
         cp ./_scripts/downloads/europass.pdf ./_site/cv/europass.pdf
       
+    - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
