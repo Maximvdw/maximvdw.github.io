@@ -25,9 +25,9 @@ eleventyExcludeFromCollections: true
       @page {
         size: A4;
         background: #ffffff;
-        margin: 5mm;
-        margin-top: 10mm;
-        margin-bottom: 10mm;
+        margin: 0;
+        margin-top: 8mm;
+        margin-bottom: 8mm;
       }
 
       * {
@@ -41,7 +41,6 @@ eleventyExcludeFromCollections: true
         color: #333;
         margin: 0;
         background: #ffffff;
-        padding: 5mm;
       }
 
       header {
@@ -224,16 +223,16 @@ eleventyExcludeFromCollections: true
       .timeline li {
         position: relative;
         padding-left: 30px;
-        margin-bottom: 20px;
+        margin-bottom: 5px;
       }
 
       .timeline li::before {
         content: "";
         position: absolute;
-        left: 2px;
+        left: 4px;
         top: 5px;
-        width: 16px;
-        height: 16px;
+        width: 10px;
+        height: 10px;
         border-radius: 50%;
         background: #fff;
         border: 2px solid #ddd;
@@ -329,7 +328,7 @@ eleventyExcludeFromCollections: true
               <ul class="timeline">
                 {%- for item in positionsByTitle %}
                 <li>
-                  <span class="muted">{{ item.positions[0].start | date("MMMM, yyyy") }} - {% if item.positions[0].ongoing %}now{% else %}{{ item.positions[0].end | date("MMMM, yyyy") }}{% endif %}</span><strong>{{ item.title }}{% if item.positions[0].note %} <small>({{ item.positions[0].note }})</small>{% endif %}</strong>
+                  <span class="muted">{{ item.positions[0].start | date("MMM, yyyy") }} - {% if item.positions[0].ongoing %}now{% else %}{{ item.positions[0].end | date("MMM, yyyy") }}{% endif %}</span><strong>{{ item.title }}{% if item.positions[0].note %} <small>({{ item.positions[0].note }})</small>{% endif %}</strong>
                 </li>
                 {%- endfor %}
               </ul>
@@ -354,8 +353,9 @@ eleventyExcludeFromCollections: true
     <section>
       <h2>Publications</h2>
       <ul>
-        {% set publications = collections.publications | reverse %} {% for pub
-        in publications %}
+        {% set publications = collections.publications | reverse %} 
+        {% for pub in publications %}
+        {% if pub.data.type != 'thesis' %}
         <li>
           <div class="content">
             {{ pub.data.excerpt | replace("Van de Wynckel, M.", "<strong
@@ -363,6 +363,7 @@ eleventyExcludeFromCollections: true
             >") | safe }}
           </div>
         </li>
+        {% endif %}
         {% endfor %}
       </ul>
     </section>
