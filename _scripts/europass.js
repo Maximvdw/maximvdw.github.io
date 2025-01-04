@@ -58,7 +58,9 @@ const download = async (page) => {
         await page.waitForSelector('cv-language-selector-wrapper');
         console.log('\tClicking on "Next" button ...');
         page.evaluate(() => {
-            document.querySelector('button#wizard-nav-next').click();
+            setTimeout(() => {
+                document.querySelector('button#wizard-nav-next').click();
+            }, 5000);;
         });
         await page.waitForSelector('eportfolio-html-preview');
         console.log('\tClicking on "Next" button ...');
