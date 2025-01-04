@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -39,21 +40,21 @@
         padding: 5mm;
       }
 
-    header {
-      margin-bottom: 0;
-      margin-top: 0;
-      padding-top: 0;
-      padding-bottom: 10px;
-      background-color: #ffffff;
-      color: #284cb5;
-      padding-left: 1em;
-      padding-right: 1em;
-      border-bottom: 2px solid #284cb5;
-      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-      position: relative;
-      overflow: hidden;
-      clip-path: inset(0 0 -30px 0);
-    }
+      header {
+        margin-bottom: 0;
+        margin-top: 0;
+        padding-top: 0;
+        padding-bottom: 10px;
+        background-color: #ffffff;
+        color: #284cb5;
+        padding-left: 1em;
+        padding-right: 1em;
+        border-bottom: 2px solid #284cb5;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        position: relative;
+        overflow: hidden;
+        clip-path: inset(0 0 -30px 0);
+      }
 
       header .container {
         display: flex;
@@ -196,6 +197,43 @@
           padding: 0;
         }
       }
+      span.muted {
+        color: #666;
+      }
+
+      .timeline {
+        list-style: none;
+        padding: 0;
+        position: relative;
+      }
+
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 10px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: #ddd;
+      }
+
+      .timeline li {
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 20px;
+      }
+
+      .timeline li::before {
+        content: "";
+        position: absolute;
+        left: 2px;
+        top: 5px;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: #fff;
+        border: 2px solid #ddd;
+      }
     </style>
   </head>
   <body>
@@ -205,7 +243,7 @@
         <div>
           <p>
             <i class="fas fa-map-marker-alt"></i> Invalidenlaan 178/5,
-            1160 Oudergem, Belgium
+            1160 Oudergem, 
           </p>
           <p><i class="fas fa-envelope"></i> maxim.van.de.wynckel@vub.be</p>
           <p>
@@ -238,10 +276,14 @@
           <div class="content">
             <h4>PhD, Computer Science</h4>
             <strong>Vrije Universiteit Brussel</strong> (Elsene, Belgium)  
+            <p><strong>Thesis:</strong> Interoperable and Discoverable Indoor Positioning Systems</p>
+            
           </div>
           <div class="date">
             
-            <span>2019 - now</span>
+            <span
+              >2019 - now</span
+            >
             
           </div>
         </li>
@@ -250,14 +292,14 @@
           <div class="content">
             <h4>Master of Science (MSc), Applied Computer Science</h4>
             <strong>Vrije Universiteit Brussel</strong> (Elsene, Belgium) 
-            <p><strong>Graduated with:</strong> Great Distinction</p>
+            <p>Graduated magna cum laude</p>
              
             <p><strong>Thesis:</strong> Indoor Navigation by Centralized Tracking</p>
             
           </div>
           <div class="date">
             
-            <span>July 2019</span>
+            <span>July, 2019</span>
             
           </div>
         </li>
@@ -269,7 +311,9 @@
           </div>
           <div class="date">
             
-            <span>2016 - 2018</span>
+            <span
+              >2016 - 2018</span
+            >
             
           </div>
         </li>
@@ -278,14 +322,14 @@
           <div class="content">
             <h4>Bachelor (Ba), Applied Computer Science</h4>
             <strong>Erasmushogeschool Brussel</strong> (Anderlecht, Belgium) 
-            <p><strong>Graduated with:</strong> Great Distinction</p>
+            <p>Graduated magna cum laude</p>
              
             <p><strong>Thesis:</strong> eID IO - Applicatie Besturing</p>
             
           </div>
           <div class="date">
             
-            <span>June 2016</span>
+            <span>June, 2016</span>
             
           </div>
         </li>
@@ -294,96 +338,49 @@
     </section>
 
     <section>
-      <h2>Experience</h2>
+      <h2>Employment</h2>
       <ul>
-        
         <li>
           <div class="content">
-            <h4>University teaching assistant and researcher</h4>
-            <strong
-              >Vrije Universiteit Brussel</strong
-            >
-          </div>
-          <div class="date">
-            <span
-              >2019 - now</span
-            >
-          </div>
+            <h4>Vrije Universiteit Brussel</h4>
+              <strong>University teaching assistant and researcher</strong></div>
+          <div class="date"><span>2019</span> - <span>now</span></div>
         </li>
-        
         <li>
           <div class="content">
-            <h4>Software consultant</h4>
-            <strong
-              >MVdW-Software
-              <small>(self-employed)</small></strong
-            >
-          </div>
-          <div class="date">
-            <span
-              >2019 - now</span
-            >
-          </div>
+            <h4>MVdW-Software</h4>
+              <strong>Software consultant</strong></div>
+          <div class="date"><span>2019</span> - <span>now</span></div>
         </li>
-        
         <li>
           <div class="content">
-            <h4>Software engineer</h4>
-            <strong
-              >ChemStream BV.
-              <small>(student job)</small></strong
-            >
-          </div>
-          <div class="date">
-            <span
-              >2014 - 2018</span
-            >
-          </div>
+            <h4>ChemStream BV.</h4>
+              <strong>Software engineer <small>(student job)</small></strong></div>
+          <div class="date"><span>2014</span> - <span>2018</span></div>
         </li>
-        
         <li>
           <div class="content">
-            <h4>Software developer internship</h4>
-            <strong
-              >UZ Brussel
-              <small>(student job)</small></strong
-            >
-          </div>
-          <div class="date">
-            <span
-              >2016</span
-            >
-          </div>
+            <h4>UZ Brussel</h4>
+              <strong>Software developer internship <small>(student job)</small></strong></div>
+          <div class="date"><span>2016</span></div>
         </li>
-        
         <li>
           <div class="content">
-            <h4>Software developer</h4>
-            <strong
-              >BITPOWER BV.
-              <small>(student job)</small></strong
-            >
-          </div>
-          <div class="date">
-            <span
-              >2015</span
-            >
-          </div>
+            <h4>BITPOWER BV.</h4><ul class="timeline">
+                <li>
+                  <span class="muted">October, 2015 - July, 2016</span><strong>Software developer internship <small>(student job)</small></strong>
+                </li>
+                <li>
+                  <span class="muted">August, 2015 - September, 2015</span><strong>Software developer <small>(student job)</small></strong>
+                </li>
+              </ul></div>
+          <div class="date"><span>2015</span> - <span>2016</span></div>
         </li>
-        
         <li>
           <div class="content">
-            <h4>Software developer</h4>
-            <strong
-              >VDW-Consulting BV.
-              <small>(student job)</small></strong
-            >
-          </div>
-          <div class="date">
-            <span
-              >2013 - 2014</span
-            >
-          </div>
+            <h4>VDW-Consulting BV.</h4>
+              <strong>Software developer <small>(student job)</small></strong></div>
+          <div class="date"><span>2013</span> - <span>2014</span></div>
         </li>
         
       </ul>
@@ -533,7 +530,7 @@
           <div class="content">
             <h4>Conference presentation at IoT 2023</h4>
             <p>
-              <strong>Venue:</strong> 13th International Conference on the Internet of Things, Nagoya, Japan
+              <strong>Venue:</strong> The 13th International Conference on the Internet of Things, Nagoya, Japan
             </p>
             <p>Paper presentation titled &#39;SemBeacon: A Semantic Proximity Beacon Solution for Discovering and Detecting the Position of Physical Things&#39;</p>
           </div>
@@ -546,12 +543,12 @@
           <div class="content">
             <h4>Poster presentation at BeJS conf 2023</h4>
             <p>
-              <strong>Venue:</strong> Belgian JavaScript Conference (BeJS conf), Brussels, Belgium
+              <strong>Venue:</strong> The Belgian JavaScript Conference (BeJS conf), Brussels, Belgium
             </p>
             <p>Poster presentation of the OpenHPS framework</p>
           </div>
           <div class="date">
-            <span>2023-02-06</span>
+            <span>2023-05-12</span>
           </div>
         </li>
         
@@ -572,7 +569,7 @@
           <div class="content">
             <h4>Conference presentation at IPIN 2022</h4>
             <p>
-              <strong>Venue:</strong> 12th International Conference on Indoor Positioning and Indoor Navigation, Beijing, China
+              <strong>Venue:</strong> The 12th International Conference on Indoor Positioning and Indoor Navigation, Beijing, China
             </p>
             <p>Paper presentation titled &#39;A Solid-based Architecture for Decentralised Interoperable Location Data&#39;</p>
           </div>
@@ -598,7 +595,7 @@
           <div class="content">
             <h4>Conference presentation at IPIN 2021</h4>
             <p>
-              <strong>Venue:</strong> 11th International Conference on Indoor Positioning and Indoor Navigation, Lloret de Mar, Spain
+              <strong>Venue:</strong> The 11th International Conference on Indoor Positioning and Indoor Navigation, Lloret de Mar, Spain
             </p>
             <p>Paper presentation titled &#39;Indoor Positioning Using the OpenHPS Framework&#39;</p>
           </div>
