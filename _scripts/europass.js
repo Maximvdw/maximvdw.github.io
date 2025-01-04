@@ -60,24 +60,26 @@ const download = async (page) => {
         page.evaluate(() => {
             setTimeout(() => {
                 document.querySelector('button#wizard-nav-next').click();
-            }, 5000);;
+            }, 1000);
         });
         await page.waitForSelector('eportfolio-html-preview');
         console.log('\tClicking on "Next" button ...');
         page.evaluate(() => {
             setTimeout(() => {
                 document.querySelector('button#wizard-nav-next').click();
-            }, 5000);
+            }, 1000);
         });
 
         // Wait for the download button to be available
         console.log('\tWaiting for "Download" button ...');
-        await page.waitForSelector('cv-preview-pdf');
+        // await page.waitForSelector('cv-preview-pdf');
         console.log('\tInputting CV name ...');
         await page.evaluate(() => {
-            document.querySelector('input[euiinputtext]').value = 'europass';
-            const event = new Event('input', { bubbles: true });
-            document.querySelector('input[euiinputtext]').dispatchEvent(event);
+            setTimeout(() => {
+                document.querySelector('input[euiinputtext]').value = 'europass';
+                const event = new Event('input', { bubbles: true });
+                document.querySelector('input[euiinputtext]').dispatchEvent(event);
+            }, 5000);
         });
 
         await page.waitForSelector('cv-download-button');
