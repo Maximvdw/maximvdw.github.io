@@ -45,54 +45,17 @@ layout: main.njk
     <div class="col-sm-3"></div>
     <div class="col-sm-9">
       <div class="social-links">
-        <a
-          class="social-link linkedin"
-          rel="me"
-          href="{{ social.linkedin }}"
+        {%- for key, value in social %}
+        {%- if value.visible != false %}
+        <a 
+          class="social-link {{ key }}" rel="me" 
+          href="{{ value.url }}" 
           itemprop="sameAs"
         >
-          <i class="fa fa-brands fa-linkedin"></i>
+          <i class="{{ value.icon.class }}"></i>
         </a>
-        <a
-          class="social-link mastodon"
-          rel="me"
-          href="{{ social.mastodon }}"
-          itemprop="sameAs"
-        >
-          <i class="fa fa-brands fa-mastodon"></i>
-        </a>
-        <a
-          class="social-link x"
-          rel="me"
-          href="{{ social.twitter }}"
-          itemprop="sameAs"
-        >
-          <i class="fa fa-brands fa-x-twitter"></i>
-        </a>
-        <a
-          class="social-link github"
-          rel="me"
-          href="{{ social.github }}"
-          itemprop="sameAs"
-        >
-          <i class="fa fa-brands fa-github"></i>
-        </a>
-        <a
-          class="social-link google-scholar"
-          rel="me"
-          href="{{ social.scholar }}"
-          itemprop="sameAs"
-        >
-          <i class="ai ai-google-scholar"></i>
-        </a>
-        <a
-          class="social-link orcid"
-          rel="me"
-          href="{{ social.orcid }}"
-          itemprop="sameAs"
-        >
-          <i class="ai ai-orcid"></i>
-        </a>
+        {%- endif %}
+        {%- endfor %}
       </div>
     </div>
   </div>
@@ -115,10 +78,10 @@ layout: main.njk
               <h3>{{ entry.university.name }}</h3>
               <h4>{{ entry.degree }}</h4>
               {%- if entry.grade %}
-              <span class="detail-line italic">Graduated with {{ entry.grade }}</span>
+              <span class="detail-line italic">Graduated {{ entry.grade.latin }}</span>
               {%- endif %}
               <div class="year">
-                <span>{{ entry.graduation | default(entry.start + " - " + entry.end) }}</span>
+                <span>{{ (entry.graduation | date("MMMM, yyyy")) | default((entry.start | date("yyyy")) + " - " + (entry.end | date("yyyy")))}}</span>
               </div>
               {% markdown %}
               <div>{{ entry.description }}</div>
@@ -132,25 +95,61 @@ layout: main.njk
     </div>
     <div class="col-sm-6">
       <section class="cv-section">
-        <h2>Experience</h2>
+        <h2>Employment</h2>
         <div class="employment">
-          {%- for entry in experience %}
+          {%- for entry in employment %}
           <div class="employment-item">
-              <a class="logo" href="{{ entry.company.url }}" target="_blank" rel="{{ entry.company.rel | default('nofollow') }}">
+              <a class="logo" href="{{ entry.organization.url }}" target="_blank" rel="{{ entry.organization.rel | default('nofollow') }}">
               <img
-                src="{{ entry.company.icon }}"
-                alt="{{ entry.company.name }} Logo"
+                src="{{ entry.organization.icon }}"
+                alt="{{ entry.organization.name }} Logo"
               />
               </a>
             <div class="details">
-              <h3>{{ entry.company.name }}</h3>
-              <h4>{{ entry.title }}{% if entry.note %} <small>({{ entry.note }})</small>{% endif %}</h4>
-              <div class="year">
-                  <span>{{ entry.start }}</span>{% if entry.start != entry.end %} - <span>{{ entry.end }}</span>{% endif %}
-              </div>
-              {% markdown %}
-              <div>{{ entry.description }}</div>
-              {% endmarkdown %}
+              <h3>{{ entry.organization.name }}</h3>
+                <div class="year">
+                  {%- set startYear = entry.positions[entry.positions | length - 1].start | date("yyyy") -%}
+                  {%- set endYear = entry.positions[0].end | date("yyyy") -%}
+                  {%- if startYear == endYear -%}
+                  <span>{{ startYear }}</span>
+                  {%- else -%}
+                    <span>{{ startYear }}</span> - <span>{% if entry.positions[0].ongoing %}now{% else %}{{ endYear }}{% endif %}</span>
+                  {%- endif -%}
+                </div>
+                {%- set positionsByTitle = [] -%}
+                {%- for position in entry.positions %}
+                  {%- set titleExists = false -%}
+                  {%- for item in positionsByTitle %}
+                  {%- if item.title == position.title -%}
+                    {%- set item = item | merge({ positions: item.positions | push(position) }) -%}
+                    {%- set titleExists = true -%}
+                  {%- endif -%}
+                  {%- endfor -%}
+                  {%- if not titleExists -%}
+                  {%- set positionsByTitle = positionsByTitle | push({ title: position.title, positions: [position] }) -%}
+                  {%- endif -%}
+                {%- endfor %}
+
+                {%- if positionsByTitle | length > 1 -%}
+                  <ul class="timeline">
+                    {%- for item in positionsByTitle %}
+                    <li>
+                      <h4>{{ item.title }}{% if item.positions[0].note %} <small>({{ item.positions[0].note }})</small>{% endif %}</h4>
+                      <span class="muted">{{ item.positions[0].start | date("MMMM, yyyy") }} - {% if item.positions[0].ongoing %}now{% else %}{{ item.positions[0].end | date("MMMM, yyyy") }}{% endif %}</span>
+                      {% markdown %}
+                      <div>{{ item.positions[0].summary }}</div>
+                      {% endmarkdown %}
+                    </li>
+                    {%- endfor %}
+                  </ul>
+                {%- else -%}
+                  {%- for item in positionsByTitle %}
+                  <h4>{{ item.title }}{% if item.positions[0].note %} <small>({{ item.positions[0].note }})</small>{% endif %}</h4>
+                  {% markdown %}
+                  <div>{{ entry.description | default(item.positions[0].summary) }}</div>
+                  {% endmarkdown %}
+                  {%- endfor %}
+                {%- endif -%}
             </div>
           </div>
           {%- endfor %}

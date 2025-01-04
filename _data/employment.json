@@ -1,0 +1,235 @@
+[
+    {
+        "organization": {
+            "name": "Vrije Universiteit Brussel",
+            "url": "https://vub.be",
+            "icon": "/images/logo/vub-logo_square.svg",
+            "unit": "Department of Computer Science",
+            "address": {
+                "street": "Pleinlaan 2",
+                "city": "Elsene",
+                "postalCode": "1050",
+                "country": {
+                    "code": "BE",
+                    "label": "Belgium"
+                }
+            }
+        },
+        "positions": [
+            {
+                "title": "University teaching assistant and researcher",
+                "start": "2019-10-01",
+                "ongoing": true,
+                "summary": "6-year Ph.D grant on indoor positioning and interoperability. Teaching assistant for various Bachelor and Master courses."
+            }
+        ],
+        "contact": {
+            "email": "maxim.van.de.wynckel@vub.be",
+            "website": "https://wise.vub.ac.be/member/maxim-van-de-wynckel"
+        },
+        "sector": {
+            "type": "P",
+            "code": "85.42",
+            "label": "Higher education"
+        }
+    },
+    {
+        "organization": {
+            "name": "MVdW-Software",
+            "url": "https://mvdw-software.com",
+            "icon": "/images/logo/mvdw-logo.svg",
+            "rel": "author",
+            "address": {
+                "street": "Invalidenlaan 178/5",
+                "city": "Oudergem",
+                "postalCode": "1160",
+                "country": {
+                    "code": "BE",
+                    "label": "Belgium"
+                }
+            }
+        },
+        "positions": [
+            {
+                "title": "Software consultant",
+                "start": "2019-07-01",
+                "ongoing": true,
+                "summary": "Freelance software development and consultancy. Projects spanning from web development to IoT and AI implementation in business processes."
+            }
+        ],
+        "note": "self-employed",
+        "contact": {
+            "email": "maxim@mvdw-software.com",
+            "website": "https://mvdw-software.com"
+        },
+        "sector": {
+            "type": "J",
+            "code": "62.0.1",
+            "label": "Computer programming activities"
+        }
+    },
+    {
+        "student": true,
+        "note": "student job",
+        "organization": {
+            "name": "ChemStream BV.",
+            "url": "https://chemstream.be",
+            "icon": "/images/logo/chemstream-logo.svg",
+            "address": {
+                "street": "Drie Eikenstraat 661",
+                "city": "Edegem",
+                "postalCode": "2650",
+                "country": {
+                    "code": "BE",
+                    "label": "Belgium"
+                }
+            }
+        },
+        "positions": [
+            {
+                "title": "Software engineer",
+                "start": "2018-07-01",
+                "end": "2018-07-31",
+                "summary": "Development and design of chemical database software.",
+                "student": true,
+                "note": "student job"
+            },
+            {
+                "title": "Software engineer",
+                "start": "2016-03-01",
+                "end": "2016-04-30",
+                "summary": "Development and design of chemical database software.",
+                "student": true,
+                "note": "student job"
+            },
+            {
+                "title": "Software engineer",
+                "start": "2015-09-01",
+                "end": "2015-09-30",
+                "summary": "Development and design of chemical database software.",
+                "student": true,
+                "note": "student job"
+            },
+            {
+                "title": "Software engineer",
+                "start": "2015-04-01",
+                "end": "2015-04-30",
+                "summary": "Development and design of chemical database software.",
+                "student": true,
+                "note": "student job"
+            },
+            {
+                "title": "Software engineer",
+                "start": "2014-08-01",
+                "end": "2014-08-31",
+                "summary": "Development and design of chemical database software.",
+                "student": true,
+                "note": "student job"
+            }
+        ],
+        "summary": "Development and design of chemical database software."
+    },
+    {
+        "organization": {
+            "name": "UZ Brussel",
+            "url": "https://uzbrussel.be/",
+            "icon": "/images/logo/uzbrussel-logo.png",
+            "address": {
+                "street": "Laarbeeklaan 101",
+                "city": "Jette",
+                "postalCode": "1090",
+                "country": {
+                    "code": "BE",
+                    "label": "Belgium"
+                }
+            }
+        },
+        "positions": [
+            {
+                "title": "Software developer internship",
+                "start": "2016-02-01",
+                "end": "2016-05-31",
+                "summary": "Development of QR-code based appointment system. Google Fit integration for patients. Healthcare software development.",
+                "student": true,
+                "note": "student job"
+            }
+        ]
+    },
+    {
+        "title": "Software developer",
+        "student": true,
+        "note": "student job",
+        "organization": {
+            "name": "BITPOWER BV.",
+            "url": "https://www.nieuwsblad.be/cnt/dmf20150604_01714431",
+            "icon": "/images/logo/bitpower-logo.jpg",
+            "location": "Evergem, Belgium",
+            "address": {
+                "city": "Evergem",
+                "postalCode": "9940",
+                "country": {
+                    "code": "BE",
+                    "label": "Belgium"
+                }
+            }
+        },
+        "positions": [
+            {
+                "title": "Software developer internship",
+                "start": "2015-10-01",
+                "end": "2016-07-01",
+                "summary": "eID cloud authentication Bachelor thesis.",
+                "student": true,
+                "note": "student job"
+            }, 
+            {
+                "title": "Software developer",
+                "start": "2015-08-01",
+                "end": "2015-09-30",
+                "summary": "eID cloud authentication and security penetration testing.",
+                "student": true,
+                "note": "student job"
+            }
+        ],
+        "description": "eID cloud authentication and security penetration testing."
+    },
+    {
+        "title": "Software developer",
+        "student": true,
+        "note": "student job",
+        "organization": {
+            "name": "VDW-Consulting BV.",
+            "url": "https://vdw-consulting.com/",
+            "icon": "/images/logo/vdwconsulting-logo.svg",
+            "location": "Grimbergen, Belgium",
+            "address": {
+                "street": "Dijkstraat 17",
+                "city": "Humbeek",
+                "postalCode": "1851",
+                "country": {
+                    "code": "BE",
+                    "label": "Belgium"
+                }
+            }
+        },
+        "positions": [
+            {
+                "title": "Software developer",
+                "start": "2014-07-01",
+                "end": "2014-07-31",
+                "summary": "Web UI for print management software.",
+                "student": true,
+                "note": "student job"
+            },
+            {
+                "title": "Software developer",
+                "start": "2013-07-01",
+                "end": "2015-08-31",
+                "summary": "File server deployment and print job submitting in C#.",
+                "student": true,
+                "note": "student job"
+            }
+        ],
+        "description": "Web UI for print management software. File server deployment and print job submitting in C#."
+    }
+]

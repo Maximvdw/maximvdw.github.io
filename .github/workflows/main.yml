@@ -21,8 +21,14 @@ jobs:
     - name: Install dependencies
       run: yarn install
 
+    - name: Run Docker container
+      run: docker run -d -p 8888:8888 ghcr.io/validator/validator:latest
+
     - name: Build the site
       run: npm run build
+
+    - name: Stop Docker container
+      run: docker stop $(docker ps -q --filter ancestor=ghcr.io/validator/validator:latest)
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3

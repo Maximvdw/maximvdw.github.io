@@ -196,3 +196,43 @@ ul.teaching a.person {
     padding-bottom: 2px;
   }
 }
+
+.cv-section {
+  span.muted {
+    color: #666;
+  }
+
+  .timeline {
+    list-style: none;
+    padding: 0;
+    position: relative;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #ddd;
+  }
+  
+  .timeline li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .timeline li::before {
+    content: '';
+    position: absolute;
+    left: 2px;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #ddd;
+  }
+}

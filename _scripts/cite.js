@@ -36,6 +36,16 @@ async function generateCitation(item) {
         })
         // Set the excerpt to the formatted bibliography
         item.excerpt = apa;
+        if (apa.length > 250) {
+            console.log("\tExcerpt too long for Europass, generating short excerpt");
+            // Create a short excerpt
+            let shortExcerpt = apa.substring(0, 250);
+            const lastSpaceIndex = shortExcerpt.lastIndexOf(' ');
+            if (lastSpaceIndex > -1) {
+                shortExcerpt = shortExcerpt.substring(0, lastSpaceIndex);
+            }
+            item.excerpt_short = shortExcerpt;
+        }
 
         // Get the authors from the citation
         const authors = citation.get().map(entry => entry.author).flat();

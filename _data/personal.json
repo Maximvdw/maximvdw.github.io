@@ -20,10 +20,13 @@
         "street": "Invalidenlaan 178/5",
         "city": "Oudergem",
         "postalCode": "1160",
-        "country": "Belgium",
+        "country": {
+            "code": "BE",
+            "label": "Belgium"
+        },
         "type": "Home"
     },
-    "description": "I am a software engineer and researcher",
+    "description": "I am a software engineer and researcher with a passion for interoperable and privacy-aware systems.",
     "hobbies": [
         {
             "title": "Scuba diving",

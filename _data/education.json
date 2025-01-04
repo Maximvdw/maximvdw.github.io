@@ -15,8 +15,11 @@
         },
         "icon": "/images/logo/vub-logo_square.svg",
         "degree": "PhD, Computer Science",
-        "start": "2019",
+        "start": "2019-10-01",
         "end": "now",
+        "thesis": {
+            "title": "Interoperable and Discoverable Indoor Positioning Systems"
+        },
         "eqfLevel": "8",
         "description": "Researching hybrid- and indoor positioning systems, interoperability of location data and discoverability of services. Expected end date: October 2025."
     }, {
@@ -35,10 +38,13 @@
         },
         "icon": "/images/logo/vub-logo_square.svg",
         "degree": "Master of Science (MSc), Applied Computer Science",
-        "start": "2018",
-        "end": "2019",
-        "graduation": "July 2019",
-        "grade": "Great Distinction",
+        "start": "2018-10-01",
+        "end": "2019-07-01",
+        "graduation": "2019-07-04",
+        "grade": {
+            "label": "with great honors",
+            "latin": "magna cum laude"
+        },
         "thesis": {
             "title": "Indoor Navigation by Centralized Tracking",
             "url": "/publications/2019/thesis"
@@ -62,8 +68,9 @@
         },
         "icon": "/images/logo/vub-logo_square.svg",
         "degree": "Bridging program, Computer Science",
-        "start": "2016",
-        "end": "2018",
+        "start": "2016-10-01",
+        "end": "2018-07-01",
+        "ects": "60",
         "description": "Bridging program from professional bachelor to academic bachelor.",
         "visible": false
     }, {
@@ -83,10 +90,13 @@
         "icon": "/images/logo/ehb-logo_square.svg",
         "degree": "Bachelor (Ba), Applied Computer Science",
         "specialization": "Software Engineering",
-        "start": "2013",
-        "end": "2016",
-        "graduation": "June 2016",
-        "grade": "Great Distinction",
+        "start": "2013-10-01",
+        "end": "2016-07-01",
+        "graduation": "2016-06-23",
+        "grade": {
+            "label": "with great honors",
+            "latin": "magna cum laude"
+        },
         "thesis": {
             "title": "eID IO - Applicatie Besturing"
         },

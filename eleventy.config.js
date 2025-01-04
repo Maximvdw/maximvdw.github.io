@@ -56,7 +56,7 @@ export default async function (el) {
     });
 
     el.addPlugin(pluginHTMLValidate, {
-        // validator: 'http://localhost:8888',
+        validator: 'http://localhost:8888',
     });
 
     /* Markdown */
@@ -231,14 +231,43 @@ async function configureFilters(el) {
         return String(value).padStart(length, char);
     });
 
-    el.addFilter("base64", async (url) => {
-        try {
-            const response = await axios.get(url, { responseType: 'arraybuffer' });
-            const base64 = Buffer.from(response.data, 'binary').toString('base64');
-            return `data:${response.headers['content-type']};base64,${base64}`;
-        } catch (error) {
-            console.error("Error fetching image for base64 filter:", error);
-            return null;
+    el.addFilter("base64", async (data) => {
+        if (data.startsWith('http://') || data.startsWith('https://')) {
+            try {
+                const response = await axios.get(data, { responseType: 'arraybuffer' });
+                const base64 = Buffer.from(response.data, 'binary').toString('base64');
+                return `data:${response.headers['content-type']};base64,${base64}`;
+            } catch (error) {
+                console.error("Error fetching image for base64 filter:", error);
+                return null;
+            }
+        } else {
+            // base64 the data
+            return Buffer.from(data).toString('base64');
         }
+    });
+
+    el.addFilter("date", (dateObj, format) => {
+        if (typeof dateObj === 'string') {
+            const backup = dateObj;
+            dateObj = DateTime.fromFormat(dateObj, 'yyyy-LL-dd').toJSDate();
+            if (!dateObj || isNaN(dateObj.getTime())) {
+                return backup;
+            }
+        }
+        return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat(format);
+    });
+
+    el.addFilter("push", (array, item) => {
+        array.push(item);
+        return array;
+    });
+
+    el.addFilter("merge", (obj1, obj2) => {
+        return { ...obj1, ...obj2 };
+    });
+
+    el.addFilter("slice", (array, start, end) => {
+        return array.slice(start, end);
     });
 }

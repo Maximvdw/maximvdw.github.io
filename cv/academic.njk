@@ -2,6 +2,7 @@
 sitemap: false
 eleventyExcludeFromCollections: true
 ---
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -43,21 +44,21 @@ eleventyExcludeFromCollections: true
         padding: 5mm;
       }
 
-    header {
-      margin-bottom: 0;
-      margin-top: 0;
-      padding-top: 0;
-      padding-bottom: 10px;
-      background-color: #ffffff;
-      color: #284cb5;
-      padding-left: 1em;
-      padding-right: 1em;
-      border-bottom: 2px solid #284cb5;
-      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-      position: relative;
-      overflow: hidden;
-      clip-path: inset(0 0 -30px 0);
-    }
+      header {
+        margin-bottom: 0;
+        margin-top: 0;
+        padding-top: 0;
+        padding-bottom: 10px;
+        background-color: #ffffff;
+        color: #284cb5;
+        padding-left: 1em;
+        padding-right: 1em;
+        border-bottom: 2px solid #284cb5;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        position: relative;
+        overflow: hidden;
+        clip-path: inset(0 0 -30px 0);
+      }
 
       header .container {
         display: flex;
@@ -200,6 +201,43 @@ eleventyExcludeFromCollections: true
           padding: 0;
         }
       }
+      span.muted {
+        color: #666;
+      }
+
+      .timeline {
+        list-style: none;
+        padding: 0;
+        position: relative;
+      }
+
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 10px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: #ddd;
+      }
+
+      .timeline li {
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 20px;
+      }
+
+      .timeline li::before {
+        content: "";
+        position: absolute;
+        left: 2px;
+        top: 5px;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: #fff;
+        border: 2px solid #ddd;
+      }
     </style>
   </head>
   <body>
@@ -210,7 +248,7 @@ eleventyExcludeFromCollections: true
           <p>
             <i class="fas fa-map-marker-alt"></i> {{ personal.address.street }},
             {{ personal.address.postalCode }} {{ personal.address.city }}, {{
-            personal.address.country }}
+            personal.address.country.name }}
           </p>
           <p><i class="fas fa-envelope"></i> {{ personal.email.academic }}</p>
           <p>
@@ -221,16 +259,14 @@ eleventyExcludeFromCollections: true
         </div>
         <div>
           <p class="links">
-            <a href="{{ social.orcid }}"
-              ><i class="ai ai-orcid"></i> {{ social.orcid |
-              replace("https://orcid.org/", "") }}</a
+            <a href="{{ social.orcid.url }}"
+              ><i class="{{ social.orcid.icon.class }}"></i> {{ social.orcid.displayname }}</a
             >
-            <a href="{{ social.linkedin }}"
-              ><i class="fab fa-linkedin"></i> {{ social.linkedin |
-              replace("https://linkedin.com", "") }}</a
+            <a href="{{ social.linkedin.url }}"
+              ><i class="{{ social.linkedin.icon.class }}"></i> {{ social.linkedin.displayname }}</a
             >
-            <a href="https://github.com/Maximvdw"
-              ><i class="fab fa-github"></i> github.com/Maximvdw</a
+            <a href="{{ social.github.url }}"
+              ><i class="{{ social.github.icon.class }}"></i> {{ social.github.displayname }}</a
             >
           </p>
         </div>
@@ -244,18 +280,22 @@ eleventyExcludeFromCollections: true
         <li>
           <div class="content">
             <h4>{{ edu.degree }}</h4>
-            <strong>{{ edu.university.name }}</strong> ({{ edu.university.address.city }}, {{ edu.university.address.country.label }}) {% if
-            edu.grade %}
-            <p><strong>Graduated with:</strong> {{ edu.grade }}</p>
+            <strong>{{ edu.university.name }}</strong> ({{
+            edu.university.address.city }}, {{
+            edu.university.address.country.label }}) {% if edu.grade.latin %}
+            <p>Graduated {{ edu.grade.latin }}</p>
             {% endif %} {% if edu.thesis %}
             <p><strong>Thesis:</strong> {{ edu.thesis.title }}</p>
             {% endif %}
           </div>
           <div class="date">
             {% if edu.graduation %}
-            <span>{{ edu.graduation }}</span>
+            <span>{{ edu.graduation | date('MMMM, yyyy') }}</span>
             {% else %}
-            <span>{{ edu.start }} - {{ edu.end }}</span>
+            <span
+              >{{ edu.start | date('yyyy') }} - {{ edu.end | date('yyyy')
+              }}</span
+            >
             {% endif %}
           </div>
         </li>
@@ -264,22 +304,47 @@ eleventyExcludeFromCollections: true
     </section>
 
     <section>
-      <h2>Experience</h2>
+      <h2>Employment</h2>
       <ul>
-        {% for job in experience %}
+        {% for entry in employment %}
+        {%- set startYear = entry.positions[entry.positions | length - 1].start | date("yyyy") -%}
+        {%- set endYear = entry.positions[0].end | date("yyyy") -%}
+        {%- set positionsByTitle = [] -%}
+        {%- for position in entry.positions -%}
+        {%- set titleExists = false -%}
+        {%- for item in positionsByTitle -%}
+        {%- if item.title == position.title -%}
+        {%- set item = item | merge({ positions: item.positions | push(position) }) -%}
+        {%- set titleExists = true -%}
+        {%- endif -%}
+        {%- endfor -%}
+        {%- if not titleExists -%}
+        {%- set positionsByTitle = positionsByTitle | push({ title: position.title, positions: [position] }) -%}
+        {%- endif -%}
+        {%- endfor -%}
         <li>
           <div class="content">
-            <h4>{{ job.title }}</h4>
-            <strong
-              >{{ job.company.name }}{% if job.note %}
-              <small>({{ job.note }})</small>{% endif %}</strong
-            >
+            <h4>{{ entry.organization.name }}</h4>
+            {%- if positionsByTitle | length > 1 -%}
+              <ul class="timeline">
+                {%- for item in positionsByTitle %}
+                <li>
+                  <span class="muted">{{ item.positions[0].start | date("MMMM, yyyy") }} - {% if item.positions[0].ongoing %}now{% else %}{{ item.positions[0].end | date("MMMM, yyyy") }}{% endif %}</span><strong>{{ item.title }}{% if item.positions[0].note %} <small>({{ item.positions[0].note }})</small>{% endif %}</strong>
+                </li>
+                {%- endfor %}
+              </ul>
+            {%- else -%}
+              {%- for item in positionsByTitle %}
+              <strong>{{ item.title }}{% if item.positions[0].note %} <small>({{ item.positions[0].note }})</small>{% endif %}</strong>
+              {%- endfor %}
+            {%- endif -%}
           </div>
           <div class="date">
-            <span
-              >{{ job.start }}{% if job.start != job.end %} - {{ job.end }}{%
-              endif %}</span
-            >
+            {%- if startYear == endYear -%}
+            <span>{{ startYear }}</span>
+            {%- else -%}
+              <span>{{ startYear }}</span> - <span>{% if entry.positions[0].ongoing %}now{% else %}{{ endYear }}{% endif %}</span>
+            {%- endif -%}
           </div>
         </li>
         {% endfor %}
