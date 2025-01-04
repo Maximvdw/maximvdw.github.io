@@ -65,7 +65,7 @@ const download = async (page) => {
         page.evaluate(() => {
             setTimeout(() => {
                 document.querySelector('button#wizard-nav-next').click();
-            }, 1000);
+            }, 5000);
         });
 
         // Wait for the download button to be available
