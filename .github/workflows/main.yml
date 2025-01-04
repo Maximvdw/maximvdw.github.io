@@ -31,6 +31,7 @@ jobs:
       run: docker stop $(docker ps -q --filter ancestor=ghcr.io/validator/validator:latest)
 
     - name: Generate Europass
+      image: ubuntu:22.04
       run: |
         sudo apt-get update
         sudo apt-get install -yq gconf-service libasound2 libatk1.0-0 libc6 libcairo2 \
