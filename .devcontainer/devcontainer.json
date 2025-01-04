@@ -19,7 +19,7 @@
             ]
         }
     },
-    "postCreateCommand": "yarn install",
+    "postCreateCommand": "./install.sh",
     "forwardPorts": [8080],
     "remoteUser": "node"
 }
