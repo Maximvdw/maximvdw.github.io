@@ -1,0 +1,33 @@
+{
+    "digital": [
+        {
+            "title": "Research",
+            "entries": [
+                "Semantic interoperability",
+                "Web Semantic and Linked Data",
+                "Indoor robot navigation",
+                "Localization and Positioning"
+            ]
+        }
+    ],
+    "language": [
+        {
+            "language": "English",
+            "listening": "C2",
+            "reading": "C2",
+            "spoken_interaction": "C2",
+            "spoken_production": "C2",
+            "writing": "C2"
+        }, {
+            "language": "Dutch",
+            "native": true
+        }, {
+            "language": "French",
+            "listening": "B1",
+            "reading": "B1",
+            "spoken_interaction": "B1",
+            "spoken_production": "B1",
+            "writing": "B1"
+        }
+    ]
+}

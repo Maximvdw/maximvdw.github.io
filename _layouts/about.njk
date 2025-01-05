@@ -84,7 +84,11 @@ layout: main.njk
               <span class="detail-line italic">Graduated {{ entry.grade.latin }}</span>
               {%- endif %}
               <div class="year">
-                <span>{{ (entry.graduation | date("MMMM, yyyy")) | default((entry.start | date("yyyy")) + " - " + (entry.end | date("yyyy")))}}</span>
+                {% if entry.graduation %}
+                <span>{{ entry.graduation | date("MMMM, yyyy") }}</span>
+                {% else %}
+                <span>{{ entry.start | date("yyyy") }} - {{ entry.end | date("yyyy") }}</span>
+                {% endif %}
               </div>
               {% markdown %}
               <div>{{ entry.description }}</div>

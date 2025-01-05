@@ -216,7 +216,7 @@ permalink: cv/europass.xml
             {% endfor %}
         </PublicationHistory>
         <PersonQualifications>
-            {% for skill in languageskills %}
+            {% for skill in skills.language %}
             <PersonCompetency>
                 <CompetencyID schemeName="NORMAL">{{ skill.language | lower | slice(0, 3) }}</CompetencyID>
                 <hr:TaxonomyID>language</hr:TaxonomyID>
@@ -267,10 +267,14 @@ permalink: cv/europass.xml
         <SocialAndPoliticalActivities/>
         <CommunicationAndInterpersonalSkills/>
         <DigitalSkills>
+            {% for skill in skills.digital %}
             <DigitalSkillsGroup>
-                <Title>Research</Title>
-                <DigitalSkill>Semantic interoperability</DigitalSkill>
+                <Title>{{ skill.title }}</Title>
+                {% for entry in skill.entries %}
+                <DigitalSkill>{{ entry }}</DigitalSkill>
+                {% endfor %}
             </DigitalSkillsGroup>
+            {% endfor %}
         </DigitalSkills>
         <NetworksAndMemberships/>
         <ConferencesAndSeminars>

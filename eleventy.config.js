@@ -248,14 +248,19 @@ async function configureFilters(el) {
     });
 
     el.addFilter("date", (dateObj, format) => {
+        const backup = dateObj;
         if (typeof dateObj === 'string') {
-            const backup = dateObj;
             dateObj = DateTime.fromFormat(dateObj, 'yyyy-LL-dd').toJSDate();
             if (!dateObj || isNaN(dateObj.getTime())) {
                 return backup;
             }
         }
-        return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat(format);
+        const result = DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat(format);
+        if (!result || result === 'Invalid DateTime') {
+            return null;
+        } else {
+            return result;
+        }
     });
 
     el.addFilter("push", (array, item) => {
