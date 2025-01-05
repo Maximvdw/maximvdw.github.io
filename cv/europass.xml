@@ -276,7 +276,7 @@
                         
                         <hr:CurrentIndicator></hr:CurrentIndicator>
                     </eures:EmploymentPeriod>
-                    <oa:Description>Development and design of chemical database software. </oa:Description>
+                    <oa:Description>Development of chemical database software. </oa:Description>
                     <oa:AddressLine>Drie Eikenstraat 661</oa:AddressLine>
                     <oa:CityName>Edegem</oa:CityName>
                     <CountryCode>be</CountryCode>
@@ -326,7 +326,7 @@
                         
                         <hr:CurrentIndicator></hr:CurrentIndicator>
                     </eures:EmploymentPeriod>
-                    <oa:Description>Development and design of chemical database software. </oa:Description>
+                    <oa:Description>Maintenance of chemical database search by substructures. </oa:Description>
                     <oa:AddressLine>Drie Eikenstraat 661</oa:AddressLine>
                     <oa:CityName>Edegem</oa:CityName>
                     <CountryCode>be</CountryCode>
@@ -376,7 +376,7 @@
                         
                         <hr:CurrentIndicator></hr:CurrentIndicator>
                     </eures:EmploymentPeriod>
-                    <oa:Description>Development and design of chemical database software. </oa:Description>
+                    <oa:Description>Development and maintenance of chemical database software. </oa:Description>
                     <oa:AddressLine>Drie Eikenstraat 661</oa:AddressLine>
                     <oa:CityName>Edegem</oa:CityName>
                     <CountryCode>be</CountryCode>
@@ -426,7 +426,7 @@
                         
                         <hr:CurrentIndicator></hr:CurrentIndicator>
                     </eures:EmploymentPeriod>
-                    <oa:Description>Development and design of chemical database software. </oa:Description>
+                    <oa:Description>Migration from Access database to Web-based chemical database software. </oa:Description>
                     <oa:AddressLine>Drie Eikenstraat 661</oa:AddressLine>
                     <oa:CityName>Edegem</oa:CityName>
                     <CountryCode>be</CountryCode>
@@ -476,7 +476,7 @@
                         
                         <hr:CurrentIndicator></hr:CurrentIndicator>
                     </eures:EmploymentPeriod>
-                    <oa:Description>Development and design of chemical database software. </oa:Description>
+                    <oa:Description>Development of PHP and MySQL based chemical database software. </oa:Description>
                     <oa:AddressLine>Drie Eikenstraat 661</oa:AddressLine>
                     <oa:CityName>Edegem</oa:CityName>
                     <CountryCode>be</CountryCode>
@@ -562,7 +562,7 @@
                     </StartDate>
                     
                     <EndDate>
-                        <hr:FormattedDateTime>2016-07-01</hr:FormattedDateTime>
+                        <hr:FormattedDateTime>2015-12-31</hr:FormattedDateTime>
                     </EndDate>
                     
                     <hr:CurrentIndicator></hr:CurrentIndicator>
@@ -575,12 +575,12 @@
                         </eures:StartDate>
                         
                         <eures:EndDate>
-                          <hr:FormattedDateTime>2016-07-01</hr:FormattedDateTime>
+                          <hr:FormattedDateTime>2015-12-31</hr:FormattedDateTime>
                         </eures:EndDate>
                         
                         <hr:CurrentIndicator></hr:CurrentIndicator>
                     </eures:EmploymentPeriod>
-                    <oa:Description>eID cloud authentication Bachelor thesis. </oa:Description>
+                    <oa:Description>eID cloud authentication Bachelor thesis preparatory training. </oa:Description>
                     <oa:AddressLine></oa:AddressLine>
                     <oa:CityName>Evergem</oa:CityName>
                     <CountryCode>be</CountryCode>
@@ -612,7 +612,7 @@
                     </StartDate>
                     
                     <EndDate>
-                        <hr:FormattedDateTime>2016-07-01</hr:FormattedDateTime>
+                        <hr:FormattedDateTime>2015-12-31</hr:FormattedDateTime>
                     </EndDate>
                     
                     <hr:CurrentIndicator></hr:CurrentIndicator>
