@@ -61,18 +61,16 @@ const download = async (page) => {
     console.log('\tWaiting for "Next" button ...');
     await page.waitForSelector("cv-language-selector-wrapper"); // Edit tab
     console.log('\tClicking on "Next" button ...');
-    setTimeout(() => {
-      page.evaluate(() => {
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+    await page.evaluate(() => {
         document.querySelector("button#wizard-nav-next").click();
-      });
-    }, 1000);
+    });
     await page.waitForSelector("eportfolio-html-preview"); // Template tab
     console.log('\tClicking on "Next" button ...');
-    setTimeout(() => {
-      page.evaluate(() => {
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+    await page.evaluate(() => {
         document.querySelector("button#wizard-nav-next").click();
-      });
-    }, 5000);
+    });
 
     // Wait for the download button to be available
     console.log('\tWaiting for "Download" button ...');
@@ -83,13 +81,12 @@ const download = async (page) => {
     }, 5000);
     await page.waitForSelector("cv-preview-pdf");
     console.log("\tInputting CV name ...");
-    setTimeout(() => {
-      page.evaluate(() => {
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+    await page.evaluate(() => {
         document.querySelector("input[euiinputtext]").value = "europass";
         const event = new Event("input", { bubbles: true });
         document.querySelector("input[euiinputtext]").dispatchEvent(event);
-      });
-    }, 1000);
+    });
 
     await page.waitForSelector("cv-download-button");
     console.log('\tClicking on "Download" button ...');
@@ -100,16 +97,19 @@ const download = async (page) => {
     });
 
     // Click the download button
-    setTimeout(() => {
-      page.evaluate(() => {
+    const downloadPath = path.join(__dirname, "downloads/europass.pdf");
+    // Delete the file if it already exists
+    if (fs.existsSync(downloadPath)) {
+      fs.unlinkSync(downloadPath);
+    }
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+    await page.evaluate(() => {
         document.querySelector("cv-download-button button").click();
-      });
-    }, 1000);
+    });
 
     // Wait for the download to complete
     console.log("\tWaiting for download to complete ...");
     // Check __dirname + 'downloads' for the file
-    const downloadPath = path.join(__dirname, "downloads/europass.pdf");
     const timeout = 15000; // 15 seconds
     const startTime = Date.now();
 
@@ -121,6 +121,7 @@ const download = async (page) => {
     }
   } catch (error) {
     console.error("Error downloading the CV:", error);
+    console.log(await page.content());
   }
 };
 
