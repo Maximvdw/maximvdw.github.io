@@ -89,7 +89,7 @@
                 "title": "Software engineer",
                 "start": "2018-07-01",
                 "end": "2018-07-31",
-                "summary": "Development and design of chemical database software.",
+                "summary": "Development of chemical database software.",
                 "student": true,
                 "note": "student job"
             },
@@ -97,7 +97,7 @@
                 "title": "Software engineer",
                 "start": "2016-03-01",
                 "end": "2016-04-30",
-                "summary": "Development and design of chemical database software.",
+                "summary": "Maintenance of chemical database search by substructures.",
                 "student": true,
                 "note": "student job"
             },
@@ -105,7 +105,7 @@
                 "title": "Software engineer",
                 "start": "2015-09-01",
                 "end": "2015-09-30",
-                "summary": "Development and design of chemical database software.",
+                "summary": "Development and maintenance of chemical database software.",
                 "student": true,
                 "note": "student job"
             },
@@ -113,7 +113,7 @@
                 "title": "Software engineer",
                 "start": "2015-04-01",
                 "end": "2015-04-30",
-                "summary": "Development and design of chemical database software.",
+                "summary": "Migration from Access database to Web-based chemical database software.",
                 "student": true,
                 "note": "student job"
             },
@@ -121,7 +121,7 @@
                 "title": "Software engineer",
                 "start": "2014-08-01",
                 "end": "2014-08-31",
-                "summary": "Development and design of chemical database software.",
+                "summary": "Development of PHP and MySQL based chemical database software.",
                 "student": true,
                 "note": "student job"
             }
@@ -176,8 +176,8 @@
             {
                 "title": "Software developer internship",
                 "start": "2015-10-01",
-                "end": "2016-07-01",
-                "summary": "eID cloud authentication Bachelor thesis.",
+                "end": "2015-12-31",
+                "summary": "eID cloud authentication Bachelor thesis preparatory training.",
                 "student": true,
                 "note": "student job"
             }, 

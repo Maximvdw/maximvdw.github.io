@@ -221,7 +221,7 @@ ul.teaching a.person {
   .timeline li {
     position: relative;
     padding-left: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
   }
   
   .timeline li::before {
@@ -255,4 +255,8 @@ a.europass {
     background-color: white;
     cursor: pointer;
   }
+}
+
+.collapse {
+  display: none;
 }

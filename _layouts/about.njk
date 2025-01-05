@@ -32,7 +32,7 @@ layout: main.njk
         class="img-fluid rounded-circle"
         itemprop="image"
       />
-      <a class="europass" href="/cv/europass.pdf" download>
+      <a class="europass" href="/cv/europass">
         <img src="/images/logo/europass-logo.svg" alt="Europass Logo">
       </a>
     </div>
@@ -127,7 +127,7 @@ layout: main.njk
                 {%- for position in entry.positions %}
                   {%- set titleExists = false -%}
                   {%- for item in positionsByTitle %}
-                  {%- if item.title == position.title -%}
+                  {%- if item.title == position.title and not position.student -%}
                     {%- set item = item | merge({ positions: item.positions | push(position) }) -%}
                     {%- set titleExists = true -%}
                   {%- endif -%}
@@ -138,17 +138,35 @@ layout: main.njk
                 {%- endfor %}
 
                 {%- if positionsByTitle | length > 1 -%}
+                  {% if positionsByTitle[0].positions[0].student %}
+                  {%- set item = positionsByTitle[0].positions[0] -%}
+                  <h4>{{ entry.title | default(item.title) }}{% if item.note %} <small>({{ item.note }})</small>{% endif %}</h4>
+                  {% markdown %}
+                  <div>{{ entry.description | default(item.summary) }}</div>
+                  {% endmarkdown %}
+                  <a href="#" class="show-details" data-toggle="collapse" data-target="#details-{{ loop.index }}">Show details ...</a>
+                  <div id="details-{{ loop.index }}" class="collapse">
+                  {% endif %}
                   <ul class="timeline">
                     {%- for item in positionsByTitle %}
                     <li>
                       <h4>{{ item.title }}{% if item.positions[0].note %} <small>({{ item.positions[0].note }})</small>{% endif %}</h4>
-                      <span class="muted">{{ item.positions[0].start | date("MMMM, yyyy") }} - {% if item.positions[0].ongoing %}now{% else %}{{ item.positions[0].end | date("MMMM, yyyy") }}{% endif %}</span>
+                        {%- set startDate = item.positions[0].start | date("MMMM, yyyy") -%}
+                        {%- set endDate = item.positions[0].end | date("MMMM, yyyy") -%}
+                        {%- if startDate == endDate -%}
+                        <span class="muted">{{ startDate }}</span>
+                        {%- else -%}
+                        <span class="muted">{{ startDate }} - {% if item.positions[0].ongoing %}now{% else %}{{ endDate }}{% endif %}</span>
+                        {%- endif -%}
                       {% markdown %}
                       <div>{{ item.positions[0].summary }}</div>
                       {% endmarkdown %}
                     </li>
                     {%- endfor %}
                   </ul>
+                  {% if positionsByTitle[0].positions[0].student %}
+                  </div>
+                  {% endif %}
                 {%- else -%}
                   {%- for item in positionsByTitle %}
                   <h4>{{ item.title }}{% if item.positions[0].note %} <small>({{ item.positions[0].note }})</small>{% endif %}</h4>
@@ -165,3 +183,4 @@ layout: main.njk
     </div>
   </div>
 </div>
+<script src="/scripts/about.js"></script>
