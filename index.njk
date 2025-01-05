@@ -10,7 +10,33 @@ title: 'Maxim Van de Wynckel'
     <meta itemprop="name" content="Maxim Van de Wynckel">
     <meta itemprop="jobTitle" content="Researcher">
     <meta itemprop="affiliation" content="Vrije Universiteit Brussel">
-    <meta itemprop="sameAs" content="/about">
+    <meta itemprop="sameAs" content="/about#me">
+    <!-- Metadata -->
+    <meta itemprop="givenName" content="Maxim">
+    <meta itemprop="familyName" content="Van de Wynckel">
+    <meta itemprop="sameAs" content="https://solid.maximvdw.be/profile/card#me">
+    <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+      <meta itemprop="streetAddress" content="{{ personal.address.street}}">
+      <meta itemprop="addressLocality" content="{{ personal.address.city }}">
+      <meta itemprop="addressRegion" content="{{ personal.address.region }}">
+      <meta itemprop="postalCode" content="{{ personal.address.postalCode }}">
+      <meta itemprop="addressCountry" content="{{ personal.address.country.code }}">
+    </div>
+    <meta itemprop="birthDate" content="{{ personal.birthDate | date('yyyy-MM-dd') }}">
+    <div itemprop="birthPlace" itemscope itemtype="http://schema.org/Place">
+      <meta itemprop="addressLocality" content="{{ personal.birthPlace.city }}">
+      <meta itemprop="addressCountry" content="{{ personal.birthPlace.country.code }}">
+    </div>
+    <meta itemprop="email" content="me@maximvdw.be">
+    <meta itemprop="jobTitle" content="researcher">
+    <meta itemprop="knowsAbout" content="interoperability">
+    <meta itemprop="knowsAbout" content="indoor positioning">
+    <meta itemprop="knowsAbout" content="hybrid positioning systems">
+    <meta itemprop="knowsAbout" content="location-based services">
+    <meta itemprop="knowsAbout" content="linked data">
+    <meta itemprop="knowsAbout" content="semantic web">
+    <meta itemprop="knowsAbout" content="personal data vaults">
+    <!-- END Metadata -->
     <blockquote class="styled-blockquote">
     {% markdown %}
       Hello! My name is <span class="name me" itemprop="name">Maxim Van de Wynckel</span>, a researcher at the Vrije Universiteit Brussel. I am a PhD candidate focusing on hybrid and indoor positioning, interoperability, linked data, and methods for discovering services. Read more [about me here](/about). 

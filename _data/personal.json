@@ -3,9 +3,13 @@
     "lastName": "Van de Wynckel",
     "name": "Maxim Van de Wynckel",
     "imageUrl": "https://maximvdw.be/images/profile/maxim.png",
+    "birthDate": "1995-03-10",
     "birthPlace": {
         "city": "Antwerp (Wilrijk)",
-        "country": "Belgium"
+        "country": {
+            "code": "BE",
+            "label": "Belgium"
+        }
     },
     "email": {
         "academic": "maxim.van.de.wynckel@vub.be",
@@ -19,6 +23,7 @@
     "address": {
         "street": "Invalidenlaan 178/5",
         "city": "Oudergem",
+        "region": "Brussels-capital region",
         "postalCode": "1160",
         "country": {
             "code": "BE",

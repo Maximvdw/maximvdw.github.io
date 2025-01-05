@@ -1,20 +1,25 @@
 ---
 layout: main.njk
 ---
-<div itemscope itemtype="http://schema.org/Person">
+<div itemscope itemtype="http://schema.org/Person" id="me">
   <!-- Metadata -->
   <meta itemprop="givenName" content="Maxim">
   <meta itemprop="familyName" content="Van de Wynckel">
   <meta itemprop="sameAs" content="https://solid.maximvdw.be/profile/card#me">
   <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-    <meta itemprop="streetAddress" content="Invalidenlaan 178">
-    <meta itemprop="addressLocality" content="Oudergem">
-    <meta itemprop="addressRegion" content="Brussels-capital region">
-    <meta itemprop="postalCode" content="1160">
-    <meta itemprop="addressCountry" content="BE">
+    <meta itemprop="streetAddress" content="{{ personal.address.street}}">
+    <meta itemprop="addressLocality" content="{{ personal.address.city }}">
+    <meta itemprop="addressRegion" content="{{ personal.address.region }}">
+    <meta itemprop="postalCode" content="{{ personal.address.postalCode }}">
+    <meta itemprop="addressCountry" content="{{ personal.address.country.code }}">
   </div>
   <meta itemprop="email" content="me@maximvdw.be">
   <meta itemprop="jobTitle" content="researcher">
+  <meta itemprop="birthDate" content="{{ personal.birthDate | date('yyyy-MM-dd') }}">
+  <div itemprop="birthPlace" itemscope itemtype="http://schema.org/Place">
+    <meta itemprop="addressLocality" content="{{ personal.birthPlace.city }}">
+    <meta itemprop="addressCountry" content="{{ personal.birthPlace.country.code }}">
+  </div>
   <meta itemprop="knowsAbout" content="interoperability">
   <meta itemprop="knowsAbout" content="indoor positioning">
   <meta itemprop="knowsAbout" content="hybrid positioning systems">
