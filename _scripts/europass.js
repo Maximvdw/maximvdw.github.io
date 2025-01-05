@@ -5,7 +5,7 @@ import puppeteer from "puppeteer";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const delay = 1;    // Should not need this
+const delay = 5000;    // Should not need this
 
 const prepare = async (page) => {
     try {
@@ -70,7 +70,7 @@ const download = async (page) => {
         await page.waitForSelector('div[role="tab"][aria-label="Select template "].eui-wizard-step--active'); // Template
         await page.waitForSelector("eportfolio-html-preview"); // Template tab contents
         console.log('\tClicking on "Next" button ...');
-        await new Promise((resolve) => setTimeout(resolve, 5000));
+        await new Promise((resolve) => setTimeout(resolve, delay + 5000));
         await page.evaluate(() => {
             document.querySelector("button#wizard-nav-next").click();
         });
