@@ -5,6 +5,7 @@ import puppeteer from "puppeteer";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+const delay = 1;    // Should not need this
 
 const prepare = async (page) => {
     try {
@@ -56,29 +57,33 @@ const upload = async (file, page) => {
 const download = async (page) => {
     try {
         // Click two times on the next button when available
-        console.log('\tWaiting for "Next" button ...');
-        await page.waitForSelector("cv-language-selector-wrapper"); // Edit tab
+        console.log('\tWaiting for "Edit" tab ...');
+        await page.waitForSelector('div[role="tab"][aria-label="Edit "].eui-wizard-step--active'); // Edit tab
+        await page.waitForSelector("cv-language-selector-wrapper"); // Edit tab contents
         console.log('\tClicking on "Next" button ...');
-        await new Promise((resolve) => setTimeout(resolve, 2000));
+        await new Promise((resolve) => setTimeout(resolve, delay));
         await page.evaluate(() => {
-                document.querySelector("button#wizard-nav-next").click();
+            document.querySelector("button#wizard-nav-next").click();
         });
-        await page.waitForSelector("eportfolio-html-preview"); // Template tab
+
+        console.log('\tWaiting for "Select template" tab ...');
+        await page.waitForSelector('div[role="tab"][aria-label="Select template "].eui-wizard-step--active'); // Template
+        await page.waitForSelector("eportfolio-html-preview"); // Template tab contents
         console.log('\tClicking on "Next" button ...');
-        await new Promise((resolve) => setTimeout(resolve, 2000));
+        await new Promise((resolve) => setTimeout(resolve, 5000));
         await page.evaluate(() => {
-                document.querySelector("button#wizard-nav-next").click();
+            document.querySelector("button#wizard-nav-next").click();
         });
 
         // Wait for the download button to be available
         console.log('\tWaiting for "Download" button ...');
-        await new Promise((resolve) => setTimeout(resolve, 2000));
+        await new Promise((resolve) => setTimeout(resolve, delay));
         await page.evaluate(() => {
                 console.log(document.documentElement.innerHTML);
         });
         await page.waitForSelector("cv-preview-pdf");
         console.log("\tInputting CV name ...");
-        await new Promise((resolve) => setTimeout(resolve, 2000));
+        await new Promise((resolve) => setTimeout(resolve, delay));
         await page.evaluate(() => {
                 document.querySelector("input[euiinputtext]").value = "europass";
                 const event = new Event("input", { bubbles: true });
@@ -99,7 +104,7 @@ const download = async (page) => {
         if (fs.existsSync(downloadPath)) {
             fs.unlinkSync(downloadPath);
         }
-        await new Promise((resolve) => setTimeout(resolve, 2000));
+        await new Promise((resolve) => setTimeout(resolve, delay));
         await page.evaluate(() => {
                 document.querySelector("cv-download-button button").click();
         });
@@ -125,6 +130,8 @@ const download = async (page) => {
 async function create() {
     const browser = await puppeteer.launch({
         headless: true,
+        // args: ['--no-sandbox', '--disable-setuid-sandbox'],
+        // slowMo: 50
     });
     const page = await browser.newPage();
 
