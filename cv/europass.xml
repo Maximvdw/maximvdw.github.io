@@ -146,7 +146,14 @@
                         <oa:URI>https://vub.be</oa:URI>
                     </Communication>
                     
+                    <Communication>
+                      <ChannelCode>Email</ChannelCode>
+                      <oa:URI>maxim.van.de.wynckel@vub.be</oa:URI>
+                    </Communication>
+                    
                 </OrganizationContact>
+                
+                <Department>Department of Computer Science</Department>
                 
                 
                 <hr:IndustryCode>P</hr:IndustryCode>
@@ -190,6 +197,11 @@
                     <Communication>
                         <ChannelCode>Web</ChannelCode>
                         <oa:URI>https://mvdw-software.com</oa:URI>
+                    </Communication>
+                    
+                    <Communication>
+                      <ChannelCode>Email</ChannelCode>
+                      <oa:URI>maxim@mvdw-software.com</oa:URI>
                     </Communication>
                     
                 </OrganizationContact>
@@ -1169,10 +1181,10 @@ locations.&lt;/p&gt;
         </PublicationHistory>
         <PersonQualifications>
             
+            
             <PersonCompetency>
                 <CompetencyID schemeName="NORMAL">eng</CompetencyID>
                 <hr:TaxonomyID>language</hr:TaxonomyID>
-                
                 <eures:CompetencyDimension>
                     <hr:CompetencyDimensionTypeCode>CEF-Understanding-Listening</hr:CompetencyDimensionTypeCode>
                     <eures:Score>
@@ -1203,26 +1215,15 @@ locations.&lt;/p&gt;
                         <hr:ScoreText>C2</hr:ScoreText>
                     </eures:Score>
                 </eures:CompetencyDimension>
-                
             </PersonCompetency>
             
-            <PersonCompetency>
-                <CompetencyID schemeName="NORMAL">dut</CompetencyID>
-                <hr:TaxonomyID>language</hr:TaxonomyID>
-                
-                <eures:CompetencyDimension>
-                    <hr:CompetencyDimensionTypeCode>Native</hr:CompetencyDimensionTypeCode>
-                    <eures:Score>
-                        <hr:ScoreText>Native</hr:ScoreText>
-                    </eures:Score>
-                </eures:CompetencyDimension>
-                
-            </PersonCompetency>
+            
+            
+            
             
             <PersonCompetency>
                 <CompetencyID schemeName="NORMAL">fre</CompetencyID>
                 <hr:TaxonomyID>language</hr:TaxonomyID>
-                
                 <eures:CompetencyDimension>
                     <hr:CompetencyDimensionTypeCode>CEF-Understanding-Listening</hr:CompetencyDimensionTypeCode>
                     <eures:Score>
@@ -1253,8 +1254,8 @@ locations.&lt;/p&gt;
                         <hr:ScoreText>B1</hr:ScoreText>
                     </eures:Score>
                 </eures:CompetencyDimension>
-                
             </PersonCompetency>
+            
             
         </PersonQualifications>
         <EmploymentReferences/>
@@ -1262,10 +1263,20 @@ locations.&lt;/p&gt;
         <SocialAndPoliticalActivities/>
         <CommunicationAndInterpersonalSkills/>
         <DigitalSkills>
+            
             <DigitalSkillsGroup>
                 <Title>Research</Title>
+                
                 <DigitalSkill>Semantic interoperability</DigitalSkill>
+                
+                <DigitalSkill>Web Semantic and Linked Data</DigitalSkill>
+                
+                <DigitalSkill>Indoor robot navigation</DigitalSkill>
+                
+                <DigitalSkill>Localization and Positioning</DigitalSkill>
+                
             </DigitalSkillsGroup>
+            
         </DigitalSkills>
         <NetworksAndMemberships/>
         <ConferencesAndSeminars>
@@ -1275,10 +1286,10 @@ locations.&lt;/p&gt;
                 <Description>Presentation titled &#39;Discovering Indoor Environments and Positioning Systems&#39;</Description>
                 <Date>
                     <StartDate>
-                        <hr:FormattedDateTime>Invalid DateTime</hr:FormattedDateTime>
+                        <hr:FormattedDateTime></hr:FormattedDateTime>
                     </StartDate>
                     <EndDate>
-                        <hr:FormattedDateTime>Invalid DateTime</hr:FormattedDateTime>
+                        <hr:FormattedDateTime></hr:FormattedDateTime>
                     </EndDate>
                     <Ongoing>false</Ongoing>
                 </Date>
