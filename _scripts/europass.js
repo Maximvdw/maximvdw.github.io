@@ -74,11 +74,10 @@ const download = async (page) => {
 
     // Wait for the download button to be available
     console.log('\tWaiting for "Download" button ...');
-    setTimeout(() => {
-      page.evaluate(() => {
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+    await page.evaluate(() => {
         console.log(document.documentElement.innerHTML);
-      });
-    }, 5000);
+    });
     await page.waitForSelector("cv-preview-pdf");
     console.log("\tInputting CV name ...");
     await new Promise((resolve) => setTimeout(resolve, 2000));

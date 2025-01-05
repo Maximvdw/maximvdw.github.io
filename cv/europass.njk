@@ -91,10 +91,10 @@ permalink: cv/europass.xml
                         <ChannelCode>Web</ChannelCode>
                         <oa:URI>{{ employer.organization.url }}</oa:URI>
                     </Communication>
-                    {% if job.contact %}
+                    {% if employer.contact %}
                     <Communication>
                       <ChannelCode>Email</ChannelCode>
-                      <oa:URI>{{ employer.organization.email }}</oa:URI>
+                      <oa:URI>{{ employer.contact.email }}</oa:URI>
                     </Communication>
                     {% endif %}
                 </OrganizationContact>
@@ -217,17 +217,10 @@ permalink: cv/europass.xml
         </PublicationHistory>
         <PersonQualifications>
             {% for skill in skills.language %}
+            {% if skill.native != true %}
             <PersonCompetency>
                 <CompetencyID schemeName="NORMAL">{{ skill.language | lower | slice(0, 3) }}</CompetencyID>
                 <hr:TaxonomyID>language</hr:TaxonomyID>
-                {% if skill.native %}
-                <eures:CompetencyDimension>
-                    <hr:CompetencyDimensionTypeCode>Native</hr:CompetencyDimensionTypeCode>
-                    <eures:Score>
-                        <hr:ScoreText>Native</hr:ScoreText>
-                    </eures:Score>
-                </eures:CompetencyDimension>
-                {% else %}
                 <eures:CompetencyDimension>
                     <hr:CompetencyDimensionTypeCode>CEF-Understanding-Listening</hr:CompetencyDimensionTypeCode>
                     <eures:Score>
@@ -258,8 +251,8 @@ permalink: cv/europass.xml
                         <hr:ScoreText>{{ skill.writing }}</hr:ScoreText>
                     </eures:Score>
                 </eures:CompetencyDimension>
-                {% endif %}
             </PersonCompetency>
+            {% endif %}
             {% endfor %}
         </PersonQualifications>
         <EmploymentReferences/>

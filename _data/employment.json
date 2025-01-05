@@ -4,7 +4,6 @@
             "name": "Vrije Universiteit Brussel",
             "url": "https://vub.be",
             "icon": "/images/logo/vub-logo_square.svg",
-            "unit": "Department of Computer Science",
             "address": {
                 "street": "Pleinlaan 2",
                 "city": "Elsene",
@@ -20,6 +19,7 @@
                 "title": "University teaching assistant and researcher",
                 "start": "2019-10-01",
                 "ongoing": true,
+                "unit": "Department of Computer Science",
                 "summary": "6-year Ph.D grant on indoor positioning and interoperability. Teaching assistant for various Bachelor and Master courses."
             }
         ],
@@ -59,8 +59,7 @@
         ],
         "note": "self-employed",
         "contact": {
-            "email": "maxim@mvdw-software.com",
-            "website": "https://mvdw-software.com"
+            "email": "maxim@mvdw-software.com"
         },
         "sector": {
             "type": "J",
