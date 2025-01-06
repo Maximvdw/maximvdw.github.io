@@ -82,6 +82,6 @@ img.postlist-image.padding {
 }
 iframe.video, video.video {
     width: 100%;
-    min-height: 500px;
+    aspect-ratio: 2 / 1;
     border: none;
 }

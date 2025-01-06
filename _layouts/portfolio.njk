@@ -6,7 +6,7 @@ layout: default.njk
     <div class="row">
         <div class="col-sm-3">
             <nav class="navigation">
-            {% for post in collections.portfolio | reverse %}
+            {% for post in collections.portfolio %}
                 <ul>
                     <li {% if page.url == post.url %}class="selected"{% endif %}>
                     <a href="{{ post.url }}" {% if page.url == post.url %}class="current"{% endif %}>{{ post.data.title }}</a>

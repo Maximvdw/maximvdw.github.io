@@ -5,26 +5,8 @@
     height: 80vh;
 }
 
-@media screen and (max-width: $on-medium) {
-    #pdf-viewer {
-        margin-left: -40px;
-        margin-right: -40px;
-        border-radius: 0;
-        width: 100vw;
-    }
-}
-
 video {
     width: 100%;
-}
-
-@media screen and (max-width: $on-medium) {
-    video {
-        margin-left: -40px;
-        margin-right: -40px;
-        border-radius: 0;
-        width: 100vw;
-    }
 }
 
 .img-fluid {

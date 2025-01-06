@@ -213,7 +213,7 @@ async function configureCollections(el) {
             } else {
             return new Date(b.data.end) - new Date(a.data.end);
             }
-        }).reverse();
+        });
     });
 }
 
