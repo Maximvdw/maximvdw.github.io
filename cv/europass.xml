@@ -938,14 +938,14 @@
                         <oa:URI>https://www.donboscohoboken.be/</oa:URI>
                     </Communication>
                 </OrganizationContact>
-                <EducationLevelCode>5</EducationLevelCode>
+                <EducationLevelCode></EducationLevelCode>
                 <AttendancePeriod>
                     <StartDate>
                       <hr:FormattedDateTime></hr:FormattedDateTime>
                     </StartDate>
                     
                     <EndDate>
-                      <hr:FormattedDateTime></hr:FormattedDateTime>
+                      <hr:FormattedDateTime>2013-06-30</hr:FormattedDateTime>
                     </EndDate>
                     
                     <Ongoing>false</Ongoing>
@@ -1451,7 +1451,7 @@ locations.&lt;/p&gt;
                 <Location>Hangzhou, China</Location>
                 <Link>https://iswc2022.semanticweb.org/index.php/accepted-papers/index.html</Link>
                 
-                <Link>https://solid.maximvdw.be/videos/2022/5b3-Van%20de%20Wynckel-Video-MQ.mp4</Link>
+                <Link>https://openhps.org/publications/2022/5b3-Van%20de%20Wynckel-Video-MQ.mp4</Link>
                 
                 <Link>https://maximvdw.be/presentations/2022/iswc2022/</Link>
             </ConferenceAndSeminar>
@@ -1534,14 +1534,70 @@ locations.&lt;/p&gt;
         <Projects>
             
             <Project>
-                <Title>WisaReg</Title>
+                <Title>OpenHPS</Title>
                 <Date>
                     <StartDate>
-                        <hr:FormattedDateTime>2012-08-01</hr:FormattedDateTime>
+                        <hr:FormattedDateTime>2019-10-01</hr:FormattedDateTime>
+                    </StartDate>
+                    
+                    <Ongoing>true</Ongoing>
+                </Date>
+                <Description></Description>
+                <Link>https://openhps.org</Link>
+            </Project>
+            
+            <Project>
+                <Title>SemBeacon</Title>
+                <Date>
+                    <StartDate>
+                        <hr:FormattedDateTime>2022-10-01</hr:FormattedDateTime>
+                    </StartDate>
+                    
+                    <Ongoing>true</Ongoing>
+                </Date>
+                <Description></Description>
+                <Link>https://sembeacon.org</Link>
+            </Project>
+            
+            <Project>
+                <Title>SpigotMC Plugins</Title>
+                <Date>
+                    <StartDate>
+                        <hr:FormattedDateTime>2013-07-01</hr:FormattedDateTime>
+                    </StartDate>
+                    
+                    <Ongoing>true</Ongoing>
+                </Date>
+                <Description></Description>
+                <Link>https://www.spigotmc.org/members/maximvdw.6687/</Link>
+            </Project>
+            
+            <Project>
+                <Title>EhB Rooster</Title>
+                <Date>
+                    <StartDate>
+                        <hr:FormattedDateTime>2015-09-01</hr:FormattedDateTime>
                     </StartDate>
                     
                     <EndDate>
-                        <hr:FormattedDateTime>2013-06-30</hr:FormattedDateTime>
+                        <hr:FormattedDateTime>2018-07-01</hr:FormattedDateTime>
+                    </EndDate>
+                    
+                    <Ongoing>false</Ongoing>
+                </Date>
+                <Description></Description>
+                <Link>https://web.archive.org/web/20180812082356/https://ehbrooster.be/</Link>
+            </Project>
+            
+            <Project>
+                <Title>eIDIO Cloud Authentication</Title>
+                <Date>
+                    <StartDate>
+                        <hr:FormattedDateTime>2015-08-01</hr:FormattedDateTime>
+                    </StartDate>
+                    
+                    <EndDate>
+                        <hr:FormattedDateTime>2016-07-01</hr:FormattedDateTime>
                     </EndDate>
                     
                     <Ongoing>false</Ongoing>
@@ -1568,76 +1624,20 @@ locations.&lt;/p&gt;
             </Project>
             
             <Project>
-                <Title>eIDIO Cloud Authentication</Title>
+                <Title>WisaReg</Title>
                 <Date>
                     <StartDate>
-                        <hr:FormattedDateTime>2015-08-01</hr:FormattedDateTime>
+                        <hr:FormattedDateTime>2012-08-01</hr:FormattedDateTime>
                     </StartDate>
                     
                     <EndDate>
-                        <hr:FormattedDateTime>2016-07-01</hr:FormattedDateTime>
+                        <hr:FormattedDateTime>2013-06-30</hr:FormattedDateTime>
                     </EndDate>
                     
                     <Ongoing>false</Ongoing>
                 </Date>
                 <Description></Description>
                 <Link></Link>
-            </Project>
-            
-            <Project>
-                <Title>EhB Rooster</Title>
-                <Date>
-                    <StartDate>
-                        <hr:FormattedDateTime>2015-09-01</hr:FormattedDateTime>
-                    </StartDate>
-                    
-                    <EndDate>
-                        <hr:FormattedDateTime>2018-07-01</hr:FormattedDateTime>
-                    </EndDate>
-                    
-                    <Ongoing>false</Ongoing>
-                </Date>
-                <Description></Description>
-                <Link>https://web.archive.org/web/20180812082356/https://ehbrooster.be/</Link>
-            </Project>
-            
-            <Project>
-                <Title>SpigotMC Plugins</Title>
-                <Date>
-                    <StartDate>
-                        <hr:FormattedDateTime>2013-07-01</hr:FormattedDateTime>
-                    </StartDate>
-                    
-                    <Ongoing>true</Ongoing>
-                </Date>
-                <Description></Description>
-                <Link>https://www.spigotmc.org/members/maximvdw.6687/</Link>
-            </Project>
-            
-            <Project>
-                <Title>SemBeacon</Title>
-                <Date>
-                    <StartDate>
-                        <hr:FormattedDateTime>2022-10-01</hr:FormattedDateTime>
-                    </StartDate>
-                    
-                    <Ongoing>true</Ongoing>
-                </Date>
-                <Description></Description>
-                <Link>https://sembeacon.org</Link>
-            </Project>
-            
-            <Project>
-                <Title>OpenHPS</Title>
-                <Date>
-                    <StartDate>
-                        <hr:FormattedDateTime>2019-10-01</hr:FormattedDateTime>
-                    </StartDate>
-                    
-                    <Ongoing>true</Ongoing>
-                </Date>
-                <Description></Description>
-                <Link>https://openhps.org</Link>
             </Project>
             
         </Projects>
