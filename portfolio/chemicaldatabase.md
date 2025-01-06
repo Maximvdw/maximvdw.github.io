@@ -6,6 +6,7 @@ thumbnail: /images/logo/sembeacon-logo.svg
 start: 2014-01-01
 ongoing: true
 type: job
+eleventyExcludeFromCollections: true
 ---
 I was hired in 2014 as a student by [ChemStream](https://chemstream.be) to develop a web-based database for maintaining chemicals and their data. The database was developed in PHP and MySQL and has been in use since 2015. Chemical structure searching was based on checkmol and matchmol.
 

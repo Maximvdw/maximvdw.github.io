@@ -103,5 +103,23 @@
         "eqfLevel": "6",
         "ects": "180",
         "description": "Software Security, Software Development (Java, C++, C#, Objective-C), Agile development."
+    }, {
+        "university": {
+            "name": "Don Bosco Hoboken",
+            "url": "https://www.donboscohoboken.be/",
+            "address": {
+                "street": " Salesianenlaan 1",
+                "city": "Hoboken",
+                "postalCode": "2660",
+                "country": {
+                    "code": "BE",
+                    "label": "Belgium"
+                }
+            }
+        },
+        "icon": "/images/logo/donbosco-logo.png",
+        "degree": "Industrial ICT",
+        "graduation": "2013-06-30",
+        "eqfLevel": "5"
     }
 ]

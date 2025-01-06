@@ -29,6 +29,12 @@
         background-color: #dc3545;
     }
 
+    &.badge-other {
+        color: #6f42c1;
+        border: 1px solid #6f42c1;
+        box-shadow: 0 0 5px rgba(111, 66, 193, 0.5);
+    }
+
     &.badge-warning {
         background-color: #ffc107;
         color: #212529;

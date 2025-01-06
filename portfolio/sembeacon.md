@@ -3,6 +3,7 @@ layout: portfolio.njk
 title: "SemBeacon"
 logo: /images/logo/sembeacon-logo.svg
 thumbnail: /images/logo/sembeacon-logo_square.svg
+thumbnail_padding: true
 website: https://sembeacon.org
 start: 2022-10-01
 ongoing: true

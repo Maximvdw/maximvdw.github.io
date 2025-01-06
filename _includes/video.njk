@@ -1,0 +1,15 @@
+{% if video.startsWith('https://videolectures.net') %}
+<iframe src="{{ video }}" class="video" allowfullscreen style="aspect-ratio:16/9" itemprop="video"></iframe>
+{% elif video.endsWith('mp4') %}
+<video class="video" controls preload="auto" itemprop="video">
+<source src="{{ video }}" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+{% elif video.endsWith('webm') %}
+<video class="video" controls preload="auto" itemprop="video">
+<source src="{{ video }}" type="video/webm">
+Your browser does not support the video tag.
+</video>
+{% elif video.contains('youtube') %}
+<iframe class="video" src="{{ video }}" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+{% endif %}

@@ -159,6 +159,7 @@ export default async function (el) {
             "liquid",
             "svg",
             "png",
+            "bmp",
             "pdf",
             'gif',
             "mp4",
@@ -200,6 +201,19 @@ async function configureCollections(el) {
             .toPairs()
             .reverse()
             .value();
+    });
+    el.addCollection("portfolio", (collection) => {
+        return collection.getFilteredByTag("portfolio").sort((a, b) => {
+            if (a.data.ongoing && !b.data.ongoing) {
+            return -1;
+            } else if (!a.data.ongoing && b.data.ongoing) {
+            return 1;
+            } else if (a.data.ongoing && b.data.ongoing) {
+            return 0;
+            } else {
+            return new Date(b.data.end) - new Date(a.data.end);
+            }
+        }).reverse();
     });
 }
 

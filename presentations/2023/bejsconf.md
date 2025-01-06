@@ -15,5 +15,6 @@ slides: "https://openhps.org/slides/ipin2022"
 thumbnail: "/presentations/2023/bejsconf.png"
 publication: "/publications/2020/openhps2020"
 images:
-- ../images/bejsconf-booth.jpg
+- url: ../images/bejsconf-booth.jpg
+  alt: OpenHPS banner and poster at the BeJS conference in 2023
 ---

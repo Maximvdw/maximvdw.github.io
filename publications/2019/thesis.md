@@ -1,9 +1,9 @@
 ---
 layout: publication.njk
-title: "Indoor Navigation by Centralized Tracking"
+title: "Master thesis: Indoor Navigation by Centralized Tracking"
 author: Maxim Van de Wynckel
 date: 2019-07-01
-pdf: https://solid.maximvdw.be/publications/Masterthesis_MaximVandeWynckel.pdf
+pdf: https://solid.maximvdw.be/publications/2019/Masterthesis_MaximVandeWynckel.pdf
 type: thesis
 video: https://youtu.be/fMFZu4Z49SU
 link: https://researchportal.vub.be/en/studentTheses/indoor-navigation-by-centralized-tracking

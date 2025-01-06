@@ -6,19 +6,30 @@ layout: default.njk
     <div class="row">
         <div class="col-sm-3">
             <nav class="navigation">
-            {% for posts in collections.projects %}
+            {% for post in collections.portfolio | reverse %}
                 <ul>
-                {% for post in posts | reverse %}
                     <li {% if page.url == post.url %}class="selected"{% endif %}>
                     <a href="{{ post.url }}" {% if page.url == post.url %}class="current"{% endif %}>{{ post.data.title }}</a>
                     </li>
-                {% endfor %}
                 </ul>
             {% endfor %}
             </nav>
         </div>
         <div class="col-sm-9 typography">
             <h1 itemprop="headline">{{ title }}</h1>
+            {{ content | safe }}
+
+            {% if video %}
+            {% include "video.njk" %}
+            {% endif %}
+
+            <div class="gallery" itemprop="image">
+            {% for image in images %}
+                <div class="gallery-item">
+                <img src="{{ image.url }}" alt="{{ image.alt }}" onclick="enlargeImage(this)">
+                </div>
+            {% endfor %}
+            </div>
         </div>
     </div>
 </div>

@@ -9,6 +9,8 @@ scheduled: true
 venue:
     name: "FOSDEM 2025"
     location: "Brussels, Belgium"
+    start: 2025-02-01
+    end: 2025-02-02
 event: "https://fosdem.org/2025/schedule/event/fosdem-2025-4526-discovering-indoor-environments-and-positioning-systems/"
 thumbnail: "/presentations/2025/fosdem.svg"
 publication: "/publications/2023/iot2023"

@@ -56,34 +56,10 @@ layout: default.njk
             {% endif %}
 
             {% if video %}
-            {% if video.startsWith('https://videolectures.net') %}
-            <iframe src="{{ video }}" class="video" allowfullscreen style="aspect-ratio:16/9" itemprop="video"></iframe>
-            {% elif video.endsWith('mp4') %}
-            <video class="video" controls preload="auto" itemprop="video">
-            <source src="{{ video }}" type="video/mp4">
-            Your browser does not support the video tag.
-            </video>
-            {% elif video.endsWith('webm') %}
-            <video class="video" controls preload="auto" itemprop="video">
-            <source src="{{ video }}" type="video/webm">
-            Your browser does not support the video tag.
-            </video>
-            {% endif %}
+            {% include "video.njk" %}
             {% endif %}
 
-            <div class="gallery" itemprop="image">
-            {% for image in images %}
-                <div class="gallery-item">
-                <img src="{{ image }}" alt="Gallery image" onclick="enlargeImage(this)">
-                </div>
-            {% endfor %}
-            </div>
-            <script>
-            function enlargeImage(img) {
-                const galleryItem = img.parentElement;
-                galleryItem.classList.toggle('enlarged');
-            }
-            </script>
+            {% include "gallery.njk" %}
         </div>
     </div>
 </div>

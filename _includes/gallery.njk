@@ -1,0 +1,13 @@
+<div class="gallery" itemprop="image">
+{% for image in images %}
+    <div class="gallery-item">
+    <img src="{{ image.url }}" alt="{{ image.alt }}" onclick="enlargeImage(this)">
+    </div>
+{% endfor %}
+</div>
+<script>
+function enlargeImage(img) {
+    const galleryItem = img.parentElement;
+    galleryItem.classList.toggle('enlarged');
+}
+</script>

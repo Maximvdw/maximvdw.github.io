@@ -55,6 +55,7 @@ img.postlist-image {
     height: 4em;
     border-radius: 0.5em;
     background-color: white;
+    object-fit: contain;
     float: left;
     margin-right: 1em;
     margin-left: 0;
@@ -81,5 +82,6 @@ img.postlist-image.padding {
 }
 iframe.video, video.video {
     width: 100%;
+    min-height: 500px;
     border: none;
 }
