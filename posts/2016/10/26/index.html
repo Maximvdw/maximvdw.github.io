@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>How easy is it to hack my WiFi light bulb? | Maxim Van de Wynckel</title>
+
+<meta name="description" content="In this article, I explore the security vulnerabilities of a WiFi light bulb and RGB LED strip controller from MagicHue. Through a detailed step-by-step process, I demonstrate how easily these IoT devices can be hacked, revealing significant security flaws that could potentially affect millions of users.">
+<meta name="robots" content="index,follow">
+<meta name="author" content="Maxim Van de Wynckel">
+
+<link rel="canonical" href="https://maximvdw.be/posts/2016/10/26/">
+
+<meta property="og:title" content="How easy is it to hack my WiFi light bulb? | Maxim Van de Wynckel">
+<meta property="og:type" content="article">
+
+<meta property="og:url" content="https://maximvdw.be/posts/2016/10/26/">
+<meta property="og:description" content="In this article, I explore the security vulnerabilities of a WiFi light bulb and RGB LED strip controller from MagicHue. Through a detailed step-by-step process, I demonstrate how easily these IoT devices can be hacked, revealing significant security flaws that could potentially affect millions of users.">
+<meta property="og:image" content="https://maximvdw.be/images/social/summary-large.png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@MVdWSoftware">
+<meta name="twitter:url" content="https://maximvdw.be/posts/2016/10/26/">
+<meta name="twitter:title" content="How easy is it to hack my WiFi light bulb? | Maxim Van de Wynckel">
+<meta name="twitter:description" content="In this article, I explore the security vulnerabilities of a WiFi light bulb and RGB LED strip controller from MagicHue. Through a detailed step-by-step process, I demonstrate how easily these IoT devices can be hacked, revealing significant security flaws that could potentially affect millions of users.">
+<meta name="twitter:image" content="https://maximvdw.be/images/social/summary-large.png">
+
+
+
+    <meta name="keywords" content="maxim van de wynckel, researcher, indoor positioning, navigation systems, interoperability, linked data, semantic web, location-based services">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="/css/main.css?version=2025-01-06T21:56:19.412+00:00">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+    
+    <link type="application/atom+xml" rel="alternate" href="https://maximvdw.be/feed.xml" title="" >
+
+    
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+
+    <meta name="theme-color" content="#284cb5">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BQZFG2FMWN"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-BQZFG2FMWN');
+    </script>
+</head>
+
+
+  <body>
+    
+    <aside class="sidebar">
+    <div class="profile">
+        <a href="/"><img src="/images/profile/maxim2.jpg" alt="Maxim Van de Wynckel"></a>
+        <div class="firstname">Maxim</div>
+        <div class="lastname">Van de Wynckel</div>
+        <div class="bio">Researcher, consultant, software engineer</div>
+    </div>
+    <ul class="menu">
+        
+        
+        <li><a  href="/about/">About me</a></li>
+        
+        <li><a class="active" href="/posts/">Blog</a></li>
+        
+        <li><a  href="/publications/">Publications</a></li>
+        
+        <li><a  href="/presentations/">Talks</a></li>
+        
+        <li><a  href="/teaching/">Teaching</a></li>
+        
+        <li><a  href="/portfolio/">Portfolio</a></li>
+        
+    </ul>
+</aside>
+<div class="hamburger" onclick="toggleSidebar()">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<script>
+    function isOpen() {
+        return document.querySelector('aside.sidebar').classList.contains('open');
+    }
+
+    function toggleSidebar() {
+        document.querySelector('aside.sidebar').classList.toggle('open');
+        document.querySelector('.content').classList.toggle('shifted');
+        document.querySelector('footer').classList.toggle('shifted');
+        document.querySelector('.hamburger').classList.toggle('active');
+    }
+
+    let touchstartX = 0;
+    let touchendX = 0;
+
+    function handleGesture() {
+        const threshold = 100; // Minimum swipe distance in pixels
+        if (touchendX < touchstartX - threshold) {
+            // Swiped left
+            if (isOpen()) {
+                toggleSidebar();
+            }
+        }
+        if (touchendX > touchstartX + threshold) {
+            // Swiped right
+            if (!isOpen()) {
+                toggleSidebar();
+            }
+        }
+    }
+
+    document.addEventListener('touchstart', function(event) {
+        touchstartX = event.changedTouches[0].screenX;
+    }, false);
+
+    document.addEventListener('touchend', function(event) {
+        touchendX = event.changedTouches[0].screenX;
+        handleGesture();
+    }, false);
+</script>
+
+    <section class="content" id="content">
+      
+<div class="container main">
+  <div class="row">
+    <div class="col-sm-2">
+      <nav class="navigation">
+        
+          <h3>2024</h3>
+          <ul>
+            
+              <li >
+                <a href="/posts/2024/12/18/" >Wednesday, 18 Dec 2024</a>
+              </li>
+            
+          </ul>
+        
+          <h3>2019</h3>
+          <ul>
+            
+              <li >
+                <a href="/posts/2019/06/07/" >Friday, 07 Jun 2019</a>
+              </li>
+            
+          </ul>
+        
+          <h3>2016</h3>
+          <ul>
+            
+              <li class="selected">
+                <a href="/posts/2016/10/26/" class="current">Wednesday, 26 Oct 2016</a>
+              </li>
+            
+          </ul>
+        
+      </nav>
+    </div>
+    <div class="col-sm-10 typography">
+      
+        <div class="alert alert-info">
+          This post was originally published <a href="https://medium.com/@Maximvdw/how-easy-is-it-to-hack-my-wifi-light-bulb-b6ba9192176d" target="_blank">here</a>. The layout might look different.
+        </div>
+      
+
+      <h1>How easy is it to hack my WiFi light bulb?</h1>
+      <h2 id="or-a-companies-whole-line-of-light-bulbs%3F" tabindex="-1">Or a companies whole line of light bulbs?</h2>
+<p><img src="https://miro.medium.com/v2/resize:fit:2000/format:webp/1*Ch6Jo0zRkE8aVedotNTMLw.png" alt="captionless image"></p>
+<p>Being a frugal student, I bought myself a 20$ light bulb and a 8$ RGB led strip controller so I could turn my lights on using my phone. After the IoT DDoS that took a part of the internet down on October 2016 I decided to check ‘how unsafe’ IoT devices like these light bulbs actually are. Articles describe the “theories” behind hacking “simple” IoT devices and the damage they could do — but how simple is it for a student like me to hack a light bulb (or maybe even all light bulbs of a company)</p>
+<p>The light bulb and RGB controller I am using are from a company called “MagicHue” and their app is called “Magic Home”.</p>
+<p><em>The following is a proof of concept to make users and manufacturers aware of the dangers in creating/using IoT devices. Controlling lights has been done using personal devices. Information such as sessions, id’s and email’s are masked.</em></p>
+<h1 id="step-1)-what-can-this-light-bulb%2Frgb-controller-actually-do%3F" tabindex="-1">Step 1) What can this light bulb/RGB controller actually do?</h1>
+<p><img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*KiEArK090hDHHqSw8G0S2w.jpeg" alt="captionless image"></p>
+<p>To start, I disassembled my RGB led controller to see what is actually in there. It turns out to be an ESP8266 providing both the WiFi connection and code that makes the actual thing work.</p>
+<p>An ESP8266 is a cheap controller I actually used a lot in combination with an Arduino, so I did have some background information on it.</p>
+<p>The controller is simple and just does what it is programmed to do. I can understand that a smart device running a Linux variant would’ve been way easier to hack. But that doesn’t mean this thing can’t be controlled/hacked.</p>
+<h1 id="step-2)-what-can-you-do-with-it%3F" tabindex="-1">Step 2) What can you do with it?</h1>
+<p>The next step a hacker would take is analyzing what actually can be done with the IoT device (in this case an RGB led controller).</p>
+<ol>
+<li>Turn the lights on and off</li>
+<li>Change the color and brightness</li>
+<li>Control using an iOS and Android app</li>
+<li>Bind a bulb to an account so it can be controlled from everywhere</li>
+</ol>
+<h1 id="step-3)-reverse-engineering-the-server-connection" tabindex="-1">Step 3) Reverse engineering the server connection</h1>
+<p>Now that we know that the light bulb controller itself doesn’t really have a lot of ‘easy to notice’ vulnerabilities, it is time to look for those vulnerabilities on the server the devices are connecting to.</p>
+<p><img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*mgZDvLAHfTOvMw2cwYA0rQ.png" alt="captionless image"></p>
+<p>So like all remote IoT devices behind a firewall they connect to a server that gives your light bulb commands. When your phone makes an “authenticated” request to the server, it is able to use the server to relay actions to your light bulb.</p>
+<p>The question you have to ask yourself as a developer:</p>
+<h2 id="%E2%80%9Chow-will-i-know-what-light-bulb-is-connected-to-a-specific-user%3F%E2%80%9D" tabindex="-1">“How will I know what light bulb is connected to a specific user?”</h2>
+<p>To do this the device needs to have “something unique” for that user/light bulb.</p>
+<blockquote>
+<p>A good way would be to generate a random and secure key (or request a unique key from the server and store it somewhere on first start).</p>
+<p>Requesting an unique key from a server allows you to keep the method you are using the generate the unique key private + it helps to give you server side control on how many keys are actually being generated.</p>
+</blockquote>
+<p>But did the developers that created this ‘cheap’ hardware chose this approach? That is what we are going to find out …</p>
+<h2 id="step-3.1)-analyzing-the-light-bulb-to-server-connection" tabindex="-1">Step 3.1) Analyzing the light bulb to server connection</h2>
+<p>This step is not always possible since some servers may communicate over SSL preventing you from reading the actual packets that the light bulb is sending to the server.</p>
+<p>I prepared the light bulb for remote connection. So It should be doing something with the server at that point:</p>
+<ol>
+<li>It either <strong>polls</strong> the server for changes (sending a request to the server every interval)</li>
+<li>It initializes a <strong>keep-alive connection</strong> with the server (resource intensive for a server with many light bulbs)</li>
+</ol>
+<p>I used Wireshark to sniff the traffic that was coming from my light bulb.</p>
+<p>The things I found didn’t really help me further, so I went on analyzing the application traffic. On other IoT device it is probably recommended to continue analyzing the IoT&lt;-&gt;server traffic.</p>
+<h2 id="step-3.2)-analyzing-the-app-traffic" tabindex="-1">Step 3.2) Analyzing the app traffic</h2>
+<p>Checking the connection between the Android app and the server is easy. I used an app called “Packet Sniffer” that launches a MITM on a non-rooted Android phone and even allows you to see SSL requests in plain text.</p>
+<p>From earlier research I did to automatically turn on my lights when I enter my room I know that the connection between the App and light bulb is a normal socket TCP connection sending hex. The connection from the app to the server is done over plain HTTP and actions are send as hex in a HTTP JSON request.</p>
+<p>The protocol for the hex commands is for this proof of concept not important, it consists of hex commands followed by their arguments and a checksum — but for testing purposes we will just copy paste commands send from the app.</p>
+<h2 id="checking-all-the-different-requests" tabindex="-1">Checking all the different requests</h2>
+<p>Most of the time I spend doing all sorts of different requests and saving them so I could analyse/redo them later.</p>
+<p>**Login:
+**The login is fairly easy to sniff. It sends the UserId (email) with a hashed (md5) password.</p>
+<p>The result is an ASP.NET session cookie used for further actions.</p>
+<p>**Enabling remote on a device:
+**This is basically a request that is made when you “Check” a checkbox asking to allow remote control.</p>
+<p><img src="https://miro.medium.com/v2/resize:fit:1002/format:webp/1*uXI0t2tSFVGeSyUyCBrcEw.png" alt="HTTP request for binding a device"></p>
+<p>Apart from the MAC address there is nothing unique to identify the device. The request does ask for device information, but it is not certain yet if this information will be validated to the connection that the light bulb makes to the server. I do not think that the time zone will be checked, since this is something that can be changed locally without it causing to break the remote function.</p>
+<p>**Disabling remote on a device:
+**Same as enabling, but when unchecking the box.</p>
+<p><img src="https://miro.medium.com/v2/resize:fit:1002/format:webp/1*9vDh_SKs2jarVWcbvrFQEA.png" alt="HTTP request for unbinding a device"></p>
+<p>Disabling only requires a GET request with the MAC address.</p>
+<p>**Checking to what accounts a device is bound:
+**Apparently the server supports binding a device to multiple accounts. This means we may be able to add someone else their light bulb if we know its MAC address (or brute force it?).</p>
+<p><img src="https://miro.medium.com/v2/resize:fit:1002/format:webp/1*7RFlgr1H5nN-B0yBfH3Peg.png" alt="HTTP request — getting users bound to device"></p>
+<p>The request is made after enabling remote on a device to display the following information inside the app:</p>
+<p><img src="https://miro.medium.com/v2/resize:fit:1002/format:webp/1*ZzFf4HMb7TdUpSJj6_xFLg.png" alt="Original application: Accounts bound to device"></p>
+<p>**Turning on/off:
+**Once remote is enabled you can turn it on/off using a request
+(note: the hex command is different for on/off/color/…)</p>
+<p><img src="https://miro.medium.com/v2/resize:fit:1002/format:webp/1*M_vv4FeGHxB7xmZY5llXFw.png" alt="HTTP request for an “action” to a light bulb"></p>
+<h2 id="thinking-as-a-developer-%E2%80%94-what-would-you-do%3F" tabindex="-1">Thinking as a developer — What would you do?</h2>
+<p>We know how a simple “on/off” requests is done:</p>
+<ol>
+<li>The user logs in with a request that takes:
+a) The user email
+b) The hashed password
+c) Some version info
+d) A check code (probably a checksum of the request) — UNKNOWN</li>
+<li>The response is a cookie used for future requests</li>
+<li>The user enables “remote” on the device sending a request containing:
+a) **MAC Address (only identifier of a light bulb)
+**b) Device information and model
+c) Some version info
+d) A check code (probably a checksum of the request) — UNKNOWN</li>
+<li>The request to turn on a light requires:
+a) Some version information about the app (copy/paste)
+b) **MAC Address (only identifier of a light bulb)
+**c) The action in HEX (copy/paste)
+d) A “check code” (probably a checksum of the request) — UNKNOWN
+e) Timestamp (probably used in the check code)</li>
+</ol>
+<p>You can clearly see that apart from the MAC address there is nothing ‘unique’ to identify a device. There is no unique key that you can’t guess… there is no password per device…. it’s just the MAC address.</p>
+<p>Think as a developer. What would you do on each request: What will you check, what will you do but above all… “What will you forget to check”.</p>
+<h1 id="step-4)-what-protections-exists%3F" tabindex="-1">Step 4) What protections exists?</h1>
+<p>Now that we completely understand the working of the server connection we have a full overview of the existing protections and the gaping holes:</p>
+<ol>
+<li>We know that connecting to a bulb from inside the network doesn’t require any password or pin</li>
+<li>Logging in using the app is done over plain text with a hashed password</li>
+<li>Requests to login / performing an action have an unknown “CheckCode” argument</li>
+<li>Light bulbs are bound to an account by their MAC address only</li>
+</ol>
+<h1 id="step-5)-manually-creating-requests" tabindex="-1">Step 5) Manually creating requests</h1>
+<p>Once you know “What” requests are made, “How” they are made and “When” they are made — it is time to manually create them and change their purpose.</p>
+<p>The first thing I did was executing the EXACT HTTP requests I captured before (without changing anything).</p>
+<h2 id="step-5.1)-turning-an-already-bound-device-on%2Foff" tabindex="-1">Step 5.1) Turning an already bound device on/off</h2>
+<p><img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*WbKTdw2maj-_sIa6ClqTzw.png" alt="Executing a HTTP request to turn off the light (redoing previous captured)"></p>
+<p>Result: It worked!</p>
+<p>This allows us to conclude a few things:</p>
+<ol>
+<li>The “Timestamp” can be used multiple times and does not need to be in the near future</li>
+<li>The “CheckCode” can be used multiple times</li>
+</ol>
+<h2 id="changing-the-mac-to-an-already-bound-device" tabindex="-1">Changing the MAC to an already bound device</h2>
+<p>The next thing I tried was simply changing the device to an already bound device. This worked as well allowing me to conclude that:</p>
+<ol>
+<li>The “CheckCode” does not take the MAC address into account</li>
+</ol>
+<h2 id="changing-the-cookie-to-another-account" tabindex="-1">Changing the cookie to another account</h2>
+<p>Feeling hopeful I tried to change the cookie to that of another account I just created. The CheckCode, Timestamp and MAC stayed the same.</p>
+<p>The request failed with the following message:</p>
+<p><img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*Bip9EFu5pHhSf9A9yRRZMw.png" alt="Result of HTTP request with other account"></p>
+<p>The request failed, but we now know that the problem is either:</p>
+<ol>
+<li>The checkcode depends on the user</li>
+<li>The device needs to be bound first</li>
+</ol>
+<h2 id="step-5.2)-binding-a-device-to-an-account" tabindex="-1">Step 5.2) Binding a device to an account</h2>
+<p>To test this, I first removed the device from my account. After that I just executed the same command again.</p>
+<p><img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*_UacLxTZWDkQ-mUsavkVnQ.png" alt="HTTP request to bind a device"></p>
+<p>Result: The request worked, and when I looked in the app the device was in there!</p>
+<h2 id="changing-the-mac-to-another-device" tabindex="-1">Changing the MAC to another device</h2>
+<p>This is perhaps the most important test in this article. If this works — it means we can bind to any device by just knowing or guessing the MAC address.</p>
+<p>I executed the command from another WAN address than the IP address of the device — so I was certain that wasn’t used as a check.</p>
+<p>Result: It worked!</p>
+<p>I managed to add a device bound to another account without changing the device specifications.</p>
+<p>In the application the new device showed it being bound to two accounts — the icon/information about the device was incorrect since I didn’t change it. This allows us to conclude:</p>
+<ol>
+<li>The “CheckCode” does not take the MAC address into account</li>
+<li>The device can be added by only knowing the MAC address</li>
+<li>The device specifications/type does not matter when adding</li>
+</ol>
+<h2 id="changing-the-cookie-to-another-account-1" tabindex="-1">Changing the cookie to another account</h2>
+<p>This test was the same as 5.1, where I just change the cookie to another account that does not have the device bound to it.</p>
+<p>Result: It worked!</p>
+<p>This lets us conclude a few more things:</p>
+<ol>
+<li>The “CheckCode” does not take the user into account (we now know that this is the same case as in 5.1 , so that means we just need to bind a device first before performing actions on it)</li>
+</ol>
+<h2 id="step-5.3)-turning-an-unbound-device-on%2Foff" tabindex="-1">Step 5.3) Turning an unbound device on/off</h2>
+<p>What we know of step 5.1 and 5.2 is that we can perform an action from the moment we bind a device to an account.</p>
+<p>Result: It worked!</p>
+<p>After just binding the device I was able to perform the hex command on the newly bound device without any problem.</p>
+<blockquote>
+<p>At this point, we have managed to control any light bulb of that company by just knowing their MAC address.</p>
+</blockquote>
+<h1 id="step-6)-automating-the-whole-thing" tabindex="-1">Step 6) Automating the whole thing</h1>
+<p>What we did from step 1–5 was research on how everything worked. We may now know how to control IoT lightbulbs of MagicHue by just knowing their MAC address — but what does this actually mean?</p>
+<h2 id="brute-forcing-the-possible-mac-addresses" tabindex="-1">Brute forcing the possible MAC addresses</h2>
+<p>A first thing a hacker could do is just brute forcing the MAC addresses. This may seem impossible — but since we know the manufacturer of the WiFi adapter (ESP controller) we can just brute force within the boundaries of their assigned addresses.</p>
+<p>A quick lookup on <a href="https://macvendors.com/">https://macvendors.com/</a> learns that the company is called “ESPRESSIF INC.”. Using that name we can lookup the assigned addresses: <a href="https://www.adminsub.net/mac-address-finder/espressif">https://www.adminsub.net/mac-address-finder/espressif</a>
+Giving us the first 3 bytes (as of 10/2016 there are 6x ranges).</p>
+<p>Lets calculate how much MAC addresses we have to test. Keep in mind that ESP is not just used by these light bulbs — so just a fraction is actually used by MagicHue.</p>
+<blockquote>
+<p>A MAC address consists of 6 bytes. Since we have the first 3 bytes we still have
+255<em>255</em>255 possibilities = 16581375
+There are 6 different OUI (Organisational Unique Identifier) assigned to ESP. So that means the possibilities are 6 * 1651375 = 99 488 250</p>
+</blockquote>
+<p>Trying to bind one MAC address takes about 450ms per request (ASP.NET — explains it all). The request will return if the device is online/offline so we do not need to check this.</p>
+<p>This means it would take ~520 days to check all these MAC addresses.</p>
+<blockquote>
+<p>For a hacker, this is fast enough to wait for. Especially when they already have a botnet that can speed up this ‘testing’ action.</p>
+</blockquote>
+<h2 id="brute-force-proof-of-concept" tabindex="-1">Brute force proof of concept</h2>
+<p>A proof of concept Java application that will loop through possible MAC addresses. I chose a range of MAC addresses that I know are sold in Belgium.</p>
+<p>After just a few minutes:</p>
+<p><img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*sMNNzBke_UkzJMvAT0zizQ.png" alt="Devices found after just 2 minutes"></p>
+<p>I outputted the list of user email addresses I found for each online device. This proves how “real life” this is.</p>
+<blockquote>
+<p>You may not know the MAC address of the person you are hacking, but you can basically map each MAC address that you find to a living person. That is what makes this so scary.</p>
+</blockquote>
+<p>The “admin@proofofconcept.fake” is an account I made for this proof of concept.</p>
+<p>This is how the app now looks like after a 2 minute brute force search:</p>
+<p><img src="https://miro.medium.com/v2/resize:fit:1002/format:webp/1*sXQwhfrJEVXfcuNkxUzcNg.png" alt="captionless image"></p>
+<h1 id="how-will-this-be-fixed%3F" tabindex="-1">How will this be fixed?</h1>
+<p>They can try to prevent it a bit… but they can’t remotely update the existing devices to make them more secure.</p>
+<p>This basically means that the current line of devices is vulnerable to hacking regardless of whatever the company tries to do — and a hunch tells me this won’t change in the near future.</p>
+<p><strong>Tips:</strong></p>
+<ol>
+<li>Give the devices a unique identifier that is stored on first boot. This ensures that a hacker can’t just guess the MAC address</li>
+<li>Check the timestamps that are send to avoid double requests (slows them down)</li>
+<li>Perform checksums on the requests (slows them down)</li>
+<li>Use TLS — its 2016</li>
+<li>Only allow your IoT devices to be added inside the network they are in</li>
+<li>Possibility of using pin codes for a light can act as a private key (or both)</li>
+<li>Rate limiting the amount of requests</li>
+</ol>
+<h1 id="what-can-a-hacker-do%3F" tabindex="-1">What can a hacker do?</h1>
+<ol>
+<li>They can turn all the lights on and off or just change the colors. We are speaking of millions of sold units</li>
+<li>They can see all emails linked to those light bulbs/rgb controllers</li>
+<li>They can see when you timed your lights to go on or off. Maybe see when a specific user leaves his house or has his house in vacation mode?</li>
+<li>They can further exploit it …</li>
+</ol>
+<h1 id="conclusion" tabindex="-1">Conclusion</h1>
+<p>Despite having all sorts of ‘security’ measures — I was able to control any light bulb of the company without breaching into the network. Some simple changes like giving each device an unique ID would solve this particular problem ASAP.</p>
+<p><em>IoT devices come in all shapes and sizes. Some have screens, others are smart under the hood without you even really noticing it.</em></p>
+<p><em>The problem however is that these IoT devices are made by hardware manufacturers that do not really care about cyber security. A light bulb like this may not be able to inflict a lot of damage apart from energy bills, probable fire hazards and stealth burglary — but from the moment these devices get smarter and smarter they have more possibilities to exploit them.</em></p>
+<p><em>This proof of concept shows that it isn’t hard to hack all sold devices of an IoT company — what is kind of worrying.</em></p>
+<p>Even if companies fix these “small” security issues it just means we have to search for the next vulnerability in a long list to come…</p>
+
+
+      <hr>
+      <ul><li>Next: <a href="/posts/2019/06/07/">Putting an Artificial brain in my Sumo Robot</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+    </section>
+
+    <footer>
+    <div class="social">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <ul class="social-links">
+                        <li><a href="https://mas.to/@maximvdw" rel="me" target="_blank"><i class="fab fa-mastodon"></i></a></li>
+                        <li><a href="https://github.com/Maximvdw" rel="me" target="_blank"><i class="fab fa-github"></i></a></li>
+                        <li><a href="mailto:me@maximvdw.be"><i class="fas fa-envelope"></i></a></li>
+                        <li><a href="https://twitter.com/MVdWSoftware" rel="me" target="_blank"><i class="fab fa-x-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        &copy; Copyright 2024 - 2025
+    </div>
+</footer>
+
+  </body>
+</html>

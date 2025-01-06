@@ -922,6 +922,47 @@
                 </EducationDegree>
             </EducationOrganizationAttendance>
             
+            <EducationOrganizationAttendance>
+                <hr:OrganizationName>Don Bosco Hoboken</hr:OrganizationName>
+                <OrganizationContact>
+                    <Communication>
+                        <Address>
+                            <oa:AddressLine> Salesianenlaan 1</oa:AddressLine>
+                            <oa:CityName>Hoboken</oa:CityName>
+                            <CountryCode>be</CountryCode>
+                            <oa:PostalCode>2660</oa:PostalCode>
+                        </Address>
+                    </Communication>
+                    <Communication>
+                        <ChannelCode>Web</ChannelCode>
+                        <oa:URI>https://www.donboscohoboken.be/</oa:URI>
+                    </Communication>
+                </OrganizationContact>
+                <EducationLevelCode>5</EducationLevelCode>
+                <AttendancePeriod>
+                    <StartDate>
+                      <hr:FormattedDateTime></hr:FormattedDateTime>
+                    </StartDate>
+                    
+                    <EndDate>
+                      <hr:FormattedDateTime></hr:FormattedDateTime>
+                    </EndDate>
+                    
+                    <Ongoing>false</Ongoing>
+                </AttendancePeriod>
+                <EducationDegree>
+                    <hr:DegreeName>Industrial ICT</hr:DegreeName>
+                    
+                    <DegreeDate>
+                        <hr:FormattedDateTime>2013-06-30</hr:FormattedDateTime>
+                    </DegreeDate>
+                    
+                    
+                    
+                    
+                </EducationDegree>
+            </EducationOrganizationAttendance>
+            
         </EducationHistory>
         <eures:Licenses/>
         <Certifications/>
@@ -1163,7 +1204,7 @@ locations.&lt;/p&gt;
 &lt;p&gt;Starting from a comparison of existing positioning techniques, such as beacons or Wi-Fi positioning, this thesis gradually explains how the system can track a smartphone; how both visual and textual navigation instructions are created and the pros and cons of using this system in a hospital environment.&lt;/p&gt;
 &lt;p&gt;To achieve the goal of the thesis, first theoretical research was needed to come to a possible solution. Next, the solution was implemented, i.e. software was created. The software implementation shows the feasibility of the positioning approach as well as the navigation approach.&lt;/p&gt;
 </hr:FormattedPublicationDescription>
-                <Title>Indoor Navigation by Centralized Tracking</Title>
+                <Title>Master thesis: Indoor Navigation by Centralized Tracking</Title>
                 <Year>2019</Year>
                 <Reference>Van de Wynckel, M. (2019). Indoor Navigation by Centralized Tracking [Master’s thesis, Vrije Universiteit Brussel]. https://researchportal.vub.be/en/studentTheses/indoor-navigation-by-centralized-tracking
 </Reference>
@@ -1176,6 +1217,28 @@ locations.&lt;/p&gt;
                 <Link>https://youtu.be/fMFZu4Z49SU</Link>
                 
                 <Link>https://maximvdw.be/publications/2019/thesis/</Link>
+            </Publication>
+            
+            <Publication>
+                <hr:FormattedPublicationDescription>&lt;p&gt;My assignment was to continue working on the existing backend code and card reader software. The objective was to ensure that a company or private residence door or gate can be opened via an iOS and/or Android device. Additionally, a notification must be sent to the linked mobile devices of the customer to whom the card reader belongs when a bell signal is received at a card reader. Since it concerns access control, everything related to the assignment must also be done securely without compromising the stability and speed of the system. For this assignment, I need to continue working on an existing (C++) program for the card reader placed at an access point and the online panel where customers can see who entered and at what time. I have to write an application that works for both iOS and Android devices.&lt;/p&gt;
+</hr:FormattedPublicationDescription>
+                <Title>Bachelor thesis: eID IO - Applicatie besturing</Title>
+                <Year>2016</Year>
+                <Reference>My bachelor thesis was to provide remote actions for eID authentication. It was awarded the best thesis of the class of 2016.</Reference>
+                
+                
+                <Link>https://maximvdw.be/publications/2016/thesis/</Link>
+            </Publication>
+            
+            <Publication>
+                <hr:FormattedPublicationDescription>&lt;p&gt;WisaReg is an application that provides newly registered students from the Wisa database with accounts for various services. The system creates accounts for Windows Active Directory, the Virtual Learning Platform, the student tracking system, and also for a Gmail email address. Wisa is an administration package that most schools use to manage student and staff administration. The data created with this is saved in a Firebird SQL database. As soon as a password is changed somewhere, it will also change across all services, and when a student is deregistered, their accounts will also be deleted due to some limitations.&lt;/p&gt;
+</hr:FormattedPublicationDescription>
+                <Title>Final work: WisaReg</Title>
+                <Year>2013</Year>
+                <Reference>WisaReg is an application that provides newly registered students from the Wisa database with accounts for various services. It was awarded the best final work of 2013.</Reference>
+                
+                
+                <Link>https://maximvdw.be/publications/2013/gip/</Link>
             </Publication>
             
         </PublicationHistory>
@@ -1286,10 +1349,10 @@ locations.&lt;/p&gt;
                 <Description>Presentation titled &#39;Discovering Indoor Environments and Positioning Systems&#39;</Description>
                 <Date>
                     <StartDate>
-                        <hr:FormattedDateTime></hr:FormattedDateTime>
+                        <hr:FormattedDateTime>2025-02-01</hr:FormattedDateTime>
                     </StartDate>
                     <EndDate>
-                        <hr:FormattedDateTime></hr:FormattedDateTime>
+                        <hr:FormattedDateTime>2025-02-02</hr:FormattedDateTime>
                     </EndDate>
                     <Ongoing>false</Ongoing>
                 </Date>
@@ -1388,7 +1451,7 @@ locations.&lt;/p&gt;
                 <Location>Hangzhou, China</Location>
                 <Link>https://iswc2022.semanticweb.org/index.php/accepted-papers/index.html</Link>
                 
-                <Link>https://openhps.org/publications/2022/5b3-Van%20de%20Wynckel-Video-MQ.mp4</Link>
+                <Link>https://solid.maximvdw.be/videos/2022/5b3-Van%20de%20Wynckel-Video-MQ.mp4</Link>
                 
                 <Link>https://maximvdw.be/presentations/2022/iswc2022/</Link>
             </ConferenceAndSeminar>
@@ -1471,16 +1534,84 @@ locations.&lt;/p&gt;
         <Projects>
             
             <Project>
-                <Title>OpenHPS</Title>
+                <Title>WisaReg</Title>
                 <Date>
                     <StartDate>
-                        <hr:FormattedDateTime>2019-10-01</hr:FormattedDateTime>
+                        <hr:FormattedDateTime>2012-08-01</hr:FormattedDateTime>
+                    </StartDate>
+                    
+                    <EndDate>
+                        <hr:FormattedDateTime>2013-06-30</hr:FormattedDateTime>
+                    </EndDate>
+                    
+                    <Ongoing>false</Ongoing>
+                </Date>
+                <Description></Description>
+                <Link></Link>
+            </Project>
+            
+            <Project>
+                <Title>Shutti</Title>
+                <Date>
+                    <StartDate>
+                        <hr:FormattedDateTime>2009-04-01</hr:FormattedDateTime>
+                    </StartDate>
+                    
+                    <EndDate>
+                        <hr:FormattedDateTime>2013-07-01</hr:FormattedDateTime>
+                    </EndDate>
+                    
+                    <Ongoing>false</Ongoing>
+                </Date>
+                <Description></Description>
+                <Link>https://web.archive.org/web/20130831040157/http://www.shutti.co.nr:80/</Link>
+            </Project>
+            
+            <Project>
+                <Title>eIDIO Cloud Authentication</Title>
+                <Date>
+                    <StartDate>
+                        <hr:FormattedDateTime>2015-08-01</hr:FormattedDateTime>
+                    </StartDate>
+                    
+                    <EndDate>
+                        <hr:FormattedDateTime>2016-07-01</hr:FormattedDateTime>
+                    </EndDate>
+                    
+                    <Ongoing>false</Ongoing>
+                </Date>
+                <Description></Description>
+                <Link></Link>
+            </Project>
+            
+            <Project>
+                <Title>EhB Rooster</Title>
+                <Date>
+                    <StartDate>
+                        <hr:FormattedDateTime>2015-09-01</hr:FormattedDateTime>
+                    </StartDate>
+                    
+                    <EndDate>
+                        <hr:FormattedDateTime>2018-07-01</hr:FormattedDateTime>
+                    </EndDate>
+                    
+                    <Ongoing>false</Ongoing>
+                </Date>
+                <Description></Description>
+                <Link>https://web.archive.org/web/20180812082356/https://ehbrooster.be/</Link>
+            </Project>
+            
+            <Project>
+                <Title>SpigotMC Plugins</Title>
+                <Date>
+                    <StartDate>
+                        <hr:FormattedDateTime>2013-07-01</hr:FormattedDateTime>
                     </StartDate>
                     
                     <Ongoing>true</Ongoing>
                 </Date>
                 <Description></Description>
-                <Link>https://openhps.org</Link>
+                <Link>https://www.spigotmc.org/members/maximvdw.6687/</Link>
             </Project>
             
             <Project>
@@ -1494,6 +1625,19 @@ locations.&lt;/p&gt;
                 </Date>
                 <Description></Description>
                 <Link>https://sembeacon.org</Link>
+            </Project>
+            
+            <Project>
+                <Title>OpenHPS</Title>
+                <Date>
+                    <StartDate>
+                        <hr:FormattedDateTime>2019-10-01</hr:FormattedDateTime>
+                    </StartDate>
+                    
+                    <Ongoing>true</Ongoing>
+                </Date>
+                <Description></Description>
+                <Link>https://openhps.org</Link>
             </Project>
             
         </Projects>

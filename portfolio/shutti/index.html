@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Shutti | Maxim Van de Wynckel</title>
+
+<meta name="description" content="Shutti was a set of software tools developed for Windows that enabled users to optimize, schedule and automate their computer&apos;s power management settings.">
+<meta name="robots" content="index,follow">
+<meta name="author" content="Maxim Van de Wynckel">
+
+<link rel="canonical" href="https://maximvdw.be/portfolio/shutti/">
+
+<meta property="og:title" content="Shutti | Maxim Van de Wynckel">
+<meta property="og:type" content="article">
+
+<meta property="og:url" content="https://maximvdw.be/portfolio/shutti/">
+<meta property="og:description" content="Shutti was a set of software tools developed for Windows that enabled users to optimize, schedule and automate their computer&apos;s power management settings.">
+<meta property="og:image" content="https://maximvdw.be/images/social/summary-large.png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@MVdWSoftware">
+<meta name="twitter:url" content="https://maximvdw.be/portfolio/shutti/">
+<meta name="twitter:title" content="Shutti | Maxim Van de Wynckel">
+<meta name="twitter:description" content="Shutti was a set of software tools developed for Windows that enabled users to optimize, schedule and automate their computer&apos;s power management settings.">
+<meta name="twitter:image" content="https://maximvdw.be/images/social/summary-large.png">
+
+
+
+    <meta name="keywords" content="maxim van de wynckel, researcher, indoor positioning, navigation systems, interoperability, linked data, semantic web, location-based services">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="/css/main.css?version=2025-01-06T21:56:19.412+00:00">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+    
+    <link type="application/atom+xml" rel="alternate" href="https://maximvdw.be/feed.xml" title="" >
+
+    
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+
+    <meta name="theme-color" content="#284cb5">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BQZFG2FMWN"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-BQZFG2FMWN');
+    </script>
+</head>
+
+
+  <body>
+    
+    <aside class="sidebar">
+    <div class="profile">
+        <a href="/"><img src="/images/profile/maxim2.jpg" alt="Maxim Van de Wynckel"></a>
+        <div class="firstname">Maxim</div>
+        <div class="lastname">Van de Wynckel</div>
+        <div class="bio">Researcher, consultant, software engineer</div>
+    </div>
+    <ul class="menu">
+        
+        
+        <li><a  href="/about/">About me</a></li>
+        
+        <li><a  href="/posts/">Blog</a></li>
+        
+        <li><a  href="/publications/">Publications</a></li>
+        
+        <li><a  href="/presentations/">Talks</a></li>
+        
+        <li><a  href="/teaching/">Teaching</a></li>
+        
+        <li><a class="active" href="/portfolio/">Portfolio</a></li>
+        
+    </ul>
+</aside>
+<div class="hamburger" onclick="toggleSidebar()">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<script>
+    function isOpen() {
+        return document.querySelector('aside.sidebar').classList.contains('open');
+    }
+
+    function toggleSidebar() {
+        document.querySelector('aside.sidebar').classList.toggle('open');
+        document.querySelector('.content').classList.toggle('shifted');
+        document.querySelector('footer').classList.toggle('shifted');
+        document.querySelector('.hamburger').classList.toggle('active');
+    }
+
+    let touchstartX = 0;
+    let touchendX = 0;
+
+    function handleGesture() {
+        const threshold = 100; // Minimum swipe distance in pixels
+        if (touchendX < touchstartX - threshold) {
+            // Swiped left
+            if (isOpen()) {
+                toggleSidebar();
+            }
+        }
+        if (touchendX > touchstartX + threshold) {
+            // Swiped right
+            if (!isOpen()) {
+                toggleSidebar();
+            }
+        }
+    }
+
+    document.addEventListener('touchstart', function(event) {
+        touchstartX = event.changedTouches[0].screenX;
+    }, false);
+
+    document.addEventListener('touchend', function(event) {
+        touchendX = event.changedTouches[0].screenX;
+        handleGesture();
+    }, false);
+</script>
+
+    <section class="content" id="content">
+      
+<div class="container main" itemscope itemtype="http://schema.org/ScholarlyArticle">
+    <div class="row">
+        <div class="col-sm-3">
+            <nav class="navigation">
+            
+                <ul>
+                    <li >
+                    <a href="/portfolio/openhps/" >OpenHPS</a>
+                    </li>
+                </ul>
+            
+                <ul>
+                    <li >
+                    <a href="/portfolio/sembeacon/" >SemBeacon</a>
+                    </li>
+                </ul>
+            
+                <ul>
+                    <li >
+                    <a href="/portfolio/spigotmc/" >SpigotMC Plugins</a>
+                    </li>
+                </ul>
+            
+                <ul>
+                    <li >
+                    <a href="/portfolio/ehbrooster/" >EhB Rooster</a>
+                    </li>
+                </ul>
+            
+                <ul>
+                    <li >
+                    <a href="/portfolio/eidio/" >eIDIO Cloud Authentication</a>
+                    </li>
+                </ul>
+            
+                <ul>
+                    <li class="selected">
+                    <a href="/portfolio/shutti/" class="current">Shutti</a>
+                    </li>
+                </ul>
+            
+                <ul>
+                    <li >
+                    <a href="/portfolio/wisareg/" >WisaReg</a>
+                    </li>
+                </ul>
+            
+            </nav>
+        </div>
+        <div class="col-sm-9 typography">
+            <h1 itemprop="headline">Shutti</h1>
+            <p>Shutti was set of software tools developed for Windows that enabled users to optimize, schedule and automate their computer's power management settings. The software was developed in C# and was available for free. The software was discontinued in 2013. The website is no longer available, but a snapshot of the website is available on the <a href="https://web.archive.org/web/20130831040157/http://www.shutti.co.nr:80/">Internet Archive</a>.</p>
+<p>The software consisted of the following tools available on <a href="https://www.softpedia.com/publisher/Van-de-Wynckel-Maxim-67492.html">Softpedia</a>:</p>
+<ul>
+<li><a href="https://www.softpedia.com/get/System/Launchers-Shutdown-Tools/Shutti-2010-Professional.shtml"><strong>Shutti Shutdown Timer</strong></a>: A tool to schedule shutdowns, restarts, hibernations and logoffs.</li>
+<li><a href="https://www.softpedia.com/get/System/Launchers-Shutdown-Tools/Shutti-2010-Desktop-Edition.shtml"><strong>Shutti DeskTOP</strong></a>: Fast hardware-based shutdowns, restarts, hibernations and logoffs.</li>
+<li><a href="https://www.softpedia.com/get/Tweak/System-Tweak/Shutti-Shutdown-Booster.shtml"><strong>Shutti Shutdown Booster</strong></a>: A tool to optimize power management settings.</li>
+<li><a href="https://www.softpedia.com/get/System/Launchers-Shutdown-Tools/Shutti-GreenMoni.shtml"><strong>Shutti GreenMoni</strong></a>: A tool to manage power settings of your desktop or laptop monitor.</li>
+</ul>
+<p>Shutti GreenMoni was also featured on <a href="https://www.cnet.com/videos/power-saving-tool-for-laptop-screens/">CNET</a>.</p>
+<iframe class="video" src='//players.brightcove.net/6415844878001/qniRAwgO3y_default/index.html?videoId=6354475790112' allowfullscreen></iframe>
+
+
+            
+
+            <div class="gallery" itemprop="image">
+            
+            </div>
+        </div>
+    </div>
+</div>
+
+    </section>
+
+    <footer>
+    <div class="social">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <ul class="social-links">
+                        <li><a href="https://mas.to/@maximvdw" rel="me" target="_blank"><i class="fab fa-mastodon"></i></a></li>
+                        <li><a href="https://github.com/Maximvdw" rel="me" target="_blank"><i class="fab fa-github"></i></a></li>
+                        <li><a href="mailto:me@maximvdw.be"><i class="fas fa-envelope"></i></a></li>
+                        <li><a href="https://twitter.com/MVdWSoftware" rel="me" target="_blank"><i class="fab fa-x-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        &copy; Copyright 2024 - 2025
+    </div>
+</footer>
+
+  </body>
+</html>
