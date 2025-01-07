@@ -10,6 +10,7 @@ pdf: https://solid.maximvdw.be/publications/discoverable-and-interoperable-augme
 bib: /publications/2024/vandewynckel2024ar.bib
 thumbnail: "/publications/2024/sosy2024maxim.png"
 website: https://maximvdw.github.io/sosy2024
+summary: In this paper, we propose a novel solution to store 3D manipulations in AR spaces within a Solid pod. Using this solution, multiple users can work together in the same environment while also ensuring interoperability between AR applications.
 ---
 Augmented Reality (AR) environments are physical environments with virtual objects superimposed
 through AR-enabled devices. These virtual objects can range from simple aesthetic objects like pictures

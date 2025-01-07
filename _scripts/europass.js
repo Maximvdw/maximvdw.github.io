@@ -5,7 +5,7 @@ import puppeteer from "puppeteer";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const delay = 5000;    // Should not need this
+const delay = 8000;    // Should not need this
 
 const prepare = async (page) => {
     try {

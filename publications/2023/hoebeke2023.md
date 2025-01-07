@@ -8,6 +8,7 @@ publisher: zenodo
 type: dataset
 bib: /publications/2023/hoebeke2023.bib
 thumbnail: "/publications/2023/hoebeke2023.png"
+summary: In this dataset, a Monopoly game was recorded from a first person perspective. The aim of this dataset is to conduct pawn and object tracking using computer vision algorithms.
 ---
 The goal of this dataset was to track game pieces on the physical game board of Monopoly. We make use of object classification where our training data consists of 100 pictures (taken at an angle) of the game board in order to classify the individual (moving) pieces. The training dataset was on the 9th of April 2023 and the test date recorded on the 7th of May 2023 using an iPhone 13 mini and iPhone 12.
 

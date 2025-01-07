@@ -50,8 +50,8 @@ eleventyExcludeFromCollections: true
         padding-bottom: 10px;
         background-color: #ffffff;
         color: #284cb5;
-        padding-left: 1em;
-        padding-right: 1em;
+        padding-left: 2em;
+        padding-right: 2em;
         border-bottom: 2px solid #284cb5;
         box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
         position: relative;
@@ -102,8 +102,8 @@ eleventyExcludeFromCollections: true
 
       section {
         margin-top: 1em;
-        padding-left: 5mm;
-        padding-right: 5mm;
+        padding-left: 8mm;
+        padding-right: 8mm;
       }
 
       h2 {
@@ -237,6 +237,10 @@ eleventyExcludeFromCollections: true
         background: #fff;
         border: 2px solid #ddd;
       }
+
+      section.newpage {
+        page-break-before: always;
+      }
     </style>
   </head>
   <body>
@@ -276,6 +280,7 @@ eleventyExcludeFromCollections: true
       <h2>Education</h2>
       <ul>
         {% for edu in education %}
+        {% if edu.start %}
         <li>
           <div class="content">
             <h4>{{ edu.degree }}</h4>
@@ -298,6 +303,7 @@ eleventyExcludeFromCollections: true
             {% endif %}
           </div>
         </li>
+        {% endif %}
         {% endfor %}
       </ul>
     </section>
@@ -352,10 +358,58 @@ eleventyExcludeFromCollections: true
 
     <section>
       <h2>Publications</h2>
+      <h3>Conference papers <small>(peer reviewed)</small></h3>
       <ul>
         {% set publications = collections.publications | reverse %} 
         {% for pub in publications %}
-        {% if pub.data.type != 'thesis' %}
+        {% if pub.data.type == 'conference' %}
+        <li>
+          <div class="content">
+            {{ pub.data.excerpt | replace("Van de Wynckel, M.", "<strong
+              >Van de Wynckel, M.</strong
+            >") | safe }}
+          </div>
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+      <h3>Posters <small>(peer reviewed)</small></h3>
+      <ul>
+        {% set publications = collections.publications | reverse %} 
+        {% for pub in publications %}
+        {% if pub.data.type == 'poster' %}
+        <li>
+          <div class="content">
+            {{ pub.data.excerpt | replace("Van de Wynckel, M.", "<strong
+              >Van de Wynckel, M.</strong
+            >") | safe }}
+          </div>
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+
+      <h3>Technical reports <small>(not peer reviewed)</small></h3>
+      <ul>
+        {% set publications = collections.publications | reverse %} 
+        {% for pub in publications %}
+        {% if pub.data.type == 'tech-report' %}
+        <li>
+          <div class="content">
+            {{ pub.data.excerpt | replace("Van de Wynckel, M.", "<strong
+              >Van de Wynckel, M.</strong
+            >") | safe }}
+          </div>
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+
+      <h3>Datasets</h3>
+      <ul>
+        {% set publications = collections.publications | reverse %} 
+        {% for pub in publications %}
+        {% if pub.data.type == 'dataset' %}
         <li>
           <div class="content">
             {{ pub.data.excerpt | replace("Van de Wynckel, M.", "<strong
@@ -368,7 +422,7 @@ eleventyExcludeFromCollections: true
       </ul>
     </section>
 
-    <section>
+    <section class="newpage">
       <h2>Presentations</h2>
       <ul>
         {% set presentations = collections.presentations | reverse %} {% for
@@ -390,7 +444,7 @@ eleventyExcludeFromCollections: true
       </ul>
     </section>
 
-    <section>
+    <section class="newpage">
       <h2>Teaching Experience</h2>
       <h3>Courses</h3>
       <ul>

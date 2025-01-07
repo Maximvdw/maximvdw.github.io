@@ -12,6 +12,7 @@ type: tech-report
 github: https://github.com/OpenHPS
 video: https://video.fosdem.org/2022/L.lightningtalks/lt_openhps.webm
 thumbnail: "/publications/2020/openhps2020.png"
+summary: In this technical report, we provide a technical overview of the OpenHPS framework. OpenHPS is a framework to design a wide range of hybrid positioning systems using TypeScript.
 ---
 Positioning systems and frameworks use various techniques to determine the position of an object. Some of the existing solutions combine different sensory data at the time of positioning in order
 to compute more accurate positions by reducing the error introduced by the used individual positioning techniques. We present OpenHPS, a generic hybrid positioning system implemented in

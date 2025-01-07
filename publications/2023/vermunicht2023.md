@@ -8,9 +8,8 @@ publisher: zenodo
 type: dataset
 bib: /publications/2023/vermunicht2023.bib
 thumbnail: "/publications/2023/vermunicht2023.png"
+summary: "In this dataset, two separate datasets were recorded in a Belgian train station to collect 802.11 wireless management frames. The datasets were anonymised and contain data on the SSIDs, signal strengths and MAC addresses."
 ---
-## About
-
 The following datasets were captured at a busy Belgian train station between 9pm and 10pm, it contains all 802.11 management frames that were captured. both datasets were captured with approximately 20 minutes between then.
 
 Both datasets are represented by a pcap and CSV file. The CSV file contains the frame type, timestamps, signal strength, SSID and MAC addresses for every frame. In the pcap file, all generic 802.11 elements were removed for anonymization purposes.

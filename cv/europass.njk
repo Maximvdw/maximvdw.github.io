@@ -198,7 +198,7 @@ permalink: cv/europass.xml
         <PublicationHistory>
            {% for publication in collections.publications | reverse %}
             <Publication>
-                <hr:FormattedPublicationDescription>{{ publication.content }}</hr:FormattedPublicationDescription>
+                <hr:FormattedPublicationDescription>{{ publication.data.summary | default(publication.content) }}</hr:FormattedPublicationDescription>
                 <Title>{{ publication.data.title }}</Title>
                 <Year>{{ publication.data.date | date("yyyy") }}</Year>
                 <Reference>{{ publication.data.excerpt_short or publication.data.excerpt }}</Reference>
