@@ -216,7 +216,7 @@
                     <hr:CurrentIndicator>true</hr:CurrentIndicator>
                 </eures:EmploymentPeriod>
                 <PositionHistory>
-                    <PositionTitle typeCode="FREETEXT">Software consultant</PositionTitle>
+                    <PositionTitle typeCode="FREETEXT">Software engineering consultant</PositionTitle>
                     <eures:EmploymentPeriod>
                         <eures:StartDate>
                             <hr:FormattedDateTime>2019-07-01</hr:FormattedDateTime>
@@ -915,7 +915,7 @@
                     <Thesis>eID IO - Applicatie Besturing</Thesis>
                     
                     
-                    <OccupationalSkillsCovered>Software Security, Software Development (Java, C++, C#, Objective-C), Agile development.</OccupationalSkillsCovered>
+                    <OccupationalSkillsCovered>Software Security, Software Development (Java, C++, C#, Objective-C), Agile development. Received an award for best final work.</OccupationalSkillsCovered>
                     <CreditType>ECTS</CreditType>
                     <NumberOfCredit>180</NumberOfCredit>
                     
@@ -1057,6 +1057,113 @@ within a beacon’s proximity using linked data.&lt;/p&gt;
                 
                 
                 <Link>https://maximvdw.be/publications/2023/iot2023/</Link>
+            </Publication>
+            
+            <Publication>
+                <hr:FormattedPublicationDescription>&lt;h2 id=&quot;about&quot; tabindex=&quot;-1&quot;&gt;About&lt;/h2&gt;
+&lt;p&gt;The following datasets were captured at a busy Belgian train station between 9pm and 10pm, it contains all 802.11 management frames that were captured. both datasets were captured with approximately 20 minutes between then.&lt;/p&gt;
+&lt;p&gt;Both datasets are represented by a pcap and CSV file. The CSV file contains the frame type, timestamps, signal strength, SSID and MAC addresses for every frame. In the pcap file, all generic 802.11 elements were removed for anonymization purposes.&lt;/p&gt;
+&lt;h2 id=&quot;anonymization&quot; tabindex=&quot;-1&quot;&gt;Anonymization&lt;/h2&gt;
+&lt;p&gt;All frames were anonymized by removing identifying information or renaming identifiers. Concretely, the following transformations were applied to both datasets:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;All MAC addresses were renamed (e.g. 00:00:00:00:00:01)&lt;/li&gt;
+&lt;li&gt;All SSID&#39;s were renamed (e.g. NETWORK_1)&lt;/li&gt;
+&lt;li&gt;All generec 802.11 elements were removed from the pcap&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In the pcap file, anonymization actions could lead to &amp;quot;corrupted&amp;quot; frames because length tags do not correspond with the actual data. However, the file and its frames are still readable in packet analyzing tools such as Wireshark or Scapy.&lt;/p&gt;
+&lt;p&gt;The script which was used to anonymize is available in the dataset.&lt;/p&gt;
+&lt;h2 id=&quot;data&quot; tabindex=&quot;-1&quot;&gt;Data&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;N/o&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Dataset 1&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;dataset 2&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Frames&lt;/td&gt;
+&lt;td&gt;36306&lt;/td&gt;
+&lt;td&gt;60984&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Beacon frames&lt;/td&gt;
+&lt;td&gt;19693&lt;/td&gt;
+&lt;td&gt;27983&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Request frames&lt;/td&gt;
+&lt;td&gt;798&lt;/td&gt;
+&lt;td&gt;1580&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Response frames&lt;/td&gt;
+&lt;td&gt;15815&lt;/td&gt;
+&lt;td&gt;31421&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Identified Wi-Fi Networks&lt;/td&gt;
+&lt;td&gt;54&lt;/td&gt;
+&lt;td&gt;70&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Identified MAC addresses&lt;/td&gt;
+&lt;td&gt;2092&lt;/td&gt;
+&lt;td&gt;2705&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Identified Wireless devices&lt;/td&gt;
+&lt;td&gt;128&lt;/td&gt;
+&lt;td&gt;186&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Capturetime&lt;/td&gt;
+&lt;td&gt;480s&lt;/td&gt;
+&lt;td&gt;422s&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&quot;dataset-contents&quot; tabindex=&quot;-1&quot;&gt;Dataset contents&lt;/h2&gt;
+&lt;p&gt;The two datasets are stored in the directories &lt;code&gt;1/&lt;/code&gt; and &lt;code&gt;2/&lt;/code&gt;. Each directory contains:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;capture-X.pcap&lt;/code&gt;: an anonymized version of the original capture&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;capture-X.csv&lt;/code&gt;: content of each captured frame (timestamp, MAC address...) saved as a CSV file&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;anonymization.py&lt;/code&gt; is the script which was used to remove identifiers.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;README.md&lt;/code&gt; contains the documentation about the datasets&lt;/p&gt;
+</hr:FormattedPublicationDescription>
+                <Title>802.11 Managemement frames from a public location</Title>
+                <Year>2023</Year>
+                <Reference>Vermunicht, B., Van de Wynckel, M., &amp; Signer, B. (2023). 802.11 Managemement frames from a public location. https://doi.org/10.5281/zenodo.8003771
+</Reference>
+                
+                <DOI>
+                  <Link>https://zenodo.org/records/8003772</Link>
+                </DOI>
+                
+                
+                <Link>https://maximvdw.be/publications/2023/vermunicht2023/</Link>
+            </Publication>
+            
+            <Publication>
+                <hr:FormattedPublicationDescription>&lt;p&gt;The goal of this dataset was to track game pieces on the physical game board of Monopoly. We make use of object classification where our training data consists of 100 pictures (taken at an angle) of the game board in order to classify the individual (moving) pieces. The training dataset was on the 9th of April 2023 and the test date recorded on the 7th of May 2023 using an iPhone 13 mini and iPhone 12.&lt;/p&gt;
+&lt;p&gt;Two participants played a game of Monopoly and each individually took pictures of the current game state after every move. These images were then processed by our application to determine the location of pawns and other game pieces such as the red and green houses.&lt;/p&gt;
+&lt;p&gt;Raw images are unprocessed but may have minor edits to ensure anonymisation of participants in the background. We used &lt;a href=&quot;https://roboflow.com/&quot;&gt;Roboflow&lt;/a&gt; to label and train our dataset which is included in this repository.&lt;/p&gt;
+&lt;p&gt;For more information about our processing and this dataset you can download the full Bachelor thesis here: &lt;a href=&quot;https://wise.vub.ac.be/thesis/location-tracking-physical-game-board&quot;&gt;https://wise.vub.ac.be/thesis/location-tracking-physical-game-board&lt;/a&gt; (download link available after embargo at the end of the academic year)&lt;/p&gt;
+&lt;p&gt;This dataset was published as part of the bachelor thesis: &lt;em&gt;Location Tracking on a Physical Game Board&lt;/em&gt; for obtaining the degree of Bachelor in Computer Sciences at the &lt;a href=&quot;https://vub.be&quot;&gt;Vrije Universiteit Brussel&lt;/a&gt;.&lt;/p&gt;
+</hr:FormattedPublicationDescription>
+                <Title>Object Tracking on a Monopoly Game Board</Title>
+                <Year>2023</Year>
+                <Reference>Hoebeke, N., Van de Wynckel, M., &amp; Signer, B. (2023). Object Tracking on a Monopoly Game Board. https://doi.org/10.5281/zenodo.7990434
+</Reference>
+                
+                <DOI>
+                  <Link>https://zenodo.org/records/7990434</Link>
+                </DOI>
+                
+                
+                <Link>https://maximvdw.be/publications/2023/hoebeke2023/</Link>
             </Publication>
             
             <Publication>
