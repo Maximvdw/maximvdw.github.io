@@ -102,7 +102,7 @@
         },
         "eqfLevel": "6",
         "ects": "180",
-        "description": "Software Security, Software Development (Java, C++, C#, Objective-C), Agile development."
+        "description": "Software Security, Software Development (Java, C++, C#, Objective-C), Agile development. Received an award for best final work."
     }, {
         "university": {
             "name": "Don Bosco Hoboken",
@@ -120,6 +120,7 @@
         "icon": "/images/logo/donbosco-logo.png",
         "degree": "Industrial ICT",
         "graduation": "2013-06-30",
-        "end": "2013-06-30"
+        "end": "2013-06-30",
+        "description": "Electrical engineering, networking, hardware, software development. Received an award for best final work."
     }
 ]

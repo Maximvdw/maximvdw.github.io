@@ -2,7 +2,7 @@
 layout: publication.njk
 title: "OpenHPS: Single Floor Fingerprinting and Trajectory Dataset"
 author: Maxim Van de Wynckel, Beat Signer
-date: 2021-12-02
+date: 2021-05-09
 link: https://zenodo.org/records/4744380
 bib: /publications/2021/vandewynckel2021dataset.bib
 publisher: zenodo
