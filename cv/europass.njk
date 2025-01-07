@@ -317,7 +317,7 @@ permalink: cv/europass.xml
                     {% endif %}
                     <Ongoing>{{ project.data.ongoing == true }}</Ongoing>
                 </Date>
-                <Description>{{ project.data.content }}</Description>
+                <Description>{{ project.data.excerpt }}</Description>
                 <Link>{{ project.data.website }}</Link>
             </Project>
             {% endfor %}
