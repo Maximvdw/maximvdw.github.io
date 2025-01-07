@@ -969,8 +969,7 @@
         <PublicationHistory>
            
             <Publication>
-                <hr:FormattedPublicationDescription>&lt;p&gt;The use of recommendation engines to personalise students’ learning experiences can be beneficial by providing them with exercises tailored to their knowledge. However, the use of these systems often comes at a cost. Most learning or tutoring systems require the data to be stored locally within a proprietary database, limiting learners’ freedom as they move across different systems during their learning journey. In addition, these systems might potentially cause additional stress, as the learner might feel observed without knowing who has access to their learning progress and performance data. We propose a solution to this problem by decentralising learning progress and performance data in user-owned Solid Pods. We outline the proposed solution by describing how it might be applied to an existing environment for programming education that already includes research on how to align difficulty levels of exercises across different systems.&lt;/p&gt;
-</hr:FormattedPublicationDescription>
+                <hr:FormattedPublicationDescription>This paper proposes a decentralised approach to intelligent tutoring systems by storing learning progress and performance data in user-owned Solid Pods, enhancing learner autonomy and privacy.</hr:FormattedPublicationDescription>
                 <Title>Towards Distributed Intelligent Tutoring Systems Based on User-owned Progress and Performance Data</Title>
                 <Year>2024</Year>
                 <Reference>Malaise, Y., Van de Wynckel, M., &amp; Signer, B. (2024, May). Towards Distributed Intelligent Tutoring Systems Based on User-owned Progress and Performance Data. Proceedings of SoSy 2024 (Poster), 2nd Solid Symposium, Leuven, Belgium, May 2024.</Reference>
@@ -980,18 +979,7 @@
             </Publication>
             
             <Publication>
-                <hr:FormattedPublicationDescription>&lt;p&gt;Augmented Reality (AR) environments are physical environments with virtual objects superimposed
-through AR-enabled devices. These virtual objects can range from simple aesthetic objects like pictures
-to superimposed contextual information about physical items. In most modern AR applications, the
-augmented spaces exist only for the user who created the environment or for proprietary applications
-that enable multi-user collaboration in the same environment. However, there is a lack of solutions that
-enable interoperable collaboration in these personal AR spaces, allowing users to share and contribute
-to an AR space. We propose a solution that enables users to create their personal AR space that can
-then be discovered by other users who are in physical proximity to this space, enabling them to view or
-contribute to the augmented space. In addition, we discuss a solution that utilises the same technique
-to create AR spaces that are bound to a specific room and can be discovered by users who are in close
-vicinity to these rooms.&lt;/p&gt;
-</hr:FormattedPublicationDescription>
+                <hr:FormattedPublicationDescription>In this paper, we propose a novel solution to store 3D manipulations in AR spaces within a Solid pod. Using this solution, multiple users can work together in the same environment while also ensuring interoperability between AR applications.</hr:FormattedPublicationDescription>
                 <Title>Discoverable and Interoperable Augmented Reality Environments Through Solid Pods</Title>
                 <Year>2024</Year>
                 <Reference>Van de Wynckel, M., &amp; Signer, B. (2024, May). Discoverable and Interoperable Augmented Reality Environments Through Solid Pods. Proceedings of SoSy 2024 (Poster), 2nd Solid Symposium, Leuven, Belgium, May 2024. https://events.vito.be/sosy2024
@@ -1002,18 +990,7 @@ vicinity to these rooms.&lt;/p&gt;
             </Publication>
             
             <Publication>
-                <hr:FormattedPublicationDescription>&lt;p&gt;Fiducial markers are visual objects that can be placed in the
-field of view of an imaging sensor to determine its position and orientation, and subsequently the scale and position of other objects within the same field of view. They are used in a wide variety of applications
-ranging from medical applications to augmented reality (AR) solutions
-where they are applied to determine the location of an AR headset. Despite the wide range of different marker types with their advantages for specific use cases, there exists no standard to decide which marker to best
-use in which situation. This leads to proprietary AR solutions that rely
-on a predefined set of marker and pose detection algorithms, preventing interoperability between AR applications. We propose the FidMark
-fiducial marker ontology, classifying and describing the different markers
-available for computer vision and augmented reality along with their spatial position and orientation. Our proposed ontology also describes the procedures required to perform pose estimation, and marker detection
-to allow the description of algorithms used to perform these procedures.
-With FidMark we aim to enable future AR solutions to semantically describe markers within an environment so that third-party applications
-can utilise this information.&lt;/p&gt;
-</hr:FormattedPublicationDescription>
+                <hr:FormattedPublicationDescription>In this publication, we propose an ontology called FidMark for semantically describing fiducial markers. This ontology is useful for AR and robotics applications to ensure interoperability between systems.</hr:FormattedPublicationDescription>
                 <Title>FidMark: A Fiducial Marker Ontology for Semantically Describing Visual Markers</Title>
                 <Year>2024</Year>
                 <Reference>Van de Wynckel, M., Valadez, I., &amp; Signer, B. (2024). FidMark: A Fiducial Marker Ontology for Semantically Describing Visual Markers. Proceedings of The Semantic Web (ESWC 2024), 235–250.
@@ -1030,23 +1007,7 @@ can utilise this information.&lt;/p&gt;
             </Publication>
             
             <Publication>
-                <hr:FormattedPublicationDescription>&lt;p&gt;Discovering smart devices in the physical world often requires some
-type of indoor positioning system. Bluetooth Low Energy (BLE)
-beacons are a well-established technique to create scalable lowcost positioning systems for indoor navigation, tracking and location awareness. While various BLE specifications aim to provide
-a generic way to uniquely identify a beacon and optionally detect
-its location, they are either deployment specific or do not broadcast enough information to be used without a proprietary database
-containing the locations of installed beacons. We present a novel
-BLE advertising solution and semantic ontology extension called
-SemBeacon that is backwards compatible with existing specifications such as iBeacon, Eddystone and AltBeacon. With the help of
-a prototype application, we demonstrate how SemBeacon enables
-the creation of real-time positioning systems that can describe their
-location as well as the environment in which they are located. In
-contrast to Eddystone-URL beacons which were originally used in
-Google’s Physical Web project to broadcast web pages of physical
-objects, SemBeacon is a specification for broadcasting semantic data
-about the environment and positioning systems that are available
-within a beacon’s proximity using linked data.&lt;/p&gt;
-</hr:FormattedPublicationDescription>
+                <hr:FormattedPublicationDescription>In this publication we propose the SemBeacon specification, which is a semantic beacon solution to discover and detect the position of physical things such as IoT devices, environments or services.</hr:FormattedPublicationDescription>
                 <Title>SemBeacon: A Semantic Proximity Beacon Solution for Discovering and Detecting the Position of Physical Things</Title>
                 <Year>2023</Year>
                 <Reference>Van de Wynckel, M., &amp; Signer, B. (2023). SemBeacon: A Semantic Proximity Beacon Solution for Discovering and Detecting the Position of Physical Things. Proceedings of the 13th International Conference on the Internet of Things, 9–16.</Reference>
@@ -1060,79 +1021,7 @@ within a beacon’s proximity using linked data.&lt;/p&gt;
             </Publication>
             
             <Publication>
-                <hr:FormattedPublicationDescription>&lt;h2 id=&quot;about&quot; tabindex=&quot;-1&quot;&gt;About&lt;/h2&gt;
-&lt;p&gt;The following datasets were captured at a busy Belgian train station between 9pm and 10pm, it contains all 802.11 management frames that were captured. both datasets were captured with approximately 20 minutes between then.&lt;/p&gt;
-&lt;p&gt;Both datasets are represented by a pcap and CSV file. The CSV file contains the frame type, timestamps, signal strength, SSID and MAC addresses for every frame. In the pcap file, all generic 802.11 elements were removed for anonymization purposes.&lt;/p&gt;
-&lt;h2 id=&quot;anonymization&quot; tabindex=&quot;-1&quot;&gt;Anonymization&lt;/h2&gt;
-&lt;p&gt;All frames were anonymized by removing identifying information or renaming identifiers. Concretely, the following transformations were applied to both datasets:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;All MAC addresses were renamed (e.g. 00:00:00:00:00:01)&lt;/li&gt;
-&lt;li&gt;All SSID&#39;s were renamed (e.g. NETWORK_1)&lt;/li&gt;
-&lt;li&gt;All generec 802.11 elements were removed from the pcap&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;In the pcap file, anonymization actions could lead to &amp;quot;corrupted&amp;quot; frames because length tags do not correspond with the actual data. However, the file and its frames are still readable in packet analyzing tools such as Wireshark or Scapy.&lt;/p&gt;
-&lt;p&gt;The script which was used to anonymize is available in the dataset.&lt;/p&gt;
-&lt;h2 id=&quot;data&quot; tabindex=&quot;-1&quot;&gt;Data&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;&lt;strong&gt;N/o&lt;/strong&gt;&lt;/th&gt;
-&lt;th&gt;&lt;strong&gt;Dataset 1&lt;/strong&gt;&lt;/th&gt;
-&lt;th&gt;&lt;strong&gt;dataset 2&lt;/strong&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Frames&lt;/td&gt;
-&lt;td&gt;36306&lt;/td&gt;
-&lt;td&gt;60984&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Beacon frames&lt;/td&gt;
-&lt;td&gt;19693&lt;/td&gt;
-&lt;td&gt;27983&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Request frames&lt;/td&gt;
-&lt;td&gt;798&lt;/td&gt;
-&lt;td&gt;1580&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Response frames&lt;/td&gt;
-&lt;td&gt;15815&lt;/td&gt;
-&lt;td&gt;31421&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Identified Wi-Fi Networks&lt;/td&gt;
-&lt;td&gt;54&lt;/td&gt;
-&lt;td&gt;70&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Identified MAC addresses&lt;/td&gt;
-&lt;td&gt;2092&lt;/td&gt;
-&lt;td&gt;2705&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Identified Wireless devices&lt;/td&gt;
-&lt;td&gt;128&lt;/td&gt;
-&lt;td&gt;186&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Capturetime&lt;/td&gt;
-&lt;td&gt;480s&lt;/td&gt;
-&lt;td&gt;422s&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&quot;dataset-contents&quot; tabindex=&quot;-1&quot;&gt;Dataset contents&lt;/h2&gt;
-&lt;p&gt;The two datasets are stored in the directories &lt;code&gt;1/&lt;/code&gt; and &lt;code&gt;2/&lt;/code&gt;. Each directory contains:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;capture-X.pcap&lt;/code&gt;: an anonymized version of the original capture&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;capture-X.csv&lt;/code&gt;: content of each captured frame (timestamp, MAC address...) saved as a CSV file&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;anonymization.py&lt;/code&gt; is the script which was used to remove identifiers.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;README.md&lt;/code&gt; contains the documentation about the datasets&lt;/p&gt;
-</hr:FormattedPublicationDescription>
+                <hr:FormattedPublicationDescription>In this dataset, two separate datasets were recorded in a Belgian train station to collect 802.11 wireless management frames. The datasets were anonymised and contain data on the SSIDs, signal strengths and MAC addresses.</hr:FormattedPublicationDescription>
                 <Title>802.11 Managemement frames from a public location</Title>
                 <Year>2023</Year>
                 <Reference>Vermunicht, B., Van de Wynckel, M., &amp; Signer, B. (2023). 802.11 Managemement frames from a public location. https://doi.org/10.5281/zenodo.8003771
@@ -1147,12 +1036,7 @@ within a beacon’s proximity using linked data.&lt;/p&gt;
             </Publication>
             
             <Publication>
-                <hr:FormattedPublicationDescription>&lt;p&gt;The goal of this dataset was to track game pieces on the physical game board of Monopoly. We make use of object classification where our training data consists of 100 pictures (taken at an angle) of the game board in order to classify the individual (moving) pieces. The training dataset was on the 9th of April 2023 and the test date recorded on the 7th of May 2023 using an iPhone 13 mini and iPhone 12.&lt;/p&gt;
-&lt;p&gt;Two participants played a game of Monopoly and each individually took pictures of the current game state after every move. These images were then processed by our application to determine the location of pawns and other game pieces such as the red and green houses.&lt;/p&gt;
-&lt;p&gt;Raw images are unprocessed but may have minor edits to ensure anonymisation of participants in the background. We used &lt;a href=&quot;https://roboflow.com/&quot;&gt;Roboflow&lt;/a&gt; to label and train our dataset which is included in this repository.&lt;/p&gt;
-&lt;p&gt;For more information about our processing and this dataset you can download the full Bachelor thesis here: &lt;a href=&quot;https://wise.vub.ac.be/thesis/location-tracking-physical-game-board&quot;&gt;https://wise.vub.ac.be/thesis/location-tracking-physical-game-board&lt;/a&gt; (download link available after embargo at the end of the academic year)&lt;/p&gt;
-&lt;p&gt;This dataset was published as part of the bachelor thesis: &lt;em&gt;Location Tracking on a Physical Game Board&lt;/em&gt; for obtaining the degree of Bachelor in Computer Sciences at the &lt;a href=&quot;https://vub.be&quot;&gt;Vrije Universiteit Brussel&lt;/a&gt;.&lt;/p&gt;
-</hr:FormattedPublicationDescription>
+                <hr:FormattedPublicationDescription>In this dataset, a Monopoly game was recorded from a first person perspective. The aim of this dataset is to conduct pawn and object tracking using computer vision algorithms.</hr:FormattedPublicationDescription>
                 <Title>Object Tracking on a Monopoly Game Board</Title>
                 <Year>2023</Year>
                 <Reference>Hoebeke, N., Van de Wynckel, M., &amp; Signer, B. (2023). Object Tracking on a Monopoly Game Board. https://doi.org/10.5281/zenodo.7990434
@@ -1167,18 +1051,7 @@ within a beacon’s proximity using linked data.&lt;/p&gt;
             </Publication>
             
             <Publication>
-                <hr:FormattedPublicationDescription>&lt;p&gt;While satellite-based positioning systems are mainly used in
-outdoor environments, various other positioning techniques exist for different domains and use cases, including indoor or underground settings.
-The representation of spatial data via semantic linked data is well addressed by existing spatial ontologies. However, there is a primary focus
-on location data with its specific geographical context, but a lack of solutions for describing the different types of data generated by a positioning
-system and the used sampling techniques to obtain the data. In this paper we introduce a new generic Positioning System Ontology (POSO)
-that is built on top of the Semantic Sensor Network (SSN) and Sensor,
-Observation, Sample, and Actuator (SOSA) ontologies. With POSO, we
-provide missing concepts needed for describing a positioning system and
-its output with known positioning algorithms and techniques in mind.
-Thereby, we enable the improvement of hybrid positioning systems making use of multiple platforms and sensors that are described via the
-presented POSO ontology&lt;/p&gt;
-</hr:FormattedPublicationDescription>
+                <hr:FormattedPublicationDescription>In this publication we propose the POSO ontology, which is a positioning system ontology to semantically describe positioning systems, the data they produce and the environments in which these systems are deployed.</hr:FormattedPublicationDescription>
                 <Title>POSO: A Generic Positioning System Ontology</Title>
                 <Year>2022</Year>
                 <Reference>Van de Wynckel, M., &amp; Signer, B. (2022). POSO: A Generic Positioning System Ontology. The Semantic Web – ISWC 2022, 231–247.
@@ -1195,21 +1068,7 @@ presented POSO ontology&lt;/p&gt;
             </Publication>
             
             <Publication>
-                <hr:FormattedPublicationDescription>&lt;p&gt;In today’s technological world of privacy-conscious users, the tracking of individuals via different
-positioning systems and services can be considered obtrusive. Furthermore, linking and integrating
-data from these positioning systems is not always possible or requires the major effort of creating new
-interfaces between systems. In this paper, we propose an architecture for the realisation of a decentralised
-positioning system based on the W3C’s Solid platform specification. Using this specification, sensor data
-as well as an individual’s location information is stored in secure decentralised data stores called Pods, that
-are hosted by user-selected Pod providers. We demonstrate that these Pods do not only offer transparent
-and interoperable data stores for persisting sensor data as well as processed location information, but also
-aid in linking multiple positioning systems for high- and low-level sensor fusion. For indoor positioning,
-this interoperability provides a way to offer users a single location-based service while also providing
-additional semantic context for other positioning systems to improve their data output. Developers of
-indoor positioning systems can store all data in a format that is readable, understandable and accessible
-by any other system that their users might be using, enabling collaboration between researchers and
-companies implementing these indoor positioning systems.&lt;/p&gt;
-</hr:FormattedPublicationDescription>
+                <hr:FormattedPublicationDescription>In this publication we propose a solution to decentralise location data and positioning systems in Solid pods using linked data.</hr:FormattedPublicationDescription>
                 <Title>A Solid-based Architecture for Decentralised Interoperable Location Data</Title>
                 <Year>2022</Year>
                 <Reference>Van de Wynckel, M., &amp; Signer, B. (2022). A Solid-based Architecture for Decentralised Interoperable Location Data. Proceedings of the 12th International Conference on Indoor Positioning and Indoor Navigation (IPIN), CEUR Workshop Proceedings.
@@ -1226,25 +1085,7 @@ companies implementing these indoor positioning systems.&lt;/p&gt;
             </Publication>
             
             <Publication>
-                <hr:FormattedPublicationDescription>&lt;p&gt;Hybrid positioning frameworks use various sensors
-and algorithms to enhance positioning through different types
-of fusion. The optimisation of the fusion process requires the
-testing of different algorithm parameters and optimal lowas well as high-level sensor fusion techniques. The presented
-OpenHPS open source hybrid positioning system is a modular
-framework managing individual nodes in a process network,
-which can be configured to support concrete positioning use
-cases or to adapt to specific technologies. This modularity allows
-developers to rapidly develop and optimise their positioning
-system while still providing them the flexibility to add their
-own algorithms. In this paper we discuss how a process network
-developed with OpenHPS can be used to realise a customisable
-indoor positioning solution with an offline and online stage, and
-how it can be adapted for high accuracy or low latency. For the
-demonstration and validation of our indoor positioning solution,
-we further compiled a publicly available dataset containing data
-from WLAN access points, BLE beacons as well as several
-trajectories that include IMU data.&lt;/p&gt;
-</hr:FormattedPublicationDescription>
+                <hr:FormattedPublicationDescription>In this publication, we propose OpenHPS, an open source hybrid positioning system. We demonstrate how OpenHPS can be used to create indoor positioning systems.</hr:FormattedPublicationDescription>
                 <Title>Indoor Positioning Using the OpenHPS Framework</Title>
                 <Year>2021</Year>
                 <Reference>Van de Wynckel, M., &amp; Signer, B. (2021). Indoor Positioning Using the OpenHPS Framework. 2021 International Conference on Indoor Positioning and Indoor Navigation (IPIN), 1–8. https://doi.org/10.1109/IPIN51156.2021.9662569
@@ -1259,8 +1100,7 @@ trajectories that include IMU data.&lt;/p&gt;
             </Publication>
             
             <Publication>
-                <hr:FormattedPublicationDescription>&lt;p&gt;This dataset contains fingerprint information of WLAN access points and BLE beacons with a known position and IMU sensor data. Data was collected on the floor of the Web and Information Systems Engineering (WISE) Lab at the VUB (Pleinlaan 9, 3rd floor) with 110 training reference points and 30 test data points. Each reference point was recorded for 20 seconds in four different orientations.&lt;/p&gt;
-</hr:FormattedPublicationDescription>
+                <hr:FormattedPublicationDescription>In this dataset, we collected fingerprints of Wi-Fi access points and BLE beacons in a building. The fingerprints are collected in four directions and cover an entire floor.</hr:FormattedPublicationDescription>
                 <Title>OpenHPS: Single Floor Fingerprinting and Trajectory Dataset</Title>
                 <Year>2021</Year>
                 <Reference>Van de Wynckel, M., &amp; Signer, B. (2021). OpenHPS: Single Floor Fingerprinting and Trajectory Dataset. https://doi.org/10.5281/zenodo.4744380
@@ -1275,20 +1115,7 @@ trajectories that include IMU data.&lt;/p&gt;
             </Publication>
             
             <Publication>
-                <hr:FormattedPublicationDescription>&lt;p&gt;Positioning systems and frameworks use various techniques to determine the position of an object. Some of the existing solutions combine different sensory data at the time of positioning in order
-to compute more accurate positions by reducing the error introduced by the used individual positioning techniques. We present OpenHPS, a generic hybrid positioning system implemented in
-TypeScript, that can not only reduce the error during tracking by
-fusing different sensory data based on different algorithms, but also
-also make use of combined tracking techniques when calibrating
-or training the system. In addition to a detailed discussion of the
-architecture, features and implementation of the extensible open
-source OpenHPS framework, we illustrate the use of our solution in
-a demonstrator application fusing different positioning techniques.
-While OpenHPS offers a number of positioning techniques, future
-extensions might integrate new positioning methods or algorithms
-and support additional levels of abstraction including symbolic
-locations.&lt;/p&gt;
-</hr:FormattedPublicationDescription>
+                <hr:FormattedPublicationDescription>In this technical report, we provide a technical overview of the OpenHPS framework. OpenHPS is a framework to design a wide range of hybrid positioning systems using TypeScript.</hr:FormattedPublicationDescription>
                 <Title>OpenHPS: An Open Source Hybrid Positioning System</Title>
                 <Year>2020</Year>
                 <Reference>Van de Wynckel, M., &amp; Signer, B. (2020). OpenHPS: An Open Source Hybrid Positioning System (WISE-2020-01). Vrije Universiteit Brussel. https://doi.org/10.48550/ARXIV.2101.05198
@@ -1305,12 +1132,7 @@ locations.&lt;/p&gt;
             </Publication>
             
             <Publication>
-                <hr:FormattedPublicationDescription>&lt;p&gt;The main goal of this thesis is to create an indoor positioning system that guides a patient or visitor through a hospital building. Using only the smartphone of a person, the system should be able to track and guide the user to his/her destination. Unlike other possible solutions that focus on the smartphone application to determine the position, the proposed solution uses a centralized server with Bluetooth scanners.&lt;/p&gt;
-&lt;p&gt;These scanners are distributed throughout the hospital and report their scan results back to the centralized server for position calculation and navigation instruction generation. Finally, these instructions are sent to the smartphone application to guide the user to his/her destination. Apart from starting the transmission of a Bluetooth signal, the task of the smartphone application is limited to receiving and displaying these navigation instructions.&lt;/p&gt;
-&lt;p&gt;The centralized server approach provides companies that implement this system, complete control over which other functionalities to implement related to the determined location of the end-user (i.e. the patient or visitor). For instance, companies can trigger actions based on the end-user’s location such as automatic registration when a user arrives at their destination or use it to track assets.&lt;/p&gt;
-&lt;p&gt;Starting from a comparison of existing positioning techniques, such as beacons or Wi-Fi positioning, this thesis gradually explains how the system can track a smartphone; how both visual and textual navigation instructions are created and the pros and cons of using this system in a hospital environment.&lt;/p&gt;
-&lt;p&gt;To achieve the goal of the thesis, first theoretical research was needed to come to a possible solution. Next, the solution was implemented, i.e. software was created. The software implementation shows the feasibility of the positioning approach as well as the navigation approach.&lt;/p&gt;
-</hr:FormattedPublicationDescription>
+                <hr:FormattedPublicationDescription>The goal of my Master thesis was to design an indoor navigation system that guides patients and visitors inside a hospital. The solution was designed to require minimal setup and interaction by both the hospital and users.</hr:FormattedPublicationDescription>
                 <Title>Master thesis: Indoor Navigation by Centralized Tracking</Title>
                 <Year>2019</Year>
                 <Reference>Van de Wynckel, M. (2019). Indoor Navigation by Centralized Tracking [Master’s thesis, Vrije Universiteit Brussel]. https://researchportal.vub.be/en/studentTheses/indoor-navigation-by-centralized-tracking
@@ -1327,8 +1149,7 @@ locations.&lt;/p&gt;
             </Publication>
             
             <Publication>
-                <hr:FormattedPublicationDescription>&lt;p&gt;My assignment was to continue working on the existing backend code and card reader software. The objective was to ensure that a company or private residence door or gate can be opened via an iOS and/or Android device. Additionally, a notification must be sent to the linked mobile devices of the customer to whom the card reader belongs when a bell signal is received at a card reader. Since it concerns access control, everything related to the assignment must also be done securely without compromising the stability and speed of the system. For this assignment, I need to continue working on an existing (C++) program for the card reader placed at an access point and the online panel where customers can see who entered and at what time. I have to write an application that works for both iOS and Android devices.&lt;/p&gt;
-</hr:FormattedPublicationDescription>
+                <hr:FormattedPublicationDescription>My bachelor thesis was designed for the company BITPOWER. Using the European Identity card (eID), remote authorisation access could be granted via a mobile application.</hr:FormattedPublicationDescription>
                 <Title>Bachelor thesis: eID IO - Applicatie besturing</Title>
                 <Year>2016</Year>
                 <Reference>My bachelor thesis was to provide remote actions for eID authentication. It was awarded the best thesis of the class of 2016.</Reference>
@@ -1338,8 +1159,7 @@ locations.&lt;/p&gt;
             </Publication>
             
             <Publication>
-                <hr:FormattedPublicationDescription>&lt;p&gt;WisaReg is an application that provides newly registered students from the Wisa database with accounts for various services. The system creates accounts for Windows Active Directory, the Virtual Learning Platform, the student tracking system, and also for a Gmail email address. Wisa is an administration package that most schools use to manage student and staff administration. The data created with this is saved in a Firebird SQL database. As soon as a password is changed somewhere, it will also change across all services, and when a student is deregistered, their accounts will also be deleted due to some limitations.&lt;/p&gt;
-</hr:FormattedPublicationDescription>
+                <hr:FormattedPublicationDescription>My final work during the last year of my highschool was a database migration tool for migrating the Flemish student database to other platforms used by students.</hr:FormattedPublicationDescription>
                 <Title>Final work: WisaReg</Title>
                 <Year>2013</Year>
                 <Reference>WisaReg is an application that provides newly registered students from the Wisa database with accounts for various services. It was awarded the best final work of 2013.</Reference>
