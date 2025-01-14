@@ -107,6 +107,20 @@ body p {
     margin-right: auto;
 }
 
+.typography figure.article {
+    max-width: 90%;
+    figcaption {
+        text-align: left;
+        font-size: 0.9em;
+        color: $secondary-color;
+        margin-top: 0.5em;
+        &::before {
+            content: "Figure - ";
+            font-style: italic;
+        }
+    }
+}
+
 p.abstract {
     font-style: italic;
 }

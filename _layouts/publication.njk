@@ -40,7 +40,13 @@ layout: default.njk
             <a href="{{ video }}" class="btn btn-blue btn-icon" data-title="Download video"><i class="fa fa-regular fa-file-video"></i></a>
             {% endif %}
             {% if link %}
-            <a href="{{ link }}" class="btn btn-yellow btn-icon"><i class="ai ai-{{ publisher }}"></i></a>
+            <a href="{{ link }}" class="btn btn-yellow btn-icon">
+                {% if publisher == "institution" %}
+                    <i class="fa fa-university"></i>
+                {% else %}
+                    <i class="ai ai-{{ publisher }}"></i>
+                {% endif %}
+            </a>
             {% endif %}
             {% if github %}
             <a href="{{ github }}" class="btn btn-grey btn-icon"><i class="fa fa-brands fa-github"></i></a>

@@ -61,6 +61,7 @@ title: 'Maxim Van de Wynckel'
           <div class="postlist-content">
             <a href="{{ post.url | url }}" class="postlist-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
             <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+            <span class="postlist-readingtime">{{ post.content | readingTime }}</span>
             <span class="postlist-description">{{ post.data.excerpt }}</span>
           </div>
         </li>

@@ -5,6 +5,7 @@ author: Maxim Van de Wynckel
 date: 2019-07-01
 pdf: https://solid.maximvdw.be/publications/2019/Masterthesis_MaximVandeWynckel.pdf
 type: thesis
+publisher: institution
 video: https://youtu.be/fMFZu4Z49SU
 link: https://researchportal.vub.be/en/studentTheses/indoor-navigation-by-centralized-tracking
 thumbnail: "/publications/2019/thesis.png"

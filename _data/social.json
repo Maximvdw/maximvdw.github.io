@@ -5,6 +5,15 @@
         "name": "Twitter",
         "icon": {
             "class": "fab fa-x-twitter"
+        },
+        "visible": false
+    },
+    "bluesky": {
+        "displayname": "@maximvdw.be",
+        "url": "https://bsky.app/profile/maximvdw.be",
+        "name": "Bluesky",
+        "icon": {
+            "class": "fab fa-bluesky"
         }
     },
     "orcid": {

@@ -3,6 +3,7 @@
 
 aside.sidebar {
   width: 250px;
+  overflow: hidden;
   background: linear-gradient(
     to bottom,
     $primary-color,
@@ -14,12 +15,12 @@ aside.sidebar {
   top: 0;
   left: 0;
   height: 100%;
-  overflow: auto;
   transition: transform 0.3s ease;
 
   .profile {
     text-align: center;
     padding: 20px;
+    padding-bottom: 0;
 
     img {
       border-radius: 50%;
@@ -53,10 +54,10 @@ aside.sidebar {
   .menu {
     list-style-type: none;
     padding: 0;
-    font-size: 0.9em;
+    font-size: 0.8em;
 
     li {
-      padding: 8px;
+      padding: 6px;
       text-align: center;
 
       a {

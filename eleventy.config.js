@@ -9,6 +9,7 @@ import pluginSitemap from "@quasibit/eleventy-plugin-sitemap";
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import pluginNavigation from "@11ty/eleventy-navigation";
 import pluginCite from './_scripts/cite.js';
+import pluginReadingTime from 'eleventy-plugin-reading-time';
 
 import { DateTime } from "luxon";
 import fs from 'fs';
@@ -60,6 +61,7 @@ export default async function (el) {
     });
 
     /* Markdown */
+    el.addPlugin(pluginReadingTime);
     const md = markdownIt({ html: true });
     md.use(markdownItAnchor);
     md.use(markdownItAttrs, {
