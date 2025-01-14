@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>The privacy of location data is an open problem | Maxim Van de Wynckel</title>
+
+<meta name="description" content="Imagine this: Your New Year&rsquo;s resolution is to exercise more, so you start running. Suddenly, ads for running shoes pop up on your phone. Convenient? Sure. But it makes you wonder: Why are you seeing this?">
+<meta name="robots" content="index,follow">
+<meta name="author" content="Maxim Van de Wynckel">
+
+<link rel="canonical" href="https://maximvdw.be/posts/2025/01/14/">
+
+<meta property="og:title" content="The privacy of location data is an open problem | Maxim Van de Wynckel">
+<meta property="og:type" content="article">
+
+<meta property="og:url" content="https://maximvdw.be/posts/2025/01/14/">
+<meta property="og:description" content="Imagine this: Your New Year&rsquo;s resolution is to exercise more, so you start running. Suddenly, ads for running shoes pop up on your phone. Convenient? Sure. But it makes you wonder: Why are you seeing this?">
+<meta property="og:image" content="https://maximvdw.be/images/social/summary-large.png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@MVdWSoftware">
+<meta name="twitter:url" content="https://maximvdw.be/posts/2025/01/14/">
+<meta name="twitter:title" content="The privacy of location data is an open problem | Maxim Van de Wynckel">
+<meta name="twitter:description" content="Imagine this: Your New Year&rsquo;s resolution is to exercise more, so you start running. Suddenly, ads for running shoes pop up on your phone. Convenient? Sure. But it makes you wonder: Why are you seeing this?">
+<meta name="twitter:image" content="https://maximvdw.be/images/social/summary-large.png">
+
+
+
+    <meta name="keywords" content="maxim van de wynckel, researcher, indoor positioning, navigation systems, interoperability, linked data, semantic web, location-based services">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="/css/main.css?version=2025-01-14T15:53:11.512+00:00">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+    
+    <link type="application/atom+xml" rel="alternate" href="https://maximvdw.be/feed.xml" title="" >
+
+    
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+
+    <meta name="theme-color" content="#284cb5">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BQZFG2FMWN"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-BQZFG2FMWN');
+    </script>
+</head>
+
+
+  <body>
+    
+    <aside class="sidebar">
+    <div class="profile">
+        <a href="/"><img src="/images/profile/maxim2.jpg" alt="Maxim Van de Wynckel"></a>
+        <div class="firstname">Maxim</div>
+        <div class="lastname">Van de Wynckel</div>
+        <div class="bio">Researcher, consultant, software engineer</div>
+    </div>
+    <ul class="menu">
+        
+        
+        <li><a  href="/about/">About me</a></li>
+        
+        <li><a class="active" href="/posts/">Blog</a></li>
+        
+        <li><a  href="/publications/">Publications</a></li>
+        
+        <li><a  href="/presentations/">Talks</a></li>
+        
+        <li><a  href="/teaching/">Teaching</a></li>
+        
+        <li><a  href="/portfolio/">Portfolio</a></li>
+        
+    </ul>
+</aside>
+<div class="hamburger" onclick="toggleSidebar()">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<script>
+    function isOpen() {
+        return document.querySelector('aside.sidebar').classList.contains('open');
+    }
+
+    function toggleSidebar() {
+        document.querySelector('aside.sidebar').classList.toggle('open');
+        document.querySelector('.content').classList.toggle('shifted');
+        document.querySelector('footer').classList.toggle('shifted');
+        document.querySelector('.hamburger').classList.toggle('active');
+    }
+
+    let touchstartX = 0;
+    let touchendX = 0;
+
+    function handleGesture() {
+        const threshold = 100; // Minimum swipe distance in pixels
+        if (touchendX < touchstartX - threshold) {
+            // Swiped left
+            if (isOpen()) {
+                toggleSidebar();
+            }
+        }
+        if (touchendX > touchstartX + threshold) {
+            // Swiped right
+            if (!isOpen()) {
+                toggleSidebar();
+            }
+        }
+    }
+
+    document.addEventListener('touchstart', function(event) {
+        touchstartX = event.changedTouches[0].screenX;
+    }, false);
+
+    document.addEventListener('touchend', function(event) {
+        touchendX = event.changedTouches[0].screenX;
+        handleGesture();
+    }, false);
+</script>
+
+    <section class="content" id="content">
+      
+<div class="container main">
+  <div class="row">
+    <div class="col-sm-2">
+      <nav class="navigation">
+        
+          <h3>2025</h3>
+          <ul>
+            
+              <li class="selected">
+                <a href="/posts/2025/01/14/" class="current">Tuesday, 14 Jan 2025</a>
+              </li>
+            
+          </ul>
+        
+          <h3>2024</h3>
+          <ul>
+            
+              <li >
+                <a href="/posts/2024/12/18/" >Wednesday, 18 Dec 2024</a>
+              </li>
+            
+          </ul>
+        
+          <h3>2019</h3>
+          <ul>
+            
+              <li >
+                <a href="/posts/2019/06/07/" >Friday, 07 Jun 2019</a>
+              </li>
+            
+          </ul>
+        
+          <h3>2016</h3>
+          <ul>
+            
+              <li >
+                <a href="/posts/2016/10/26/" >Wednesday, 26 Oct 2016</a>
+              </li>
+            
+          </ul>
+        
+      </nav>
+    </div>
+    <div class="col-sm-10 typography">
+      
+
+      <h1>The privacy of location data is an open problem</h1>
+      <p>A few years ago, a <a href="https://9to5mac.com/2022/02/28/apps-sell-your-location-data/">news article</a> was published concerning the sale of location data by apps, despite privacy policies of app stores. The first question you might ask yourself as a user is <em>why</em> services want to buy or collect your location data. The answer is simple: money. Companies can use your location data to target you with ads, or even sell it to other companies. This is not only a privacy issue, but also a security issue.</p>
+<p>Imagine this, you use your favorite fitness application to track your running sessions. The app collects your location data to show you your running route. Suddenly, you start seeing advertisements for shops on your route. Other applications such as Amazon start to show you ads for running shoes. This is not a coincidence.</p>
+<p>These types of issues are not new, but they are definitely not the most severe. Millions of users use Google Timeline which keeps tracks of your location over time. For you as a user it offers the ability to see how busy a location is, when you last visited a certain point of interest or track your walks through a city you visited. On the 14th of March, 2018 - <a href="https://www.nytimes.com/interactive/2019/04/13/us/google-location-tracking-police.html">a murder was committed without any witnesses</a> in Phoenix, US. A short time later, police aprehanded the suspect by making use of location data that Google provided.</p>
+<p>In Europe, we have better protection against the misuse of location data and companies are required to provide clear privacy policies on how they use your data. It is one of the reasons why Google <a href="https://www.oitc.ca/alerts/google-maps-timeline-data-to-be-stored-locally-on-your-device-for-privacy/">started to move location data locally to a smartphone</a>. While this helps to ensure that location data can not be (forcefully) requested or sold by third parties, it brings a wide range of other problems with it pertaining to the accessibility of the data. Google already has a large monopoly on location data and location insights through their mobile applications such as Google Maps or Waze. They provide a privacy policy that states <a href="https://policies.google.com/privacy?hl=en-US#europeanrequirements">how they use location data</a> with one of the prominment statements being that they do not sell data. Despite this, they still collect a wide range of data that can be used to track you or your friends, family members or colleagues.</p>
+<figure class="article">
+<img src="https://i.mvdw-software.com/chrome_lMtDXl6dR9.png" alt="VGoogle's privacy policy snippet highlighting their data collection practices">
+<figcaption>Google's privacy policy snippet highlighting their data collection practices</figcaption>
+</figure>
+<p>Data includes expected information such as the IP address, GPS location data and regular activity on Google Services. However, it goes a lot further with the collection of sensor data from your device, such as the accelerometer. Additionaly, external information is collected, such as the Wi-Fi access points around you, Bluetooth-enabled devices, and cell towers. Internally, Google could potentially use this information to not only track yourself, but also your friends, family members or colleagues. For example, if your coworker uses a Bluetooth headset and you are in the same room, Google could potentially determine when your colleague is in the same room, even if they do not use Google's services.</p>
+<p>Even unintentionally, location data can find its way to unwanted parties. In December of 2025 it became known that the <a href="https://www.theverge.com/2024/12/30/24332181/volkswagen-data-leak-exposed-location-evs">location data, including personal information of 800.000 Volkswagens</a> was available through an insecure endpoint.</p>
+<figure class="article">
+<img src="../volkswagen.webp" alt="Volkswagen visualisation (source: Michael Kreil and Flüpke)">
+<figcaption>Visualization of Volkswagen data leak (source: Michael Kreil and Flüpke)</figcaption>
+</figure>
+<p>I am investigating possible solutions to this problem. We are developing a system that allows users to control their location data. This system will allow users to decide who can access their location data and for what purpose. This way, users can still use their favorite fitness application without having to worry about their location data being sold to third parties. To further position this research, we are conducting a survey to understand how users feel about the current state of location data privacy and transparancy.</p>
+<p>If you have <strong>15 minutes</strong> you can really help to make a difference in this investigation. The survey is available <a href="https://vub.fra1.qualtrics.com/jfe/form/SV_0TUPKzDuCnrje9U">on Qualtrics</a> till mid-February. Your answers will be anonymised and used to further develop the system.</p>
+
+
+      <hr>
+      <ul><li>Previous: <a href="/posts/2024/12/18/">FOSDEM 2025: Discovering indoor environments and positioning systems</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+    </section>
+
+    <footer>
+    <div class="social">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <ul class="social-links">
+                        <li><a href="https://mas.to/@maximvdw" rel="me" target="_blank"><i class="fab fa-mastodon"></i></a></li>
+                        <li><a href="https://bsky.app/profile/maximvdw.be" rel="me" target="_blank"><i class="fab fa-bluesky"></i></a></li>
+                        <li><a href="https://github.com/Maximvdw" rel="me" target="_blank"><i class="fab fa-github"></i></a></li>
+                        <li><a href="mailto:me@maximvdw.be"><i class="fas fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        &copy; Copyright 2024 - 2025
+    </div>
+</footer>
+
+  </body>
+</html>

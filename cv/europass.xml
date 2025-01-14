@@ -48,12 +48,15 @@
         </Communication>
         
         
+        
+        
         <Communication>
           <ChannelCode>Social Media</ChannelCode>
             
-            <UseCode>twitter</UseCode>
+            <UseCode>other</UseCode>
+            <OtherTitle>Bluesky</OtherTitle>
             
-            <oa:URI>https://twitter.com/MVdWSoftware</oa:URI>
+            <oa:URI>https://bsky.app/profile/maximvdw.be</oa:URI>
         </Communication>
         
         
@@ -1469,7 +1472,7 @@
                     
                     <Ongoing>true</Ongoing>
                 </Date>
-                <Description></Description>
+                <Description>OpenHPS is an open source hybrid positioning system to help developers fuse various positioning technologies and algorithms. The system offers a modular data processing framework with each modules ranging from computer vision to common algorithms such as fingerprinting or data persistence of sampled data.</Description>
                 <Link>https://openhps.org</Link>
             </Project>
             
@@ -1482,7 +1485,7 @@
                     
                     <Ongoing>true</Ongoing>
                 </Date>
-                <Description></Description>
+                <Description>SemBeacon is an ongoing project for the development of a semantic Bluetooth Low Energy beacon specification that helps to describe the beacon itself, its deployment and the positioning system used within.</Description>
                 <Link>https://sembeacon.org</Link>
             </Project>
             
@@ -1495,7 +1498,7 @@
                     
                     <Ongoing>true</Ongoing>
                 </Date>
-                <Description></Description>
+                <Description>I am an active member of the SpigotMC.org developer community. Having developed software that has been sold to more than 20,000 users since 2014</Description>
                 <Link>https://www.spigotmc.org/members/maximvdw.6687/</Link>
             </Project>
             
@@ -1512,7 +1515,7 @@
                     
                     <Ongoing>false</Ongoing>
                 </Date>
-                <Description></Description>
+                <Description>EhBRooster.be was a project aimed at improving the usability of timetables for Erasmushogeschool Brussel, gaining significant interest from students and staff. Developed in Java and PHP, the website influenced the adoption of a new timetable system before its discontinuation in 2018.</Description>
                 <Link>https://web.archive.org/web/20180812082356/https://ehbrooster.be/</Link>
             </Project>
             
@@ -1529,7 +1532,7 @@
                     
                     <Ongoing>false</Ongoing>
                 </Date>
-                <Description></Description>
+                <Description>eIDIO was a platform developed by BITPOWER to provide secure eID access to buildings. I was tasked to expand this platform with cloud authentication.</Description>
                 <Link></Link>
             </Project>
             
@@ -1546,7 +1549,7 @@
                     
                     <Ongoing>false</Ongoing>
                 </Date>
-                <Description></Description>
+                <Description>Shutti was a set of software tools developed for Windows that enabled users to optimize, schedule and automate their computer&#39;s power management settings.</Description>
                 <Link>https://web.archive.org/web/20130831040157/http://www.shutti.co.nr:80/</Link>
             </Project>
             
@@ -1563,7 +1566,7 @@
                     
                     <Ongoing>false</Ongoing>
                 </Date>
-                <Description></Description>
+                <Description>My final work at my highschool was a project called WisaReg. WisaReg is a database migration tool to convert data from the Wisa database to other internal databases. The tool aimed to help the ICT administrators to automatically create new user accounts in LDAP, Chamilio, Smartschool and other internal databases.</Description>
                 <Link></Link>
             </Project>
             
