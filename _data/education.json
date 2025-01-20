@@ -67,11 +67,11 @@
             }
         },
         "icon": "/images/logo/vub-logo_square.svg",
-        "degree": "Bridging program, Computer Science",
+        "degree": "Bridging programme, Computer Science",
         "start": "2016-10-01",
         "end": "2018-07-01",
         "ects": "60",
-        "description": "Bridging program from professional bachelor to academic bachelor.",
+        "description": "Bridging programme from professional bachelor to academic bachelor.",
         "visible": false
     }, {
         "university": {
