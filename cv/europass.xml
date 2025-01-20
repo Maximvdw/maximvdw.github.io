@@ -862,12 +862,12 @@
                     <Ongoing>false</Ongoing>
                 </AttendancePeriod>
                 <EducationDegree>
-                    <hr:DegreeName>Bridging program, Computer Science</hr:DegreeName>
+                    <hr:DegreeName>Bridging programme, Computer Science</hr:DegreeName>
                     
                     
                     
                     
-                    <OccupationalSkillsCovered>Bridging program from professional bachelor to academic bachelor.</OccupationalSkillsCovered>
+                    <OccupationalSkillsCovered>Bridging programme from professional bachelor to academic bachelor.</OccupationalSkillsCovered>
                     <CreditType>ECTS</CreditType>
                     <NumberOfCredit>60</NumberOfCredit>
                     
@@ -996,7 +996,7 @@
                 <hr:FormattedPublicationDescription>In this publication, we propose an ontology called FidMark for semantically describing fiducial markers. This ontology is useful for AR and robotics applications to ensure interoperability between systems.</hr:FormattedPublicationDescription>
                 <Title>FidMark: A Fiducial Marker Ontology for Semantically Describing Visual Markers</Title>
                 <Year>2024</Year>
-                <Reference>Van de Wynckel, M., Valadez, I., &amp; Signer, B. (2024). FidMark: A Fiducial Marker Ontology for Semantically Describing Visual Markers. Proceedings of The Semantic Web (ESWC 2024), 235–250.
+                <Reference>Van de Wynckel, M., Valadez, I., &amp; Signer, B. (2024). FidMark: A Fiducial Marker Ontology for Semantically Describing Visual Markers. Proceedings of The Semantic Web (ESWC 2024), 235–250. https://doi.org/10.1007/978-3-031-60635-9_14
 </Reference>
                 
                 <DOI>
@@ -1057,7 +1057,7 @@
                 <hr:FormattedPublicationDescription>In this publication we propose the POSO ontology, which is a positioning system ontology to semantically describe positioning systems, the data they produce and the environments in which these systems are deployed.</hr:FormattedPublicationDescription>
                 <Title>POSO: A Generic Positioning System Ontology</Title>
                 <Year>2022</Year>
-                <Reference>Van de Wynckel, M., &amp; Signer, B. (2022). POSO: A Generic Positioning System Ontology. The Semantic Web – ISWC 2022, 231–247.
+                <Reference>Van de Wynckel, M., &amp; Signer, B. (2022). POSO: A Generic Positioning System Ontology. The Semantic Web – ISWC 2022, 231–247. https://doi.org/10.1007/978-3-031-19433-7_14
 </Reference>
                 
                 <DOI>
