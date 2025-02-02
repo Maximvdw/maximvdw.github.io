@@ -34,7 +34,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-    <link rel="stylesheet" href="/css/main.css?version=2025-01-20T08:18:12.196+00:00">
+    <link rel="stylesheet" href="/css/main.css?version=2025-02-02T15:50:19.350+00:00">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
     
@@ -208,6 +208,8 @@
             <a href="/publications/2023/iot2023" class="btn btn-red btn-icon" data-title="Publication" itemprop="publication"><i class="fa fa-regular fa-file-pdf"></i> Publication</a>
             
             
+            <a href="https://video.fosdem.org/2025/aw1120/fosdem-2025-4526-discovering-indoor-environments-and-positioning-systems.av1.webm" class="btn btn-blue btn-icon" data-title="Video" itemprop="video"><i class="fa fa-regular fa-file-video"></i> Recording</a>
+            
             
             <a href="https://fosdem.org/2025/schedule/event/fosdem-2025-4526-discovering-indoor-environments-and-positioning-systems/" class="btn btn-yellow btn-icon" itemprop="url"><i class="fa fa-calendar"></i> Event link</a>
             
@@ -217,36 +219,22 @@
             <p><strong>Speaker:</strong> <span itemprop="performer">Maxim Van de Wynckel</span></p>
             <p><strong>Date:</strong> <time itemprop="startDate" datetime="2025-02-01">2025-02-01</time></p>
             
-            <p><strong>Status:</strong> <span itemprop="eventStatus">Scheduled</span></p>
-            
             <p><strong>Venue:</strong> <span itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">FOSDEM 2025</span>, <span itemprop="address">Brussels, Belgium</span></span></p>
             </div>
 
             
-            
-            
-            <h2>Abstract</h2>
-            <div class="publication-content" itemprop="description">
-            <p>Discovering smart devices in the physical world often requires some
-type of indoor positioning system. Bluetooth Low Energy (BLE)
-beacons are a well-established technique to create scalable lowcost positioning systems for indoor navigation, tracking and location awareness. While various BLE specifications aim to provide
-a generic way to uniquely identify a beacon and optionally detect
-its location, they are either deployment specific or do not broadcast enough information to be used without a proprietary database
-containing the locations of installed beacons. We present a novel
-BLE advertising solution and semantic ontology extension called
-SemBeacon that is backwards compatible with existing specifications such as iBeacon, Eddystone and AltBeacon. With the help of
-a prototype application, we demonstrate how SemBeacon enables
-the creation of real-time positioning systems that can describe their
-location as well as the environment in which they are located. In
-contrast to Eddystone-URL beacons which were originally used in
-Google’s Physical Web project to broadcast web pages of physical
-objects, SemBeacon is a specification for broadcasting semantic data
-about the environment and positioning systems that are available
-within a beacon’s proximity using linked data.</p>
+            <div itemprop="description">
+            <p>Have you ever gotten lost in a building and wished they had some sort of navigation system or at least a floor plan? I have, unfortunately, and it was only later that I realised that not only they had a floor plan online - but they had a navigation app for that building. The reality is that a user who is not familiar with a building will not find such an app until it's too late. Indoor environments sometimes have public floorplans available via some service. Similarly, more and more indoor positioning systems are being deployed in buildings to provide navigation services or asset tracking. However, as a person visiting a building, you are often not aware that these services exist or where to find them. Even if some global registry exists to discover this data, it is often proprietary, discouraging developers from interfacing with such systems. I want to bring a shift into the landscape of indoor positioning systems and services and solve this! In this presentation, I will talk about discovering indoor environments and positioning systems through proximity-based discovery methods and linked data. How nice would it be, that instead of downloading the FOSDEM app, you simply use Google Maps or any open-source navigation application to find the location of this talk?</p>
 
             </div>
             
+
             
+            
+<video class="video" controls preload="auto" itemprop="video">
+<source src="https://video.fosdem.org/2025/aw1120/fosdem-2025-4526-discovering-indoor-environments-and-positioning-systems.av1.webm" type="video/webm">
+Your browser does not support the video tag.
+</video>
 
             
 
