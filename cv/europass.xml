@@ -972,6 +972,21 @@
         <PublicationHistory>
            
             <Publication>
+                <hr:FormattedPublicationDescription>A fingerprinting dataset consisting of WLAN, BLE and IMU data in a garage</hr:FormattedPublicationDescription>
+                <Title>Garage Positioning Dataset</Title>
+                <Year>2025</Year>
+                <Reference>Van de Wynckel, M. (2025). Garage Positioning Dataset. Kaggle. https://doi.org/10.34740/KAGGLE/DS/6654647
+</Reference>
+                
+                <DOI>
+                  <Link>https://www.kaggle.com/datasets/maximvandewynckel/garage-positioning-dataset</Link>
+                </DOI>
+                
+                
+                <Link>https://maximvdw.be/publications/2025/vandewynckel2025kaggle/</Link>
+            </Publication>
+            
+            <Publication>
                 <hr:FormattedPublicationDescription>This paper proposes a decentralised approach to intelligent tutoring systems by storing learning progress and performance data in user-owned Solid Pods, enhancing learner autonomy and privacy.</hr:FormattedPublicationDescription>
                 <Title>Towards Distributed Intelligent Tutoring Systems Based on User-owned Progress and Performance Data</Title>
                 <Year>2024</Year>
