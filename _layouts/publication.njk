@@ -43,6 +43,8 @@ layout: default.njk
             <a href="{{ link }}" class="btn btn-yellow btn-icon">
                 {% if publisher == "institution" %}
                     <i class="fa fa-university"></i>
+                {% elif publisher == "kaggle" %}
+                    <i class="fa-brands fa-kaggle"></i>
                 {% else %}
                     <i class="ai ai-{{ publisher }}"></i>
                 {% endif %}
