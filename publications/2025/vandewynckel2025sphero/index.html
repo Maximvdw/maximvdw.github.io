@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Sphero Dead Reckoning and CV Tracking Dataset | Maxim Van de Wynckel</title>
+
+<meta name="description" content="Van de Wynckel, M., &amp; Signer, B. (2025). Sphero Dead Reckoning and CV Tracking Dataset. Kaggle. https://doi.org/10.34740/KAGGLE/DS/6760212
+">
+<meta name="robots" content="index,follow">
+<meta name="author" content="Maxim Van de Wynckel">
+
+<link rel="canonical" href="https://maximvdw.be/publications/2025/vandewynckel2025sphero/">
+
+<meta property="og:title" content="Sphero Dead Reckoning and CV Tracking Dataset | Maxim Van de Wynckel">
+<meta property="og:type" content="article">
+
+<meta property="og:url" content="https://maximvdw.be/publications/2025/vandewynckel2025sphero/">
+<meta property="og:description" content="Van de Wynckel, M., &amp; Signer, B. (2025). Sphero Dead Reckoning and CV Tracking Dataset. Kaggle. https://doi.org/10.34740/KAGGLE/DS/6760212
+">
+<meta property="og:image" content="https://maximvdw.be/images/social/summary-large.png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@MVdWSoftware">
+<meta name="twitter:url" content="https://maximvdw.be/publications/2025/vandewynckel2025sphero/">
+<meta name="twitter:title" content="Sphero Dead Reckoning and CV Tracking Dataset | Maxim Van de Wynckel">
+<meta name="twitter:description" content="Van de Wynckel, M., &amp; Signer, B. (2025). Sphero Dead Reckoning and CV Tracking Dataset. Kaggle. https://doi.org/10.34740/KAGGLE/DS/6760212
+">
+<meta name="twitter:image" content="https://maximvdw.be/images/social/summary-large.png">
+
+
+
+    <meta name="keywords" content="maxim van de wynckel, researcher, indoor positioning, navigation systems, interoperability, linked data, semantic web, location-based services">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="/css/main.css?version=2025-02-28T11:33:25.244+00:00">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+    
+    <link type="application/atom+xml" rel="alternate" href="https://maximvdw.be/feed.xml" title="" >
+
+    
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+
+    <meta name="theme-color" content="#284cb5">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BQZFG2FMWN"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-BQZFG2FMWN');
+    </script>
+</head>
+
+
+  <body>
+    
+    <aside class="sidebar">
+    <div class="profile">
+        <a href="/"><img src="/images/profile/maxim2.jpg" alt="Maxim Van de Wynckel"></a>
+        <div class="firstname">Maxim</div>
+        <div class="lastname">Van de Wynckel</div>
+        <div class="bio">Researcher, consultant, software engineer</div>
+    </div>
+    <ul class="menu">
+        
+        
+        <li><a  href="/about/">About me</a></li>
+        
+        <li><a  href="/posts/">Blog</a></li>
+        
+        <li><a class="active" href="/publications/">Publications</a></li>
+        
+        <li><a  href="/presentations/">Talks</a></li>
+        
+        <li><a  href="/teaching/">Teaching</a></li>
+        
+        <li><a  href="/portfolio/">Portfolio</a></li>
+        
+    </ul>
+</aside>
+<div class="hamburger" onclick="toggleSidebar()">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<script>
+    function isOpen() {
+        return document.querySelector('aside.sidebar').classList.contains('open');
+    }
+
+    function toggleSidebar() {
+        document.querySelector('aside.sidebar').classList.toggle('open');
+        document.querySelector('.content').classList.toggle('shifted');
+        document.querySelector('footer').classList.toggle('shifted');
+        document.querySelector('.hamburger').classList.toggle('active');
+    }
+
+    let touchstartX = 0;
+    let touchendX = 0;
+
+    function handleGesture() {
+        const threshold = 100; // Minimum swipe distance in pixels
+        if (touchendX < touchstartX - threshold) {
+            // Swiped left
+            if (isOpen()) {
+                toggleSidebar();
+            }
+        }
+        if (touchendX > touchstartX + threshold) {
+            // Swiped right
+            if (!isOpen()) {
+                toggleSidebar();
+            }
+        }
+    }
+
+    document.addEventListener('touchstart', function(event) {
+        touchstartX = event.changedTouches[0].screenX;
+    }, false);
+
+    document.addEventListener('touchend', function(event) {
+        touchendX = event.changedTouches[0].screenX;
+        handleGesture();
+    }, false);
+</script>
+
+    <section class="content" id="content">
+      <div class="container main">
+    <div class="row">
+        <div class="col-sm-3 mobile-hide">
+            <nav class="navigation">
+            
+                <h3>2025</h3>
+                <ul>
+                
+                    <li class="selected">
+                    <a href="/publications/2025/vandewynckel2025sphero/" class="current">Sphero Dead Reckoning and CV Tracking Dataset</a>
+                    </li>
+                
+                    <li >
+                    <a href="/publications/2025/vandewynckel2025kaggle/" >Garage Positioning Dataset</a>
+                    </li>
+                
+                </ul>
+            
+                <h3>2024</h3>
+                <ul>
+                
+                    <li >
+                    <a href="/publications/2024/sosy2024yoshi/" >Towards Distributed Intelligent Tutoring Systems Based on User-owned Progress and Performance Data</a>
+                    </li>
+                
+                    <li >
+                    <a href="/publications/2024/sosy2024maxim/" >Discoverable and Interoperable Augmented Reality Environments Through Solid Pods</a>
+                    </li>
+                
+                    <li >
+                    <a href="/publications/2024/eswc2024/" >FidMark: A Fiducial Marker Ontology for Semantically Describing Visual Markers</a>
+                    </li>
+                
+                </ul>
+            
+                <h3>2023</h3>
+                <ul>
+                
+                    <li >
+                    <a href="/publications/2023/iot2023/" >SemBeacon: A Semantic Proximity Beacon Solution for Discovering and Detecting the Position of Physical Things</a>
+                    </li>
+                
+                    <li >
+                    <a href="/publications/2023/vermunicht2023/" >802.11 Managemement frames from a public location</a>
+                    </li>
+                
+                    <li >
+                    <a href="/publications/2023/hoebeke2023/" >Object Tracking on a Monopoly Game Board</a>
+                    </li>
+                
+                </ul>
+            
+                <h3>2022</h3>
+                <ul>
+                
+                    <li >
+                    <a href="/publications/2022/iswc2022/" >POSO: A Generic Positioning System Ontology</a>
+                    </li>
+                
+                    <li >
+                    <a href="/publications/2022/ipin2022/" >A Solid-based Architecture for Decentralised Interoperable Location Data</a>
+                    </li>
+                
+                </ul>
+            
+                <h3>2021</h3>
+                <ul>
+                
+                    <li >
+                    <a href="/publications/2021/ipin2021/" >Indoor Positioning Using the OpenHPS Framework</a>
+                    </li>
+                
+                    <li >
+                    <a href="/publications/2021/dataset/" >OpenHPS: Single Floor Fingerprinting and Trajectory Dataset</a>
+                    </li>
+                
+                </ul>
+            
+                <h3>2020</h3>
+                <ul>
+                
+                    <li >
+                    <a href="/publications/2020/openhps2020/" >OpenHPS: An Open Source Hybrid Positioning System</a>
+                    </li>
+                
+                </ul>
+            
+                <h3>2019</h3>
+                <ul>
+                
+                    <li >
+                    <a href="/publications/2019/thesis/" >Master thesis: Indoor Navigation by Centralized Tracking</a>
+                    </li>
+                
+                </ul>
+            
+                <h3>2016</h3>
+                <ul>
+                
+                    <li >
+                    <a href="/publications/2016/thesis/" >Bachelor thesis: eID IO - Applicatie besturing</a>
+                    </li>
+                
+                </ul>
+            
+                <h3>2013</h3>
+                <ul>
+                
+                    <li >
+                    <a href="/publications/2013/gip/" >Final work: WisaReg</a>
+                    </li>
+                
+                </ul>
+            
+            </nav>
+        </div>
+        <div class="col-sm-9 typography" itemscope itemtype="http://schema.org/ScholarlyArticle">
+            
+
+            <h1 itemprop="headline">Sphero Dead Reckoning and CV Tracking Dataset</h1>
+            <meta itemprop="author" content="Maxim Van de Wynckel">
+            <meta itemprop="citation" content="Van de Wynckel, M., &amp; Signer, B. (2025). Sphero Dead Reckoning and CV Tracking Dataset. Kaggle. https://doi.org/10.34740/KAGGLE/DS/6760212
+">
+            <meta itemprop="image" content="/publications/2025/vandewynckel2025sphero.png">
+            <meta itemprop="datePublished" content="2025-02-28T00:00:00Z">
+
+            
+            
+            
+            
+            <a href="https://www.kaggle.com/datasets/maximvandewynckel/sphero-dead-reckoning-and-cv-tracking-dataset" class="btn btn-yellow btn-icon">
+                
+                    <i class="fa-brands fa-kaggle"></i>
+                
+            </a>
+            
+            
+            
+            
+            
+            <a href="#" class="btn btn-outline-primary btn-icon" onclick="showCitationDialog()"><i class="fa fa-quote-right"></i> Cite this</a>
+            
+            
+            <div id="citation-dialog" class="citation-dialog">
+                <div class="citation-dialog-content">
+                    <span class="close" onclick="closeCitationDialog()">&times;</span>
+                    <h2>Citation</h2>
+                    <div class="tabs">
+                        <button class="tablinks" onclick="openTab(event, 'APA')">APA</button>
+                        <button class="tablinks" onclick="openTab(event, 'BibTeX')">BibTeX</button>
+                    </div>
+                    <div id="APA" class="tabcontent">
+                        <pre id="apaCitation">Van de Wynckel, M., &amp; Signer, B. (2025). Sphero Dead Reckoning and CV Tracking Dataset. Kaggle. https://doi.org/10.34740/KAGGLE/DS/6760212
+</pre>
+                        <button class="copy-btn" onclick="copyToClipboard('apaCitation')">Copy</button>
+                    </div>
+                    <div id="BibTeX" class="tabcontent">
+                        <pre id="bibtexCitation">@misc{maxim_van_de_wynckel_beat_signer_2025,
+	author = {Van de Wynckel, Maxim and Signer, Beat},
+	doi = {10.34740/KAGGLE/DS/6760212},
+	year = {2025},
+	publisher = {Kaggle},
+	title = {Sphero {Dead} {Reckoning} and {CV} {Tracking} {Dataset}},
+	url = {https://www.kaggle.com/ds/6760212},
+}
+
+</pre>
+                        <button class="copy-btn" onclick="copyToClipboard('bibtexCitation')">Copy</button>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Authors</h2>
+            <ul class="authors">
+                
+                
+                <li itemprop="author" itemscope itemtype="http://schema.org/Person">
+                    <meta itemprop="givenName" content="Maxim">
+                    <meta itemprop="familyName" content="Van de Wynckel">
+                    
+                        <meta itemprop="url" content="https://maximvdw.be/about/#me">
+                        <span class="name me" itemprop="name">Maxim Van de Wynckel</span>
+                    
+                </li>
+                
+                <li itemprop="author" itemscope itemtype="http://schema.org/Person">
+                    <meta itemprop="givenName" content="Beat">
+                    <meta itemprop="familyName" content="Signer">
+                    
+                        <span itemprop="name">Beat Signer</span>
+                    
+                </li>
+                
+            </ul>
+
+            <h2>Abstract</h2>
+            <div class="abstract" itemprop="abstract"><p>A Sphero Mini is a Bluetooth ball that can be controlled by a smartphone (or in our case a laptop). The Sphero Mini can be controlled by sending movement instructions to the Sphero consisting of a direction and speed. In this dataset, we placed a camera on top of a table to create a top-down view of the Sphero moving on the floor. The Sphero was instructed to move in a spiral trajectory from the bottom-right corner to the center of the area. The dataset contains the video recording of the Sphero moving, the input instructions given to the Sphero, and the sensor data retrieved from the Sphero. The dataset was used to evaluate the sensor fusion from various sources.</p>
+<p>The dataset was recorded on Friday, November 27, 2020, at the Vrije Universiteit Brussel. The dataset was used in the paper: https://arxiv.org/abs/2101.05198</p>
+<h3 id="area" tabindex="-1">Area</h3>
+<p>The dataset was recorded in a 260cm (W) x 200cm (H) area on the floor. The origin (0, 0) is at the bottom-right corner of the video frames.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Width (cm)</td>
+<td>260</td>
+</tr>
+<tr>
+<td>Height (cm)</td>
+<td>200</td>
+</tr>
+<tr>
+<td>Width (pixels)</td>
+<td>1040</td>
+</tr>
+<tr>
+<td>Height (pixels)</td>
+<td>800</td>
+</tr>
+<tr>
+<td>Corner 1 (pixels)</td>
+<td>(307, 120)</td>
+</tr>
+<tr>
+<td>Corner 2 (pixels)</td>
+<td>(1473, 87)</td>
+</tr>
+<tr>
+<td>Corner 3 (pixels)</td>
+<td>(1899, 891)</td>
+</tr>
+<tr>
+<td>Corner 4 (pixels)</td>
+<td>(20, 1024)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="trajectory" tabindex="-1">Trajectory</h3>
+<p>The input trajectory is defined and visualised in the input data. A spiral trajectory was given to the Sphero toy. The Sphero toy was instructed to move in a spiral trajectory from the bottom-right corner to the center of the area.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Turns</td>
+<td>30</td>
+</tr>
+<tr>
+<td>Sensor Frequency</td>
+<td>50</td>
+</tr>
+</tbody>
+</table>
+<h3 id="camera" tabindex="-1">Camera</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Model</td>
+<td>Logitech Brio</td>
+</tr>
+<tr>
+<td>FPS</td>
+<td>30</td>
+</tr>
+<tr>
+<td>Width</td>
+<td>1920</td>
+</tr>
+<tr>
+<td>Height</td>
+<td>1080</td>
+</tr>
+</tbody>
+</table>
+<h2 id="processing" tabindex="-1">Processing</h2>
+<p>The processed data is available in the <code>processed/</code> folder. The processing steps are as follows:</p>
+<h3 id="video-processing" tabindex="-1">Video processing</h3>
+<h4 id="wrap-the-video-frames-to-a-top-down-view" tabindex="-1">Wrap the video frames to a top-down view</h4>
+<p>The video frames are wrapped to a top-down view. Yellow markers were placed on the ground to help with the wrapping process (<code>processed/video_frames_wrapped/</code>).</p>
+<h3 id="convert-the-video-frames-to-hsv" tabindex="-1">Convert the video frames to HSV</h3>
+<p>The video frames are converted to HSV to help with the object detection process (<code>processed/video_frames_hsv/</code>).</p>
+<h4 id="convert-the-video-frames-to-black-and-white" tabindex="-1">Convert the video frames to black and white</h4>
+<p>The (HSV) video frames are converted to black and white to help with the object detection process (<code>processed/video_frames_bw/</code>).</p>
+<h4 id="position-detection" tabindex="-1">Position detection</h4>
+<p>The position of the Sphero is detected in each frame of the video recording. The X-Y coordinates of the Sphero are saved in <code>processed/video_final.csv</code>. Note that the origin (0, 0) is at the bottom-right corner. The position is converted from pixels (the pixel location in the video frame) to centimeters (the real-world location of the Sphero).</p>
+<h3 id="sensor-processing" tabindex="-1">Sensor processing</h3>
+<p>All sensor data from the Sphero toy were processed to match the orientation of the video frames.</p>
+<h2 id="files" tabindex="-1">Files</h2>
+<ul>
+<li><code>misc/</code>: Images and other files that are not part of the dataset itself.</li>
+<li><code>raw/</code>: Contains the raw data files generated by OpenHPS.
+<ul>
+<li><code>raw/input_frames/</code>: Contains the raw input frames (i.e, the instructions that were given to the Sphero). Each file is a JSON file containing an OpenHPS data frame.</li>
+<li><code>raw/sensor_frames/</code>: Contains the raw output sensor data from the Sphero. Each file is a JSON file containing an OpenHPS data frame.</li>
+<li><code>raw/video_frames/</code>: Contains the individual frames of the video recording.</li>
+<li><code>raw/output.avi</code>: All the frames of the video recording stitched together.</li>
+<li><code>raw/dataset_info.json</code>: Contains information about the dataset (primarily the camera and sensor frequency).</li>
+</ul>
+</li>
+<li><code>processed/</code>: Contains the processed data files processed by OpenHPS.
+<ul>
+<li><code>processed/video_frames_wrapped/</code>: Contains the invidiual frames of the video recording wrapped to a top-down view (step 1).</li>
+<li><code>processed/video_frames_hsv/</code>: Contains the individual frames of the video recording in HSV (step 2).</li>
+<li><code>processed/video_frames_bw/</code>: Contains the individual frames of the video recording in black and white (step 3).</li>
+<li><code>processed/video.csv</code>: Contains the X-Y pixel coordinates of the Sphero in each frame of the video recording.</li>
+<li><code>processed/video_final.csv</code>: Contains the final processed video X-Y coordinates in cm. (*.pdf, *.svg are the visualisations of these coordinates)</li>
+<li><code>processed/input_final.csv</code>: Contains the final processed input data. Input data are the movement instructions given to the Sphero. (*.pdf, *.svg are the visualisations of these coordinates)</li>
+<li><code>processed/sensor_position_final.csv</code>: Contains the position that is reported by the Sphero (internally computed).</li>
+<li><code>processed/sensor_velocity_final.csv</code>: Contains the position based on the velocity that is reported by the Sphero.</li>
+<li><code>processed/final.csv</code>: Contains the final processed data. This file contains the X-Y coordinates of the Sphero based on the video processing, input instructions, and sensor data. (*.pdf, *.svg are the visualisations of these coordinates)</li>
+</ul>
+</li>
+<li><code>results/</code>: Contains results and experiments based on the processed data.</li>
+<li><code>README.md</code>: This file (source).</li>
+</ul>
+<h2 id="columns" tabindex="-1">Columns</h2>
+<h3 id="raw-data" tabindex="-1">Raw data</h3>
+<h4 id="input_frames%2F" tabindex="-1"><code>input_frames/</code></h4>
+<p>Raw OpenHPS data frames containing the input instructions given to the Sphero. For more info check <a href="https://openhps.org">https://openhps.org</a>.</p>
+<h4 id="sensor_frames%2F" tabindex="-1"><code>sensor_frames/</code></h4>
+<p>Raw OpenHPS data frames containing the sensor output retrieved from the Sphero. For more info check <a href="https://openhps.org">https://openhps.org</a>.</p>
+<h4 id="sensor_velocity_raw.csv" tabindex="-1"><code>sensor_velocity_raw.csv</code></h4>
+<ul>
+<li><code>timestamp</code>: Sensor frame timestamp</li>
+<li><code>x</code>: Raw processed position based on heading + velocity</li>
+<li><code>y</code>: Raw processed position based on heading + velocity</li>
+<li><code>heading</code>: Heading in degrees</li>
+<li><code>velocity</code>: Linear velocity of the Sphero (cm/s)</li>
+</ul>
+<h4 id="sensor_position_raw.csv" tabindex="-1"><code>sensor_position_raw.csv</code></h4>
+<ul>
+<li><code>timestamp</code>: Sensor frame timestamp</li>
+<li><code>x</code>: Internally computed X-coordinate of the Sphero (cm)</li>
+<li><code>y</code>: Internally computed Y-coordinate of the Sphero (cm)</li>
+<li><code>euler_x</code>: Euler angle X (degrees)</li>
+<li><code>euler_y</code>: Euler angle Y (degrees)</li>
+<li><code>euler_z</code>: Euler angle Z (degrees)</li>
+</ul>
+<h3 id="processed-data" tabindex="-1">Processed data</h3>
+<h4 id="video_final.csv" tabindex="-1"><code>video_final.csv</code></h4>
+<p><em>Position according to the video processing</em></p>
+<ul>
+<li><code>timestamp</code>: Video frame timestamp</li>
+<li><code>x</code>: X-coordinate of the Sphero (cm)</li>
+<li><code>y</code>: Y-coordinate of the Sphero (cm)</li>
+</ul>
+<h4 id="input_final.csv" tabindex="-1"><code>input_final.csv</code></h4>
+<p><em>Position according to the input instructions</em></p>
+<ul>
+<li><code>timestamp</code>: Input frame timestamp</li>
+<li><code>x</code>: X-coordinate of the Sphero (cm)</li>
+<li><code>y</code>: Y-coordinate of the Sphero (cm)</li>
+</ul>
+<h4 id="sensor_position_final.csv" tabindex="-1"><code>sensor_position_final.csv</code></h4>
+<p><em>Internally calculated position by the Sphero</em></p>
+<ul>
+<li><code>timestamp</code>: Sensor frame timestamp</li>
+<li><code>x</code>: X-coordinate of the Sphero (cm)</li>
+<li><code>y</code>: Y-coordinate of the Sphero (cm)</li>
+</ul>
+<h3 id="results" tabindex="-1">Results</h3>
+<ul>
+<li><code>timestamp</code>: Timestamp of the data frame</li>
+<li><code>x</code>: X-coordinate of the Sphero (cm)</li>
+<li><code>y</code>: Y-coordinate of the Sphero (cm)</li>
+<li><code>video</code>: True or false if the video frames were included to compute the position (only for deadzone calculations)</li>
+</ul>
+<h2 id="license" tabindex="-1">License</h2>
+<p>The dataset is available under the MIT License.</p>
+</div>
+
+            
+        </div>
+    </div>
+</div>
+<script src="/scripts/publications.js"></script>
+    </section>
+
+    <footer>
+    <div class="social">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <ul class="social-links">
+                        <li><a href="https://mas.to/@maximvdw" rel="me" target="_blank"><i class="fab fa-mastodon"></i></a></li>
+                        <li><a href="https://bsky.app/profile/maximvdw.be" rel="me" target="_blank"><i class="fab fa-bluesky"></i></a></li>
+                        <li><a href="https://github.com/Maximvdw" rel="me" target="_blank"><i class="fab fa-github"></i></a></li>
+                        <li><a href="mailto:me@maximvdw.be"><i class="fas fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        &copy; Copyright 2024 - 2025
+    </div>
+</footer>
+
+  </body>
+</html>

@@ -972,6 +972,21 @@
         <PublicationHistory>
            
             <Publication>
+                <hr:FormattedPublicationDescription>Computer vision tracking and dead reckoning sensor fusion of a Sphero robot</hr:FormattedPublicationDescription>
+                <Title>Sphero Dead Reckoning and CV Tracking Dataset</Title>
+                <Year>2025</Year>
+                <Reference>Van de Wynckel, M., &amp; Signer, B. (2025). Sphero Dead Reckoning and CV Tracking Dataset. Kaggle. https://doi.org/10.34740/KAGGLE/DS/6760212
+</Reference>
+                
+                <DOI>
+                  <Link>https://www.kaggle.com/datasets/maximvandewynckel/sphero-dead-reckoning-and-cv-tracking-dataset</Link>
+                </DOI>
+                
+                
+                <Link>https://maximvdw.be/publications/2025/vandewynckel2025sphero/</Link>
+            </Publication>
+            
+            <Publication>
                 <hr:FormattedPublicationDescription>A fingerprinting dataset consisting of WLAN, BLE and IMU data in a garage</hr:FormattedPublicationDescription>
                 <Title>Garage Positioning Dataset</Title>
                 <Year>2025</Year>
