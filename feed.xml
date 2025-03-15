@@ -4,12 +4,28 @@
   <subtitle>An open-source hybrid positioning system framework.</subtitle>
   <link href="https://maximvdw.be/feed.xml" rel="self"/>
   <link href="https://maximvdw.be"/>
-  <updated>2025-01-14T00:00:00Z</updated>
+  <updated>2025-03-15T00:00:00Z</updated>
   <id>https://maximvdw.be</id>
   <author>
     <name>Maxim Van de Wynckel</name>
     <email>maxim.van.de.wynckel@vub.be</email>
   </author>
+  
+  <entry>
+    <title>Research featured in an interview</title>
+    <link href="https://maximvdw.be/posts/2025/03/12/"/>
+    <updated>2025-03-15T00:00:00Z</updated>
+    <id>https://maximvdw.be/posts/2025/03/12/</id>
+    <content type="html">&lt;p&gt;&lt;a href=&quot;https://www.knack.be/nieuws/technologie/jong-talent-maxim-van-de-wynckel-30-zoekt-oplossingen-om-gebruikers-meer-controle-te-geven-over-hun-locatiegegevens/&quot;&gt;Lees het volledige artikel op Knack.be&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;English below&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Deze week in Knack en knack.be, mijn onderzoek aan de &lt;a href=&quot;https://vub.ac.be/&quot;&gt;Vrije Universiteit Brussel&lt;/a&gt; in de kijker via de rubriek &#39;Jong talent&#39;.&lt;/p&gt;
+&lt;p&gt;Met het Solid project en ons OpenHPS.org raamwerk leggen we samen de basis om gebruikers controle te geven over hun locatiegegevens. Zo creëren we transparantie over wie de data genereert en gebruikt. Locatiegegevens bieden enorme mogelijkheden voor bedrijven en ontwikkelaars, maar als gebruikers moeten we er bewust en verantwoordelijk mee omgaan.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;This week in Knack and knack.be, my research at the &lt;a href=&quot;https://vub.ac.be/&quot;&gt;Vrije Universiteit Brussel&lt;/a&gt; is highlighted in the &#39;Young Talent&#39; section.&lt;/p&gt;
+&lt;p&gt;With the Solid project and our OpenHPS.org framework, we are laying the foundation to give users control over their location data. This creates transparency about who generates and uses the data. Location data offers enormous opportunities for businesses and developers, but as users, we must handle it consciously and responsibly.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.knack.be/nieuws/technologie/jong-talent-maxim-van-de-wynckel-30-zoekt-oplossingen-om-gebruikers-meer-controle-te-geven-over-hun-locatiegegevens/&quot;&gt;Read the full article on Knack.be&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
   
   <entry>
     <title>The privacy of location data is an open problem</title>
