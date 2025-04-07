@@ -210,7 +210,11 @@ permalink: cv/europass.xml
                 {% if publication.data.video %}
                 <Link>{{ publication.data.video }}</Link>
                 {% endif %}
+                {% if publication.data.type == 'press' %}
+                <Link>{{ publication.data.link }}</Link>
+                {% else %}
                 <Link>https://maximvdw.be{{ publication.url }}</Link>
+                {% endif %}
             </Publication>
             {% endfor %}
         </PublicationHistory>

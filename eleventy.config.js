@@ -255,7 +255,7 @@ async function configureFilters(el) {
                 return `data:${response.headers['content-type']};base64,${base64}`;
             } catch (error) {
                 console.error("Error fetching image for base64 filter:", error);
-                return ``;
+                return null;
             }
         } else {
             // base64 the data
