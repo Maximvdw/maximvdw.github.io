@@ -1346,7 +1346,39 @@
                 
                 <DigitalSkill>Indoor robot navigation</DigitalSkill>
                 
-                <DigitalSkill>Localization and Positioning</DigitalSkill>
+                <DigitalSkill>Localisation and Positioning</DigitalSkill>
+                
+            </DigitalSkillsGroup>
+            
+            <DigitalSkillsGroup>
+                <Title>Technical</Title>
+                
+                <DigitalSkill>Distributed systems</DigitalSkill>
+                
+                <DigitalSkill>Software architecture</DigitalSkill>
+                
+                <DigitalSkill>Full stack development</DigitalSkill>
+                
+                <DigitalSkill>Software security</DigitalSkill>
+                
+                <DigitalSkill>Software development</DigitalSkill>
+                
+                <DigitalSkill>Database management and design</DigitalSkill>
+                
+            </DigitalSkillsGroup>
+            
+            <DigitalSkillsGroup>
+                <Title>Programming</Title>
+                
+                <DigitalSkill>TypeScript</DigitalSkill>
+                
+                <DigitalSkill>JavaScript</DigitalSkill>
+                
+                <DigitalSkill>Java</DigitalSkill>
+                
+                <DigitalSkill>Python</DigitalSkill>
+                
+                <DigitalSkill>C#</DigitalSkill>
                 
             </DigitalSkillsGroup>
             
