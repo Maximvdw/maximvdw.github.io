@@ -2,7 +2,7 @@
     "firstName": "Maxim",
     "lastName": "Van de Wynckel",
     "name": "Maxim Van de Wynckel",
-    "imageUrl": "https://maximvdw.be/images/profile/maxim.png",
+    "imageUrl": "https://maximvdw.be/images/profile/maxim_2025.jpg",
     "birthDate": "1995-03-10",
     "birthPlace": {
         "city": "Antwerp (Wilrijk)",
@@ -31,7 +31,7 @@
         },
         "type": "Home"
     },
-    "description": "I am a software engineer and researcher with a passion for interoperable and privacy-aware systems.",
+    "description": "I am a software engineer and researcher with a passion for interoperable and privacy-aware (information) systems.",
     "hobbies": [
         {
             "title": "Scuba diving",
