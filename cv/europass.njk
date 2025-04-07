@@ -184,8 +184,8 @@ permalink: cv/europass.xml
                     {% if edu.thesis %}
                     <Thesis>{{ edu.thesis.title }}</Thesis>
                     {% endif %}
-                    {% if edu.ects %}
                     <OccupationalSkillsCovered>{{ edu.description }}</OccupationalSkillsCovered>
+                    {% if edu.ects %}
                     <CreditType>ECTS</CreditType>
                     <NumberOfCredit>{{ edu.ects }}</NumberOfCredit>
                     {% endif %}
