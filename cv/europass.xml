@@ -778,7 +778,7 @@
                     
                     <Thesis>Interoperable and Discoverable Indoor Positioning Systems</Thesis>
                     
-                    <OccupationalSkillsCovered>Researching hybrid- and indoor positioning systems, interoperability of location data and discoverability of services. Internal defence: 12th of May, 2025. Expected end date: July, 2025.</OccupationalSkillsCovered>
+                    <OccupationalSkillsCovered>Researching hybrid- and indoor positioning systems, interoperability of location data and discoverability of services using linked data and Solid. Internal defence: 12th of May, 2025. End date: September, 2025.</OccupationalSkillsCovered>
                     
                 </EducationDegree>
             </EducationOrganizationAttendance>
@@ -826,7 +826,7 @@
                     
                     <Thesis>Indoor Navigation by Centralized Tracking</Thesis>
                     
-                    <OccupationalSkillsCovered>Parallelism, distributed systems, multicore programming (Java, Erlang and GPU with OpenCL), software security and Indoor navigation master thesis.</OccupationalSkillsCovered>
+                    <OccupationalSkillsCovered>Parallelism, distributed systems, multicore programming, software security and indoor navigation master thesis.</OccupationalSkillsCovered>
                     
                     <CreditType>ECTS</CreditType>
                     <NumberOfCredit>60</NumberOfCredit>
@@ -918,7 +918,7 @@
                     
                     <Thesis>eID IO - Applicatie Besturing</Thesis>
                     
-                    <OccupationalSkillsCovered>Software Security, Software Development (Java, C++, C#, Objective-C), Agile development. Received an award for best final work.</OccupationalSkillsCovered>
+                    <OccupationalSkillsCovered>Software Security, Software Development, Agile development. Received an award for best final work.</OccupationalSkillsCovered>
                     
                     <CreditType>ECTS</CreditType>
                     <NumberOfCredit>180</NumberOfCredit>
@@ -1027,7 +1027,12 @@
                 <hr:FormattedPublicationDescription>This paper proposes a decentralised approach to intelligent tutoring systems by storing learning progress and performance data in user-owned Solid Pods, enhancing learner autonomy and privacy.</hr:FormattedPublicationDescription>
                 <Title>Towards Distributed Intelligent Tutoring Systems Based on User-owned Progress and Performance Data</Title>
                 <Year>2024</Year>
-                <Reference>Malaise, Y., Van de Wynckel, M., &amp; Signer, B. (2024, May). Towards Distributed Intelligent Tutoring Systems Based on User-owned Progress and Performance Data. Proceedings of SoSy 2024 (Poster), 2nd Solid Symposium, Leuven, Belgium, May 2024.</Reference>
+                <Reference>Malaise, Y., Van de Wynckel, M., &amp; Signer, B. (2024). Towards Distributed Intelligent Tutoring Systems Based on User-owned Progress and Performance Data. Proceedings of the 2nd Solid Symposium (SoSy’24), 3947. https://ceur-ws.org/Vol-3947/short3.pdf
+</Reference>
+                
+                <DOI>
+                  <Link>https://ceur-ws.org/Vol-3947/short3.pdf</Link>
+                </DOI>
                 
                 
                 
@@ -1039,8 +1044,11 @@
                 <hr:FormattedPublicationDescription>In this paper, we propose a novel solution to store 3D manipulations in AR spaces within a Solid pod. Using this solution, multiple users can work together in the same environment while also ensuring interoperability between AR applications.</hr:FormattedPublicationDescription>
                 <Title>Discoverable and Interoperable Augmented Reality Environments Through Solid Pods</Title>
                 <Year>2024</Year>
-                <Reference>Van de Wynckel, M., &amp; Signer, B. (2024, May). Discoverable and Interoperable Augmented Reality Environments Through Solid Pods. Proceedings of SoSy 2024 (Poster), 2nd Solid Symposium, Leuven, Belgium, May 2024. https://events.vito.be/sosy2024
-</Reference>
+                <Reference>Van de Wynckel, M., &amp; Signer, B. (2024). Discoverable and Interoperable Augmented Reality Environments Through Solid Pods. Proceedings of SoSy 2024 (Poster), 2nd Solid Symposium, Leuven, Belgium, May 2024, 3947.</Reference>
+                
+                <DOI>
+                  <Link>https://ceur-ws.org/Vol-3947/short2.pdf</Link>
+                </DOI>
                 
                 
                 
@@ -1140,8 +1148,7 @@
                 <hr:FormattedPublicationDescription>In this publication we propose a solution to decentralise location data and positioning systems in Solid pods using linked data.</hr:FormattedPublicationDescription>
                 <Title>A Solid-based Architecture for Decentralised Interoperable Location Data</Title>
                 <Year>2022</Year>
-                <Reference>Van de Wynckel, M., &amp; Signer, B. (2022). A Solid-based Architecture for Decentralised Interoperable Location Data. Proceedings of the 12th International Conference on Indoor Positioning and Indoor Navigation (IPIN), CEUR Workshop Proceedings.
-</Reference>
+                <Reference>Van de Wynckel, M., &amp; Signer, B. (2022). A Solid-based Architecture for Decentralised Interoperable Location Data. Proceedings of the 12th International Conference on Indoor Positioning and Indoor Navigation (IPIN’22), CEUR Workshop Proceedings,</Reference>
                 
                 <DOI>
                   <Link>https://ceur-ws.org/Vol-3248/paper11.pdf</Link>
