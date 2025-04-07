@@ -1382,6 +1382,25 @@
                 
             </DigitalSkillsGroup>
             
+            <DigitalSkillsGroup>
+                <Title>Teaching &amp; Workshops</Title>
+                
+                <DigitalSkill>Teaching assistant (TA)</DigitalSkill>
+                
+                <DigitalSkill>Databases</DigitalSkill>
+                
+                <DigitalSkill>Open Information Systems</DigitalSkill>
+                
+                <DigitalSkill>Information Visualisation</DigitalSkill>
+                
+                <DigitalSkill>Next Generation User Interfaces</DigitalSkill>
+                
+                <DigitalSkill>Web Technologies</DigitalSkill>
+                
+                <DigitalSkill>3D Modelling and Printing</DigitalSkill>
+                
+            </DigitalSkillsGroup>
+            
         </DigitalSkills>
         <NetworksAndMemberships/>
         <ConferencesAndSeminars>
