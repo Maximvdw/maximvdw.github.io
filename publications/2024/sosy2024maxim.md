@@ -4,10 +4,11 @@ title: "Discoverable and Interoperable Augmented Reality Environments Through So
 author: Maxim Van de Wynckel, Beat Signer
 date: 2024-05-19
 github: https://github.com/Maximvdw/sosy2024
-publisher: springer
+publisher: ceur
 type: poster
 pdf: https://solid.maximvdw.be/publications/discoverable-and-interoperable-augmented-reality-environments-through-solid-pods.pdf
 bib: /publications/2024/vandewynckel2024ar.bib
+link: https://ceur-ws.org/Vol-3947/short2.pdf
 thumbnail: "/publications/2024/sosy2024maxim.png"
 website: https://maximvdw.github.io/sosy2024
 summary: In this paper, we propose a novel solution to store 3D manipulations in AR spaces within a Solid pod. Using this solution, multiple users can work together in the same environment while also ensuring interoperability between AR applications.

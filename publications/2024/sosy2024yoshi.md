@@ -4,7 +4,8 @@ title: "Towards Distributed Intelligent Tutoring Systems Based on User-owned Pro
 author: Maxim Van de Wynckel, Beat Signer
 date: 2024-05-19
 github: https://github.com/yoshimalaise/sosy2024
-publisher: springer
+publisher: ceur
+link: https://ceur-ws.org/Vol-3947/short3.pdf
 type: poster
 pdf: https://solid.maximvdw.be/publications/towards-distributed-intelligent-tutoring-systems-based-on-user-owned-progress-and-performance-data.pdf
 thumbnail: "/publications/2024/sosy2024yoshi.png"

@@ -21,7 +21,7 @@
             "title": "Interoperable and Discoverable Indoor Positioning Systems"
         },
         "eqfLevel": "8",
-        "description": "Researching hybrid- and indoor positioning systems, interoperability of location data and discoverability of services. Internal defence: 12th of May, 2025. Expected end date: July, 2025."
+        "description": "Researching hybrid- and indoor positioning systems, interoperability of location data and discoverability of services using linked data and Solid. Internal defence: 12th of May, 2025. End date: September, 2025."
     }, {
         "university": {
             "name": "Vrije Universiteit Brussel",
@@ -51,7 +51,7 @@
         },
         "eqfLevel": "7",
         "ects": "60",
-        "description": "Parallelism, distributed systems, multicore programming (Java, Erlang and GPU with OpenCL), software security and Indoor navigation master thesis."
+        "description": "Parallelism, distributed systems, multicore programming, software security and indoor navigation master thesis."
     }, {
         "university": {
             "name": "Vrije Universiteit Brussel",
@@ -102,7 +102,7 @@
         },
         "eqfLevel": "6",
         "ects": "180",
-        "description": "Software Security, Software Development (Java, C++, C#, Objective-C), Agile development. Received an award for best final work."
+        "description": "Software Security, Software Development, Agile development. Received an award for best final work."
     }, {
         "university": {
             "name": "Don Bosco Hoboken",
