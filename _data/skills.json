@@ -6,7 +6,26 @@
                 "Semantic interoperability",
                 "Web Semantic and Linked Data",
                 "Indoor robot navigation",
-                "Localization and Positioning"
+                "Localisation and Positioning"
+            ]
+        }, {
+            "title": "Technical",
+            "entries": [
+                "Distributed systems",
+                "Software architecture",
+                "Full stack development",
+                "Software security",
+                "Software development",
+                "Database management and design"
+            ]
+        }, {
+            "title": "Programming",
+            "entries": [
+                "TypeScript",
+                "JavaScript",
+                "Java",
+                "Python",
+                "C#"
             ]
         }
     ],
