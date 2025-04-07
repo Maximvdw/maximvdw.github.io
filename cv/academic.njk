@@ -422,6 +422,22 @@ eleventyExcludeFromCollections: true
       </ul>
     </section>
 
+    <section>
+      <h2>Press Articles</h2>
+      <ul>
+        {% set publications = collections.publications | reverse %}
+        {% for pub in publications %}
+        {% if pub.data.type == 'press' %}
+        <li>
+          <div class="content">
+            {{ pub.data.title }}
+            <a href="{{ pub.data.link }}">{{ pub.data.link }}</a>
+          </div>
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </section>
     <section class="newpage">
       <h2>Presentations</h2>
       <ul>

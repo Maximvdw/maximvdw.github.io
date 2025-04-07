@@ -2,6 +2,12 @@
     {
         "type": "reviewer",
         "task": "Reviewer",
+        "name": "Semantic Web - Interoperability, Usability, Applicability (Journal)",
+        "start": "2025",
+        "end": "2025"
+    }, {
+        "type": "reviewer",
+        "task": "Reviewer",
         "name": "Interactive, Mobile, Wearable and Ubiquitous Technologies (Journal)",
         "start": "2022",
         "end": "2022"
