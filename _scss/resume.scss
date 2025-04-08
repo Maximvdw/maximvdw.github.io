@@ -185,11 +185,21 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding-left: 8mm;
+    padding-right: 8mm;
   }
   div.row > section {
-    flex: 1 1 48%;
+    flex: 1 1 50%;
     margin-bottom: 20px;
     box-sizing: border-box;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  div.row > section:nth-child(2n) {
+    padding-left: 4mm;
+  }
+  div.row > section:nth-child(2n+1) {
+    padding-right: 4mm;
   }
   div.row li {
     position: relative;
