@@ -176,7 +176,10 @@
                         
                         <hr:CurrentIndicator>true</hr:CurrentIndicator>
                     </eures:EmploymentPeriod>
-                    <oa:Description>6-year Ph.D grant on indoor positioning and interoperability. Teaching assistant for various Bachelor and Master courses. </oa:Description>
+                    <oa:Description>
+                        
+                        6-year Ph.D grant on indoor positioning and interoperability. Teaching assistant for various Bachelor and Master courses.
+                    </oa:Description>
                     <oa:AddressLine>Pleinlaan 2</oa:AddressLine>
                     <oa:CityName>Elsene</oa:CityName>
                     <CountryCode>be</CountryCode>
@@ -227,7 +230,10 @@
                         
                         <hr:CurrentIndicator>true</hr:CurrentIndicator>
                     </eures:EmploymentPeriod>
-                    <oa:Description>Freelance software development and consultancy. Projects spanning from web development to IoT and AI implementation in business processes. </oa:Description>
+                    <oa:Description>
+                        
+                        Freelance software development and consultancy. Projects spanning from web development to IoT and AI implementation in business processes.
+                    </oa:Description>
                     <oa:AddressLine>Invalidenlaan 178/5</oa:AddressLine>
                     <oa:CityName>Oudergem</oa:CityName>
                     <CountryCode>be</CountryCode>
@@ -279,7 +285,12 @@
                         
                         <hr:CurrentIndicator></hr:CurrentIndicator>
                     </eures:EmploymentPeriod>
-                    <oa:Description>Development of chemical database software. </oa:Description>
+                    <oa:Description>
+                        
+                        (Student contract) 
+                        
+                        Development of chemical database software.
+                    </oa:Description>
                     <oa:AddressLine>Drie Eikenstraat 661</oa:AddressLine>
                     <oa:CityName>Edegem</oa:CityName>
                     <CountryCode>be</CountryCode>
@@ -329,7 +340,12 @@
                         
                         <hr:CurrentIndicator></hr:CurrentIndicator>
                     </eures:EmploymentPeriod>
-                    <oa:Description>Maintenance of chemical database search by substructures. </oa:Description>
+                    <oa:Description>
+                        
+                        (Student contract) 
+                        
+                        Maintenance of chemical database search by substructures.
+                    </oa:Description>
                     <oa:AddressLine>Drie Eikenstraat 661</oa:AddressLine>
                     <oa:CityName>Edegem</oa:CityName>
                     <CountryCode>be</CountryCode>
@@ -379,7 +395,12 @@
                         
                         <hr:CurrentIndicator></hr:CurrentIndicator>
                     </eures:EmploymentPeriod>
-                    <oa:Description>Development and maintenance of chemical database software. </oa:Description>
+                    <oa:Description>
+                        
+                        (Student contract) 
+                        
+                        Development and maintenance of chemical database software.
+                    </oa:Description>
                     <oa:AddressLine>Drie Eikenstraat 661</oa:AddressLine>
                     <oa:CityName>Edegem</oa:CityName>
                     <CountryCode>be</CountryCode>
@@ -429,7 +450,12 @@
                         
                         <hr:CurrentIndicator></hr:CurrentIndicator>
                     </eures:EmploymentPeriod>
-                    <oa:Description>Migration from Access database to Web-based chemical database software. </oa:Description>
+                    <oa:Description>
+                        
+                        (Student contract) 
+                        
+                        Migration from Access database to Web-based chemical database software.
+                    </oa:Description>
                     <oa:AddressLine>Drie Eikenstraat 661</oa:AddressLine>
                     <oa:CityName>Edegem</oa:CityName>
                     <CountryCode>be</CountryCode>
@@ -479,7 +505,12 @@
                         
                         <hr:CurrentIndicator></hr:CurrentIndicator>
                     </eures:EmploymentPeriod>
-                    <oa:Description>Development of PHP and MySQL based chemical database software. </oa:Description>
+                    <oa:Description>
+                        
+                        (Student contract) 
+                        
+                        Development of PHP and MySQL based chemical database software.
+                    </oa:Description>
                     <oa:AddressLine>Drie Eikenstraat 661</oa:AddressLine>
                     <oa:CityName>Edegem</oa:CityName>
                     <CountryCode>be</CountryCode>
@@ -531,7 +562,12 @@
                         
                         <hr:CurrentIndicator></hr:CurrentIndicator>
                     </eures:EmploymentPeriod>
-                    <oa:Description>Development of QR-code based appointment system. Google Fit integration for patients. Healthcare software development. </oa:Description>
+                    <oa:Description>
+                        
+                        (Student contract) 
+                        
+                        Development of QR-code based appointment system. Google Fit integration for patients. Healthcare software development.
+                    </oa:Description>
                     <oa:AddressLine>Laarbeeklaan 101</oa:AddressLine>
                     <oa:CityName>Jette</oa:CityName>
                     <CountryCode>be</CountryCode>
@@ -583,7 +619,12 @@
                         
                         <hr:CurrentIndicator></hr:CurrentIndicator>
                     </eures:EmploymentPeriod>
-                    <oa:Description>eID cloud authentication Bachelor thesis preparatory training. </oa:Description>
+                    <oa:Description>
+                        
+                        (Student contract) 
+                        
+                        eID cloud authentication Bachelor thesis preparatory training.
+                    </oa:Description>
                     <oa:AddressLine></oa:AddressLine>
                     <oa:CityName>Evergem</oa:CityName>
                     <CountryCode>be</CountryCode>
@@ -633,7 +674,12 @@
                         
                         <hr:CurrentIndicator></hr:CurrentIndicator>
                     </eures:EmploymentPeriod>
-                    <oa:Description>eID cloud authentication and security penetration testing. </oa:Description>
+                    <oa:Description>
+                        
+                        (Student contract) 
+                        
+                        eID cloud authentication and security penetration testing.
+                    </oa:Description>
                     <oa:AddressLine></oa:AddressLine>
                     <oa:CityName>Evergem</oa:CityName>
                     <CountryCode>be</CountryCode>
@@ -685,7 +731,12 @@
                         
                         <hr:CurrentIndicator></hr:CurrentIndicator>
                     </eures:EmploymentPeriod>
-                    <oa:Description>Web UI for print management software. </oa:Description>
+                    <oa:Description>
+                        
+                        (Student contract) 
+                        
+                        Web UI for print management software.
+                    </oa:Description>
                     <oa:AddressLine>Dijkstraat 17</oa:AddressLine>
                     <oa:CityName>Humbeek</oa:CityName>
                     <CountryCode>be</CountryCode>
@@ -735,7 +786,12 @@
                         
                         <hr:CurrentIndicator></hr:CurrentIndicator>
                     </eures:EmploymentPeriod>
-                    <oa:Description>File server deployment and print job submitting in C#. </oa:Description>
+                    <oa:Description>
+                        
+                        (Student contract) 
+                        
+                        File server deployment and print job submitting in C#.
+                    </oa:Description>
                     <oa:AddressLine>Dijkstraat 17</oa:AddressLine>
                     <oa:CityName>Humbeek</oa:CityName>
                     <CountryCode>be</CountryCode>
@@ -772,13 +828,16 @@
                     <Ongoing>true</Ongoing>
                 </AttendancePeriod>
                 <EducationDegree>
-                    <hr:DegreeName>PhD, Computer Science</hr:DegreeName>
+                    <hr:DegreeName>Doctor of Science (PhD), Computer Science</hr:DegreeName>
                     
                     
                     
                     <Thesis>Interoperable and Discoverable Indoor Positioning Systems</Thesis>
                     
-                    <OccupationalSkillsCovered>Researching hybrid- and indoor positioning systems, interoperability of location data and discoverability of services using linked data and Solid. Internal defence: 12th of May, 2025. End date: September, 2025.</OccupationalSkillsCovered>
+                    <OccupationalSkillsCovered>Researching hybrid- and indoor positioning systems, interoperability of location data and discoverability of services using linked data and Solid. Further research on Augmented Reality, Virtual Reality, Artifical Intelligence, deep sensor fusion and internet of things. Internal defence: 12th of May, 2025.</OccupationalSkillsCovered>
+                    
+                    <CreditType>ECTS</CreditType>
+                    <NumberOfCredit>279</NumberOfCredit>
                     
                 </EducationDegree>
             </EducationOrganizationAttendance>
@@ -863,11 +922,11 @@
                     <Ongoing>false</Ongoing>
                 </AttendancePeriod>
                 <EducationDegree>
-                    <hr:DegreeName>Bridging programme, Computer Science</hr:DegreeName>
+                    <hr:DegreeName>Bridging Programme, Computer Science</hr:DegreeName>
                     
                     
                     
-                    <OccupationalSkillsCovered>Bridging programme from professional bachelor to academic bachelor.</OccupationalSkillsCovered>
+                    <OccupationalSkillsCovered>Bridging programme from professional bachelor (Ba) to academic bachelor (BSc).</OccupationalSkillsCovered>
                     
                     <CreditType>ECTS</CreditType>
                     <NumberOfCredit>60</NumberOfCredit>
@@ -918,7 +977,7 @@
                     
                     <Thesis>eID IO - Applicatie Besturing</Thesis>
                     
-                    <OccupationalSkillsCovered>Software Security, Software Development, Agile development. Received an award for best final work.</OccupationalSkillsCovered>
+                    <OccupationalSkillsCovered>Software Security, Software Development, Agile development, business management skills. Received an award for best final work (thesis).</OccupationalSkillsCovered>
                     
                     <CreditType>ECTS</CreditType>
                     <NumberOfCredit>180</NumberOfCredit>
