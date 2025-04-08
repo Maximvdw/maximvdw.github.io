@@ -1327,31 +1327,31 @@
                 <eures:CompetencyDimension>
                     <hr:CompetencyDimensionTypeCode>CEF-Understanding-Listening</hr:CompetencyDimensionTypeCode>
                     <eures:Score>
-                        <hr:ScoreText>C2</hr:ScoreText>
+                        <hr:ScoreText>C1</hr:ScoreText>
                     </eures:Score>
                 </eures:CompetencyDimension>
                 <eures:CompetencyDimension>
                     <hr:CompetencyDimensionTypeCode>CEF-Understanding-Reading</hr:CompetencyDimensionTypeCode>
                     <eures:Score>
-                        <hr:ScoreText>C2</hr:ScoreText>
+                        <hr:ScoreText>C1</hr:ScoreText>
                     </eures:Score>
                 </eures:CompetencyDimension>
                 <eures:CompetencyDimension>
                     <hr:CompetencyDimensionTypeCode>CEF-Speaking-Interaction</hr:CompetencyDimensionTypeCode>
                     <eures:Score>
-                        <hr:ScoreText>C2</hr:ScoreText>
+                        <hr:ScoreText>C1</hr:ScoreText>
                     </eures:Score>
                 </eures:CompetencyDimension>
                 <eures:CompetencyDimension>
                     <hr:CompetencyDimensionTypeCode>CEF-Speaking-Production</hr:CompetencyDimensionTypeCode>
                     <eures:Score>
-                        <hr:ScoreText>C2</hr:ScoreText>
+                        <hr:ScoreText>C1</hr:ScoreText>
                     </eures:Score>
                 </eures:CompetencyDimension>
                 <eures:CompetencyDimension>
                     <hr:CompetencyDimensionTypeCode>CEF-Writing-Production</hr:CompetencyDimensionTypeCode>
                     <eures:Score>
-                        <hr:ScoreText>C2</hr:ScoreText>
+                        <hr:ScoreText>C1</hr:ScoreText>
                     </eures:Score>
                 </eures:CompetencyDimension>
             </PersonCompetency>
@@ -1408,7 +1408,7 @@
                 
                 <DigitalSkill>Semantic interoperability</DigitalSkill>
                 
-                <DigitalSkill>Web Semantic and Linked Data</DigitalSkill>
+                <DigitalSkill>Semantic Web and Linked Data</DigitalSkill>
                 
                 <DigitalSkill>Indoor robot navigation</DigitalSkill>
                 
@@ -1445,27 +1445,6 @@
                 <DigitalSkill>Python</DigitalSkill>
                 
                 <DigitalSkill>C#</DigitalSkill>
-                
-            </DigitalSkillsGroup>
-            
-            <DigitalSkillsGroup>
-                <Title>Teaching &amp; Workshops</Title>
-                
-                <DigitalSkill>Teaching assistant (TA)</DigitalSkill>
-                
-                <DigitalSkill>Databases</DigitalSkill>
-                
-                <DigitalSkill>Open Information Systems</DigitalSkill>
-                
-                <DigitalSkill>Information Visualisation</DigitalSkill>
-                
-                <DigitalSkill>Next Generation User Interfaces</DigitalSkill>
-                
-                <DigitalSkill>Web Technologies</DigitalSkill>
-                
-                <DigitalSkill>Advanced Topics in Big Data</DigitalSkill>
-                
-                <DigitalSkill>3D Modelling and Printing</DigitalSkill>
                 
             </DigitalSkillsGroup>
             
