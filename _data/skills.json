@@ -4,7 +4,7 @@
             "title": "Research",
             "entries": [
                 "Semantic interoperability",
-                "Web Semantic and Linked Data",
+                "Semantic Web and Linked Data",
                 "Indoor robot navigation",
                 "Localisation and Positioning"
             ]
@@ -27,7 +27,10 @@
                 "Python",
                 "C#"
             ]
-        }, {
+        }
+    ],
+    "social": [
+        {
             "title": "Teaching & Workshops",
             "entries": [
                 "Teaching assistant (TA)",
@@ -44,11 +47,11 @@
     "language": [
         {
             "language": "English",
-            "listening": "C2",
-            "reading": "C2",
-            "spoken_interaction": "C2",
-            "spoken_production": "C2",
-            "writing": "C2"
+            "listening": "C1",
+            "reading": "C1",
+            "spoken_interaction": "C1",
+            "spoken_production": "C1",
+            "writing": "C1"
         }, {
             "language": "Dutch",
             "native": true
