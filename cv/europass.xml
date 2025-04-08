@@ -730,7 +730,7 @@
                         </eures:StartDate>
                         
                         <eures:EndDate>
-                          <hr:FormattedDateTime>2015-08-31</hr:FormattedDateTime>
+                          <hr:FormattedDateTime>2013-08-31</hr:FormattedDateTime>
                         </eures:EndDate>
                         
                         <hr:CurrentIndicator></hr:CurrentIndicator>
@@ -1403,6 +1403,8 @@
                 <DigitalSkill>Next Generation User Interfaces</DigitalSkill>
                 
                 <DigitalSkill>Web Technologies</DigitalSkill>
+                
+                <DigitalSkill>Advanced Topics in Big Data</DigitalSkill>
                 
                 <DigitalSkill>3D Modelling and Printing</DigitalSkill>
                 
