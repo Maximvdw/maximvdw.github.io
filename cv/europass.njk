@@ -1,6 +1,9 @@
 ---
 sitemap: true
 permalink: cv/europass.xml
+layout: null
+print:
+    filename: "MaximVandeWynckel_CV.pdf"
 ---
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Candidate xsi:schemaLocation="http://www.europass.eu/1.0 Candidate.xsd" 
@@ -129,7 +132,12 @@ permalink: cv/europass.xml
                         {% endif %}
                         <hr:CurrentIndicator>{{ position.ongoing }}</hr:CurrentIndicator>
                     </eures:EmploymentPeriod>
-                    <oa:Description>{{ position.summary }} </oa:Description>
+                    <oa:Description>
+                        {% if position.student %}
+                        (Student contract) 
+                        {% endif %}
+                        {{ position.summary }}
+                    </oa:Description>
                     <oa:AddressLine>{{ employer.organization.address.street }}</oa:AddressLine>
                     <oa:CityName>{{ employer.organization.address.city }}</oa:CityName>
                     <CountryCode>{{ employer.organization.address.country.code | lower }}</CountryCode>

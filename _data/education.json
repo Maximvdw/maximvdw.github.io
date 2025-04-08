@@ -14,14 +14,15 @@
             }
         },
         "icon": "/images/logo/vub-logo_square.svg",
-        "degree": "PhD, Computer Science",
+        "degree": "Doctor of Science (PhD), Computer Science",
         "start": "2019-10-01",
         "end": "now",
         "thesis": {
             "title": "Interoperable and Discoverable Indoor Positioning Systems"
         },
         "eqfLevel": "8",
-        "description": "Researching hybrid- and indoor positioning systems, interoperability of location data and discoverability of services using linked data and Solid. Internal defence: 12th of May, 2025. End date: September, 2025."
+        "ects": "279",
+        "description": "Researching hybrid- and indoor positioning systems, interoperability of location data and discoverability of services using linked data and Solid. Further research on Augmented Reality, Virtual Reality, Artifical Intelligence, deep sensor fusion and internet of things. Internal defence: 12th of May, 2025."
     }, {
         "university": {
             "name": "Vrije Universiteit Brussel",
@@ -67,11 +68,11 @@
             }
         },
         "icon": "/images/logo/vub-logo_square.svg",
-        "degree": "Bridging programme, Computer Science",
+        "degree": "Bridging Programme, Computer Science",
         "start": "2016-10-01",
         "end": "2018-07-01",
         "ects": "60",
-        "description": "Bridging programme from professional bachelor to academic bachelor.",
+        "description": "Bridging programme from professional bachelor (Ba) to academic bachelor (BSc).",
         "visible": false
     }, {
         "university": {
@@ -102,7 +103,7 @@
         },
         "eqfLevel": "6",
         "ects": "180",
-        "description": "Software Security, Software Development, Agile development. Received an award for best final work."
+        "description": "Software Security, Software Development, Agile development, business management skills. Received an award for best final work (thesis)."
     }, {
         "university": {
             "name": "Don Bosco Hoboken",
