@@ -22,7 +22,7 @@
         },
         "eqfLevel": "8",
         "ects": "279",
-        "description": "Researching hybrid- and indoor positioning systems, interoperability of location data and discoverability of services using linked data and Solid. Further research on Augmented Reality, Virtual Reality, Artifical Intelligence, deep sensor fusion and internet of things. Internal defence: 12th of May, 2025."
+        "description": "Researching hybrid- and indoor positioning systems, interoperability of location data and discoverability of services using linked data and Solid. Further research on Augmented Reality, Virtual Reality, Artificial Intelligence, deep sensor fusion and internet of things. Internal defence: 12th of May, 2025."
     }, {
         "university": {
             "name": "Vrije Universiteit Brussel",
@@ -70,7 +70,7 @@
         "icon": "/images/logo/vub-logo_square.svg",
         "degree": "Bridging Programme, Computer Science",
         "start": "2016-10-01",
-        "end": "2018-07-01",
+        "end": "2018-09-13",
         "ects": "60",
         "description": "Bridging programme from professional bachelor (Ba) to academic bachelor (BSc).",
         "visible": false
