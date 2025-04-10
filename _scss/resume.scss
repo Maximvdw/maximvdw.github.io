@@ -298,3 +298,50 @@
   #publications .small {
     font-size: 0.9em;
   }
+
+
+span.note {
+  font-size: 0.6em;
+  color: #666;
+  text-align: right;
+  font-style: italic;
+  margin-left: 2rem;
+  width: 100%;
+}
+
+li.strong.tab strong {
+  width: 120px;
+}
+
+li.strong.tab span {
+  flex: 1;
+}
+
+#bio {
+  font-style: italic;
+}
+
+section div.row {
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+section div.row > div.col {
+  padding-left: 0;
+  padding-right: 0;
+  flex: 1;
+}
+
+ul.inline li.strong.tab strong {
+  width: 70px;
+}
+
+ul.inline li {
+  display: inline-block;
+  margin-right: 2em;
+}
+ul.inline li:last-child {
+  margin-right: 0;
+}

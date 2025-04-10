@@ -66,6 +66,10 @@ eleventyExcludeFromCollections: true
       </div>
     </header>
 
+    <section id="bio">
+      <p>{{ personal.description }}</p>
+    </section>
+    
     <div class="row">
       <section>
         <h2>Education</h2>
@@ -154,31 +158,39 @@ eleventyExcludeFromCollections: true
     </div>
 
     <section id="skills">
-      <h2>Skills</h2>
+      <h2>Key Skills<span class="note">The following is a summary of key skills, including digital, social and language skills.</span></h2>
       <div class="skills">
-      <h3>Digital Skills</h3>
-      <ul>
-        {% for category in collections.skills.digital %}
-        <li>
-        <strong>{{ category.title }}</strong>: {{ category.entries | join(', ') }}
-        </li>
-        {% endfor %}
-      </ul>
-      </div>
-      <div class="skills">
-      <h3>Language Skills</h3>
-      <ul>
-        {% for lang in collections.skills.language %}
-        <li>
-        <strong>{{ lang.language }}</strong>{% if lang.native %} (Native){% else %}: Listening {{ lang.listening }}, Reading {{ lang.reading }}, Spoken Interaction {{ lang.spoken_interaction }}, Spoken Production {{ lang.spoken_production }}, Writing {{ lang.writing }}{% endif %}
-        </li>
-        {% endfor %}
-      </ul>
+        <h3>Language Skills</h3>
+        <ul class="inline">
+          {% for lang in skills.language | sort(attribute='native', reverse=true) %}
+          <li class="strong tab">
+            <strong>{{ lang.language }}</strong><span>{% if lang.native %} (Native){% else %}{{ lang.listening }}{% endif %}</span>
+          </li>
+          {% endfor %}
+        </ul>
+
+        <h3>Digital Skills</h3>
+        <ul>
+          {% for category in skills.digital %}
+          <li class="strong tab">
+            <strong>{{ category.title }}</strong><span>{{ category.entries | join(', ') }}</span>
+          </li>
+          {% endfor %}
+        </ul>
+
+        <h3>Social Skills</h3>
+        <ul>
+          {% for category in skills.social %}
+          <li class="strong tab">
+            <strong>{{ category.title }}</strong><span>{{ category.entries | join(', ') }}</span>
+          </li>
+          {% endfor %}
+        </ul>
       </div>
     </section>
 
-    <section id="publications" class="newpage">
-      <h2>Publications</h2>
+    <section id="publications">
+      <h2>Publications &amp; Media Coverage</h2>
       <ul class="small">
         {% set publications = collections.publications | reverse %} 
         {% for pub in publications %}
@@ -201,6 +213,15 @@ eleventyExcludeFromCollections: true
             {{ pub.data.excerpt | replace("Van de Wynckel, M.", "<strong
               >Van de Wynckel, M.</strong
             >") | safe }}
+            {% if pub.data.link %}
+            <p class="description">
+              {% if pub.data.pdf %}
+              <a href="{{ pub.data.pdf }}">{{ pub.data.pdf }}</a>
+              {% else %}
+              <a href="{{ pub.data.link }}">{{ pub.data.link }}</a>
+              {% endif %}
+            </p>
+            {% endif %}
           </div>
         </li>
         {% endif %}
