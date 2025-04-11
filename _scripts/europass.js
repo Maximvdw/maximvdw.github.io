@@ -79,16 +79,15 @@ const download = async (page) => {
         console.log('\tWaiting for "Download" button ...');
         await new Promise((resolve) => setTimeout(resolve, delay));
         await page.evaluate(() => {
-                console.log(document.documentElement.innerHTML);
+            console.log(document.documentElement.innerHTML);
         });
         await page.waitForSelector("cv-preview-pdf");
         console.log("\tInputting CV name ...");
         await new Promise((resolve) => setTimeout(resolve, delay));
-        await new Promise((resolve) => setTimeout(resolve, 5000));
         await page.evaluate(() => {
-                document.querySelector("input[euiinputtext]").value = "europass";
-                const event = new Event("input", { bubbles: true });
-                document.querySelector("input[euiinputtext]").dispatchEvent(event);
+            document.querySelector("input[euiinputtext]").value = "europass";
+            const event = new Event("input", { bubbles: true });
+            document.querySelector("input[euiinputtext]").dispatchEvent(event);
         });
 
         await page.waitForSelector("cv-download-button");
@@ -107,7 +106,7 @@ const download = async (page) => {
         }
         await new Promise((resolve) => setTimeout(resolve, delay));
         await page.evaluate(() => {
-                document.querySelector("cv-download-button button").click();
+            document.querySelector("cv-download-button button").click();
         });
 
         // Wait for the download to complete
@@ -124,7 +123,6 @@ const download = async (page) => {
         }
     } catch (error) {
         console.error("Error downloading the CV:", error);
-        // console.log(await page.content());
     }
 };
 
@@ -132,9 +130,10 @@ async function create() {
     const browser = await puppeteer.launch({
         headless: true,
         // args: ['--no-sandbox', '--disable-setuid-sandbox'],
-        // slowMo: 50
+        // slowMo: 500
     });
     const page = await browser.newPage();
+    page.setDefaultTimeout(60000);
 
     console.log("Creating Europass CV...");
     await prepare(page);
