@@ -19,6 +19,13 @@
                 "Database management and design"
             ]
         }, {
+            "title": "DevOps",
+            "entries": [
+                "Docker",
+                "AWS",
+                "Cybersecurity"
+            ]  
+        },{
             "title": "Programming",
             "entries": [
                 "TypeScript",

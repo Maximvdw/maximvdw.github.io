@@ -95,9 +95,20 @@ layout: main.njk
                 <span>{{ entry.start | date("yyyy") }} - {{ entry.end | date("yyyy") }}</span>
                 {% endif %}
               </div>
+              <div>
               {% markdown %}
-              <div>{{ entry.description }}</div>
+              {{ entry.description }}
               {% endmarkdown %}
+              </div>
+              {%- if entry.files %}
+              <div class="files">
+              {% for file in entry.files %}
+              <a href="{{ file.url }}" class="file" target="_blank" rel="nofollow">
+                <i class="{{ file.icon }}"></i> {{ file.name }}
+              </a>
+              {% endfor %}
+              </div>
+              {%- endif %}
             </div>
           </div>
           {%- endif %}
@@ -146,9 +157,11 @@ layout: main.njk
                   {% if positionsByTitle[0].positions[0].student %}
                   {%- set item = positionsByTitle[0].positions[0] -%}
                   <h4>{{ entry.title | default(item.title) }}{% if item.note %} <small>({{ item.note }})</small>{% endif %}</h4>
+                  <div>
                   {% markdown %}
-                  <div>{{ entry.description | default(item.summary) }}</div>
+                  {{ entry.description | default(item.summary) }}
                   {% endmarkdown %}
+                  </div>
                   <a href="#" class="show-details" data-toggle="collapse" data-target="#details-{{ loop.index }}">Show details ...</a>
                   <div id="details-{{ loop.index }}" class="collapse">
                   {% endif %}
@@ -163,9 +176,11 @@ layout: main.njk
                         {%- else -%}
                         <span class="muted">{{ startDate }} - {% if item.positions[0].ongoing %}now{% else %}{{ endDate }}{% endif %}</span>
                         {%- endif -%}
+                      <div>
                       {% markdown %}
-                      <div>{{ item.positions[0].summary }}</div>
+                      {{ item.positions[0].summary }}
                       {% endmarkdown %}
+                      </div>
                     </li>
                     {%- endfor %}
                   </ul>
@@ -175,9 +190,11 @@ layout: main.njk
                 {%- else -%}
                   {%- for item in positionsByTitle %}
                   <h4>{{ item.title }}{% if item.positions[0].note %} <small>({{ item.positions[0].note }})</small>{% endif %}</h4>
+                  <div>
                   {% markdown %}
-                  <div>{{ entry.description | default(item.positions[0].summary) }}</div>
+                  {{ entry.description | default(item.positions[0].summary) }}
                   {% endmarkdown %}
+                  </div>
                   {%- endfor %}
                 {%- endif -%}
             </div>

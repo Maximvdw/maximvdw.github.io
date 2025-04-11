@@ -13,6 +13,11 @@
                 }
             }
         },
+        "files": [{
+            "name": "Activities and Research",
+            "icon": "fas fa-file-alt",
+            "url": "/documents/Attestation_of_Activities_PhD.pdf"
+        }],
         "icon": "/images/logo/vub-logo_square.svg",
         "degree": "Doctor of Science (PhD), Computer Science",
         "start": "2019-10-01",
@@ -21,7 +26,7 @@
             "title": "Interoperable and Discoverable Indoor Positioning Systems"
         },
         "eqfLevel": "8",
-        "ects": "279",
+        "ects": "285",
         "description": "Researching hybrid- and indoor positioning systems, interoperability of location data and discoverability of services using linked data and Solid. Further research on Augmented Reality, Virtual Reality, Artificial Intelligence, deep sensor fusion and internet of things. Internal defence: 12th of May, 2025."
     }, {
         "university": {
@@ -42,6 +47,11 @@
         "start": "2018-10-01",
         "end": "2019-07-01",
         "graduation": "2019-07-04",
+        "files": [{
+            "name": "Diploma",
+            "icon": "fas fa-graduation-cap",
+            "url": "/documents/MaximVandeWynckel_Master2019_EN.png"
+        }],
         "grade": {
             "label": "with great honors",
             "latin": "magna cum laude"
@@ -94,6 +104,15 @@
         "start": "2013-10-01",
         "end": "2016-07-01",
         "graduation": "2016-06-23",
+        "files": [{
+            "name": "Diploma",
+            "icon": "fas fa-graduation-cap",
+            "url": "/documents/MaximVandeWynckel_Bachelor2016_EN.png"
+        }, {
+            "name": "Award",
+            "icon": "fas fa-award",
+            "url": "/awards/2016/2016_BachelorProef.pdf"
+        }],
         "grade": {
             "label": "with great honors",
             "latin": "magna cum laude"

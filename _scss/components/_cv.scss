@@ -43,7 +43,30 @@ section.cv-section {
 
     p {
       margin: 0.2em 0;
+      margin-right: 0.8em;
       color: #666;
+    }
+
+    .files {
+      margin-top: 0.5em;
+      margin-bottom: 0.2em;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5em;
+
+      a {
+        text-decoration: none;
+        color: $primary-color;
+        font-size: 0.9em;
+        padding: 0.2em 0.4em;
+        border-radius: 4px;
+        background-color: #f7f7f7;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: #eaeaea;
+        }
+      }
     }
   }
 
