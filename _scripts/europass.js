@@ -60,6 +60,25 @@ const download = async (page) => {
         console.log('\tWaiting for "Edit" tab ...');
         await page.waitForSelector('div[role="tab"][aria-label="Edit "].eui-wizard-step--active'); // Edit tab
         await page.waitForSelector("cv-language-selector-wrapper"); // Edit tab contents
+
+        // Check for discrepancies
+        console.log("\tChecking for discrepancies...");
+        const discrepanciesSelector = 'h5#headerTitle.eui-dialog__header-title.ng-star-inserted';
+        const discrepanciesFound = await page.$(discrepanciesSelector);
+
+        if (discrepanciesFound) {
+            console.log("\tDiscrepancies found. Please resolve them manually.");
+            console.log('\tClicking on "OK" button...');
+            await page.evaluate(() => {
+                const okButton = document.querySelector('button#ok');
+                if (okButton) {
+                    okButton.click();
+                }
+            });
+            
+            await new Promise((resolve) => setTimeout(resolve, delay));
+        }
+
         console.log('\tClicking on "Next" button ...');
         await new Promise((resolve) => setTimeout(resolve, delay));
         await page.evaluate(() => {
@@ -76,7 +95,7 @@ const download = async (page) => {
         });
 
         // Wait for the download button to be available
-        console.log('\tWaiting for "Download" button ...');
+        console.log('\tWaiting for "CV preview" ...');
         await new Promise((resolve) => setTimeout(resolve, delay));
         await page.evaluate(() => {
             console.log(document.documentElement.innerHTML);
