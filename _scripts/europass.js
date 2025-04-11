@@ -84,6 +84,7 @@ const download = async (page) => {
         await page.waitForSelector("cv-preview-pdf");
         console.log("\tInputting CV name ...");
         await new Promise((resolve) => setTimeout(resolve, delay));
+        await new Promise((resolve) => setTimeout(resolve, 5000));
         await page.evaluate(() => {
                 document.querySelector("input[euiinputtext]").value = "europass";
                 const event = new Event("input", { bubbles: true });
