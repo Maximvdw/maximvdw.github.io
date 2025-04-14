@@ -51,6 +51,10 @@
             "name": "Diploma",
             "icon": "fas fa-graduation-cap",
             "url": "/documents/MaximVandeWynckel_Master2019_EN.png"
+        }, {
+            "name": "Thesis",
+            "icon": "fas fa-book",
+            "url": "/publications/2019/thesis"
         }],
         "grade": {
             "label": "with great honors",
@@ -112,6 +116,10 @@
             "name": "Award",
             "icon": "fas fa-award",
             "url": "/awards/2016/2016_BachelorProef.pdf"
+        }, {
+            "name": "Thesis",
+            "icon": "fas fa-book",
+            "url": "/publications/2016/thesis"
         }],
         "grade": {
             "label": "with great honors",
