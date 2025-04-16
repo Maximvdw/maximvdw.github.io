@@ -1516,6 +1516,29 @@
                 
             </DigitalSkillsGroup>
             
+            <DigitalSkillsGroup>
+                <Title>Semantic Web Stack</Title>
+                
+                <DigitalSkill>RDF, OWL, SHACL</DigitalSkill>
+                
+                <DigitalSkill>SPARQL</DigitalSkill>
+                
+                <DigitalSkill>JSON-LD</DigitalSkill>
+                
+                <DigitalSkill>Solid</DigitalSkill>
+                
+                <DigitalSkill>Linked Data Fragments</DigitalSkill>
+                
+                <DigitalSkill>Linked Data Notifications</DigitalSkill>
+                
+                <DigitalSkill>SEMIC toolkit</DigitalSkill>
+                
+                <DigitalSkill>Linked Data Event Streams</DigitalSkill>
+                
+                <DigitalSkill>Specification design</DigitalSkill>
+                
+            </DigitalSkillsGroup>
+            
         </DigitalSkills>
         <NetworksAndMemberships/>
         <ConferencesAndSeminars>

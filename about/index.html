@@ -34,7 +34,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-    <link rel="stylesheet" href="/css/main.css?version=2025-04-16T11:31:24.104+00:00">
+    <link rel="stylesheet" href="/css/main.css?version=2025-04-16T22:03:37.822+00:00">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
     
@@ -172,9 +172,17 @@
         class="img-fluid rounded-circle"
         itemprop="image"
       />
-      <a class="europass" href="/cv/europass">
-        <img src="/images/logo/europass-logo.svg" alt="Europass Logo">
-      </a>
+
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="cvDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-download"></i> Download CV
+        </button>
+        <div class="dropdown-menu" aria-labelledby="cvDropdown">
+          <a class="dropdown-item" href="/cv/europass">Europass</a>
+          <a class="dropdown-item" href="/cv/academic">Academic CV</a>
+          <a class="dropdown-item" href="/cv/regular">Regular CV</a>
+        </div>
+      </div>
     </div>
     <div class="col-sm-9">
       <h1>About me</h1>
