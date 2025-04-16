@@ -23,7 +23,9 @@
             "entries": [
                 "Docker",
                 "AWS",
-                "Cybersecurity"
+                "Cybersecurity",
+                "CI/CD",
+                "Git"
             ]  
         },{
             "title": "Programming",
@@ -61,6 +63,15 @@
                 "Web Technologies",
                 "Advanced Topics in Big Data",
                 "3D Modelling and Printing"
+            ]
+        }, {
+            "title": "Project Management",
+            "entries": [
+                "Agile",
+                "Scrum",
+                "Stakeholder management",
+                "Requirements engineering",
+                "End-user evaluation"
             ]
         }
     ],
