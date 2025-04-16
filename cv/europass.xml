@@ -825,7 +825,11 @@
                       <hr:FormattedDateTime>2019-10-01</hr:FormattedDateTime>
                     </StartDate>
                     
-                    <Ongoing>true</Ongoing>
+                    <EndDate>
+                      <hr:FormattedDateTime>2025-09-01</hr:FormattedDateTime>
+                    </EndDate>
+                    
+                    <Ongoing>false</Ongoing>
                 </AttendancePeriod>
                 <EducationDegree>
                     <hr:DegreeName>Doctor of Science (PhD), Computer Science</hr:DegreeName>
