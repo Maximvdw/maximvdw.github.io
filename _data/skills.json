@@ -34,6 +34,19 @@
                 "Python",
                 "C#"
             ]
+        }, {
+            "title": "Semantic Web Stack",
+            "entries": [
+                "RDF, OWL, SHACL",
+                "SPARQL",
+                "JSON-LD",
+                "Solid",
+                "Linked Data Fragments",
+                "Linked Data Notifications",
+                "SEMIC toolkit",
+                "Linked Data Event Streams",
+                "Specification design"
+            ]
         }
     ],
     "social": [

@@ -37,9 +37,17 @@ layout: main.njk
         class="img-fluid rounded-circle"
         itemprop="image"
       />
-      <a class="europass" href="/cv/europass">
-        <img src="/images/logo/europass-logo.svg" alt="Europass Logo">
-      </a>
+
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="cvDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-download"></i> Download CV
+        </button>
+        <div class="dropdown-menu" aria-labelledby="cvDropdown">
+          <a class="dropdown-item" href="/cv/europass">Europass</a>
+          <a class="dropdown-item" href="/cv/academic">Academic CV</a>
+          <a class="dropdown-item" href="/cv/regular">Regular CV</a>
+        </div>
+      </div>
     </div>
     <div class="col-sm-9">
       <h1>About me</h1>
