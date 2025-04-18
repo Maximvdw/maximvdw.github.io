@@ -72,40 +72,6 @@ eleventyExcludeFromCollections: true
     
     <div class="row">
       <section>
-        <h2>Education</h2>
-        <ul>
-          {% for edu in education %}
-          {% if edu.start %}
-          <li>
-            <div class="content">
-              <h4>{{ edu.degree }}</h4>
-              <strong>{{ edu.university.name }}</strong> <small>({{
-              edu.university.address.city }}, {{
-              edu.university.address.country.label }})</small> {% if edu.grade.latin %}
-              <p>Graduated {{ edu.grade.latin }}</p>
-              {% endif %} {% if edu.thesis %}
-              <p class="thesis"><strong>Thesis:</strong> {{ edu.thesis.title }}</p>
-              {% endif %}
-              <p class="description">{{ edu.description }}
-              </p>
-            </div>
-            <div class="date">
-              {% if edu.graduation %}
-              <span>{{ edu.graduation | date('MMMM, yyyy') }}</span>
-              {% else %}
-              <span
-                >{{ edu.start | date('yyyy') }} - {{ edu.end | date('yyyy')
-                }}</span
-              >
-              {% endif %}
-            </div>
-          </li>
-          {% endif %}
-          {% endfor %}
-        </ul>
-      </section>
-
-      <section>
         <h2>Employment</h2>
         <ul>
           {% for entry in employment %}
@@ -132,6 +98,9 @@ eleventyExcludeFromCollections: true
                   {%- for item in positionsByTitle %}
                   <li>
                     <span class="muted">{{ item.positions[0].start | date("MMM, yyyy") }} - {% if item.positions[0].ongoing %}now{% else %}{{ item.positions[0].end | date("MMM, yyyy") }}{% endif %}</span><strong>{{ item.title }}{% if item.positions[0].note %} <small>({{ item.positions[0].note }})</small>{% endif %}</strong>
+                    <p class="description">
+                      {{ item.positions[0].summary | safe }}
+                    </p>
                   </li>
                   {%- endfor %}
                 </ul>
@@ -152,6 +121,40 @@ eleventyExcludeFromCollections: true
               {%- endif -%}
             </div>
           </li>
+          {% endfor %}
+        </ul>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <ul>
+          {% for edu in education %}
+          {% if edu.start %}
+          <li>
+            <div class="content">
+              <h4>{{ edu.degree }}</h4>
+              <strong>{{ edu.university.name }}</strong> <small>({{
+              edu.university.address.city }}, {{
+              edu.university.address.country.label }})</small> {% if edu.grade.latin %}
+              <p class="graduated">Graduated {{ edu.grade.latin }}</p>
+              {% endif %} {% if edu.thesis %}
+              <p class="thesis"><strong>Thesis:</strong> {{ edu.thesis.title }}</p>
+              {% endif %}
+              <p class="description">{{ edu.description }}
+              </p>
+            </div>
+            <div class="date">
+              {% if edu.graduation %}
+              <span>{{ edu.graduation | date('MMMM, yyyy') }}</span>
+              {% else %}
+              <span
+                >{{ edu.start | date('yyyy') }} - {{ edu.end | date('yyyy')
+                }}</span
+              >
+              {% endif %}
+            </div>
+          </li>
+          {% endif %}
           {% endfor %}
         </ul>
       </section>
