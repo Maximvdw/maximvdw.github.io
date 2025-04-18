@@ -129,7 +129,7 @@
     </CandidatePerson>
     <CandidateProfile languageCode="en">
         <hr:ID schemeID="Maxim Van de Wynckel" schemeName="CandidateProfileID" schemeAgencyName="EUROPASS" schemeVersionID="1.0"/>
-        <hr:ExecutiveSummary>I am a software engineer and researcher with a passion for interoperable and privacy-aware (information) systems. My main research interests include linked open data, personal data vaults, sensor fusion and positioning systems.</hr:ExecutiveSummary>
+        <hr:ExecutiveSummary>I am a software engineer, researcher and project manager with a passion for interoperable (information) systems. My main expertise lies in linked open data, data spaces, sensor processing &amp; RTLS. With my business skills and knowledge, I am capable of integrating innovation in existing business processes.</hr:ExecutiveSummary>
         <EmploymentHistory>
             
             
@@ -232,7 +232,7 @@
                     </eures:EmploymentPeriod>
                     <oa:Description>
                         
-                        Freelance software development and consultancy. Projects spanning from web development to IoT and AI implementation in business processes.
+                        Freelance software development and consultancy. Projects spanning from web development to IoT and AI integration into existing business processes. Project lead with external partners.
                     </oa:Description>
                     <oa:AddressLine>Invalidenlaan 178/5</oa:AddressLine>
                     <oa:CityName>Oudergem</oa:CityName>
