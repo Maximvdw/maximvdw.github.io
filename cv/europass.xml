@@ -1739,7 +1739,20 @@
         <Projects>
             
             <Project>
-                <Title>OpenHPS</Title>
+                <Title>ChemStream Intranet</Title>
+                <Date>
+                    <StartDate>
+                        <hr:FormattedDateTime>2014-01-01</hr:FormattedDateTime>
+                    </StartDate>
+                    
+                    <Ongoing>true</Ongoing>
+                </Date>
+                <Description>Development of an intranet database for storing and searching chemicals and other data.</Description>
+                <Link></Link>
+            </Project>
+            
+            <Project>
+                <Title>OpenHPS: An Open-Source Hybrid Positioning System</Title>
                 <Date>
                     <StartDate>
                         <hr:FormattedDateTime>2019-10-01</hr:FormattedDateTime>
@@ -1749,6 +1762,19 @@
                 </Date>
                 <Description>OpenHPS is an open source hybrid positioning system to help developers fuse various positioning technologies and algorithms. The system offers a modular data processing framework with each modules ranging from computer vision to common algorithms such as fingerprinting or data persistence of sampled data.</Description>
                 <Link>https://openhps.org</Link>
+            </Project>
+            
+            <Project>
+                <Title>POSO: Positioning System Ontology</Title>
+                <Date>
+                    <StartDate>
+                        <hr:FormattedDateTime>2022-04-01</hr:FormattedDateTime>
+                    </StartDate>
+                    
+                    <Ongoing>true</Ongoing>
+                </Date>
+                <Description>The positioning system ontology is a vocabulary for describing positioning systems and the techniques these systems use to determine a position. With POSO we aim to provide semantic meaning on how a positioning system is deployed and how results are calculated.</Description>
+                <Link>https://poso.openhps.org</Link>
             </Project>
             
             <Project>
