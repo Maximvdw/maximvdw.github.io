@@ -136,6 +136,10 @@
     font-size: 0.9em;
   }
 
+  .date.wide {
+    flex: 0 0 120px;
+  }
+
   .content {
     flex: 1;
   }
@@ -337,13 +341,9 @@ li.strong.tab span {
 #bio {
   margin-top: 1rem;
   font-style: italic;
-<<<<<<< HEAD
-  font-size: 0.85em;
-=======
   font-size: 0.8em;
   page-break-inside: avoid;
   page-break-after: avoid;
->>>>>>> d5962211a7c0b40d876b0c59cc48db8ee307f34c
 }
 
 section div.row {

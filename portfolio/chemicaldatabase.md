@@ -1,11 +1,13 @@
 ---
 layout: portfolio.njk
-title: "Chemical structure database"
-logo: /images/logo/sembeacon-logo.svg
-thumbnail: /images/logo/sembeacon-logo.svg
+title: "ChemStream Intranet"
+logo: /images/logo/chemstream-logo.svg
+thumbnail: /images/logo/chemstream-logo.svg
 start: 2014-01-01
 ongoing: true
+excerpt: Development of an intranet database for storing and searching chemicals and other data.
 type: job
+cv: true
 ---
 I was hired in 2014 as a student by [ChemStream BV.](https://chemstream.be) to develop a Web-based database for maintaining chemicals and their associated data. The database was developed in PHP and MySQL and has been in use since 2015. Chemical structure searching was based on [checkmol](https://homepage.univie.ac.at/norbert.haider/cheminf/cmmm.html) and matchmol.
 

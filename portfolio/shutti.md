@@ -6,6 +6,7 @@ thumbnail: /images/logo/shutti-logo.png
 website: https://web.archive.org/web/20130831040157/http://www.shutti.co.nr:80/
 start: 2009-04-01
 end: 2013-07-01
+role: Lead Developer
 excerpt: "Shutti was a set of software tools developed for Windows that enabled users to optimize, schedule and automate their computer's power management settings."
 type: hobby
 ---

@@ -7,6 +7,7 @@ website: https://web.archive.org/web/20180812082356/https://ehbrooster.be/
 start: 2015-09-01
 end: 2018-07-01
 type: hobby
+cv: true
 excerpt: EhBRooster.be was a project aimed at improving the usability of timetables for Erasmushogeschool Brussel, gaining significant interest from students and staff. Developed in Java and PHP, the website influenced the adoption of a new timetable system before its discontinuation in 2018.
 images:
 - url: ./300515923_131864919559904_6413569435063153713_n.png

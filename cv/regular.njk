@@ -192,6 +192,30 @@ eleventyExcludeFromCollections: true
       </div>
     </section>
 
+    <section id="projects">
+      <h2>Projects<span class="note">The following projects are the main projects I have been part of.</span></h2>
+      <ul class="small">
+        {% for project in collections.portfolio %}
+        {% if project.data.cv %}
+        <li>
+          <div class="content">
+            <h4>{{ project.data.title }}</h4>
+            <p class="description">
+              {{ project.data.excerpt | safe }}
+              <a href="{{ project.data.link }}"
+                >{{ project.data.link }}</a
+              >
+            </p>
+          </div>
+          <div class="date wide">
+            <span>{{ project.data.start | date('yyyy') }} - {% if project.data.ongoing %}ongoing{% else %}{{ project.data.end | date('yyyy') }}{% endif %}</span>
+          </div>
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </section>
+
     <section id="publications">
       <h2>Publications &amp; Media Coverage</h2>
       <ul class="small">
