@@ -168,7 +168,7 @@
                     <hr:CurrentIndicator>true</hr:CurrentIndicator>
                 </eures:EmploymentPeriod>
                 <PositionHistory>
-                    <PositionTitle typeCode="FREETEXT">University teaching assistant and researcher</PositionTitle>
+                    <PositionTitle typeCode="FREETEXT">Academic and Teaching Staff</PositionTitle>
                     <eures:EmploymentPeriod>
                         <eures:StartDate>
                             <hr:FormattedDateTime>2019-10-01</hr:FormattedDateTime>
@@ -566,7 +566,7 @@
                         
                         (Student contract) 
                         
-                        Development of QR-code based appointment system. Google Fit integration for patients. Healthcare software development.
+                        Development of QR-code based appointment system. Optimising the printing of appointments via Zebra printers. Google Fit integration for patients. Healthcare software development.
                     </oa:Description>
                     <oa:AddressLine>Laarbeeklaan 101</oa:AddressLine>
                     <oa:CityName>Jette</oa:CityName>
@@ -623,7 +623,7 @@
                         
                         (Student contract) 
                         
-                        eID cloud authentication Bachelor thesis preparatory training.
+                        eID cloud authentication thesis preparatory training. Security testing and protocol analysis.
                     </oa:Description>
                     <oa:AddressLine></oa:AddressLine>
                     <oa:CityName>Evergem</oa:CityName>
@@ -678,7 +678,7 @@
                         
                         (Student contract) 
                         
-                        eID cloud authentication and security penetration testing.
+                        Security penetration testing of eID cloud authentication in C++.
                     </oa:Description>
                     <oa:AddressLine></oa:AddressLine>
                     <oa:CityName>Evergem</oa:CityName>
