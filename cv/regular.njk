@@ -208,7 +208,7 @@ eleventyExcludeFromCollections: true
             </p>
           </div>
           <div class="date wide">
-            <span>{{ project.data.start | date('yyyy') }} - {% if project.data.ongoing %}ongoing{% else %}{{ project.data.end | date('yyyy') }}{% endif %}</span>
+            <span>{{ project.data.start | date('yyyy') }} - {% if project.data.ongoing %}now{% else %}{{ project.data.end | date('yyyy') }}{% endif %}</span>
           </div>
         </li>
         {% endif %}

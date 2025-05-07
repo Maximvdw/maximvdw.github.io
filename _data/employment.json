@@ -16,7 +16,7 @@
         },
         "positions": [
             {
-                "title": "University teaching assistant and researcher",
+                "title": "Academic and Teaching Staff",
                 "start": "2019-10-01",
                 "ongoing": true,
                 "unit": "Department of Computer Science",
@@ -148,7 +148,7 @@
                 "title": "Software developer internship",
                 "start": "2016-02-01",
                 "end": "2016-05-31",
-                "summary": "Development of QR-code based appointment system. Google Fit integration for patients. Healthcare software development.",
+                "summary": "Development of QR-code based appointment system. Optimising the printing of appointments via Zebra printers. Google Fit integration for patients. Healthcare software development.",
                 "student": true,
                 "note": "student job"
             }
@@ -177,7 +177,7 @@
                 "title": "Software developer internship",
                 "start": "2015-10-01",
                 "end": "2015-12-31",
-                "summary": "eID cloud authentication Bachelor thesis preparatory training.",
+                "summary": "eID cloud authentication thesis preparatory training. Security testing and protocol analysis.",
                 "student": true,
                 "note": "student job"
             }, 
@@ -185,7 +185,7 @@
                 "title": "Software developer",
                 "start": "2015-08-01",
                 "end": "2015-09-30",
-                "summary": "eID cloud authentication and security penetration testing.",
+                "summary": "Security penetration testing of eID cloud authentication in C++.",
                 "student": true,
                 "note": "student job"
             }
