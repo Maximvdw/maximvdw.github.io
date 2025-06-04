@@ -4,12 +4,24 @@
   <subtitle>An open-source hybrid positioning system framework.</subtitle>
   <link href="https://maximvdw.be/feed.xml" rel="self"/>
   <link href="https://maximvdw.be"/>
-  <updated>2025-03-15T00:00:00Z</updated>
+  <updated>2025-06-04T00:00:00Z</updated>
   <id>https://maximvdw.be</id>
   <author>
     <name>Maxim Van de Wynckel</name>
     <email>maxim.van.de.wynckel@vub.be</email>
   </author>
+  
+  <entry>
+    <title>Invitation to my public PhD defence</title>
+    <link href="https://maximvdw.be/posts/2025/06/04/"/>
+    <updated>2025-06-04T00:00:00Z</updated>
+    <id>https://maximvdw.be/posts/2025/06/04/</id>
+    <content type="html">&lt;p&gt;You are cordially invited to attend my public PhD defence, which will be held on Monday, 30 June at 15:00 at the Vrije Universiteit Brussel (Campus Etterbeek).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Abstract (English):&lt;/strong&gt; &lt;a href=&quot;https://phd.maximvdw.be/&quot;&gt;https://phd.maximvdw.be/&lt;/a&gt;&lt;br /&gt;
+&lt;strong&gt;Abstract (Dutch):&lt;/strong&gt; &lt;a href=&quot;https://phd.maximvdw.be/nl/&quot;&gt;https://phd.maximvdw.be/nl/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;If you are interested in attending, please contact me at &lt;a href=&quot;mailto:me@maximvdw.be&quot;&gt;me@maximvdw.be&lt;/a&gt; for further details regarding registration.&lt;/p&gt;
+</content>
+  </entry>
   
   <entry>
     <title>Research featured in an interview</title>

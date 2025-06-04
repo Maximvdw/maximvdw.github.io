@@ -1037,6 +1037,26 @@
         <PublicationHistory>
            
             <Publication>
+                <hr:FormattedPublicationDescription>Pseudonymised survey results of our 2025 survey on the privacy and transparency of location data</hr:FormattedPublicationDescription>
+                <Title>Survey on the Privacy and Transparency of Location Data</Title>
+                <Year>2025</Year>
+                <Reference>
+                    
+                    Van de Wynckel, M., &amp; Signer, B. (2025). Survey on the Privacy and Transparency of Location Data. https://doi.org/10.5281/zenodo.15564050
+
+                </Reference>
+                
+                <DOI>
+                  <Link>https://zenodo.org/records/15564052</Link>
+                </DOI>
+                
+                
+                
+                <Link>https://maximvdw.be/publications/2025/vandewynckel2025survey/</Link>
+                
+            </Publication>
+            
+            <Publication>
                 <hr:FormattedPublicationDescription>&#39;Locatiegegevens zijn big business&#39;, zegt doctoraatsonderzoeker Maxim Van de Wynckel. Zulke data worden door een hele rist aan applicaties en andere diensten opgeslagen. &#39;Denk aan navigatie- en fitnessapps, maar ook aan wifi- en bluetooth-signalen. Gebruikers zijn zich vaak niet bewust van die onzichtbare vormen van dataverzameling&#39;. Recente gebeurtenissen tonen aan hoe kwetsbaar locatiegegevens zijn.</hr:FormattedPublicationDescription>
                 <Title>Jong Talent: Maxim Van de Wynckel (30) zoekt oplossingen om gebruikers meer controle te geven over hun locatiegegevens</Title>
                 <Year>2025</Year>

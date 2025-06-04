@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Survey on the Privacy and Transparency of Location Data | Maxim Van de Wynckel</title>
+
+<meta name="description" content="Van de Wynckel, M., &amp; Signer, B. (2025). Survey on the Privacy and Transparency of Location Data. https://doi.org/10.5281/zenodo.15564050
+">
+<meta name="robots" content="index,follow">
+<meta name="author" content="Maxim Van de Wynckel">
+
+<link rel="canonical" href="https://maximvdw.be/publications/2025/vandewynckel2025survey/">
+
+<meta property="og:title" content="Survey on the Privacy and Transparency of Location Data | Maxim Van de Wynckel">
+<meta property="og:type" content="article">
+
+<meta property="og:url" content="https://maximvdw.be/publications/2025/vandewynckel2025survey/">
+<meta property="og:description" content="Van de Wynckel, M., &amp; Signer, B. (2025). Survey on the Privacy and Transparency of Location Data. https://doi.org/10.5281/zenodo.15564050
+">
+<meta property="og:image" content="https://maximvdw.be/images/social/summary-large.png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@MVdWSoftware">
+<meta name="twitter:url" content="https://maximvdw.be/publications/2025/vandewynckel2025survey/">
+<meta name="twitter:title" content="Survey on the Privacy and Transparency of Location Data | Maxim Van de Wynckel">
+<meta name="twitter:description" content="Van de Wynckel, M., &amp; Signer, B. (2025). Survey on the Privacy and Transparency of Location Data. https://doi.org/10.5281/zenodo.15564050
+">
+<meta name="twitter:image" content="https://maximvdw.be/images/social/summary-large.png">
+
+
+
+    <meta name="keywords" content="maxim van de wynckel, researcher, indoor positioning, navigation systems, interoperability, linked data, semantic web, location-based services">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="/css/main.css?version=2025-06-04T17:03:25.832+00:00">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+    
+    <link type="application/atom+xml" rel="alternate" href="https://maximvdw.be/feed.xml" title="" >
+
+    
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+
+    <meta name="theme-color" content="#284cb5">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BQZFG2FMWN"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-BQZFG2FMWN');
+    </script>
+</head>
+
+
+  <body>
+    
+    <aside class="sidebar">
+    <div class="profile">
+        <a href="/"><img src="/images/profile/maxim_2025.jpg" alt="Maxim Van de Wynckel"></a>
+        <div class="firstname">Maxim</div>
+        <div class="lastname">Van de Wynckel</div>
+        <div class="bio">Researcher, consultant, software engineer</div>
+    </div>
+    <ul class="menu">
+        
+        
+        <li><a  href="/about/">About me</a></li>
+        
+        <li><a  href="/posts/">Blog</a></li>
+        
+        <li><a class="active" href="/publications/">Publications</a></li>
+        
+        <li><a  href="/presentations/">Talks</a></li>
+        
+        <li><a  href="/teaching/">Teaching</a></li>
+        
+        <li><a  href="/portfolio/">Portfolio</a></li>
+        
+    </ul>
+</aside>
+<div class="hamburger" onclick="toggleSidebar()">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<script>
+    function isOpen() {
+        return document.querySelector('aside.sidebar').classList.contains('open');
+    }
+
+    function toggleSidebar() {
+        document.querySelector('aside.sidebar').classList.toggle('open');
+        document.querySelector('.content').classList.toggle('shifted');
+        document.querySelector('footer').classList.toggle('shifted');
+        document.querySelector('.hamburger').classList.toggle('active');
+    }
+
+    let touchstartX = 0;
+    let touchendX = 0;
+
+    function handleGesture() {
+        const threshold = 100; // Minimum swipe distance in pixels
+        if (touchendX < touchstartX - threshold) {
+            // Swiped left
+            if (isOpen()) {
+                toggleSidebar();
+            }
+        }
+        if (touchendX > touchstartX + threshold) {
+            // Swiped right
+            if (!isOpen()) {
+                toggleSidebar();
+            }
+        }
+    }
+
+    document.addEventListener('touchstart', function(event) {
+        touchstartX = event.changedTouches[0].screenX;
+    }, false);
+
+    document.addEventListener('touchend', function(event) {
+        touchendX = event.changedTouches[0].screenX;
+        handleGesture();
+    }, false);
+</script>
+
+    <section class="content" id="content">
+      <div class="container main">
+    <div class="row">
+        <div class="col-sm-3 mobile-hide">
+            <nav class="navigation">
+            
+                <h3>2025</h3>
+                <ul>
+                
+                    <li class="selected">
+                    <a href="/publications/2025/vandewynckel2025survey/" class="current">Survey on the Privacy and Transparency of Location Data</a>
+                    </li>
+                
+                    <li >
+                    <a href="/publications/2025/knack/" >Jong Talent: Maxim Van de Wynckel (30) zoekt oplossingen om gebruikers meer controle te geven over hun locatiegegevens</a>
+                    </li>
+                
+                    <li >
+                    <a href="/publications/2025/vandewynckel2025sphero/" >Sphero Dead Reckoning and CV Tracking Dataset</a>
+                    </li>
+                
+                    <li >
+                    <a href="/publications/2025/vandewynckel2025kaggle/" >Garage Positioning Dataset</a>
+                    </li>
+                
+                </ul>
+            
+                <h3>2024</h3>
+                <ul>
+                
+                    <li >
+                    <a href="/publications/2024/sosy2024yoshi/" >Towards Distributed Intelligent Tutoring Systems Based on User-owned Progress and Performance Data</a>
+                    </li>
+                
+                    <li >
+                    <a href="/publications/2024/sosy2024maxim/" >Discoverable and Interoperable Augmented Reality Environments Through Solid Pods</a>
+                    </li>
+                
+                    <li >
+                    <a href="/publications/2024/eswc2024/" >FidMark: A Fiducial Marker Ontology for Semantically Describing Visual Markers</a>
+                    </li>
+                
+                </ul>
+            
+                <h3>2023</h3>
+                <ul>
+                
+                    <li >
+                    <a href="/publications/2023/iot2023/" >SemBeacon: A Semantic Proximity Beacon Solution for Discovering and Detecting the Position of Physical Things</a>
+                    </li>
+                
+                    <li >
+                    <a href="/publications/2023/vermunicht2023/" >802.11 Managemement frames from a public location</a>
+                    </li>
+                
+                    <li >
+                    <a href="/publications/2023/hoebeke2023/" >Object Tracking on a Monopoly Game Board</a>
+                    </li>
+                
+                </ul>
+            
+                <h3>2022</h3>
+                <ul>
+                
+                    <li >
+                    <a href="/publications/2022/iswc2022/" >POSO: A Generic Positioning System Ontology</a>
+                    </li>
+                
+                    <li >
+                    <a href="/publications/2022/ipin2022/" >A Solid-based Architecture for Decentralised Interoperable Location Data</a>
+                    </li>
+                
+                </ul>
+            
+                <h3>2021</h3>
+                <ul>
+                
+                    <li >
+                    <a href="/publications/2021/ipin2021/" >Indoor Positioning Using the OpenHPS Framework</a>
+                    </li>
+                
+                    <li >
+                    <a href="/publications/2021/dataset/" >OpenHPS: Single Floor Fingerprinting and Trajectory Dataset</a>
+                    </li>
+                
+                </ul>
+            
+                <h3>2020</h3>
+                <ul>
+                
+                    <li >
+                    <a href="/publications/2020/openhps2020/" >OpenHPS: An Open Source Hybrid Positioning System</a>
+                    </li>
+                
+                </ul>
+            
+                <h3>2019</h3>
+                <ul>
+                
+                    <li >
+                    <a href="/publications/2019/thesis/" >Master thesis: Indoor Navigation by Centralized Tracking</a>
+                    </li>
+                
+                </ul>
+            
+                <h3>2016</h3>
+                <ul>
+                
+                    <li >
+                    <a href="/publications/2016/thesis/" >Bachelor thesis: eID IO - Applicatie besturing</a>
+                    </li>
+                
+                </ul>
+            
+                <h3>2013</h3>
+                <ul>
+                
+                    <li >
+                    <a href="/publications/2013/gip/" >Final work: WisaReg</a>
+                    </li>
+                
+                </ul>
+            
+            </nav>
+        </div>
+        <div class="col-sm-9 typography" itemscope itemtype="http://schema.org/ScholarlyArticle">
+            
+
+            <h1 itemprop="headline">Survey on the Privacy and Transparency of Location Data</h1>
+            <meta itemprop="author" content="Maxim Van de Wynckel">
+            <meta itemprop="citation" content="Van de Wynckel, M., &amp; Signer, B. (2025). Survey on the Privacy and Transparency of Location Data. https://doi.org/10.5281/zenodo.15564050
+">
+            <meta itemprop="image" content="/publications/2025/vandewynckel2025survey.jpg">
+            <meta itemprop="datePublished" content="2025-05-31T00:00:00Z">
+
+            
+            
+            
+            
+            <a href="https://zenodo.org/records/15564052" class="btn btn-yellow btn-icon">
+                
+                    <i class="ai ai-zenodo"></i>
+                
+            </a>
+            
+            
+            
+            
+            
+            <a href="#" class="btn btn-outline-primary btn-icon" onclick="showCitationDialog()"><i class="fa fa-quote-right"></i> Cite this</a>
+            
+            
+            <div id="citation-dialog" class="citation-dialog">
+                <div class="citation-dialog-content">
+                    <span class="close" onclick="closeCitationDialog()">&times;</span>
+                    <h2>Citation</h2>
+                    <div class="tabs">
+                        <button class="tablinks" onclick="openTab(event, 'APA')">APA</button>
+                        <button class="tablinks" onclick="openTab(event, 'BibTeX')">BibTeX</button>
+                    </div>
+                    <div id="APA" class="tabcontent">
+                        <pre id="apaCitation">Van de Wynckel, M., &amp; Signer, B. (2025). Survey on the Privacy and Transparency of Location Data. https://doi.org/10.5281/zenodo.15564050
+</pre>
+                        <button class="copy-btn" onclick="copyToClipboard('apaCitation')">Copy</button>
+                    </div>
+                    <div id="BibTeX" class="tabcontent">
+                        <pre id="bibtexCitation">@misc{maxim_van_de_wynckel_beat_signer_2025,
+	author = {Van de Wynckel, Maxim and Signer, Beat},
+	doi = {10.5281/zenodo.15564050},
+	year = {2025},
+	month = {5},
+	title = {Survey on the {Privacy} and {Transparency} of {Location} {Data}},
+}
+
+</pre>
+                        <button class="copy-btn" onclick="copyToClipboard('bibtexCitation')">Copy</button>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Authors</h2>
+            <ul class="authors">
+                
+                
+                <li itemprop="author" itemscope itemtype="http://schema.org/Person">
+                    <meta itemprop="givenName" content="Maxim">
+                    <meta itemprop="familyName" content="Van de Wynckel">
+                    
+                        <meta itemprop="url" content="https://maximvdw.be/about/#me">
+                        <span class="name me" itemprop="name">Maxim Van de Wynckel</span>
+                    
+                </li>
+                
+                <li itemprop="author" itemscope itemtype="http://schema.org/Person">
+                    <meta itemprop="givenName" content="Beat">
+                    <meta itemprop="familyName" content="Signer">
+                    
+                        <span itemprop="name">Beat Signer</span>
+                    
+                </li>
+                
+            </ul>
+
+            <h2>Abstract</h2>
+            <div class="abstract" itemprop="abstract">
+                
+                    <p>This dataset contains information about our survey on the “Privacy and Transparency of Location Data”. The survey was launched in January 2025 and was primarily used to determine how users perceive the privacy and transparency of their location data in mobile applications.</p>
+<h2 id="file-structure" tabindex="-1">File Structure</h2>
+<ul>
+<li><code>README.md</code>: This file.</li>
+<li><code>data_pseudonymised.xlsx</code>: Pseudonymised survey results.</li>
+<li><code>data_pseudonymised.csv</code>: Pseudonymised survey results.</li>
+<li><code>images/</code>: Contains aggregated images of the survey results.</li>
+<li><code>screenshots/</code>: Screenshots of the survey</li>
+</ul>
+<h2 id="data_pseudonymised.%7Bxlsx%2Ccsv%7D" tabindex="-1"><code>data_pseudonymised.{xlsx,csv}</code></h2>
+<h3 id="columns" tabindex="-1">Columns</h3>
+<ul>
+<li><code>ID</code>: Identifier of the participant (randomised)</li>
+<li><code>Q2</code> -&gt; <code>Q29</code>: Question answers</li>
+<li><code>QX_Y</code>: X is the question, Y is the subquestion</li>
+<li><code>Q*_TRANSLATION</code>: Translation from Dutch for questions where <code>Q*</code> was an open question with a Dutch response</li>
+<li><code>Origin</code>: Country code</li>
+</ul>
+<h2 id="questions" tabindex="-1">Questions</h2>
+<p>In this section, we list all the questions asked in the survey. We also provide additional context as to why some of these questions were asked. Each question is numbered (e.g., Q5); this is an internal numbering and corresponds to the results presented in <a href="#pseudonymised-results">Pseudonymised Results</a>.</p>
+<h3 id="general-awareness" tabindex="-1">General Awareness</h3>
+<p>We began with general questions concerning participants' awareness of location data privacy. Some of these questions also serve as redundant questions for other questions. The possible answers to these questions are sometimes intentionally vague or self-explanatory to encourage participants to think critically about the potential impacts. Additionally, these questions help scope the follow-up questions.</p>
+<h4 id="%5Bq2%5D-how-familiar-are-you-with-the-concept-of-location-data-tracking%3F" tabindex="-1">[Q2] How familiar are you with the concept of location data tracking?</h4>
+<p>Participants were asked about their familiarity with location data tracking. Choices ranged from <em>&quot;Not at all familiar&quot;</em> (1) to <em>&quot;Extremely familiar&quot;</em> (5).</p>
+<h4 id="%5Bq3%5D-how-can-services-or-companies-track-your-physical-location%3F-(tick-all-that-apply)" tabindex="-1">[Q3] How can services or companies track your physical location? (Tick all that apply)</h4>
+<p>Options (random order):</p>
+<ol>
+<li>By sharing my location data using an application</li>
+<li>Through surveillance cameras</li>
+<li>By monitoring wireless activity</li>
+<li>By accessing cloud data</li>
+<li>Through my visits to websites</li>
+<li>By intercepting cellular signals</li>
+<li>Through my social media posts</li>
+</ol>
+<h4 id="%5Bq4%5D-which-of-the-following-applications-do-you-think-use-your-location-data%3F-(tick-all-that-apply)" tabindex="-1">[Q4] Which of the following applications do you think use your location data? (Tick all that apply)</h4>
+<p>Options (random order):</p>
+<ol>
+<li>GPS/Maps applications</li>
+<li>Social media apps</li>
+<li>Weather apps</li>
+<li>E-commerce platforms</li>
+<li>Ride-sharing or food delivery apps</li>
+<li>Smart home devices or assistants</li>
+<li>Travel or airline apps</li>
+<li>Fitness or health-tracking apps</li>
+<li>Banking apps</li>
+<li>E-mail clients</li>
+<li>Applications to control smart devices</li>
+<li>None of the above</li>
+</ol>
+<h4 id="%5Bq5%5D-have-you-ever-installed-a-navigation-application-for-one-specific-building%3F" tabindex="-1">[Q5] Have you ever installed a navigation application for one specific building?</h4>
+<p>Context: <em>For navigating an airport, conference, hospital or any other building</em>.
+Answers: yes, no, or unsure.</p>
+<h4 id="%5Bq6%5D-how-often-do-you-check-the-permissions-granted-to-apps-regarding-location-tracking%3F" tabindex="-1">[Q6] How often do you check the permissions granted to apps regarding location tracking?</h4>
+<p>Answers: always, often, sometimes, rarely, never.</p>
+<h4 id="%5Bq7%5D-how-often-do-you-read-privacy-policies-when-downloading-or-using-apps%3F" tabindex="-1">[Q7] How often do you read privacy policies when downloading or using apps?</h4>
+<p>Gauge: 0 (never) to 10 (always).</p>
+<h4 id="%5Bq8%5D-without-checking%2C-what-percentage-of-applications-on-your-smartphone-have-constant-access-to-your-location-data%3F" tabindex="-1">[Q8] Without checking, what percentage of applications on your smartphone have constant access to your location data?</h4>
+<p>Context: <em>Constant access means the app can request your location even when not running</em>.
+Gauge: 0% to 100%.</p>
+<h4 id="%5Bq9%5D-on-a-scale-from-1-to-10%2C-how-valuable-do-you-think-your-location-data-is-to-third-parties%3F" tabindex="-1">[Q9] On a scale from 1 to 10, how valuable do you think your location data is to third parties?</h4>
+<p>Gauge: 1 to 10.</p>
+<h3 id="privacy-concerns" tabindex="-1">Privacy Concerns</h3>
+<p>This set of questions aims to assess any privacy issues associated with location data.</p>
+<h4 id="%5Bq10%5D-rank-the-following-concerns-about-location-data-tracking" tabindex="-1">[Q10] Rank the following concerns about location data tracking</h4>
+<p>Options:</p>
+<ol>
+<li>Data being shared with third parties</li>
+<li>Data used for targeted advertising</li>
+<li>Data being stolen in a breach</li>
+<li>Lack of transparency about data usage</li>
+<li>Being monitored by authorities/employers</li>
+<li>Being monitored by friends/family</li>
+<li>Denied access due to profiling</li>
+<li>Apps collecting more information than needed</li>
+<li>Unclear consent processes</li>
+<li>Cross-device tracking by third parties</li>
+</ol>
+<h4 id="%5Bq11%5D-how-concerned-are-you-about-the-following-scenarios%3F" tabindex="-1">[Q11] How concerned are you about the following scenarios?</h4>
+<p>Scale: 1 (not at all concerned) to 5 (extremely concerned).
+Scenarios:</p>
+<ol>
+<li>Data sold to third parties</li>
+<li>Detailed profiling</li>
+<li>Denial of services due to profiling</li>
+<li>Unauthorised movement tracking</li>
+<li>Data vulnerable to breaches</li>
+</ol>
+<h4 id="%5Bq12%5D-do-you-feel-you-have-enough-control-over-how-your-location-data-is-used%3F" tabindex="-1">[Q12] Do you feel you have enough control over how your location data is used?</h4>
+<p>Scale: 1 (definitely not) to 5 (definitely yes).
+Follow-up based on answer:</p>
+<ul>
+<li>Why do you feel you need more control?</li>
+<li>Why do you feel you have enough control?</li>
+</ul>
+<h4 id="%5Bq13%5D-have-you-ever-refused-to-use-an-app-or-service-because-of-privacy-concerns%3F" tabindex="-1">[Q13] Have you ever refused to use an app or service because of privacy concerns?</h4>
+<p>Yes/No.</p>
+<h4 id="%5Bq14%5D-what-actions%2C-if-any%2C-do-you-take-to-limit-location-tracking%3F" tabindex="-1">[Q14] What actions, if any, do you take to limit location tracking?</h4>
+<p>Open question.</p>
+<h3 id="transparency-of-applications-and-systems" tabindex="-1">Transparency of Applications and Systems</h3>
+<h4 id="%5Bq15%5D-how-transparent-do-you-believe-apps-and-systems-are-about-location-data%3F" tabindex="-1">[Q15] How transparent do you believe apps and systems are about location data?</h4>
+<p>Scale: 1 (strongly disagree) to 5 (strongly agree).
+Statements:</p>
+<ol>
+<li>Apps explain why they need location</li>
+<li>Privacy policies are easy to understand</li>
+<li>I feel informed about sharing</li>
+<li>I know how often apps access my location</li>
+<li>I understand the impact of declining sharing</li>
+</ol>
+<h4 id="%5Bq16%5D-would-you-trust-an-app-more-with-real-time-location-access-notifications%3F" tabindex="-1">[Q16] Would you trust an app more with real-time location access notifications?</h4>
+<p>Context: <em>e.g., an icon like when the camera is used</em>
+Options:</p>
+<ol>
+<li>Yes, much more confident</li>
+<li>Yes, if not intrusive</li>
+<li>No, it wouldn’t affect trust</li>
+</ol>
+<h4 id="%5Bq17%5D-if-a-company-misuses-location-data%2C-how-would-it-affect-your-behaviour%3F" tabindex="-1">[Q17] If a company misuses location data, how would it affect your behaviour?</h4>
+<p>Options:</p>
+<ol>
+<li>Stop using the service</li>
+<li>Change permissions</li>
+<li>Switch to a competitor</li>
+<li>Demand accountability</li>
+<li>No change in behaviour</li>
+</ol>
+<h4 id="%5Bq18%5D-what%E2%80%99s-your-preferred-way-for-apps-to-communicate-location-policies%3F" tabindex="-1">[Q18] What’s your preferred way for apps to communicate location policies?</h4>
+<p>Options:</p>
+<ol>
+<li>Summary during setup</li>
+<li>Detailed document</li>
+<li>Short video</li>
+<li>Periodic notifications</li>
+<li>Other (with text field Q18_TEXT)</li>
+</ol>
+<h4 id="%5Bq19%5D-how-comfortable-would-you-be-with-local-storage-of-location-data%3F" tabindex="-1">[Q19] How comfortable would you be with local storage of location data?</h4>
+<p>Scale: 1 (extremely uncomfortable) to 5 (extremely comfortable)</p>
+<h3 id="valuation-of-location-data" tabindex="-1">Valuation of Location Data</h3>
+<h4 id="%5Bq20%5D-how-important-is-location-data-to-your-daily-apps%3F" tabindex="-1">[Q20] How important is location data to your daily apps?</h4>
+<p>Options: not at all, slightly, moderately, very, extremely, don’t know.</p>
+<h4 id="%5Bq21%5D-would-you-pay-for-a-no-tracking-version-of-an-app%3F" tabindex="-1">[Q21] Would you pay for a no-tracking version of an app?</h4>
+<p>Context: <em>Disable tracking via fee</em>
+Options: yes, maybe, no</p>
+<h4 id="%5Bq22%5D-what-kind-of-incentive-would-justify-location-tracking%3F" tabindex="-1">[Q22] What kind of incentive would justify location tracking?</h4>
+<p>Options:</p>
+<ol>
+<li>Improved performance/features</li>
+<li>Personalised content</li>
+<li>Monetary rewards</li>
+<li>None</li>
+<li>Other (Q22_TEXT)</li>
+</ol>
+<h4 id="%5Bq23%5D-why-do-you-think-companies-collect-location-data%3F" tabindex="-1">[Q23] Why do you think companies collect location data?</h4>
+<p>Options:</p>
+<ol>
+<li>Improve features</li>
+<li>Advertising</li>
+<li>Sell data</li>
+<li>Analytics</li>
+<li>Legal compliance</li>
+<li>UX improvements</li>
+<li>Other (Q23_TEXT)</li>
+</ol>
+<h4 id="%5Bq24%5D-how-valuable-are-the-following-tracking-types-to-third-parties%3F" tabindex="-1">[Q24] How valuable are the following tracking types to third parties?</h4>
+<p>Scale: 1 (not valuable) to 5 (extremely valuable)
+Types:</p>
+<ol>
+<li>Exact current location</li>
+<li>Constant movement tracking</li>
+<li>General area (e.g., city)</li>
+<li>Past location history</li>
+<li>Aggregated trends</li>
+</ol>
+<h4 id="%5Bq25%5D-rank-the-following-personal-data-by-importance" tabindex="-1">[Q25] Rank the following personal data by importance</h4>
+<p>Data types (random order):</p>
+<ul>
+<li>Location data</li>
+<li>Web browsing activity</li>
+<li>Home address</li>
+<li>Phone number</li>
+<li>Email address</li>
+<li>Social media profile</li>
+<li>Health/medical info</li>
+<li>Calendar info</li>
+<li>Photos</li>
+<li>Email messages</li>
+</ul>
+<h3 id="demographic-information" tabindex="-1">Demographic Information</h3>
+<p>Only age ([Q26]) and whether the participant lives in the EU ([Q27]) were collected to assess the impact of regulations like the GDPR.</p>
+<h2 id="pseudonymised-results" tabindex="-1">Pseudonymised Results</h2>
+<p>In total, <strong>58</strong> users participated. Identifiable info (e.g., IP, rough location, timestamps, internal IDs) was removed. Responses were cleaned and randomised. Open answers were reviewed and translated (if in Dutch).</p>
+<p>The results highlighted that third-party selling of location data is a major concern. Interoperable positioning systems could offer better transparency and support privacy optimisation in future systems.</p>
+<h2 id="license" tabindex="-1">License</h2>
+<p>This dataset is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> license. You are free to share and adapt the material for non-commercial purposes, provided you give appropriate credit, indicate if changes were made, and distribute your contributions under the same license.</p>
+
+                
+            </div>
+
+            
+        </div>
+    </div>
+</div>
+<script src="/scripts/publications.js"></script>
+    </section>
+
+    <footer>
+    <div class="social">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <ul class="social-links">
+                        <li><a href="https://mas.to/@maximvdw" rel="me" target="_blank"><i class="fab fa-mastodon"></i></a></li>
+                        <li><a href="https://bsky.app/profile/maximvdw.be" rel="me" target="_blank"><i class="fab fa-bluesky"></i></a></li>
+                        <li><a href="https://github.com/Maximvdw" rel="me" target="_blank"><i class="fab fa-github"></i></a></li>
+                        <li><a href="mailto:me@maximvdw.be"><i class="fas fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        &copy; Copyright 2024 - 2025
+    </div>
+</footer>
+
+  </body>
+</html>
