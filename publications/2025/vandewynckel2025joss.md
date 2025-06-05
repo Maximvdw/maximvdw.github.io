@@ -2,7 +2,7 @@
 layout: publication.njk
 title: "OpenHPS: A Modular Framework to Facilitate the Development of FAIR Positioning Systems"
 author: Maxim Van de Wynckel
-date: 2025-06-04
+date: 2025-06-05
 link: https://joss.theoj.org/papers/10.21105/joss.08113
 pdf: https://solid.maximvdw.be/publications/2025/10.21105.joss.08113.pdf
 publisher: other
