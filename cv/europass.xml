@@ -1037,6 +1037,26 @@
         <PublicationHistory>
            
             <Publication>
+                <hr:FormattedPublicationDescription>Positioning systems determine the location of people and objects using various technologies and algorithms. While GPS dominates outdoor positioning, indoor and smaller-scale systems often require alternative technologies for lower latency, higher accuracy, or greater efficiency. These systems are frequently developed as single-use prototypes with no standard data format, hindering reusability and expansion. OpenHPS addresses these challenges by providing a modular, graph-based framework for creating versatile positioning systems on multiple platforms. It supports a wide range of algorithms and enables extensibility through custom nodes for sensor fusion and algorithm integration.</hr:FormattedPublicationDescription>
+                <Title>OpenHPS: A Modular Framework to Facilitate the Development of FAIR Positioning Systems</Title>
+                <Year>2025</Year>
+                <Reference>
+                    
+                    Van de Wynckel, M., &amp; Signer, B. (2025). OpenHPS: A Modular Framework to Facilitate the Development of FAIR Positioning Systems. Journal of Open Source Software, 10(110), 8113. https://doi.org/10.21105/joss.08113
+
+                </Reference>
+                
+                <DOI>
+                  <Link>https://joss.theoj.org/papers/10.21105/joss.08113</Link>
+                </DOI>
+                
+                
+                
+                <Link>https://maximvdw.be/publications/2025/vandewynckel2025joss/</Link>
+                
+            </Publication>
+            
+            <Publication>
                 <hr:FormattedPublicationDescription>Pseudonymised survey results of our 2025 survey on the privacy and transparency of location data</hr:FormattedPublicationDescription>
                 <Title>Survey on the Privacy and Transparency of Location Data</Title>
                 <Year>2025</Year>
