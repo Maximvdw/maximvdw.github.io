@@ -1,0 +1,43 @@
+---json
+{
+  "permalink": "publications.xml",
+  "eleventyExcludeFromCollections": true,
+  "normalizeAbsoluteUrls": true,
+  "metadata": {
+    "title": "Maximvdw's Publications",
+    "subtitle": "Publications of Maxim Van de Wynckel",
+    "language": "en-UK",
+    "url": "https://maximvdw.be/publications",
+    "author": {
+      "name": "Maxim Van de Wynckel",
+      "email": "me@maximvdw.be"
+    }
+  }
+}
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:base="{{ metadata.language }}">
+  <title>{{ metadata.title }}</title>
+  <subtitle>{{ metadata.subtitle }}</subtitle>
+  <link href="{{ permalink | url | absoluteUrl(metadata.url) }}" rel="self"/>
+  <link href="{{ metadata.url }}"/>
+  <updated>{{ collections.publications | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  <id>{{ metadata.url }}</id>
+  <author>
+    <name>{{ metadata.author.name }}</name>
+    <email>{{ metadata.author.email }}</email>
+  </author>
+  {%- for publication in collections.publications | reverse %}
+  {% set absolutePostUrl %}{{ publication.url | url | absoluteUrl(metadata.url) }}{% endset %}
+  <entry>
+    <title>{{ publication.data.title }}</title>
+    <link href="{{ absolutePostUrl }}"/>
+    <updated>{{ publication.date | dateToRfc3339 }}</updated>
+    <id>{{ absolutePostUrl }}</id>
+    {% if publication.data.thumbnail %}
+    <media:thumbnail url="{{ publication.data.thumbnail | url | absoluteUrl(metadata.url) }}" />
+    {% endif %}
+    <content type="text">{{ publication.data.excerpt }}</content>
+  </entry>
+  {%- endfor %}
+</feed>
