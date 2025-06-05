@@ -4,7 +4,7 @@
   <subtitle>Publications of Maxim Van de Wynckel</subtitle>
   <link href="https://maximvdw.be/publications.xml" rel="self"/>
   <link href="https://maximvdw.be/publications"/>
-  <updated>2025-06-04T00:00:00Z</updated>
+  <updated>2025-06-05T00:00:00Z</updated>
   <id>https://maximvdw.be/publications</id>
   <author>
     <name>Maxim Van de Wynckel</name>
@@ -14,7 +14,7 @@
   <entry>
     <title>OpenHPS: A Modular Framework to Facilitate the Development of FAIR Positioning Systems</title>
     <link href="https://maximvdw.be/publications/2025/vandewynckel2025joss/"/>
-    <updated>2025-06-04T00:00:00Z</updated>
+    <updated>2025-06-05T00:00:00Z</updated>
     <id>https://maximvdw.be/publications/2025/vandewynckel2025joss/</id>
     
     <media:thumbnail url="https://maximvdw.be/images/logo/openhps-logo_square.svg" />
