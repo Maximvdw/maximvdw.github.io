@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:base="en-UK">
+  <title>Maximvdw&#39;s Publications</title>
+  <subtitle>Publications of Maxim Van de Wynckel</subtitle>
+  <link href="https://maximvdw.be/publications.xml" rel="self"/>
+  <link href="https://maximvdw.be/publications"/>
+  <updated>2025-05-31T00:00:00Z</updated>
+  <id>https://maximvdw.be/publications</id>
+  <author>
+    <name>Maxim Van de Wynckel</name>
+    <email>me@maximvdw.be</email>
+  </author>
+  
+  <entry>
+    <title>Survey on the Privacy and Transparency of Location Data</title>
+    <link href="https://maximvdw.be/publications/2025/vandewynckel2025survey/"/>
+    <updated>2025-05-31T00:00:00Z</updated>
+    <id>https://maximvdw.be/publications/2025/vandewynckel2025survey/</id>
+    
+    <media:thumbnail url="https://maximvdw.be/publications/2025/vandewynckel2025survey.jpg" />
+    
+    <content type="text">Van de Wynckel, M., &amp; Signer, B. (2025). Survey on the Privacy and Transparency of Location Data. https://doi.org/10.5281/zenodo.15564050
+</content>
+  </entry>
+  
+  <entry>
+    <title>Jong Talent: Maxim Van de Wynckel (30) zoekt oplossingen om gebruikers meer controle te geven over hun locatiegegevens</title>
+    <link href="https://maximvdw.be/publications/2025/knack/"/>
+    <updated>2025-03-12T00:00:00Z</updated>
+    <id>https://maximvdw.be/publications/2025/knack/</id>
+    
+    <media:thumbnail url="https://maximvdw.be/publications/2025/knack-thumbnail.png" />
+    
+    <content type="text"></content>
+  </entry>
+  
+  <entry>
+    <title>Sphero Dead Reckoning and CV Tracking Dataset</title>
+    <link href="https://maximvdw.be/publications/2025/vandewynckel2025sphero/"/>
+    <updated>2025-02-28T00:00:00Z</updated>
+    <id>https://maximvdw.be/publications/2025/vandewynckel2025sphero/</id>
+    
+    <media:thumbnail url="https://maximvdw.be/publications/2025/vandewynckel2025sphero.png" />
+    
+    <content type="text">Van de Wynckel, M., &amp; Signer, B. (2025). Sphero Dead Reckoning and CV Tracking Dataset. Kaggle. https://doi.org/10.34740/KAGGLE/DS/6760212
+</content>
+  </entry>
+  
+  <entry>
+    <title>Garage Positioning Dataset</title>
+    <link href="https://maximvdw.be/publications/2025/vandewynckel2025kaggle/"/>
+    <updated>2025-02-12T00:00:00Z</updated>
+    <id>https://maximvdw.be/publications/2025/vandewynckel2025kaggle/</id>
+    
+    <media:thumbnail url="https://maximvdw.be/publications/2025/vandewynckel2025kaggle.jpg" />
+    
+    <content type="text">Van de Wynckel, M. (2025). Garage Positioning Dataset. Kaggle. https://doi.org/10.34740/KAGGLE/DS/6654647
+</content>
+  </entry>
+  
+  <entry>
+    <title>Towards Distributed Intelligent Tutoring Systems Based on User-owned Progress and Performance Data</title>
+    <link href="https://maximvdw.be/publications/2024/sosy2024yoshi/"/>
+    <updated>2024-05-19T00:00:00Z</updated>
+    <id>https://maximvdw.be/publications/2024/sosy2024yoshi/</id>
+    
+    <media:thumbnail url="https://maximvdw.be/publications/2024/sosy2024yoshi.png" />
+    
+    <content type="text">Malaise, Y., Van de Wynckel, M., &amp; Signer, B. (2024). Towards Distributed Intelligent Tutoring Systems Based on User-owned Progress and Performance Data. Proceedings of the 2nd Solid Symposium (SoSy’24), 3947. https://ceur-ws.org/Vol-3947/short3.pdf
+</content>
+  </entry>
+  
+  <entry>
+    <title>Discoverable and Interoperable Augmented Reality Environments Through Solid Pods</title>
+    <link href="https://maximvdw.be/publications/2024/sosy2024maxim/"/>
+    <updated>2024-05-19T00:00:00Z</updated>
+    <id>https://maximvdw.be/publications/2024/sosy2024maxim/</id>
+    
+    <media:thumbnail url="https://maximvdw.be/publications/2024/sosy2024maxim.png" />
+    
+    <content type="text">Van de Wynckel, M., &amp; Signer, B. (2024). Discoverable and Interoperable Augmented Reality Environments Through Solid Pods. Proceedings of SoSy 2024 (Poster), 2nd Solid Symposium, Leuven, Belgium, May 2024, 3947. https://ceur-ws.org/Vol-3947/short2.pdf
+</content>
+  </entry>
+  
+  <entry>
+    <title>FidMark: A Fiducial Marker Ontology for Semantically Describing Visual Markers</title>
+    <link href="https://maximvdw.be/publications/2024/eswc2024/"/>
+    <updated>2024-05-19T00:00:00Z</updated>
+    <id>https://maximvdw.be/publications/2024/eswc2024/</id>
+    
+    <media:thumbnail url="https://maximvdw.be/publications/2024/fidmark-thumb.png" />
+    
+    <content type="text">Van de Wynckel, M., Valadez, I., &amp; Signer, B. (2024). FidMark: A Fiducial Marker Ontology for Semantically Describing Visual Markers. Proceedings of The Semantic Web (ESWC 2024), 235–250. https://doi.org/10.1007/978-3-031-60635-9_14
+</content>
+  </entry>
+  
+  <entry>
+    <title>SemBeacon: A Semantic Proximity Beacon Solution for Discovering and Detecting the Position of Physical Things</title>
+    <link href="https://maximvdw.be/publications/2023/iot2023/"/>
+    <updated>2023-11-07T00:00:00Z</updated>
+    <id>https://maximvdw.be/publications/2023/iot2023/</id>
+    
+    <media:thumbnail url="https://maximvdw.be/publications/2023/iot2023.png" />
+    
+    <content type="text">Van de Wynckel, M., &amp; Signer, B. (2023). SemBeacon: A Semantic Proximity Beacon Solution for Discovering and Detecting the Position of Physical Things. Proceedings of the 13th International Conference on the Internet of Things, 9–16. https://doi.org/10.1145/3627050.3627060
+</content>
+  </entry>
+  
+  <entry>
+    <title>802.11 Managemement frames from a public location</title>
+    <link href="https://maximvdw.be/publications/2023/vermunicht2023/"/>
+    <updated>2023-06-01T00:00:00Z</updated>
+    <id>https://maximvdw.be/publications/2023/vermunicht2023/</id>
+    
+    <media:thumbnail url="https://maximvdw.be/publications/2023/vermunicht2023.png" />
+    
+    <content type="text">Vermunicht, B., Van de Wynckel, M., &amp; Signer, B. (2023). 802.11 Managemement frames from a public location. https://doi.org/10.5281/zenodo.8003771
+</content>
+  </entry>
+  
+  <entry>
+    <title>Object Tracking on a Monopoly Game Board</title>
+    <link href="https://maximvdw.be/publications/2023/hoebeke2023/"/>
+    <updated>2023-06-01T00:00:00Z</updated>
+    <id>https://maximvdw.be/publications/2023/hoebeke2023/</id>
+    
+    <media:thumbnail url="https://maximvdw.be/publications/2023/hoebeke2023.png" />
+    
+    <content type="text">Hoebeke, N., Van de Wynckel, M., &amp; Signer, B. (2023). Object Tracking on a Monopoly Game Board. https://doi.org/10.5281/zenodo.7990434
+</content>
+  </entry>
+  
+  <entry>
+    <title>POSO: A Generic Positioning System Ontology</title>
+    <link href="https://maximvdw.be/publications/2022/iswc2022/"/>
+    <updated>2022-10-23T00:00:00Z</updated>
+    <id>https://maximvdw.be/publications/2022/iswc2022/</id>
+    
+    <media:thumbnail url="https://maximvdw.be/publications/2022/iswc2022.png" />
+    
+    <content type="text">Van de Wynckel, M., &amp; Signer, B. (2022). POSO: A Generic Positioning System Ontology. The Semantic Web – ISWC 2022, 231–247. https://doi.org/10.1007/978-3-031-19433-7_14
+</content>
+  </entry>
+  
+  <entry>
+    <title>A Solid-based Architecture for Decentralised Interoperable Location Data</title>
+    <link href="https://maximvdw.be/publications/2022/ipin2022/"/>
+    <updated>2022-09-05T00:00:00Z</updated>
+    <id>https://maximvdw.be/publications/2022/ipin2022/</id>
+    
+    <media:thumbnail url="https://maximvdw.be/publications/2022/ipin2022.png" />
+    
+    <content type="text">Van de Wynckel, M., &amp; Signer, B. (2022). A Solid-based Architecture for Decentralised Interoperable Location Data. Proceedings of the 12th International Conference on Indoor Positioning and Indoor Navigation (IPIN’22), CEUR Workshop Proceedings, 3248. https://ceur-ws.org/Vol-3248/paper11.pdf
+</content>
+  </entry>
+  
+  <entry>
+    <title>Indoor Positioning Using the OpenHPS Framework</title>
+    <link href="https://maximvdw.be/publications/2021/ipin2021/"/>
+    <updated>2021-12-02T00:00:00Z</updated>
+    <id>https://maximvdw.be/publications/2021/ipin2021/</id>
+    
+    <media:thumbnail url="https://maximvdw.be/publications/2021/ipin2021.png" />
+    
+    <content type="text">Van de Wynckel, M., &amp; Signer, B. (2021). Indoor Positioning Using the OpenHPS Framework. 2021 International Conference on Indoor Positioning and Indoor Navigation (IPIN), 1–8. https://doi.org/10.1109/IPIN51156.2021.9662569
+</content>
+  </entry>
+  
+  <entry>
+    <title>OpenHPS: Single Floor Fingerprinting and Trajectory Dataset</title>
+    <link href="https://maximvdw.be/publications/2021/dataset/"/>
+    <updated>2021-05-09T00:00:00Z</updated>
+    <id>https://maximvdw.be/publications/2021/dataset/</id>
+    
+    <media:thumbnail url="https://maximvdw.be/publications/2021/dataset.png" />
+    
+    <content type="text">Van de Wynckel, M., &amp; Signer, B. (2021). OpenHPS: Single Floor Fingerprinting and Trajectory Dataset. https://doi.org/10.5281/zenodo.4744380
+</content>
+  </entry>
+  
+  <entry>
+    <title>OpenHPS: An Open Source Hybrid Positioning System</title>
+    <link href="https://maximvdw.be/publications/2020/openhps2020/"/>
+    <updated>2020-12-29T00:00:00Z</updated>
+    <id>https://maximvdw.be/publications/2020/openhps2020/</id>
+    
+    <media:thumbnail url="https://maximvdw.be/publications/2020/openhps2020.png" />
+    
+    <content type="text">Van de Wynckel, M., &amp; Signer, B. (2020). OpenHPS: An Open Source Hybrid Positioning System (WISE-2020-01). Vrije Universiteit Brussel. https://doi.org/10.48550/ARXIV.2101.05198
+</content>
+  </entry>
+  
+  <entry>
+    <title>Master thesis: Indoor Navigation by Centralized Tracking</title>
+    <link href="https://maximvdw.be/publications/2019/thesis/"/>
+    <updated>2019-07-01T00:00:00Z</updated>
+    <id>https://maximvdw.be/publications/2019/thesis/</id>
+    
+    <media:thumbnail url="https://maximvdw.be/publications/2019/thesis.png" />
+    
+    <content type="text">Van de Wynckel, M. (2019). Indoor Navigation by Centralized Tracking [Master’s thesis, Vrije Universiteit Brussel]. https://researchportal.vub.be/en/studentTheses/indoor-navigation-by-centralized-tracking
+</content>
+  </entry>
+  
+  <entry>
+    <title>Bachelor thesis: eID IO - Applicatie besturing</title>
+    <link href="https://maximvdw.be/publications/2016/thesis/"/>
+    <updated>2016-06-23T00:00:00Z</updated>
+    <id>https://maximvdw.be/publications/2016/thesis/</id>
+    
+    <media:thumbnail url="https://maximvdw.be/publications/2016/thesis.png" />
+    
+    <content type="text">My bachelor thesis was to provide remote actions for eID authentication. It was awarded the best thesis of the class of 2016.</content>
+  </entry>
+  
+  <entry>
+    <title>Final work: WisaReg</title>
+    <link href="https://maximvdw.be/publications/2013/gip/"/>
+    <updated>2013-06-23T00:00:00Z</updated>
+    <id>https://maximvdw.be/publications/2013/gip/</id>
+    
+    <media:thumbnail url="https://maximvdw.be/publications/2013/gip.bmp" />
+    
+    <content type="text">WisaReg is an application that provides newly registered students from the Wisa database with accounts for various services. It was awarded the best final work of 2013.</content>
+  </entry>
+</feed>
