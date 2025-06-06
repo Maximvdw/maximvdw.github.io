@@ -141,6 +141,22 @@ eleventyExcludeFromCollections: true
 
     <section>
       <h2>Publications</h2>
+      <h3>Journal papers <small>(peer reviewed)</small></h3>
+      <ul>
+        {% set publications = collections.publications | reverse %} 
+        {% for pub in publications %}
+        {% if pub.data.type == 'journal' %}
+        <li>
+          <div class="content">
+            {{ pub.data.excerpt | replace("Van de Wynckel, M.", "<strong
+              >Van de Wynckel, M.</strong
+            >") | safe }}
+          </div>
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+
       <h3>Conference papers <small>(peer reviewed)</small></h3>
       <ul>
         {% set publications = collections.publications | reverse %} 
