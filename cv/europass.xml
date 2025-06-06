@@ -1448,7 +1448,7 @@
                 <eures:CompetencyDimension>
                     <hr:CompetencyDimensionTypeCode>CEF-Writing-Production</hr:CompetencyDimensionTypeCode>
                     <eures:Score>
-                        <hr:ScoreText>C1</hr:ScoreText>
+                        <hr:ScoreText>C1+</hr:ScoreText>
                     </eures:Score>
                 </eures:CompetencyDimension>
             </PersonCompetency>
