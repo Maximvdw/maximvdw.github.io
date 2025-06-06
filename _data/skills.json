@@ -83,7 +83,13 @@
             "reading": "C1",
             "spoken_interaction": "C1",
             "spoken_production": "C1",
-            "writing": "C1"
+            "writing": "C1+",
+            "certificate": {
+                "institution": "ITACE",
+                "name": "ITACE for Lecturers",
+                "date": "2025-05-30",
+                "url": "https://maximvdw.be/certificates/2025/2025-05-30_English_C1.pdf"
+            }
         }, {
             "language": "Dutch",
             "native": true

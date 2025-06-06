@@ -165,11 +165,17 @@ eleventyExcludeFromCollections: true
       <div class="skills">
         <h3>Language Skills</h3>
         <ul class="inline">
-          {% for lang in skills.language | sort(attribute='native', reverse=true) %}
-          <li class="strong tab">
-            <strong>{{ lang.language }}</strong><span>{% if lang.native %} (Native){% else %}{{ lang.listening }}{% endif %}</span>
-          </li>
-          {% endfor %}
+            {% for lang in skills.language | sort(attribute='native', reverse=true) %}
+            <li class="strong tab">
+              <strong>{{ lang.language }}</strong>
+              <span>{% if lang.native %} (Native){% else %}{{ lang.listening }}{% endif %}</span>
+              {% if lang.certificate %}
+              <span class="certificate">
+                  <small><i>(<a href="{{ lang.certificate.url }}">certificate</a>)</i></small>
+              </span>
+              {% endif %}
+            </li>
+            {% endfor %}
         </ul>
 
         <h3>Digital Skills</h3>
