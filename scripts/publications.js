@@ -8,14 +8,15 @@ if (filterForm) {
             var posts = document.querySelectorAll('.postlist-item');
             
             posts.forEach(function(post) {
-                var postYear = post.querySelector('.postlist-date').getAttribute('datetime').split('-')[0];
-                var postType = post.getAttribute('data-type').toLowerCase();
-                
-                if ((year === "" || postYear >= year) && (type === "" || postType === type)) {
-                    post.style.display = '';
-                } else {
-                    post.style.display = 'none';
-                }
+            var postYear = post.querySelector('.postlist-date').getAttribute('datetime').split('-')[0];
+            var postType = post.getAttribute('data-type').toLowerCase();
+            
+            if ((year === "" || postYear >= year) && 
+                (type === "" || postType === type || (type === "thesis" && (postType === "thesis" || postType === "phd")))) {
+                post.style.display = '';
+            } else {
+                post.style.display = 'none';
+            }
             });
         });
     });

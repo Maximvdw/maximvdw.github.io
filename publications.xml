@@ -4,12 +4,24 @@
   <subtitle>Publications of Maxim Van de Wynckel</subtitle>
   <link href="https://maximvdw.be/publications.xml" rel="self"/>
   <link href="https://maximvdw.be/publications"/>
-  <updated>2025-06-05T00:00:00Z</updated>
+  <updated>2025-06-30T00:00:00Z</updated>
   <id>https://maximvdw.be/publications</id>
   <author>
     <name>Maxim Van de Wynckel</name>
     <email>me@maximvdw.be</email>
   </author>
+  
+  <entry>
+    <title>Interoperable and Discoverable Indoor Positioning Systems</title>
+    <link href="https://maximvdw.be/publications/2025/phd/"/>
+    <updated>2025-06-30T00:00:00Z</updated>
+    <id>https://maximvdw.be/publications/2025/phd/</id>
+    
+    <media:thumbnail url="https://maximvdw.be/publications/2025/phd-thumbnail.png" />
+    
+    <content type="text">Van de Wynckel, M. (2025). Interoperable and Discoverable Indoor Positioning Systems [PhD thesis]. Vrije Universiteit Brussel – WISE lab.
+</content>
+  </entry>
   
   <entry>
     <title>OpenHPS: A Modular Framework to Facilitate the Development of FAIR Positioning Systems</title>
