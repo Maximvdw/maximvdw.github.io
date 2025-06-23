@@ -17,9 +17,11 @@
         "positions": [
             {
                 "title": "Academic and Teaching Staff",
+                "titel": "Overig Onderwijzend en Academisch Personeel",
                 "start": "2019-10-01",
                 "ongoing": true,
                 "unit": "Department of Computer Science",
+                "beschrijving": "Onderwijsassistent voor verschillende Bachelor- en Mastercursussen zoals: Databanken, Open Informatie Systemen, Web Technologieen, Informatie Visualisatie, Next Generation Gebruikersinterfaces, Advanced Topics in Big Data. Onderzoeker aan het Web & Information Systems Engineering Lab op het gebied van interoperabiliteit, linked data, internet of things, augmented reality, human-computer interaction en toegepaste kunstmatige intelligentie.",
                 "summary": "Teaching assistant for various Bachelor and Master courses such as: Databases, Open Information Systems, Web Technologies, Information Visualisation, Next Generation User Interfaces, Advanced Topics in Big Data. Researcher at the Web & Information Systems Engineering Lab on interoperability, linked data, internet of things, augmented reality, human-computer interaction and applied artificial intelligence."
             }
         ],
@@ -54,6 +56,7 @@
                 "title": "Software engineering consultant",
                 "start": "2019-07-01",
                 "ongoing": true,
+                "beschrijving": "Zelfstandig softwareontwikkeling en consultancy. Projecten variërend van webontwikkeling tot IoT en AI-integratie in bestaande bedrijfsprocessen. Projectleider met externe partners.",
                 "summary": "Freelance software development and consultancy. Projects spanning from web development to IoT and AI integration into existing business processes. Project lead with external partners."
             }
         ],
@@ -89,6 +92,7 @@
                 "title": "Software engineer",
                 "start": "2018-07-01",
                 "end": "2018-07-31",
+                "beschrijving": "Ontwikkeling van een webapplicatie voor chemische database software.",
                 "summary": "Development of chemical database software.",
                 "student": true,
                 "note": "student job"
@@ -97,6 +101,7 @@
                 "title": "Software engineer",
                 "start": "2016-03-01",
                 "end": "2016-04-30",
+                "beschrijving": "Onderhoud van chemische database software.",
                 "summary": "Maintenance of chemical database search by substructures.",
                 "student": true,
                 "note": "student job"
@@ -105,6 +110,7 @@
                 "title": "Software engineer",
                 "start": "2015-09-01",
                 "end": "2015-09-30",
+                "beschrijving": "Ontwikkeling van een webapplicatie voor chemische database software.",
                 "summary": "Development and maintenance of chemical database software.",
                 "student": true,
                 "note": "student job"
@@ -113,6 +119,7 @@
                 "title": "Software engineer",
                 "start": "2015-04-01",
                 "end": "2015-04-30",
+                "beschrijving": "Migratie van Access database naar webgebaseerde chemische database software.",
                 "summary": "Migration from Access database to Web-based chemical database software.",
                 "student": true,
                 "note": "student job"
@@ -121,11 +128,13 @@
                 "title": "Software engineer",
                 "start": "2014-08-01",
                 "end": "2014-08-31",
+                "beschrijving": "Ontwikkeling van PHP en MySQL gebaseerde chemische database software.",
                 "summary": "Development of PHP and MySQL based chemical database software.",
                 "student": true,
                 "note": "student job"
             }
         ],
+        "beschrijving": "Ontwikkeling en onderhoud van chemische database software.",
         "summary": "Development and design of chemical database software."
     },
     {
@@ -148,6 +157,7 @@
                 "title": "Software developer internship",
                 "start": "2016-02-01",
                 "end": "2016-05-31",
+                "beschrijving": "Ontwikkeling van een QR-code gebaseerde afspraken systeem. Optimalisatie van het afdrukken van afspraken via Zebra printers. Integratie van Google Fit voor patiënten. Ontwikkeling van software voor de gezondheidszorg.",
                 "summary": "Development of QR-code based appointment system. Optimising the printing of appointments via Zebra printers. Google Fit integration for patients. Healthcare software development.",
                 "student": true,
                 "note": "student job"
@@ -177,6 +187,7 @@
                 "title": "Software developer internship",
                 "start": "2015-10-01",
                 "end": "2015-12-31",
+                "beschrijving": "eID cloud authenticatie thesis voorbereidende training. Beveiligingstesten en protocolanalyse.",
                 "summary": "eID cloud authentication thesis preparatory training. Security testing and protocol analysis.",
                 "student": true,
                 "note": "student job"
@@ -185,11 +196,13 @@
                 "title": "Software developer",
                 "start": "2015-08-01",
                 "end": "2015-09-30",
+                "beschrijving": "Veiligheid penetratietesten van eID cloud authenticatie in C++. Onderzoek naar beveiligingslekken en kwetsbaarheden.",
                 "summary": "Security penetration testing of eID cloud authentication in C++.",
                 "student": true,
                 "note": "student job"
             }
         ],
+        "beschrijving": "eID cloud authenticatie en beveiliging penetratietesten.",
         "description": "eID cloud authentication and security penetration testing."
     },
     {
@@ -216,6 +229,7 @@
                 "title": "Software developer",
                 "start": "2014-07-01",
                 "end": "2014-07-31",
+                "beschrijving": "Web UI voor print management software.",
                 "summary": "Web UI for print management software.",
                 "student": true,
                 "note": "student job"
@@ -224,11 +238,13 @@
                 "title": "Software developer",
                 "start": "2013-07-01",
                 "end": "2013-08-31",
+                "beschrijving": "Bestandsysteem voor bestandsserver en printopdrachten indienen in C#.",
                 "summary": "File server deployment and print job submitting in C#.",
                 "student": true,
                 "note": "student job"
             }
         ],
+        "beschrijving": "Web UI voor print management software. Bestandsysteem voor bestandsserver en printopdrachten indienen in C#.",
         "description": "Web UI for print management software. File server deployment and print job submitting in C#."
     }
 ]

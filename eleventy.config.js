@@ -156,6 +156,7 @@ export default async function (el) {
             "ico",
             "njk",
             "jpg",
+            "jpeg",
             "md",
             "html",
             "liquid",

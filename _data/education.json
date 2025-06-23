@@ -27,6 +27,7 @@
         },
         "eqfLevel": "8",
         "ects": "285",
+        "beschrijving": "Onderzoek naar hybride- en binnenpositioneringssystemen, interoperabiliteit van locatiegegevens en vindbaarheid van diensten met behulp van linked data en Solid. Verder onderzoek naar Augmented Reality, Virtual Reality, Kunstmatige Intelligentie, en internet of things.",
         "description": "Researching hybrid- and indoor positioning systems, interoperability of location data and discoverability of services using linked data and Solid. Further research on Augmented Reality, Virtual Reality, Artificial Intelligence, deep sensor fusion and internet of things."
     }, {
         "university": {
@@ -66,6 +67,7 @@
         },
         "eqfLevel": "7",
         "ects": "60",
+        "beschrijving": "Parallelisme, gedistribueerde systemen, multicore programmeren, softwarebeveiliging en binnenpositionering masterproef.",
         "description": "Parallelism, distributed systems, multicore programming, software security and indoor navigation master thesis."
     }, {
         "university": {
@@ -86,6 +88,7 @@
         "start": "2016-10-01",
         "end": "2018-09-13",
         "ects": "60",
+        "beschrijving": "Brugprogramma van professionele bachelor (Ba) naar academische bachelor (BSc).",
         "description": "Bridging programme from professional bachelor (Ba) to academic bachelor (BSc).",
         "visible": false
     }, {
@@ -130,6 +133,7 @@
         },
         "eqfLevel": "6",
         "ects": "180",
+        "beschrijving": "Software Security, Software Development, Agile development, business management skills. Ontwikkeling van een applicatie voor de Belgische elektronische identiteitskaart (eID) en het bijhorende platform.",
         "description": "Software Security, Software Development, Agile development, business management skills. Received an award for best final work (thesis)."
     }, {
         "university": {
@@ -149,6 +153,7 @@
         "degree": "Industrial ICT",
         "graduation": "2013-06-30",
         "end": "2013-06-30",
+        "beschrijving":" Electronica, netwerken, hardware, softwareontwikkeling. Ontving een prijs voor beste eindwerk.",
         "description": "Electrical engineering, networking, hardware, software development. Received an award for best final work."
     }
 ]

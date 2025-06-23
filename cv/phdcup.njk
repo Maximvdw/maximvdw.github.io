@@ -1,0 +1,229 @@
+---
+sitemap: false
+eleventyExcludeFromCollections: true
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      {{ personal.firstName }} {{ personal.lastName }} - Curriculum Vitae
+    </title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css"
+    />
+    <link
+      href="https://fonts.cdnfonts.com/css/itc-avant-garde-gothic-std-book"
+      rel="stylesheet"
+    />
+    <link
+      href="/css/resume.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <img
+        src="{{ personal.imageUrl }}"
+        alt="{{ personal.firstName }} {{ personal.lastName }}"
+        class="profile"
+      />
+      <h1>{{ personal.firstName }} {{ personal.lastName }}</h1>
+      <div class="container">
+        <div>
+          <p>
+            <i class="fas fa-map-marker-alt"></i> {{ personal.address.street }},
+            {{ personal.address.postalCode }} {{ personal.address.city }}, {{
+            personal.address.country.code }}
+          </p>
+          <p><i class="fas fa-envelope"></i> {{ personal.email.personal }}</p>
+          <p>
+            <i class="fas fa-globe"></i>
+            <a href="https://maximvdw.be">maximvdw.be</a>
+          </p>
+        </div>
+        <div>
+          <p class="links">
+            <a href="{{ social.orcid.url }}"
+              ><i class="{{ social.orcid.icon.class }}"></i> {{ social.orcid.displayname }}</a
+            >
+            <a href="{{ social.linkedin.url }}"
+              ><i class="{{ social.linkedin.icon.class }}"></i> {{ social.linkedin.displayname }}</a
+            >
+            <a href="{{ social.github.url }}"
+              ><i class="{{ social.github.icon.class }}"></i> {{ social.github.displayname }}</a
+            >
+          </p>
+        </div>
+        <div>
+        </div>
+      </div>
+    </header>
+    
+    <div class="row">
+      <section>
+        <h2>Werkervaring</h2>
+        <ul>
+          {% for entry in employment %}
+          {%- set startYear = entry.positions[entry.positions | length - 1].start | date("yyyy") -%}
+          {%- set endYear = entry.positions[0].end | date("yyyy") -%}
+          {%- set positionsByTitle = [] -%}
+          {%- for position in entry.positions -%}
+          {%- set titleExists = false -%}
+          {%- for item in positionsByTitle -%}
+          {%- if item.title == position.title -%}
+          {%- set item = item | merge({ positions: item.positions | push(position) }) -%}
+          {%- set titleExists = true -%}
+          {%- endif -%}
+          {%- endfor -%}
+          {%- if not titleExists -%}
+          {%- set positionsByTitle = positionsByTitle | push({ title: position.title, positions: [position] }) -%}
+          {%- endif -%}
+          {%- endfor -%}
+          <li>
+            <div class="content">
+              <h4>{{ entry.organization.name }}</h4>
+              {%- if positionsByTitle | length > 1 -%}
+                <ul class="timeline">
+                  {%- for item in positionsByTitle %}
+                  <li>
+                    <span class="muted">{{ item.positions[0].start | date("MMM, yyyy") }} - {% if item.positions[0].ongoing %}now{% else %}{{ item.positions[0].end | date("MMM, yyyy") }}{% endif %}</span><strong>{{ item.title }}{% if item.positions[0].note %} <small>({{ item.positions[0].note }})</small>{% endif %}</strong>
+                    <p class="description">
+                      {{ item.positions[0].beschrijving | safe }}
+                    </p>
+                  </li>
+                  {%- endfor %}
+                </ul>
+              {%- else -%}
+                {%- for item in positionsByTitle %}
+                <strong>{{ item.title }}{% if item.positions[0].note %} <small>({{ item.positions[0].note }})</small>{% endif %}</strong>
+                <p class="description">
+                  {{ item.positions[0].beschrijving | safe }}
+                </p>
+                {%- endfor %}
+              {%- endif -%}
+            </div>
+            <div class="date">
+              {%- if startYear == endYear -%}
+              <span>{{ startYear }}</span>
+              {%- else -%}
+                <span>{{ startYear }}</span> - <span>{% if entry.positions[0].ongoing %}now{% else %}{{ endYear }}{% endif %}</span>
+              {%- endif -%}
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+      </section>
+
+      <section>
+        <h2>Educatie</h2>
+        <ul>
+          {% for edu in education %}
+          {% if edu.start %}
+          <li>
+            <div class="content">
+              <h4>{{ edu.degree }}</h4>
+              <strong>{{ edu.university.name }}</strong> <small>({{
+              edu.university.address.city }}, {{
+              edu.university.address.country.label }})</small> {% if edu.grade.latin %}
+              <p class="graduated">Graduated {{ edu.grade.latin }}</p>
+              {% endif %} {% if edu.thesis %}
+              <p class="thesis"><strong>Thesis:</strong> {{ edu.thesis.title }}</p>
+              {% endif %}
+              <p class="description">{{ edu.beschrijving }}
+              </p>
+            </div>
+            <div class="date">
+              {% if edu.graduation %}
+              <span>{{ edu.graduation | date('MMMM, yyyy') }}</span>
+              {% else %}
+              <span
+                >{{ edu.start | date('yyyy') }} - {{ edu.end | date('yyyy')
+                }}</span
+              >
+              {% endif %}
+            </div>
+          </li>
+          {% endif %}
+          {% endfor %}
+        </ul>
+      </section>
+    </div>
+
+    <section id="projects">
+      <h2>Projecten<span class="note">The following projects are the main projects I have been part of.</span></h2>
+      <ul class="small">
+        {% for project in collections.portfolio %}
+        {% if project.data.cv %}
+        <li>
+          <div class="content">
+            <h4>{{ project.data.title }}</h4>
+            <p class="description">
+              {{ project.data.excerpt | safe }}
+              <a href="{{ project.data.link }}"
+                >{{ project.data.link }}</a
+              >
+            </p>
+          </div>
+          <div class="date wide">
+            <span>{{ project.data.start | date('yyyy') }} - {% if project.data.ongoing %}now{% else %}{{ project.data.end | date('yyyy') }}{% endif %}</span>
+          </div>
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </section>
+
+    <section id="publications">
+      <h2>Voornaamste Publicaties &amp; Media Coverage</h2>
+      <ul class="small">
+        {% set publications = collections.publications | reverse %} 
+        {% for pub in publications %}
+        {% if pub.data.type == 'press' %}
+        <li>
+          <div class="content">
+            {{ pub.data.title }}
+          </div>
+          <div class="date">
+            <span>{{ pub.date | date('MMMM, yyyy') }}</span>
+          </div>
+        </li>
+        {% elif pub.data.type != 'other' %}
+        <li>
+          <div class="content">
+            {{ pub.data.excerpt | replace("Van de Wynckel, M.", "<strong
+              >Van de Wynckel, M.</strong
+            >") | safe }}
+          </div>
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </section>
+
+    <section>
+      <h2>Academische Diensten</h2>
+      <ul>
+        {% for service in services %}
+        <li>
+          <div class="content">
+            <h4>{{ service.task }}: {{ service.name }}</h4>
+            <p>{{ service.description }}</p>
+          </div>
+          <div class="date">
+            <span
+              >{{ service.start }}{% if service.start != service.end %} - {{
+              service.end }}{% endif %}</span
+            >
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+  </body>
+</html>
