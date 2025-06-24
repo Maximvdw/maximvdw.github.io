@@ -131,7 +131,7 @@ eleventyExcludeFromCollections: true
               <strong>{{ edu.university.name }}</strong> <small>({{
               edu.university.address.city }}, {{
               edu.university.address.country.label }})</small> {% if edu.grade.latin %}
-              <p class="graduated">Graduated {{ edu.grade.latin }}</p>
+              <p class="graduated">{{ edu.grade.latin }} afgestudeerd</p>
               {% endif %} {% if edu.thesis %}
               <p class="thesis"><strong>Thesis:</strong> {{ edu.thesis.title }}</p>
               {% endif %}
@@ -154,30 +154,6 @@ eleventyExcludeFromCollections: true
         </ul>
       </section>
     </div>
-
-    <section id="projects">
-      <h2>Projecten<span class="note">The following projects are the main projects I have been part of.</span></h2>
-      <ul class="small">
-        {% for project in collections.portfolio %}
-        {% if project.data.cv %}
-        <li>
-          <div class="content">
-            <h4>{{ project.data.title }}</h4>
-            <p class="description">
-              {{ project.data.excerpt | safe }}
-              <a href="{{ project.data.link }}"
-                >{{ project.data.link }}</a
-              >
-            </p>
-          </div>
-          <div class="date wide">
-            <span>{{ project.data.start | date('yyyy') }} - {% if project.data.ongoing %}now{% else %}{{ project.data.end | date('yyyy') }}{% endif %}</span>
-          </div>
-        </li>
-        {% endif %}
-        {% endfor %}
-      </ul>
-    </section>
 
     <section id="publications">
       <h2>Voornaamste Publicaties &amp; Media Coverage</h2>
@@ -202,6 +178,28 @@ eleventyExcludeFromCollections: true
           </div>
         </li>
         {% endif %}
+        {% endfor %}
+      </ul>
+    </section>
+
+    <section class="newpage">
+      <h2>Presentaties</h2>
+      <ul>
+        {% set presentations = collections.presentations | reverse %} {% for
+        presentation in presentations %}
+        <li>
+          <div class="content">
+            <h4>{{ presentation.data.title }}</h4>
+            <p>
+              <strong>Venue:</strong> {{ presentation.data.venue.name }}, {{
+              presentation.data.venue.location }}
+            </p>
+            <p>{{ presentation.data.excerpt }}</p>
+          </div>
+          <div class="date">
+            <span>{{ presentation.data.date }}</span>
+          </div>
+        </li>
         {% endfor %}
       </ul>
     </section>
