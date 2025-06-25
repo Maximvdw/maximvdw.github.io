@@ -35,10 +35,9 @@ eleventyExcludeFromCollections: true
       />
       <h1>{{ personal.firstName }} {{ personal.lastName }}</h1>
       <div class="container">
-        <div>
+        <div class="basic">
           <p>
-            <i class="fas fa-map-marker-alt"></i> {{ personal.address.street }},
-            {{ personal.address.postalCode }} {{ personal.address.city }}, {{
+            <i class="fas fa-map-marker-alt"></i> {{ personal.address.city }}, {{
             personal.address.country.code }}
           </p>
           <p><i class="fas fa-envelope"></i> {{ personal.email.personal }}</p>
@@ -92,7 +91,7 @@ eleventyExcludeFromCollections: true
                 <ul class="timeline">
                   {%- for item in positionsByTitle %}
                   <li>
-                    <span class="muted">{{ item.positions[0].start | date("MMM, yyyy") }} - {% if item.positions[0].ongoing %}now{% else %}{{ item.positions[0].end | date("MMM, yyyy") }}{% endif %}</span><strong>{{ item.title }}{% if item.positions[0].note %} <small>({{ item.positions[0].note }})</small>{% endif %}</strong>
+                    <span class="muted">{{ item.positions[0].start | date("MMM, yyyy", "nl") }} - {% if item.positions[0].ongoing %}nu{% else %}{{ item.positions[0].end | date("MMM, yyyy") }}{% endif %}</span><strong>{{ item.title }}{% if item.positions[0].note %} <small>({{ item.positions[0].note }})</small>{% endif %}</strong>
                     <p class="description">
                       {{ item.positions[0].beschrijving | safe }}
                     </p>
@@ -112,7 +111,7 @@ eleventyExcludeFromCollections: true
               {%- if startYear == endYear -%}
               <span>{{ startYear }}</span>
               {%- else -%}
-                <span>{{ startYear }}</span> - <span>{% if entry.positions[0].ongoing %}now{% else %}{{ endYear }}{% endif %}</span>
+                <span>{{ startYear }}</span> - <span>{% if entry.positions[0].ongoing %}nu{% else %}{{ endYear }}{% endif %}</span>
               {%- endif -%}
             </div>
           </li>
@@ -130,7 +129,7 @@ eleventyExcludeFromCollections: true
               <h4>{{ edu.degree }}</h4>
               <strong>{{ edu.university.name }}</strong> <small>({{
               edu.university.address.city }}, {{
-              edu.university.address.country.label }})</small> {% if edu.grade.latin %}
+              edu.university.address.country.labelNL }})</small> {% if edu.grade.latin %}
               <p class="graduated">{{ edu.grade.latin }} afgestudeerd</p>
               {% endif %} {% if edu.thesis %}
               <p class="thesis"><strong>Thesis:</strong> {{ edu.thesis.title }}</p>
@@ -140,7 +139,7 @@ eleventyExcludeFromCollections: true
             </div>
             <div class="date">
               {% if edu.graduation %}
-              <span>{{ edu.graduation | date('MMMM, yyyy') }}</span>
+              <span>{{ edu.graduation | date('MMMM, yyyy', "nl") }}</span>
               {% else %}
               <span
                 >{{ edu.start | date('yyyy') }} - {{ edu.end | date('yyyy')
@@ -155,51 +154,103 @@ eleventyExcludeFromCollections: true
       </section>
     </div>
 
-    <section id="publications">
-      <h2>Voornaamste Publicaties &amp; Media Coverage</h2>
-      <ul class="small">
-        {% set publications = collections.publications | reverse %} 
-        {% for pub in publications %}
-        {% if pub.data.type == 'press' %}
-        <li>
-          <div class="content">
-            {{ pub.data.title }}
-          </div>
-          <div class="date">
-            <span>{{ pub.date | date('MMMM, yyyy') }}</span>
-          </div>
-        </li>
-        {% elif pub.data.type != 'other' %}
-        <li>
-          <div class="content">
-            {{ pub.data.excerpt | replace("Van de Wynckel, M.", "<strong
-              >Van de Wynckel, M.</strong
-            >") | safe }}
-          </div>
-        </li>
-        {% endif %}
-        {% endfor %}
-      </ul>
-    </section>
+    <div class="row newpage">
+      <section id="publications">
+        <h2>Voornaamste Publicaties</h2>
+        <small class="note">Mijn drie voornaamste publicaties. Voor een volledige lijst, kijk op mijn <a href="https://maximvdw.be/publications/">persoonlijke website</a>.</small>
 
-    <section class="newpage">
-      <h2>Presentaties</h2>
-      <ul>
-        {% set presentations = collections.presentations | reverse %} {% for
-        presentation in presentations %}
-        <li>
-          <div class="content">
-            <h4>{{ presentation.data.title }}</h4>
-            <p>
-              <strong>Venue:</strong> {{ presentation.data.venue.name }}, {{
-              presentation.data.venue.location }}
-            </p>
-            <p>{{ presentation.data.excerpt }}</p>
-          </div>
-          <div class="date">
-            <span>{{ presentation.data.date }}</span>
-          </div>
-        </li>
+        <ul class="small">
+          {% set allowed_slugs = ["iswc2022","ipin2022","ipin2021"] %}
+          {% for slug in allowed_slugs %}
+            {% set pubs = collections.publications | filter(attribute="fileSlug", value=slug, startswith=true) %}
+            {% for pub in pubs %}
+              <li>
+                <div class="content">
+                  {{ pub.data.excerpt | replace("Van de Wynckel, M.", "<strong>Van de Wynckel, M.</strong>") | safe }}
+                  {% if pub.data.motivation and pub.data.motivation.nl %}
+                    <div class="motivation">
+                      <em>Motivatie:</em> {{ pub.data.motivation.nl }}
+                    </div>
+                  {% endif %}
+                </div>
+                
+              </li>
+            {% endfor %}
+          {% endfor %}
+        </ul>
+
+        <h2>Mediaparticipatie</h2>
+        <ul class="small">
+          {% for pub in collections.publications %}
+            {% if pub.data.type == "press" %}
+              <li>
+                <div class="content">
+                  <b>{{ pub.date | date('MMMM, yyyy', 'nl') }}:</b>
+                  {{ pub.data.title }}
+                  <p class="description">
+                    <a href="{{ pub.data.link }}"
+                      >{{ pub.data.link }}</a>
+                  </p>
+                </div>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </section>
+
+      <section class="newpage">
+        <h2>Presentaties</h2>
+        <ul>
+          {% set presentations = collections.presentations | reverse %} 
+          {% for presentation in presentations %}
+          <li>
+            <div class="content">
+              <h4>
+                {# Translate "Presentation at" and "Conference presentation at" to Dutch #}
+                {{ presentation.data.title
+                  | replace("Conference presentation at", "Conferentiepresentatie op")
+                  | replace("Presentation at", "Presentatie op")
+                  | replace("Poster presentation at", "Posterpresentatie op")
+                }}
+              </h4>
+              <p>
+                <strong>Locatie:</strong> {{ presentation.data.venue.name }}, {{
+                presentation.data.venue.locationNL }}
+              </p>
+            </div>
+            <div class="date">
+              <span>{{ presentation.data.date }}</span>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+      </section>
+    </div>
+
+    <section id="projects" class="newpage">
+      <h2>Relevante Projecten</h2>
+      <ul class="small">
+        {% set allowed_slugs = ["openhps","poso","sembeacon"] %}
+        {% for slug in allowed_slugs %}
+          {% set projects = collections.portfolio | filter(attribute="fileSlug", value=slug, startswith=true) %}
+          {% for project in projects %}
+          {% if project.data.cv %}
+          <li>
+            <div class="content">
+              <h4>{{ project.data.title }}</h4>
+              <p class="description">
+                {{ project.data.beschrijving | safe }}
+                <a href="{{ project.data.website }}"
+                  >{{ project.data.website }}</a
+                >
+              </p>
+            </div>
+            <div class="date wide">
+              <span>{{ project.data.start | date('yyyy') }} - {% if project.data.ongoing %}nu{% else %}{{ project.data.end | date('yyyy') }}{% endif %}</span>
+            </div>
+          </li>
+          {% endif %}
+          {% endfor %}
         {% endfor %}
       </ul>
     </section>
@@ -210,8 +261,10 @@ eleventyExcludeFromCollections: true
         {% for service in services %}
         <li>
           <div class="content">
-            <h4>{{ service.task }}: {{ service.name }}</h4>
-            <p>{{ service.description }}</p>
+            <h4>
+              {{ service.taskNL or service.task }} van de {{ service.nameNL or service.name }}
+            </h4>
+            <p>{{ service.beschrijving }}</p>
           </div>
           <div class="date">
             <span

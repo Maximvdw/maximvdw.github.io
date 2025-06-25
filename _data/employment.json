@@ -10,7 +10,8 @@
                 "postalCode": "1050",
                 "country": {
                     "code": "BE",
-                    "label": "Belgium"
+                    "label": "Belgium",
+                    "labelNL": "België"
                 }
             }
         },
@@ -47,7 +48,8 @@
                 "postalCode": "1160",
                 "country": {
                     "code": "BE",
-                    "label": "Belgium"
+                    "label": "Belgium",
+                    "labelNL": "België"
                 }
             }
         },
@@ -83,7 +85,8 @@
                 "postalCode": "2650",
                 "country": {
                     "code": "BE",
-                    "label": "Belgium"
+                    "label": "Belgium",
+                    "labelNL": "België"
                 }
             }
         },
@@ -148,7 +151,8 @@
                 "postalCode": "1090",
                 "country": {
                     "code": "BE",
-                    "label": "Belgium"
+                    "label": "Belgium",
+                    "labelNL": "België"
                 }
             }
         },
@@ -178,7 +182,8 @@
                 "postalCode": "9940",
                 "country": {
                     "code": "BE",
-                    "label": "Belgium"
+                    "label": "Belgium",
+                    "labelNL": "België"
                 }
             }
         },
@@ -220,7 +225,8 @@
                 "postalCode": "1851",
                 "country": {
                     "code": "BE",
-                    "label": "Belgium"
+                    "label": "Belgium",
+                    "labelNL": "België"
                 }
             }
         },

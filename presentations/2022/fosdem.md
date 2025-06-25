@@ -8,6 +8,7 @@ date: "2022-02-06"
 venue:
     name: "FOSDEM 2022"
     location: "Brussels, Belgium"
+    locationNL: "Brussel, België"
     start: 2022-02-05
     end: 2022-02-06
 event: "https://archive.fosdem.org/2022/schedule/event/lt_openhps/"

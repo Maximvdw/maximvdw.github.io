@@ -2,41 +2,53 @@
     {
         "type": "reviewer",
         "task": "Reviewer",
+        "taskNL": "Reviewer",
         "name": "Semantic Web - Interoperability, Usability, Applicability (Journal)",
         "start": "2025",
         "end": "2025"
     }, {
         "type": "reviewer",
         "task": "Reviewer",
+        "taskNL": "Reviewer",
         "name": "Interactive, Mobile, Wearable and Ubiquitous Technologies (Journal)",
         "start": "2022",
         "end": "2022"
     }, {
         "type": "reviewer",
         "task": "Reviewer",
+        "taskNL": "Reviewer",
         "name": "Proceedings of the 15th International Conference on Tangible, Embedded and Embodied Interaction",
         "start": "2020",
         "end": "2020"
     }, {
         "type": "university",
         "name": "Faculty Research Comittee",
+        "nameNL": "Facultaire onderzoekscommissie",
         "task": "OAP representative",
+        "taskNL": "OAP vertegenwoordiger",
         "start": "2020",
-        "end": "now",
+        "end": "2025",
+        "beschrijving": "Overige academische personeelsleden (OAP) vertegenwoordiger van de faculteit wetenschappen.",
         "description": "Other academic staff (OAP) representative of the faculty of science and engineering."
     }, {
         "type": "university",
         "name": "Department Council",
+        "nameNL": "Afdelingsraad",
         "task": "OAP representative",
+        "taskNL": "OAP vertegenwoordiger",
         "start": "2019",
-        "end": "now",
+        "end": "2025",
+        "beschrijving": "Overige academische personeelsleden (OAP) vertegenwoordiger van de afdeling informatica.",
         "description": "Other academic staff (OAP) representative of the department of computer science."
     }, {
         "type": "university",
         "name": "Bachelor Program Committee",
+        "nameNL": "Bachelor Program Commissie",
         "task": "OAP representative",
+        "taskNL": "OAP vertegenwoordiger",
         "start": "2019",
-        "end": "now",
+        "end": "2025",
+        "beschrijving": "Overige academische personeelsleden (OAP) vertegenwoordiger van de bacheloropleiding informatica.",
         "description": "Other academic staff (OAP) representative of the Bachelor program of computer science."
     }
 ]

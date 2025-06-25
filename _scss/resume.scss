@@ -51,7 +51,7 @@
   header .container > div {
     flex: 1;
   }
-  header .container > div:first-child {
+  header .container > div:not(.basic):first-child {
     flex: 2;
   }
   header .container > div:last-child {
@@ -190,7 +190,6 @@
 
   div.row {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     padding-left: 8mm;
     padding-right: 8mm;
@@ -375,4 +374,24 @@ ul.inline li:last-child {
 
 main {
   text-align: justify;
+}
+
+.motivation {
+  margin-top: 0.8rem;
+  margin-bottom: 1.2rem;
+  font-style: italic;
+
+  em {
+    font-style: italic;
+    color: #666;
+    font-weight: bold;
+  }
+}
+
+small.note {
+  font-size: 0.8em;
+  color: #666;
+  text-align: left;
+  font-style: italic;
+  width: 100%;
 }

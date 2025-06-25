@@ -8,6 +8,7 @@ date: "2023-05-12"
 venue:
     name: "The Belgian JavaScript Conference (BeJS conf)"
     location: "Brussels, Belgium"
+    locationNL: "Brussel, België"
     start: 2023-05-12
     end: 2023-05-12
 event: "https://www.react.brussels/conferences/bejs-conf-2023"

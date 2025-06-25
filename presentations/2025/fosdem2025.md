@@ -8,6 +8,7 @@ date: "2025-02-01"
 venue:
     name: "FOSDEM 2025"
     location: "Brussels, Belgium"
+    locationNL: "Brussel, België"
     start: 2025-02-01
     end: 2025-02-02
 event: "https://fosdem.org/2025/schedule/event/fosdem-2025-4526-discovering-indoor-environments-and-positioning-systems/"

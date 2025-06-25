@@ -229,6 +229,8 @@ async function configureFilters(el) {
         return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
     });
 
+    
+
     el.addFilter("head", (array, n) => {
         if (n < 0) {
             return array.slice(n);
@@ -264,7 +266,7 @@ async function configureFilters(el) {
         }
     });
 
-    el.addFilter("date", (dateObj, format) => {
+    el.addFilter("date", (dateObj, format, lang) => {
         const backup = dateObj;
         if (typeof dateObj === 'string') {
             dateObj = DateTime.fromFormat(dateObj, 'yyyy-LL-dd').toJSDate();
@@ -272,7 +274,12 @@ async function configureFilters(el) {
                 return backup;
             }
         }
-        const result = DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat(format);
+        let dt = DateTime.fromJSDate(dateObj, {zone: 'utc'});
+        if (lang) {
+            console.log("Setting locale to", lang);
+            dt = dt.setLocale(lang);
+        }
+        const result = dt.toFormat(format);
         if (!result || result === 'Invalid DateTime') {
             return null;
         } else {
@@ -291,5 +298,35 @@ async function configureFilters(el) {
 
     el.addFilter("slice", (array, start, end) => {
         return array.slice(start, end);
+    });
+
+    
+    // Add a custom Nunjucks filter for 'map'
+    el.addNunjucksFilter("map", function(array, property, collection) {
+        if (!Array.isArray(array)) return [];
+        if (collection && Array.isArray(collection)) {
+            // If a collection is provided, find items in the collection by property
+            return array.map(val => collection.find(item => item.data && item.data[property] === val));
+        } else {
+            // Otherwise, map property from array of objects
+            return array.map(item => item && item[property]);
+        }
+    });
+
+    // Add a custom Nunjucks filter for 'filter'
+    el.addNunjucksFilter("filter", function(array, options) {
+        if (!Array.isArray(array)) return [];
+        const attribute = options && options.attribute;
+        const value = options && options.value;
+        const startswith = options && options.startswith;
+        if (!attribute || value === undefined) return array;
+        return array.filter(item => {
+            const attrValue = item && (item[attribute] ?? (item.data && item.data[attribute]));
+            if (startswith) {
+                return typeof attrValue === "string" && attrValue.startsWith(value);
+            } else {
+                return attrValue === value;
+            }
+        });
     });
 }

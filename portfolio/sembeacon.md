@@ -11,6 +11,7 @@ type: job
 cv: true
 role: Lead Developer
 excerpt: "SemBeacon is an ongoing project for the development of a semantic Bluetooth Low Energy beacon specification that helps to describe the beacon itself, its deployment and the positioning system used within."
+beschrijving: "SemBeacon is een lopend project voor de ontwikkeling van een semantische Bluetooth Low Energy beacon specificatie die helpt om de beacon zelf, de inzet ervan en het gebruikte positioneringssysteem te beschrijven."
 ---
 SemBeacon is an ongoing project for the development of a semantic Bluetooth Low Energy beacon specification that helps to describe the beacon itself, its deployment and the positioning system used within.
 
