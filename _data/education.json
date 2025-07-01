@@ -14,16 +14,25 @@
             }
         },
         "files": [{
+            "name": "Diploma",
+            "icon": "fas fa-graduation-cap",
+            "url": "/documents/MaximVandeWynckel_PhD2025_EN.png"
+        },{
             "name": "Activities and Research",
             "icon": "fas fa-file-alt",
             "url": "/documents/Attestation_of_Activities_PhD.pdf"
+        }, {
+            "name": "Thesis",
+            "icon": "fas fa-book",
+            "url": "/publications/2025/phd"
         }],
         "icon": "/images/logo/vub-logo_square.svg",
-        "degree": "Doctor of Science (PhD), Computer Science",
+        "degree": "Doctor of Sciences (PhD), Computer Science",
         "start": "2019-10-01",
-        "end": "2025-09-01",
+        "end": "2025-06-30",
         "thesis": {
-            "title": "Interoperable and Discoverable Indoor Positioning Systems"
+            "title": "Interoperable and Discoverable Indoor Positioning Systems",
+            "url": "/publications/2025/phd"
         },
         "eqfLevel": "8",
         "ects": "285",
