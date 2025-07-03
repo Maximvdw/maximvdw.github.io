@@ -23,13 +23,7 @@ layout: default.njk
             {% include "video.njk" %}
             {% endif %}
 
-            <div class="gallery" itemprop="image">
-            {% for image in images %}
-                <div class="gallery-item">
-                <img src="{{ image.url }}" alt="{{ image.alt }}" onclick="enlargeImage(this)">
-                </div>
-            {% endfor %}
-            </div>
+           {% include "gallery.njk" %}
         </div>
     </div>
 </div>
