@@ -34,7 +34,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-    <link rel="stylesheet" href="/css/main.css?version=2025-07-01T11:50:29.319+00:00">
+    <link rel="stylesheet" href="/css/main.css?version=2025-07-03T12:40:46.174+00:00">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
     
@@ -210,9 +210,52 @@
 
             
 
-            <div class="gallery" itemprop="image">
-            
-            </div>
+           <div class="gallery" itemprop="image">
+
+</div>
+
+<div id="image-popup" class="hidden">
+    <span class="close-popup" onclick="closeImagePopup()">&times;</span>
+    <img class="popup-image" src="" alt="">
+</div>
+
+<script>
+function openImagePopup(img) {
+    const popup = document.getElementById('image-popup');
+    const popupImage = document.querySelector('#image-popup .popup-image');
+    popupImage.src = img.src;
+    popupImage.alt = img.alt;
+    popup.classList.remove('hidden');
+
+    // Close on ESC key
+    document.addEventListener('keydown', handleEscapeKey);
+    // Close on clicking outside
+    popup.addEventListener('click', handleOutsideClick);
+}
+
+function closeImagePopup() {
+    const popup = document.getElementById('image-popup');
+    popup.classList.add('hidden');
+
+    // Remove event listeners
+    document.removeEventListener('keydown', handleEscapeKey);
+    popup.removeEventListener('click', handleOutsideClick);
+}
+
+function handleEscapeKey(event) {
+    if (event.key === 'Escape') {
+        closeImagePopup();
+    }
+}
+
+function handleOutsideClick(event) {
+    const popupImage = document.querySelector('#image-popup .popup-image');
+    if (!popupImage.contains(event.target)) {
+        closeImagePopup();
+    }
+}
+</script>
+
         </div>
     </div>
 </div>
