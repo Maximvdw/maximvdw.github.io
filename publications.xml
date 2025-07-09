@@ -4,12 +4,23 @@
   <subtitle>Publications of Maxim Van de Wynckel</subtitle>
   <link href="https://maximvdw.be/publications.xml" rel="self"/>
   <link href="https://maximvdw.be/publications"/>
-  <updated>2025-06-30T00:00:00Z</updated>
+  <updated>2025-07-08T00:00:00Z</updated>
   <id>https://maximvdw.be/publications</id>
   <author>
     <name>Maxim Van de Wynckel</name>
     <email>me@maximvdw.be</email>
   </author>
+  
+  <entry>
+    <title>VUB researcher teaches systems that determine the location of people or objects within buildings to work together</title>
+    <link href="https://maximvdw.be/publications/2025/vubpress/"/>
+    <updated>2025-07-08T00:00:00Z</updated>
+    <id>https://maximvdw.be/publications/2025/vubpress/</id>
+    
+    <media:thumbnail url="https://maximvdw.be/publications/2025/vubpress-thumbnail.png" />
+    
+    <content type="text"></content>
+  </entry>
   
   <entry>
     <title>Interoperable and Discoverable Indoor Positioning Systems</title>
