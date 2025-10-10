@@ -1,13 +1,13 @@
 [
     {
         "organization": {
-            "name": "Vrije Universiteit Brussel",
-            "url": "https://vub.be",
-            "icon": "/images/logo/vub-logo_square.svg",
+            "name": "Vlaanderen connect.",
+            "url": "https://vlaanderenconnect.be",
+            "icon": "/images/logo/vlaanderen-logo.jpeg",
             "address": {
-                "street": "Pleinlaan 2",
-                "city": "Elsene",
-                "postalCode": "1050",
+                "street": "Havenlaan 86C",
+                "city": "Brussel",
+                "postalCode": "1000",
                 "country": {
                     "code": "BE",
                     "label": "Belgium",
@@ -17,23 +17,18 @@
         },
         "positions": [
             {
-                "title": "Academic and Teaching Staff",
-                "titel": "Wetenschappelijk en Pedagogisch Personeel",
-                "start": "2019-10-01",
+                "title": "Technical Team Lead - Function class C",
+                "titel": "Technisch Team Lead - Functieklasse C",
+                "start": "2025-10-01",
                 "ongoing": true,
-                "unit": "Department of Computer Science",
-                "beschrijving": "Onderwijsassistent voor verschillende Bachelor- en Mastercursussen zoals: Databanken, Open Informatie Systemen, Web Technologieen, Informatie Visualisatie, Next Generation Gebruikersinterfaces, Advanced Topics in Big Data. Onderzoeker aan het Web & Information Systems Engineering Lab op het gebied van interoperabiliteit, linked data, internet of things, augmented reality, human-computer interaction en toegepaste kunstmatige intelligentie.",
-                "summary": "Teaching assistant for various Bachelor and Master courses such as: Databases, Open Information Systems, Web Technologies, Information Visualisation, Next Generation User Interfaces, Advanced Topics in Big Data. Researcher at the Web & Information Systems Engineering Lab on interoperability, linked data, internet of things, augmented reality, human-computer interaction and applied artificial intelligence."
+                "beschrijving": "Via Vlaanderen connect. werk ik in het Departement Omgeving",
+                "summary": "Via Vlaanderen connect. I work in the 'Departement Omgeving'"
             }
         ],
         "contact": {
-            "email": "maxim.van.de.wynckel@vub.be",
-            "website": "https://wise.vub.ac.be/member/maxim-van-de-wynckel"
+            "email": "maxim.vandewynckel@vlaanderen.be"
         },
         "sector": {
-            "type": "P",
-            "code": "85.42",
-            "label": "Higher education"
         }
     },
     {
@@ -70,6 +65,86 @@
             "type": "J",
             "code": "62.0.1",
             "label": "Computer programming activities"
+        }
+    },
+    {
+        "organization": {
+            "name": "V.U.B. Diving Center vzw",
+            "url": "https://www.vubdivingcenter.be",
+            "icon": "/images/logo/vdc-logo.png",
+            "rel": "author",
+            "address": {
+                "street": "Triomflaan 40",
+                "city": "Oudergem",
+                "postalCode": "1160",
+                "country": {
+                    "code": "BE",
+                    "label": "Belgium",
+                    "labelNL": "België"
+                }
+            }
+        },
+        "positions": [
+            {
+                "title": "Board Member & Secretary",
+                "titel": "Bestuurslid & Secretaris",
+                "start": "2025-09-08",
+                "ongoing": true,
+                "beschrijving": "Onbezoldigd bestuurslid en secretaris van de V.U.B. Diving Center vzw, verantwoordelijk voor administratieve taken en het ondersteunen van de clubactiviteiten.",
+                "summary": "Unpaid board member and secretary of the V.U.B. Diving Center vzw, responsible for administrative tasks and supporting club activities."
+            }
+        ],
+        "note": "",
+        "contact": {
+        },
+        "sector": {
+
+        }
+    },
+    {
+        "organization": {
+            "name": "Vrije Universiteit Brussel",
+            "url": "https://vub.be",
+            "icon": "/images/logo/vub-logo_square.svg",
+            "address": {
+                "street": "Pleinlaan 2",
+                "city": "Elsene",
+                "postalCode": "1050",
+                "country": {
+                    "code": "BE",
+                    "label": "Belgium",
+                    "labelNL": "België"
+                }
+            }
+        },
+        "positions": [
+            {
+                "title": "External Postdoctoral Researcher",
+                "titel": "Extern Postdoctoraal Onderzoeker",
+                "start": "2025-10-01",
+                "ongoing": true,
+                "unit": "Department of Computer Science",
+                "beschrijving": "Onbezoldigd extern onderzoek naar interoperabiliteit, linked data, dataspaces",
+                "summary": "Unpaid external postdoctoral researcher at the Web & Information Systems Engineering Lab, focusing on interoperability, linked data, and dataspaces."
+            },
+            {
+                "title": "Academic and Teaching Staff",
+                "titel": "Wetenschappelijk en Pedagogisch Personeel",
+                "start": "2019-10-01",
+                "end": "2025-09-30",
+                "unit": "Department of Computer Science",
+                "beschrijving": "Onderwijsassistent voor verschillende Bachelor- en Mastercursussen zoals: Databanken, Open Informatie Systemen, Web Technologieen, Informatie Visualisatie, Next Generation Gebruikersinterfaces, Advanced Topics in Big Data. Onderzoeker aan het Web & Information Systems Engineering Lab op het gebied van interoperabiliteit, linked data, internet of things, augmented reality, human-computer interaction en toegepaste kunstmatige intelligentie.",
+                "summary": "Teaching assistant for various Bachelor and Master courses such as: Databases, Open Information Systems, Web Technologies, Information Visualisation, Next Generation User Interfaces, Advanced Topics in Big Data. Researcher at the Web & Information Systems Engineering Lab on interoperability, linked data, internet of things, augmented reality, human-computer interaction and applied artificial intelligence."
+            }
+        ],
+        "contact": {
+            "email": "maxim.van.de.wynckel@vub.be",
+            "website": "https://wise.vub.ac.be/member/maxim-van-de-wynckel"
+        },
+        "sector": {
+            "type": "P",
+            "code": "85.42",
+            "label": "Higher education"
         }
     },
     {

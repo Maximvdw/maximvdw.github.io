@@ -79,57 +79,11 @@ layout: main.njk
   <div class="row">
     <div class="col-sm-6">
       <section class="cv-section">
-        <h2>Education</h2>
-        <div class="education">
-          {%- for entry in education %}
-          {%- if entry.visible != false %}
-          <div class="education-item">
-            <a class="logo" href="{{ entry.university.url }}" target="_blank" rel="nofollow">
-              <img
-                src="{{ entry.icon }}"
-                alt="{{ entry.university.name }} Logo"
-              />
-            </a>
-            <div class="details">
-              <h3>{{ entry.university.name }}</h3>
-              <h4>{{ entry.degree }}</h4>
-              {%- if entry.grade %}
-              <span class="detail-line italic">Graduated {{ entry.grade.latin }}</span>
-              {%- endif %}
-              <div class="year">
-                {% if entry.graduation %}
-                <span>{{ entry.graduation | date("MMMM, yyyy") }}</span>
-                {% else %}
-                <span>{{ entry.start | date("yyyy") }} - {{ entry.end | date("yyyy") }}</span>
-                {% endif %}
-              </div>
-              <div>
-              {% markdown %}
-              {{ entry.description }}
-              {% endmarkdown %}
-              </div>
-              {%- if entry.files %}
-              <div class="files">
-              {% for file in entry.files %}
-              <a href="{{ file.url }}" class="file" target="_blank" rel="nofollow">
-                <i class="{{ file.icon }}"></i> {{ file.name }}
-              </a>
-              {% endfor %}
-              </div>
-              {%- endif %}
-            </div>
-          </div>
-          {%- endif %}
-          {%- endfor %}
-        </div>
-      </section>
-    </div>
-    <div class="col-sm-6">
-      <section class="cv-section">
         <h2>Employment</h2>
         <div class="employment">
           {%- for entry in employment %}
-          <div class="employment-item">
+          {%- set isStudentJob = entry.positions and entry.positions[0].student %}
+          <div class="employment-item{% if isStudentJob %} student-job d-none{% endif %}">
               <a class="logo" href="{{ entry.organization.url }}" target="_blank" rel="{{ entry.organization.rel | default('nofollow') }}">
               <img
                 src="{{ entry.organization.icon }}"
@@ -208,9 +162,84 @@ layout: main.njk
             </div>
           </div>
           {%- endfor %}
+          <a href="#" id="toggle-student-jobs" class="show-details" data-toggle="collapse" data-target="#details-{{ loop.index }}">Show more ...</a>
+        </div>
+      </section>
+    </div>
+        <div class="col-sm-6">
+      <section class="cv-section">
+        <h2>Education</h2>
+        <div class="education">
+          {%- for entry in education %}
+          {%- if entry.visible != false %}
+          <div class="education-item">
+            <a class="logo" href="{{ entry.university.url }}" target="_blank" rel="nofollow">
+              <img
+                src="{{ entry.icon }}"
+                alt="{{ entry.university.name }} Logo"
+              />
+            </a>
+            <div class="details">
+              <h3>{{ entry.university.name }}</h3>
+              <h4>{{ entry.degree }}</h4>
+              {%- if entry.grade %}
+              <span class="detail-line italic">Graduated {{ entry.grade.latin }}</span>
+              {%- endif %}
+              <div class="year">
+                {% if entry.graduation %}
+                <span>{{ entry.graduation | date("MMMM, yyyy") }}</span>
+                {% else %}
+                <span>{{ entry.start | date("yyyy") }} - {{ entry.end | date("yyyy") }}</span>
+                {% endif %}
+              </div>
+              <div>
+              {% markdown %}
+              {{ entry.description }}
+              {% endmarkdown %}
+              </div>
+              {%- if entry.files %}
+              <div class="files">
+              {% for file in entry.files %}
+              <a href="{{ file.url }}" class="file" target="_blank" rel="nofollow">
+                <i class="{{ file.icon }}"></i> {{ file.name }}
+              </a>
+              {% endfor %}
+              </div>
+              {%- endif %}
+            </div>
+          </div>
+          {%- endif %}
+          {%- endfor %}
         </div>
       </section>
     </div>
   </div>
 </div>
 <script src="/scripts/about.js"></script>
+<style>
+/* Hide student jobs by default */
+.employment-item.student-job.d-none {
+  display: none;
+}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var studentJobs = document.querySelectorAll('.employment-item.student-job');
+  var btn = document.getElementById('toggle-student-jobs');
+  if (studentJobs.length > 0 && btn) {
+    btn.style.display = '';
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      var hidden = studentJobs[0].classList.contains('d-none');
+      studentJobs.forEach(function(el) {
+        if (hidden) {
+          el.classList.remove('d-none');
+        } else {
+          el.classList.add('d-none');
+        }
+      });
+      btn.textContent = hidden ? 'Hide student jobs' : 'Show more ...';
+    });
+  }
+});
+</script>
