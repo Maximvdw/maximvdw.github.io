@@ -40,7 +40,7 @@ jobs:
           libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 \
           libxss1 libxtst6 ca-certificates fonts-liberation libnss3 lsb-release \
           xdg-utils wget
-        node ./_scripts/europass.js - name: Deploy to GitHub Pages
+        node ./_scripts/europass.js 
         cp ./_scripts/downloads/europass.pdf ./_site/cv/europass.pdf
       
     - name: Deploy to GitHub Pages
