@@ -129,61 +129,59 @@
     </CandidatePerson>
     <CandidateProfile languageCode="en">
         <hr:ID schemeID="Maxim Van de Wynckel" schemeName="CandidateProfileID" schemeAgencyName="EUROPASS" schemeVersionID="1.0"/>
-        <hr:ExecutiveSummary>I am a software engineer, researcher and project manager with a passion for interoperable (information) systems. My main expertise lies in linked open data, data spaces, sensor processing &amp; RTLS. With my business skills and knowledge, I am capable of integrating innovation in existing business processes.</hr:ExecutiveSummary>
+        <hr:ExecutiveSummary>I am a tech lead, researcher and project manager with a passion for interoperable (information) systems. My main expertise lies in linked open data, data spaces, sensor processing &amp; RTLS. With my business skills and knowledge, I am capable of integrating innovation in existing business processes.</hr:ExecutiveSummary>
         <EmploymentHistory>
             
             
             <EmployerHistory>
-                <hr:OrganizationName>Vrije Universiteit Brussel</hr:OrganizationName>
+                <hr:OrganizationName>Vlaanderen connect.</hr:OrganizationName>
                 <OrganizationContact>
                     <Communication>
                         <Address>
-                            <oa:AddressLine>Pleinlaan 2</oa:AddressLine>
-                            <oa:CityName>Elsene</oa:CityName>
+                            <oa:AddressLine>Havenlaan 86C</oa:AddressLine>
+                            <oa:CityName>Brussel</oa:CityName>
                             <CountryCode>be</CountryCode>
-                            <oa:PostalCode>1050</oa:PostalCode>
+                            <oa:PostalCode>1000</oa:PostalCode>
                         </Address>
                     </Communication>
                     <Communication>
                         <ChannelCode>Web</ChannelCode>
-                        <oa:URI>https://vub.be</oa:URI>
+                        <oa:URI>https://vlaanderenconnect.be</oa:URI>
                     </Communication>
                     
                     <Communication>
                       <ChannelCode>Email</ChannelCode>
-                      <oa:URI>maxim.van.de.wynckel@vub.be</oa:URI>
+                      <oa:URI>maxim.vandewynckel@vlaanderen.be</oa:URI>
                     </Communication>
                     
                 </OrganizationContact>
                 
-                <Department>Department of Computer Science</Department>
                 
-                
-                <hr:IndustryCode>P</hr:IndustryCode>
+                <hr:IndustryCode></hr:IndustryCode>
                 
                 <eures:EmploymentPeriod><StartDate>
-                        <hr:FormattedDateTime>2019-10-01</hr:FormattedDateTime>
+                        <hr:FormattedDateTime>2025-10-01</hr:FormattedDateTime>
                     </StartDate>
                     
                     <hr:CurrentIndicator>true</hr:CurrentIndicator>
                 </eures:EmploymentPeriod>
                 <PositionHistory>
-                    <PositionTitle typeCode="FREETEXT">Academic and Teaching Staff</PositionTitle>
+                    <PositionTitle typeCode="FREETEXT">Technical Team Lead - Function class C</PositionTitle>
                     <eures:EmploymentPeriod>
                         <eures:StartDate>
-                            <hr:FormattedDateTime>2019-10-01</hr:FormattedDateTime>
+                            <hr:FormattedDateTime>2025-10-01</hr:FormattedDateTime>
                         </eures:StartDate>
                         
                         <hr:CurrentIndicator>true</hr:CurrentIndicator>
                     </eures:EmploymentPeriod>
                     <oa:Description>
                         
-                        Teaching assistant for various Bachelor and Master courses such as: Databases, Open Information Systems, Web Technologies, Information Visualisation, Next Generation User Interfaces, Advanced Topics in Big Data. Researcher at the Web &amp; Information Systems Engineering Lab on interoperability, linked data, internet of things, augmented reality, human-computer interaction and applied artificial intelligence.
+                        Via Vlaanderen connect. I work in the &#39;Departement Omgeving&#39;
                     </oa:Description>
-                    <oa:AddressLine>Pleinlaan 2</oa:AddressLine>
-                    <oa:CityName>Elsene</oa:CityName>
+                    <oa:AddressLine>Havenlaan 86C</oa:AddressLine>
+                    <oa:CityName>Brussel</oa:CityName>
                     <CountryCode>be</CountryCode>
-                    <oa:PostalCode>1050</oa:PostalCode>
+                    <oa:PostalCode>1000</oa:PostalCode>
                 </PositionHistory>
             </EmployerHistory>
             
@@ -238,6 +236,174 @@
                     <oa:CityName>Oudergem</oa:CityName>
                     <CountryCode>be</CountryCode>
                     <oa:PostalCode>1160</oa:PostalCode>
+                </PositionHistory>
+            </EmployerHistory>
+            
+            
+            
+            <EmployerHistory>
+                <hr:OrganizationName>V.U.B. Diving Center vzw</hr:OrganizationName>
+                <OrganizationContact>
+                    <Communication>
+                        <Address>
+                            <oa:AddressLine>Triomflaan 40</oa:AddressLine>
+                            <oa:CityName>Oudergem</oa:CityName>
+                            <CountryCode>be</CountryCode>
+                            <oa:PostalCode>1160</oa:PostalCode>
+                        </Address>
+                    </Communication>
+                    <Communication>
+                        <ChannelCode>Web</ChannelCode>
+                        <oa:URI>https://www.vubdivingcenter.be</oa:URI>
+                    </Communication>
+                    
+                    <Communication>
+                      <ChannelCode>Email</ChannelCode>
+                      <oa:URI></oa:URI>
+                    </Communication>
+                    
+                </OrganizationContact>
+                
+                
+                <hr:IndustryCode></hr:IndustryCode>
+                
+                <eures:EmploymentPeriod><StartDate>
+                        <hr:FormattedDateTime>2025-09-08</hr:FormattedDateTime>
+                    </StartDate>
+                    
+                    <hr:CurrentIndicator>true</hr:CurrentIndicator>
+                </eures:EmploymentPeriod>
+                <PositionHistory>
+                    <PositionTitle typeCode="FREETEXT">Board Member &amp; Secretary</PositionTitle>
+                    <eures:EmploymentPeriod>
+                        <eures:StartDate>
+                            <hr:FormattedDateTime>2025-09-08</hr:FormattedDateTime>
+                        </eures:StartDate>
+                        
+                        <hr:CurrentIndicator>true</hr:CurrentIndicator>
+                    </eures:EmploymentPeriod>
+                    <oa:Description>
+                        
+                        Unpaid board member and secretary of the V.U.B. Diving Center vzw, responsible for administrative tasks and supporting club activities.
+                    </oa:Description>
+                    <oa:AddressLine>Triomflaan 40</oa:AddressLine>
+                    <oa:CityName>Oudergem</oa:CityName>
+                    <CountryCode>be</CountryCode>
+                    <oa:PostalCode>1160</oa:PostalCode>
+                </PositionHistory>
+            </EmployerHistory>
+            
+            
+            
+            <EmployerHistory>
+                <hr:OrganizationName>Vrije Universiteit Brussel</hr:OrganizationName>
+                <OrganizationContact>
+                    <Communication>
+                        <Address>
+                            <oa:AddressLine>Pleinlaan 2</oa:AddressLine>
+                            <oa:CityName>Elsene</oa:CityName>
+                            <CountryCode>be</CountryCode>
+                            <oa:PostalCode>1050</oa:PostalCode>
+                        </Address>
+                    </Communication>
+                    <Communication>
+                        <ChannelCode>Web</ChannelCode>
+                        <oa:URI>https://vub.be</oa:URI>
+                    </Communication>
+                    
+                    <Communication>
+                      <ChannelCode>Email</ChannelCode>
+                      <oa:URI>maxim.van.de.wynckel@vub.be</oa:URI>
+                    </Communication>
+                    
+                </OrganizationContact>
+                
+                <Department>Department of Computer Science</Department>
+                
+                
+                <hr:IndustryCode>P</hr:IndustryCode>
+                
+                <eures:EmploymentPeriod><StartDate>
+                        <hr:FormattedDateTime>2019-10-01</hr:FormattedDateTime>
+                    </StartDate>
+                    
+                    <hr:CurrentIndicator>true</hr:CurrentIndicator>
+                </eures:EmploymentPeriod>
+                <PositionHistory>
+                    <PositionTitle typeCode="FREETEXT">External Postdoctoral Researcher</PositionTitle>
+                    <eures:EmploymentPeriod>
+                        <eures:StartDate>
+                            <hr:FormattedDateTime>2025-10-01</hr:FormattedDateTime>
+                        </eures:StartDate>
+                        
+                        <hr:CurrentIndicator>true</hr:CurrentIndicator>
+                    </eures:EmploymentPeriod>
+                    <oa:Description>
+                        
+                        Unpaid external postdoctoral researcher at the Web &amp; Information Systems Engineering Lab, focusing on interoperability, linked data, and dataspaces.
+                    </oa:Description>
+                    <oa:AddressLine>Pleinlaan 2</oa:AddressLine>
+                    <oa:CityName>Elsene</oa:CityName>
+                    <CountryCode>be</CountryCode>
+                    <oa:PostalCode>1050</oa:PostalCode>
+                </PositionHistory>
+            </EmployerHistory>
+            
+            <EmployerHistory>
+                <hr:OrganizationName>Vrije Universiteit Brussel</hr:OrganizationName>
+                <OrganizationContact>
+                    <Communication>
+                        <Address>
+                            <oa:AddressLine>Pleinlaan 2</oa:AddressLine>
+                            <oa:CityName>Elsene</oa:CityName>
+                            <CountryCode>be</CountryCode>
+                            <oa:PostalCode>1050</oa:PostalCode>
+                        </Address>
+                    </Communication>
+                    <Communication>
+                        <ChannelCode>Web</ChannelCode>
+                        <oa:URI>https://vub.be</oa:URI>
+                    </Communication>
+                    
+                    <Communication>
+                      <ChannelCode>Email</ChannelCode>
+                      <oa:URI>maxim.van.de.wynckel@vub.be</oa:URI>
+                    </Communication>
+                    
+                </OrganizationContact>
+                
+                <Department>Department of Computer Science</Department>
+                
+                
+                <hr:IndustryCode>P</hr:IndustryCode>
+                
+                <eures:EmploymentPeriod><StartDate>
+                        <hr:FormattedDateTime>2019-10-01</hr:FormattedDateTime>
+                    </StartDate>
+                    
+                    <hr:CurrentIndicator>true</hr:CurrentIndicator>
+                </eures:EmploymentPeriod>
+                <PositionHistory>
+                    <PositionTitle typeCode="FREETEXT">Academic and Teaching Staff</PositionTitle>
+                    <eures:EmploymentPeriod>
+                        <eures:StartDate>
+                            <hr:FormattedDateTime>2019-10-01</hr:FormattedDateTime>
+                        </eures:StartDate>
+                        
+                        <eures:EndDate>
+                          <hr:FormattedDateTime>2025-09-30</hr:FormattedDateTime>
+                        </eures:EndDate>
+                        
+                        <hr:CurrentIndicator></hr:CurrentIndicator>
+                    </eures:EmploymentPeriod>
+                    <oa:Description>
+                        
+                        Teaching assistant for various Bachelor and Master courses such as: Databases, Open Information Systems, Web Technologies, Information Visualisation, Next Generation User Interfaces, Advanced Topics in Big Data. Researcher at the Web &amp; Information Systems Engineering Lab on interoperability, linked data, internet of things, augmented reality, human-computer interaction and applied artificial intelligence.
+                    </oa:Description>
+                    <oa:AddressLine>Pleinlaan 2</oa:AddressLine>
+                    <oa:CityName>Elsene</oa:CityName>
+                    <CountryCode>be</CountryCode>
+                    <oa:PostalCode>1050</oa:PostalCode>
                 </PositionHistory>
             </EmployerHistory>
             
@@ -1039,13 +1205,7 @@
             <Publication>
                 <hr:FormattedPublicationDescription>Maxim Van de Wynckel aims to make indoor positioning technology as universal as GPS, with a focus on interoperability, adaptability, and privacy</hr:FormattedPublicationDescription>
                 <Title>VUB researcher teaches systems that determine the location of people or objects within buildings to work together</Title>
-                <Year>2025</Year>
-                <Reference>
-                    
-                    (Press article) 
-                    
-                    
-                </Reference>
+                <Year>2025</Year><Reference>(Press article)</Reference>
                 
                 <DOI>
                   <Link>https://press.vub.ac.be/vub-researcher-teaches-systems-that-determine-the-location-of-people-or-objects-within-buildings-to-work-together</Link>
@@ -1064,12 +1224,8 @@
 &lt;p&gt;An important aspect of the proposed solution is the emphasis on user control. By supporting privacy-aware data management and reducing reliance on closed, vendor-specific applications, the framework aims to offer a more open and user-centric alternative. The ultimate goal of this research is to support the development of a unified ecosystem for positioning systems, where location data can be managed and shared efficiently across various contexts while preserving trust and interoperability.&lt;/p&gt;
 </hr:FormattedPublicationDescription>
                 <Title>Interoperable and Discoverable Indoor Positioning Systems</Title>
-                <Year>2025</Year>
-                <Reference>
-                    
-                    Van de Wynckel, M. (2025). Interoperable and Discoverable Indoor Positioning Systems [PhD thesis]. Vrije Universiteit Brussel – WISE lab.
-
-                </Reference>
+                <Year>2025</Year><Reference>Van de Wynckel, M. (2025). Interoperable and Discoverable Indoor Positioning Systems [PhD thesis]. Vrije Universiteit Brussel – WISE lab.
+</Reference>
                 
                 
                 
@@ -1080,12 +1236,8 @@
             <Publication>
                 <hr:FormattedPublicationDescription>Positioning systems determine the location of people and objects using various technologies and algorithms. While GPS dominates outdoor positioning, indoor and smaller-scale systems often require alternative technologies for lower latency, higher accuracy, or greater efficiency. These systems are frequently developed as single-use prototypes with no standard data format, hindering reusability and expansion. OpenHPS addresses these challenges by providing a modular, graph-based framework for creating versatile positioning systems on multiple platforms. It supports a wide range of algorithms and enables extensibility through custom nodes for sensor fusion and algorithm integration.</hr:FormattedPublicationDescription>
                 <Title>OpenHPS: A Modular Framework to Facilitate the Development of FAIR Positioning Systems</Title>
-                <Year>2025</Year>
-                <Reference>
-                    
-                    Van de Wynckel, M., &amp; Signer, B. (2025). OpenHPS: A Modular Framework to Facilitate the Development of FAIR Positioning Systems. Journal of Open Source Software, 10(110), 8113. https://doi.org/10.21105/joss.08113
-
-                </Reference>
+                <Year>2025</Year><Reference>Van de Wynckel, M., &amp; Signer, B. (2025). OpenHPS: A Modular Framework to Facilitate the Development of FAIR Positioning Systems. Journal of Open Source Software, 10(110), 8113. https://doi.org/10.21105/joss.08113
+</Reference>
                 
                 <DOI>
                   <Link>https://joss.theoj.org/papers/10.21105/joss.08113</Link>
@@ -1100,12 +1252,8 @@
             <Publication>
                 <hr:FormattedPublicationDescription>Pseudonymised survey results of our 2025 survey on the privacy and transparency of location data</hr:FormattedPublicationDescription>
                 <Title>Survey on the Privacy and Transparency of Location Data</Title>
-                <Year>2025</Year>
-                <Reference>
-                    
-                    Van de Wynckel, M., &amp; Signer, B. (2025). Survey on the Privacy and Transparency of Location Data. https://doi.org/10.5281/zenodo.15564050
-
-                </Reference>
+                <Year>2025</Year><Reference>Van de Wynckel, M., &amp; Signer, B. (2025). Survey on the Privacy and Transparency of Location Data. https://doi.org/10.5281/zenodo.15564050
+</Reference>
                 
                 <DOI>
                   <Link>https://zenodo.org/records/15564052</Link>
@@ -1120,13 +1268,7 @@
             <Publication>
                 <hr:FormattedPublicationDescription>&#39;Locatiegegevens zijn big business&#39;, zegt doctoraatsonderzoeker Maxim Van de Wynckel. Zulke data worden door een hele rist aan applicaties en andere diensten opgeslagen. &#39;Denk aan navigatie- en fitnessapps, maar ook aan wifi- en bluetooth-signalen. Gebruikers zijn zich vaak niet bewust van die onzichtbare vormen van dataverzameling&#39;. Recente gebeurtenissen tonen aan hoe kwetsbaar locatiegegevens zijn.</hr:FormattedPublicationDescription>
                 <Title>Jong Talent: Maxim Van de Wynckel (30) zoekt oplossingen om gebruikers meer controle te geven over hun locatiegegevens</Title>
-                <Year>2025</Year>
-                <Reference>
-                    
-                    (Press article) 
-                    
-                    
-                </Reference>
+                <Year>2025</Year><Reference>(Press article)</Reference>
                 
                 <DOI>
                   <Link>https://www.knack.be/nieuws/technologie/jong-talent-maxim-van-de-wynckel-30-zoekt-oplossingen-om-gebruikers-meer-controle-te-geven-over-hun-locatiegegevens/</Link>
@@ -1141,12 +1283,8 @@
             <Publication>
                 <hr:FormattedPublicationDescription>Computer vision tracking and dead reckoning sensor fusion of a Sphero robot</hr:FormattedPublicationDescription>
                 <Title>Sphero Dead Reckoning and CV Tracking Dataset</Title>
-                <Year>2025</Year>
-                <Reference>
-                    
-                    Van de Wynckel, M., &amp; Signer, B. (2025). Sphero Dead Reckoning and CV Tracking Dataset. Kaggle. https://doi.org/10.34740/KAGGLE/DS/6760212
-
-                </Reference>
+                <Year>2025</Year><Reference>Van de Wynckel, M., &amp; Signer, B. (2025). Sphero Dead Reckoning and CV Tracking Dataset. Kaggle. https://doi.org/10.34740/KAGGLE/DS/6760212
+</Reference>
                 
                 <DOI>
                   <Link>https://www.kaggle.com/datasets/maximvandewynckel/sphero-dead-reckoning-and-cv-tracking-dataset</Link>
@@ -1161,12 +1299,8 @@
             <Publication>
                 <hr:FormattedPublicationDescription>A fingerprinting dataset consisting of WLAN, BLE and IMU data in a garage</hr:FormattedPublicationDescription>
                 <Title>Garage Positioning Dataset</Title>
-                <Year>2025</Year>
-                <Reference>
-                    
-                    Van de Wynckel, M. (2025). Garage Positioning Dataset. Kaggle. https://doi.org/10.34740/KAGGLE/DS/6654647
-
-                </Reference>
+                <Year>2025</Year><Reference>Van de Wynckel, M. (2025). Garage Positioning Dataset. Kaggle. https://doi.org/10.34740/KAGGLE/DS/6654647
+</Reference>
                 
                 <DOI>
                   <Link>https://www.kaggle.com/datasets/maximvandewynckel/garage-positioning-dataset</Link>
@@ -1181,12 +1315,8 @@
             <Publication>
                 <hr:FormattedPublicationDescription>This paper proposes a decentralised approach to intelligent tutoring systems by storing learning progress and performance data in user-owned Solid Pods, enhancing learner autonomy and privacy.</hr:FormattedPublicationDescription>
                 <Title>Towards Distributed Intelligent Tutoring Systems Based on User-owned Progress and Performance Data</Title>
-                <Year>2024</Year>
-                <Reference>
-                    
-                    Malaise, Y., Van de Wynckel, M., &amp; Signer, B. (2024). Towards Distributed Intelligent Tutoring Systems Based on User-owned Progress and Performance Data. Proceedings of the 2nd Solid Symposium (SoSy’24), 3947. https://ceur-ws.org/Vol-3947/short3.pdf
-
-                </Reference>
+                <Year>2024</Year><Reference>Malaise, Y., Van de Wynckel, M., &amp; Signer, B. (2024). Towards Distributed Intelligent Tutoring Systems Based on User-owned Progress and Performance Data. Proceedings of the 2nd Solid Symposium (SoSy’24), 3947. https://ceur-ws.org/Vol-3947/short3.pdf
+</Reference>
                 
                 <DOI>
                   <Link>https://ceur-ws.org/Vol-3947/short3.pdf</Link>
@@ -1201,11 +1331,7 @@
             <Publication>
                 <hr:FormattedPublicationDescription>In this paper, we propose a novel solution to store 3D manipulations in AR spaces within a Solid pod. Using this solution, multiple users can work together in the same environment while also ensuring interoperability between AR applications.</hr:FormattedPublicationDescription>
                 <Title>Discoverable and Interoperable Augmented Reality Environments Through Solid Pods</Title>
-                <Year>2024</Year>
-                <Reference>
-                    
-                    Van de Wynckel, M., &amp; Signer, B. (2024). Discoverable and Interoperable Augmented Reality Environments Through Solid Pods. Proceedings of SoSy 2024 (Poster), 2nd Solid Symposium, Leuven, Belgium, May 2024, 3947.
-                </Reference>
+                <Year>2024</Year><Reference>Van de Wynckel, M., &amp; Signer, B. (2024). Discoverable and Interoperable Augmented Reality Environments Through Solid Pods. Proceedings of SoSy 2024 (Poster), 2nd Solid Symposium, Leuven, Belgium, May 2024, 3947.</Reference>
                 
                 <DOI>
                   <Link>https://ceur-ws.org/Vol-3947/short2.pdf</Link>
@@ -1220,12 +1346,8 @@
             <Publication>
                 <hr:FormattedPublicationDescription>In this publication, we propose an ontology called FidMark for semantically describing fiducial markers. This ontology is useful for AR and robotics applications to ensure interoperability between systems.</hr:FormattedPublicationDescription>
                 <Title>FidMark: A Fiducial Marker Ontology for Semantically Describing Visual Markers</Title>
-                <Year>2024</Year>
-                <Reference>
-                    
-                    Van de Wynckel, M., Valadez, I., &amp; Signer, B. (2024). FidMark: A Fiducial Marker Ontology for Semantically Describing Visual Markers. Proceedings of The Semantic Web (ESWC 2024), 235–250. https://doi.org/10.1007/978-3-031-60635-9_14
-
-                </Reference>
+                <Year>2024</Year><Reference>Van de Wynckel, M., Valadez, I., &amp; Signer, B. (2024). FidMark: A Fiducial Marker Ontology for Semantically Describing Visual Markers. Proceedings of The Semantic Web (ESWC 2024), 235–250. https://doi.org/10.1007/978-3-031-60635-9_14
+</Reference>
                 
                 <DOI>
                   <Link>https://link.springer.com/chapter/10.1007/978-3-031-60635-9_14</Link>
@@ -1242,11 +1364,7 @@
             <Publication>
                 <hr:FormattedPublicationDescription>In this publication we propose the SemBeacon specification, which is a semantic beacon solution to discover and detect the position of physical things such as IoT devices, environments or services.</hr:FormattedPublicationDescription>
                 <Title>SemBeacon: A Semantic Proximity Beacon Solution for Discovering and Detecting the Position of Physical Things</Title>
-                <Year>2023</Year>
-                <Reference>
-                    
-                    Van de Wynckel, M., &amp; Signer, B. (2023). SemBeacon: A Semantic Proximity Beacon Solution for Discovering and Detecting the Position of Physical Things. Proceedings of the 13th International Conference on the Internet of Things, 9–16.
-                </Reference>
+                <Year>2023</Year><Reference>Van de Wynckel, M., &amp; Signer, B. (2023). SemBeacon: A Semantic Proximity Beacon Solution for Discovering and Detecting the Position of Physical Things. Proceedings of the 13th International Conference on the Internet of Things, 9–16.</Reference>
                 
                 <DOI>
                   <Link>https://dl.acm.org/doi/10.1145/3627050.3627060</Link>
@@ -1261,12 +1379,8 @@
             <Publication>
                 <hr:FormattedPublicationDescription>In this dataset, two separate datasets were recorded in a Belgian train station to collect 802.11 wireless management frames. The datasets were anonymised and contain data on the SSIDs, signal strengths and MAC addresses.</hr:FormattedPublicationDescription>
                 <Title>802.11 Managemement frames from a public location</Title>
-                <Year>2023</Year>
-                <Reference>
-                    
-                    Vermunicht, B., Van de Wynckel, M., &amp; Signer, B. (2023). 802.11 Managemement frames from a public location. https://doi.org/10.5281/zenodo.8003771
-
-                </Reference>
+                <Year>2023</Year><Reference>Vermunicht, B., Van de Wynckel, M., &amp; Signer, B. (2023). 802.11 Managemement frames from a public location. https://doi.org/10.5281/zenodo.8003771
+</Reference>
                 
                 <DOI>
                   <Link>https://zenodo.org/records/8003772</Link>
@@ -1281,12 +1395,8 @@
             <Publication>
                 <hr:FormattedPublicationDescription>In this dataset, a Monopoly game was recorded from a first person perspective. The aim of this dataset is to conduct pawn and object tracking using computer vision algorithms.</hr:FormattedPublicationDescription>
                 <Title>Object Tracking on a Monopoly Game Board</Title>
-                <Year>2023</Year>
-                <Reference>
-                    
-                    Hoebeke, N., Van de Wynckel, M., &amp; Signer, B. (2023). Object Tracking on a Monopoly Game Board. https://doi.org/10.5281/zenodo.7990434
-
-                </Reference>
+                <Year>2023</Year><Reference>Hoebeke, N., Van de Wynckel, M., &amp; Signer, B. (2023). Object Tracking on a Monopoly Game Board. https://doi.org/10.5281/zenodo.7990434
+</Reference>
                 
                 <DOI>
                   <Link>https://zenodo.org/records/7990434</Link>
@@ -1301,12 +1411,8 @@
             <Publication>
                 <hr:FormattedPublicationDescription>In this publication we propose the POSO ontology, which is a positioning system ontology to semantically describe positioning systems, the data they produce and the environments in which these systems are deployed.</hr:FormattedPublicationDescription>
                 <Title>POSO: A Generic Positioning System Ontology</Title>
-                <Year>2022</Year>
-                <Reference>
-                    
-                    Van de Wynckel, M., &amp; Signer, B. (2022). POSO: A Generic Positioning System Ontology. The Semantic Web – ISWC 2022, 231–247. https://doi.org/10.1007/978-3-031-19433-7_14
-
-                </Reference>
+                <Year>2022</Year><Reference>Van de Wynckel, M., &amp; Signer, B. (2022). POSO: A Generic Positioning System Ontology. The Semantic Web – ISWC 2022, 231–247. https://doi.org/10.1007/978-3-031-19433-7_14
+</Reference>
                 
                 <DOI>
                   <Link>https://link.springer.com/chapter/10.1007/978-3-031-19433-7_14</Link>
@@ -1323,11 +1429,7 @@
             <Publication>
                 <hr:FormattedPublicationDescription>In this publication we propose a solution to decentralise location data and positioning systems in Solid pods using linked data.</hr:FormattedPublicationDescription>
                 <Title>A Solid-based Architecture for Decentralised Interoperable Location Data</Title>
-                <Year>2022</Year>
-                <Reference>
-                    
-                    Van de Wynckel, M., &amp; Signer, B. (2022). A Solid-based Architecture for Decentralised Interoperable Location Data. Proceedings of the 12th International Conference on Indoor Positioning and Indoor Navigation (IPIN’22), CEUR Workshop Proceedings,
-                </Reference>
+                <Year>2022</Year><Reference>Van de Wynckel, M., &amp; Signer, B. (2022). A Solid-based Architecture for Decentralised Interoperable Location Data. Proceedings of the 12th International Conference on Indoor Positioning and Indoor Navigation (IPIN’22), CEUR Workshop Proceedings,</Reference>
                 
                 <DOI>
                   <Link>https://ceur-ws.org/Vol-3248/paper11.pdf</Link>
@@ -1344,12 +1446,8 @@
             <Publication>
                 <hr:FormattedPublicationDescription>In this publication, we propose OpenHPS, an open source hybrid positioning system. We demonstrate how OpenHPS can be used to create indoor positioning systems.</hr:FormattedPublicationDescription>
                 <Title>Indoor Positioning Using the OpenHPS Framework</Title>
-                <Year>2021</Year>
-                <Reference>
-                    
-                    Van de Wynckel, M., &amp; Signer, B. (2021). Indoor Positioning Using the OpenHPS Framework. 2021 International Conference on Indoor Positioning and Indoor Navigation (IPIN), 1–8. https://doi.org/10.1109/IPIN51156.2021.9662569
-
-                </Reference>
+                <Year>2021</Year><Reference>Van de Wynckel, M., &amp; Signer, B. (2021). Indoor Positioning Using the OpenHPS Framework. 2021 International Conference on Indoor Positioning and Indoor Navigation (IPIN), 1–8. https://doi.org/10.1109/IPIN51156.2021.9662569
+</Reference>
                 
                 <DOI>
                   <Link>https://ieeexplore.ieee.org/document/9662569</Link>
@@ -1364,12 +1462,8 @@
             <Publication>
                 <hr:FormattedPublicationDescription>In this dataset, we collected fingerprints of Wi-Fi access points and BLE beacons in a building. The fingerprints are collected in four directions and cover an entire floor.</hr:FormattedPublicationDescription>
                 <Title>OpenHPS: Single Floor Fingerprinting and Trajectory Dataset</Title>
-                <Year>2021</Year>
-                <Reference>
-                    
-                    Van de Wynckel, M., &amp; Signer, B. (2021). OpenHPS: Single Floor Fingerprinting and Trajectory Dataset. https://doi.org/10.5281/zenodo.4744380
-
-                </Reference>
+                <Year>2021</Year><Reference>Van de Wynckel, M., &amp; Signer, B. (2021). OpenHPS: Single Floor Fingerprinting and Trajectory Dataset. https://doi.org/10.5281/zenodo.4744380
+</Reference>
                 
                 <DOI>
                   <Link>https://zenodo.org/records/4744380</Link>
@@ -1384,12 +1478,8 @@
             <Publication>
                 <hr:FormattedPublicationDescription>In this technical report, we provide a technical overview of the OpenHPS framework. OpenHPS is a framework to design a wide range of hybrid positioning systems using TypeScript.</hr:FormattedPublicationDescription>
                 <Title>OpenHPS: An Open Source Hybrid Positioning System</Title>
-                <Year>2020</Year>
-                <Reference>
-                    
-                    Van de Wynckel, M., &amp; Signer, B. (2020). OpenHPS: An Open Source Hybrid Positioning System (WISE-2020-01). Vrije Universiteit Brussel. https://doi.org/10.48550/ARXIV.2101.05198
-
-                </Reference>
+                <Year>2020</Year><Reference>Van de Wynckel, M., &amp; Signer, B. (2020). OpenHPS: An Open Source Hybrid Positioning System (WISE-2020-01). Vrije Universiteit Brussel. https://doi.org/10.48550/ARXIV.2101.05198
+</Reference>
                 
                 <DOI>
                   <Link>https://arxiv.org/abs/2101.05198</Link>
@@ -1406,12 +1496,8 @@
             <Publication>
                 <hr:FormattedPublicationDescription>The goal of my Master thesis was to design an indoor navigation system that guides patients and visitors inside a hospital. The solution was designed to require minimal setup and interaction by both the hospital and users.</hr:FormattedPublicationDescription>
                 <Title>Master thesis: Indoor Navigation by Centralized Tracking</Title>
-                <Year>2019</Year>
-                <Reference>
-                    
-                    Van de Wynckel, M. (2019). Indoor Navigation by Centralized Tracking [Master’s thesis, Vrije Universiteit Brussel]. https://researchportal.vub.be/en/studentTheses/indoor-navigation-by-centralized-tracking
-
-                </Reference>
+                <Year>2019</Year><Reference>Van de Wynckel, M. (2019). Indoor Navigation by Centralized Tracking [Master’s thesis, Vrije Universiteit Brussel]. https://researchportal.vub.be/en/studentTheses/indoor-navigation-by-centralized-tracking
+</Reference>
                 
                 <DOI>
                   <Link>https://researchportal.vub.be/en/studentTheses/indoor-navigation-by-centralized-tracking</Link>
@@ -1428,11 +1514,7 @@
             <Publication>
                 <hr:FormattedPublicationDescription>My bachelor thesis was designed for the company BITPOWER. Using the European Identity card (eID), remote authorisation access could be granted via a mobile application.</hr:FormattedPublicationDescription>
                 <Title>Bachelor thesis: eID IO - Applicatie besturing</Title>
-                <Year>2016</Year>
-                <Reference>
-                    
-                    My bachelor thesis was to provide remote actions for eID authentication. It was awarded the best thesis of the class of 2016.
-                </Reference>
+                <Year>2016</Year><Reference>My bachelor thesis was to provide remote actions for eID authentication. It was awarded the best thesis of the class of 2016.</Reference>
                 
                 
                 
@@ -1443,11 +1525,7 @@
             <Publication>
                 <hr:FormattedPublicationDescription>My final work during the last year of my highschool was a database migration tool for migrating the Flemish student database to other platforms used by students.</hr:FormattedPublicationDescription>
                 <Title>Final work: WisaReg</Title>
-                <Year>2013</Year>
-                <Reference>
-                    
-                    WisaReg is an application that provides newly registered students from the Wisa database with accounts for various services. It was awarded the best final work of 2013.
-                </Reference>
+                <Year>2013</Year><Reference>WisaReg is an application that provides newly registered students from the Wisa database with accounts for various services. It was awarded the best final work of 2013.</Reference>
                 
                 
                 
