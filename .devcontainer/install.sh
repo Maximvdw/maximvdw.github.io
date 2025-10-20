@@ -1,5 +1,7 @@
 #!/bin/bash
 
+npm install -g npm-check-updates
+
 sudo apt-get update
 sudo apt-get install -yq gconf-service libasound2 libatk1.0-0 libc6 libcairo2 \
         libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgbm1 libgcc1 libgconf-2-4 \
@@ -9,3 +11,5 @@ sudo apt-get install -yq gconf-service libasound2 libatk1.0-0 libc6 libcairo2 \
         libxss1 libxtst6 ca-certificates fonts-liberation libnss3 lsb-release \
         xdg-utils wget
 docker compose up -d
+
+yes | npx puppeteer@latest browsers install chrome

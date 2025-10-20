@@ -209,12 +209,11 @@ print:
                 <hr:FormattedPublicationDescription>{{ publication.data.summary | default(publication.content) }}</hr:FormattedPublicationDescription>
                 <Title>{{ publication.data.title }}</Title>
                 <Year>{{ publication.data.date | date("yyyy") }}</Year>
-                <Reference>
-                    {% if publication.data.type == 'press' %}
-                    (Press article) 
-                    {% endif %}
-                    {{ publication.data.excerpt_short or publication.data.excerpt }}
-                </Reference>
+                {%- set ref = (publication.data.excerpt_short or publication.data.excerpt) -%}
+                {%- if publication.data.type == 'press' -%}
+                {%- set ref = ("(Press article)") -%}
+                {%- endif -%}
+                <Reference>{{ ref | truncate(250, true, "") }}</Reference>
                 {% if publication.data.link %}
                 <DOI>
                   <Link>{{ publication.data.link }}</Link>

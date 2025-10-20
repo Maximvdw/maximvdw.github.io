@@ -3,6 +3,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import puppeteer from "puppeteer";
 
+const DEBUG = false;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const delay = 8000;    // Should not need this
@@ -15,7 +16,7 @@ const prepare = async (page) => {
         );
 
         // Wait for the necessary JavaScript to execute and set the cookies
-        await page.waitForSelector("select-existing-file-button"); // Adjust the selector as needed
+        await page.waitForSelector("cv-wizard-select-existing-file-button"); // Adjust the selector as needed
 
         const cookies = await page.cookies();
         const xsrfCookie = cookies.find((cookie) => cookie.name === "XSRF-TOKEN");
@@ -47,7 +48,7 @@ const upload = async (file, page) => {
         // Click the save button
         console.log('\tClicking on "Save" button...');
         await page.evaluate(() => {
-            document.querySelectorAll("eui-dialog-footer button")[1].click();
+            document.querySelectorAll("#select-legacy-editor-btn button")[0].click();
         });
     } catch (error) {
         console.error("Error making POST request:", error);
@@ -147,9 +148,13 @@ const download = async (page) => {
 
 async function create() {
     const browser = await puppeteer.launch({
-        headless: true,
-        // args: ['--no-sandbox', '--disable-setuid-sandbox'],
-        // slowMo: 500
+        headless: !DEBUG,
+        devtools: DEBUG,
+        defaultViewport: DEBUG ? null : undefined,
+        args: DEBUG
+            ? ['--start-maximized']
+            : ['--no-sandbox', '--disable-setuid-sandbox'],
+        slowMo: DEBUG ? 250 : 0
     });
     const page = await browser.newPage();
     page.setDefaultTimeout(60000);

@@ -93,7 +93,9 @@ export default async function (el) {
             compileOptions: {
                 permalink: function() {
                     return (data) => {
-                        return data.page.filePathStem.replace(/^\/_scss\//, "/css/") + ".css";
+                        const stem = data && data.page && data.page.filePathStem;
+                        if (!stem) return null;
+                        return stem.replace(/^\/_scss\//, "/css/") + ".css";
                     };
                 }
             },
