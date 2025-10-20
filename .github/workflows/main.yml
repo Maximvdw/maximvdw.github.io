@@ -21,6 +21,12 @@ jobs:
     - name: Install dependencies
       run: yarn install
 
+    - name: Set up dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y build-essential python3 libvips-dev
+        yarn install --force
+
     - name: Run Docker container
       run: docker run -d -p 8888:8888 ghcr.io/validator/validator:latest
 
