@@ -166,7 +166,7 @@
                     <hr:CurrentIndicator>true</hr:CurrentIndicator>
                 </eures:EmploymentPeriod>
                 <PositionHistory>
-                    <PositionTitle typeCode="FREETEXT">Technical Team Lead - Function class C</PositionTitle>
+                    <PositionTitle typeCode="FREETEXT">Technical Team Lead</PositionTitle>
                     <eures:EmploymentPeriod>
                         <eures:StartDate>
                             <hr:FormattedDateTime>2025-10-01</hr:FormattedDateTime>
