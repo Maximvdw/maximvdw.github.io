@@ -17,8 +17,8 @@
         },
         "positions": [
             {
-                "title": "Technical Team Lead - Function class C",
-                "titel": "Technisch Team Lead - Functieklasse C",
+                "title": "Technical Team Lead",
+                "titel": "Technisch Team Lead",
                 "start": "2025-10-01",
                 "ongoing": true,
                 "beschrijving": "Via Vlaanderen connect. werk ik in het Departement Omgeving",
@@ -86,6 +86,7 @@
         },
         "positions": [
             {
+                "hidden": true,
                 "title": "Board Member & Secretary",
                 "titel": "Bestuurslid & Secretaris",
                 "start": "2025-09-08",

@@ -82,8 +82,9 @@ layout: main.njk
         <h2>Employment</h2>
         <div class="employment">
           {%- for entry in employment %}
-          {%- set isStudentJob = entry.positions and entry.positions[0].student %}
-          <div class="employment-item{% if isStudentJob %} student-job d-none{% endif %}">
+            {%- set allHidden = entry.positions | selectattr("hidden") | list | length == entry.positions | length %}
+            {%- if not allHidden %}
+            <div class="employment-item{% if entry.positions and entry.positions[0].student %} student-job d-none{% endif %}">
               <a class="logo" href="{{ entry.organization.url }}" target="_blank" rel="{{ entry.organization.rel | default('nofollow') }}">
               <img
                 src="{{ entry.organization.icon }}"
@@ -161,6 +162,7 @@ layout: main.njk
                 {%- endif -%}
             </div>
           </div>
+          {%- endif %}
           {%- endfor %}
           <a href="#" id="toggle-student-jobs" class="show-details" data-toggle="collapse" data-target="#details-{{ loop.index }}">Show more ...</a>
         </div>
