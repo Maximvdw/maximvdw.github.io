@@ -44,7 +44,11 @@ const upload = async (file, page) => {
         await page.waitForSelector("eui-file-upload");
         console.log("\tUpload XML file...");
         const input = await page.$('input[type="file"]');
-        await input.uploadFile(file);
+        const [fileChooser] = await Promise.all([
+            page.waitForFileChooser(),
+            input.click(),
+        ]);
+        await fileChooser.accept([file]);
         // Click the save button
         console.log('\tClicking on "Save" button...');
         await page.evaluate(() => {
@@ -112,7 +116,7 @@ const download = async (page) => {
 
         await page.waitForSelector("cv-download-button");
         console.log('\tClicking on "Download" button ...');
-        const client = await page.target().createCDPSession();
+        const client = await page.createCDPSession();
         await client.send("Page.setDownloadBehavior", {
             behavior: "allow",
             downloadPath: path.join(__dirname, "downloads"),
