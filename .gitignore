@@ -11,3 +11,4 @@ _site/
 
 # Yarn
 yarn-error.log
+.yarn/
