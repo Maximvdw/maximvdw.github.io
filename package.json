@@ -5,7 +5,7 @@
   "repository": "https://github.com/Maximvdw/maximvdw.be",
   "author": {
     "name": "Maxim Van de Wynckel",
-    "email": "maxim.van.de.wynckel@vub.be"
+    "email": "maxim.vandewynckel@vlaanderen.be"
   },
   "license": "MIT",
   "type": "module",
@@ -44,7 +44,7 @@
     "nunjucks": "^3.2.4",
     "nunjucks-markdown": "^2.0.1",
     "puppeteer": "^24.25.0",
-    "sharp": "^0.34.4",
+    "sharp": "^0.34.5",
     "to-ico": "^1.1.5"
   },
   "devDependencies": {

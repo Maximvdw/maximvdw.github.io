@@ -5,7 +5,7 @@
             "url": "https://vlaanderenconnect.be",
             "icon": "/images/logo/vlaanderen-logo.jpeg",
             "address": {
-                "street": "Havenlaan 86C",
+                "street": "Havenlaan 88",
                 "city": "Brussel",
                 "postalCode": "1000",
                 "country": {
@@ -38,9 +38,9 @@
             "icon": "/images/logo/mvdw-logo.svg",
             "rel": "author",
             "address": {
-                "street": "Invalidenlaan 178/5",
-                "city": "Oudergem",
-                "postalCode": "1160",
+                "street": "Draaiersstraat 33",
+                "city": "Aalst",
+                "postalCode": "9300",
                 "country": {
                     "code": "BE",
                     "label": "Belgium",

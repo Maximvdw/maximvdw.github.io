@@ -61,9 +61,35 @@ eleventyNavigation:
     {% endfor %}
 </ul>
 
+<h2>Jury Member for Bachelor and Master Theses</h2>
+<ul class="teaching">
+    {% for thesis in teaching.theses if thesis.role == "jury" %}
+    <li itemscope itemtype="http://schema.org/Thesis">
+        <div class="year">
+            <span class="start">{{ thesis.start }}</span>
+            <span class="end">{{ thesis.end }}</span>
+        </div>
+        <div class="details">
+            <h2 itemprop="name">{{ thesis.title }}</h2>
+            <div class="detail-line">
+                <strong>Student:</strong> <a class="person" rel="nofollow" href="{{ thesis.student.url }}" itemprop="author">{{ thesis.student.name }}</a>
+                <strong>Jury Members:</strong>
+                <ul class="supervisors">
+                    {% for jury in thesis.supervisors %}
+                    <li><a class="person" rel="nofollow" href="{{ jury.url }}" itemprop="supervisor">{{ jury.name }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <span class="detail-line"><strong>Grade:</strong> {{ thesis.grade }}</span>
+            <span class="detail-line"><a href="{{ thesis.url }}" itemprop="url">More details ...</a></span>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
+
 <h2>Supervised Bachelor and Master Theses</h2>
 <ul class="teaching">
-    {% for thesis in teaching.theses %}
+    {% for thesis in teaching.theses if thesis.role == "supervisor" %}
     <li itemscope itemtype="http://schema.org/Thesis">
         <div class="year">
             <span class="start">{{ thesis.start }}</span>
@@ -86,4 +112,3 @@ eleventyNavigation:
     </li>
     {% endfor %}
 </ul>
-

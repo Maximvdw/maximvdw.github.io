@@ -148,6 +148,137 @@
     ],
     "theses": [
         {
+            "title": "ExcerptManager: A Local-first Plugin for Excerpt-Level Scholary Information Management Based on the Resource-Selector-Link Metamodel",
+            "student": {
+                "name": "Zakaria Rabahi"
+            },
+            "start": "2025",
+            "end": "2026",
+            "grade": "master",
+            "url": "https://wise.vub.ac.be/thesis/excerptmanager-local-first-plugin-excerpt-level-scholarly-information-management-based",
+            "supervisors": [
+                {
+                    "name": "Prof. Dr. Beat Signer",
+                    "url": "https://beatsigner.com"
+                },
+                {
+                    "name": "Qi Xu"
+                }
+            ],
+            "role": "jury"
+        },
+        {
+            "title": "AI-Based Email Classification and REcommendation Using the 4D Inbox Zero Framework",
+            "student": {
+                "name": "Seifallah Youssef"
+            },
+            "start": "2024",
+            "end": "2025",
+            "grade": "master",
+            "url": "https://wise.vub.ac.be/thesis/ai-based-email-classification-and-recommendation-using-4d-inbox-zero-framework",
+            "supervisors": [
+                {
+                    "name": "Prof. Dr. Beat Signer",
+                    "url": "https://beatsigner.com"
+                }
+            ],
+            "role": "jury"
+        },
+        {
+            "title": "Dynamic Data Physilication Based on Magnetic Modularity and Power Line Communication",
+            "student": {
+                "name": "Sunidhi Singh"
+            },
+            "start": "2024",
+            "end": "2025",
+            "grade": "master",
+            "url": "https://wise.vub.ac.be/thesis/dynamic-data-physicalisation-based-magnetic-modularity-and-power-line-communication",
+            "supervisors": [
+                {
+                    "name": "Prof. Dr. Beat Signer",
+                    "url": "https://beatsigner.com"
+                },
+                {
+                    "name": "Xuyao Zhang"
+                }
+            ],
+            "role": "jury"
+        },
+        {
+            "title": "Paper Explorer: A Multi-Pane Solution for Literature and Citation Exploration",
+            "student": {
+                "name": "Mable Rajan"
+            },
+            "grade": "master",
+            "start": "2024",
+            "end": "2025",
+            "url": "https://wise.vub.ac.be/thesis/paper-explorer-multi-pane-solution-literature-and-citation-exploration",
+            "supervisors": [
+                {
+                    "name": "Prof. Dr. Beat Signer",
+                    "url": "https://beatsigner.com"
+                },
+                {
+                    "name": "Qi Xu"
+                }
+            ],
+            "role": "jury"
+        },
+        {
+            "title": "A Knowledge Graph-Driven Platform for Sharing Knowledge in Data Physicalisation",
+            "student": {
+                "name": "Lysa Roxana Kwizera"
+            },
+            "grade": "master",
+            "start": "2024",
+            "end": "2025",
+            "url": "https://wise.vub.ac.be/thesis/knowledge-graph-driven-platform-sharing-knowledge-data-physicalisation",
+            "supervisors": [
+                {
+                    "name": "Prof. Dr. Beat Signer",
+                    "url": "https://beatsigner.com"
+                },
+                {
+                    "name": "Ingela Rossing"
+                }
+            ],
+            "role":"jury"
+        },
+        {
+            "title": "Rethinking File Management: Designing a Human-Centric File System Interface",
+            "student": {
+                "name": "Talha Jafar"
+            },
+            "grade": "master",
+            "start": "2024",
+            "end": "2025",
+            "url": "https://wise.vub.ac.be/thesis/rethinking-file-management-designing-human-centric-file-system-interface",
+            "supervisors": [
+                {
+                    "name": "Prof. Dr. Beat Signer",
+                    "url": "https://beatsigner.com"
+                }
+            ],
+            "role": "jury"
+        },
+        {
+            "title": "A Monocular SLAM Solution for the Formula Student Driverless Competition",
+            "student": {
+                "name": "Jan Boonants"
+            },
+            "grade": "master",
+            "start": "2024",
+            "end": "2025",
+            "url": "https://wise.vub.ac.be/thesis/monocular-slam-solution-formula-student-driverless-competition",
+            "supervisors": [
+                {
+                    "name": "Prof. Dr. Beat Signer",
+                    "url": "https://beatsigner.com"
+                }
+            ],
+            "role": "jury"
+        },
+        {
             "title": "LiDAR Indoor Map Matching for Autonomous Robots",
             "student": {
                 "name": "Jordan Shittu",
@@ -166,7 +297,8 @@
                     "name": "Maxim Van de Wynckel",
                     "url": "https://maximvdw.be"
                 }
-            ]
+            ],
+            "role": "supervisor"
         }, {
             "title": "Identifying Devices Based on MAC Layer Properties",
             "student": {
@@ -186,7 +318,8 @@
                     "name": "Maxim Van de Wynckel",
                     "url": "https://maximvdw.be"
                 }
-            ]
+            ],
+            "role": "supervisor"
         }, {
             "title": "Heuristic Real-Time Trajectory Prediction Using Spatio-temporal Databases",
             "student": {
@@ -206,7 +339,8 @@
                     "name": "Maxim Van de Wynckel",
                     "url": "https://maximvdw.be"
                 }
-            ]
+            ],
+            "role": "supervisor"
         }, {
             "title": "Location Tracking on a Physical Game Board",
             "student": {
@@ -226,7 +360,8 @@
                     "name": "Maxim Van de Wynckel",
                     "url": "https://maximvdw.be"
                 }
-            ]
+            ],
+            "role": "supervisor"
         }, {
             "title": "End-User Authoring for Location-based Implicit Human-Computer Interaction",
             "student": {
@@ -246,7 +381,8 @@
                     "name": "Maxim Van de Wynckel",
                     "url": "https://maximvdw.be"
                 }
-            ]
+            ],
+            "role": "supervisor"
         }, {
             "title": "Wi-Fi Fingerprinting: Signal Visualisation and Crowd-sourcing",
             "student": {
@@ -266,7 +402,8 @@
                     "name": "Maxim Van de Wynckel",
                     "url": "https://maximvdw.be"
                 }
-            ]
+            ],
+            "role": "supervisor"
         }, {
             "title": "Indoor Positioning by Visible Light Communication",
             "student": {
@@ -286,7 +423,8 @@
                     "name": "Maxim Van de Wynckel",
                     "url": "https://maximvdw.be"
                 }
-            ]
+            ],
+            "role": "supervisor"
         }, {
             "title": "Anonymous Contact Tracing Fusion",
             "student": {
@@ -306,7 +444,8 @@
                     "name": "Maxim Van de Wynckel",
                     "url": "https://maximvdw.be"
                 }
-            ]
+            ],
+            "role": "supervisor"
         }, {
             "title": "Comparison of SLAM Solutions with Exclusive Usage of LIDAR Observation Data",
             "student": {
@@ -326,7 +465,8 @@
                     "name": "Maxim Van de Wynckel",
                     "url": "https://maximvdw.be"
                 }
-            ]
+            ],
+            "role": "supervisor"
         }, {
             "title": "Design Guidelines for IoT Systems in Smart Companies",
             "student": {
@@ -346,7 +486,8 @@
                     "name": "Maxim Van de Wynckel",
                     "url": "https://maximvdw.be"
                 }
-            ]
+            ],
+            "role": "supervisor"
         }
     ]
 }

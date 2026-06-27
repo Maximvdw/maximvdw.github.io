@@ -12,3 +12,5 @@ _site/
 # Yarn
 yarn-error.log
 .yarn/
+
+package-lock.json
