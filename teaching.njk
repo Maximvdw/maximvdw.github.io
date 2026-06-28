@@ -63,7 +63,8 @@ eleventyNavigation:
 
 <h2>Jury Member for Bachelor and Master Theses</h2>
 <ul class="teaching">
-    {% for thesis in teaching.theses if thesis.role == "jury" %}
+    {% for thesis in teaching.theses %}
+    {% if thesis.role == "jury" %}
     <li itemscope itemtype="http://schema.org/Thesis">
         <div class="year">
             <span class="start">{{ thesis.start }}</span>
@@ -84,12 +85,14 @@ eleventyNavigation:
             <span class="detail-line"><a href="{{ thesis.url }}" itemprop="url">More details ...</a></span>
         </div>
     </li>
+    {% endif %}
     {% endfor %}
 </ul>
 
 <h2>Supervised Bachelor and Master Theses</h2>
 <ul class="teaching">
-    {% for thesis in teaching.theses if thesis.role == "supervisor" %}
+    {% for thesis in teaching.theses %}
+    {% if thesis.role == "supervisor" %}
     <li itemscope itemtype="http://schema.org/Thesis">
         <div class="year">
             <span class="start">{{ thesis.start }}</span>
@@ -110,5 +113,6 @@ eleventyNavigation:
             <span class="detail-line"><a href="{{ thesis.url }}" itemprop="url">More details ...</a></span>
         </div>
     </li>
+    {% endif %}
     {% endfor %}
 </ul>
