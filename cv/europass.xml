@@ -40,10 +40,10 @@
         <Communication>
             <UseCode>home</UseCode>
             <Address type="home">
-                <oa:AddressLine>Invalidenlaan 178/5</oa:AddressLine>
-                <oa:CityName>Oudergem</oa:CityName>
+                <oa:AddressLine>Draaiersstraat 33</oa:AddressLine>
+                <oa:CityName>Aalst</oa:CityName>
                 <CountryCode>be</CountryCode>
-                <oa:PostalCode>1160</oa:PostalCode>
+                <oa:PostalCode>9300</oa:PostalCode>
             </Address>
         </Communication>
         
@@ -138,7 +138,7 @@
                 <OrganizationContact>
                     <Communication>
                         <Address>
-                            <oa:AddressLine>Havenlaan 86C</oa:AddressLine>
+                            <oa:AddressLine>Havenlaan 88</oa:AddressLine>
                             <oa:CityName>Brussel</oa:CityName>
                             <CountryCode>be</CountryCode>
                             <oa:PostalCode>1000</oa:PostalCode>
@@ -178,7 +178,7 @@
                         
                         Via Vlaanderen connect. I work in the Department of Environment and Spatial Development
                     </oa:Description>
-                    <oa:AddressLine>Havenlaan 86C</oa:AddressLine>
+                    <oa:AddressLine>Havenlaan 88</oa:AddressLine>
                     <oa:CityName>Brussel</oa:CityName>
                     <CountryCode>be</CountryCode>
                     <oa:PostalCode>1000</oa:PostalCode>
@@ -192,10 +192,10 @@
                 <OrganizationContact>
                     <Communication>
                         <Address>
-                            <oa:AddressLine>Invalidenlaan 178/5</oa:AddressLine>
-                            <oa:CityName>Oudergem</oa:CityName>
+                            <oa:AddressLine>Draaiersstraat 33</oa:AddressLine>
+                            <oa:CityName>Aalst</oa:CityName>
                             <CountryCode>be</CountryCode>
-                            <oa:PostalCode>1160</oa:PostalCode>
+                            <oa:PostalCode>9300</oa:PostalCode>
                         </Address>
                     </Communication>
                     <Communication>
@@ -232,10 +232,10 @@
                         
                         Freelance software development and consultancy. Projects spanning from web development to IoT and AI integration into existing business processes. Project lead with external partners.
                     </oa:Description>
-                    <oa:AddressLine>Invalidenlaan 178/5</oa:AddressLine>
-                    <oa:CityName>Oudergem</oa:CityName>
+                    <oa:AddressLine>Draaiersstraat 33</oa:AddressLine>
+                    <oa:CityName>Aalst</oa:CityName>
                     <CountryCode>be</CountryCode>
-                    <oa:PostalCode>1160</oa:PostalCode>
+                    <oa:PostalCode>9300</oa:PostalCode>
                 </PositionHistory>
             </EmployerHistory>
             
