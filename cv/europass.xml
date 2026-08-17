@@ -1252,7 +1252,7 @@
             <Publication>
                 <hr:FormattedPublicationDescription>Pseudonymised survey results of our 2025 survey on the privacy and transparency of location data</hr:FormattedPublicationDescription>
                 <Title>Survey on the Privacy and Transparency of Location Data</Title>
-                <Year>2025</Year><Reference>Van de Wynckel, M., &amp; Signer, B. (2025). Survey on the Privacy and Transparency of Location Data. https://doi.org/10.5281/zenodo.15564050
+                <Year>2025</Year><Reference>Van de Wynckel, M., &amp; Signer, B. (2025, May). Survey on the Privacy and Transparency of Location Data. https://doi.org/10.5281/zenodo.15564050
 </Reference>
                 
                 <DOI>
@@ -1364,7 +1364,7 @@
             <Publication>
                 <hr:FormattedPublicationDescription>In this publication we propose the SemBeacon specification, which is a semantic beacon solution to discover and detect the position of physical things such as IoT devices, environments or services.</hr:FormattedPublicationDescription>
                 <Title>SemBeacon: A Semantic Proximity Beacon Solution for Discovering and Detecting the Position of Physical Things</Title>
-                <Year>2023</Year><Reference>Van de Wynckel, M., &amp; Signer, B. (2023). SemBeacon: A Semantic Proximity Beacon Solution for Discovering and Detecting the Position of Physical Things. Proceedings of the 13th International Conference on the Internet of Things, 9–16.</Reference>
+                <Year>2023</Year><Reference>Van de Wynckel, M., &amp; Signer, B. (2023). SemBeacon: A Semantic Proximity Beacon Solution for Discovering and Detecting the Position of Physical Things. Proceedings of the 13th International Conference on the Internet of Things, IoT ’23, 9–16.</Reference>
                 
                 <DOI>
                   <Link>https://dl.acm.org/doi/10.1145/3627050.3627060</Link>
@@ -1462,7 +1462,7 @@
             <Publication>
                 <hr:FormattedPublicationDescription>In this dataset, we collected fingerprints of Wi-Fi access points and BLE beacons in a building. The fingerprints are collected in four directions and cover an entire floor.</hr:FormattedPublicationDescription>
                 <Title>OpenHPS: Single Floor Fingerprinting and Trajectory Dataset</Title>
-                <Year>2021</Year><Reference>Van de Wynckel, M., &amp; Signer, B. (2021). OpenHPS: Single Floor Fingerprinting and Trajectory Dataset. https://doi.org/10.5281/zenodo.4744380
+                <Year>2021</Year><Reference>Van de Wynckel, M., &amp; Signer, B. (2021, May 9). OpenHPS: Single Floor Fingerprinting and Trajectory Dataset. https://doi.org/10.5281/zenodo.4744380
 </Reference>
                 
                 <DOI>

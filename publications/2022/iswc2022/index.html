@@ -32,15 +32,33 @@
 
 
 
-    <meta name="keywords" content="maxim van de wynckel, researcher, indoor positioning, navigation systems, interoperability, linked data, semantic web, location-based services">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-    <link rel="stylesheet" href="/css/main.css?version=2026-06-28T18:05:41.181+00:00">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+    <!-- Dynamic meta keywords based on page tags -->
     
+        <meta name="keywords" content="maxim van de wynckel, researcher, indoor positioning, navigation systems, interoperability, linked data, semantic web, location-based services">
+    
+
+    <!-- Language alternates (hreflang) -->
+    <link rel="alternate" hreflang="en" href="https://maximvdw.be/">
+    <link rel="alternate" hreflang="x-default" href="https://maximvdw.be/">
+
+    <!-- Resource hints for third-party CDNs -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+    <!-- Preload main stylesheet -->
+    <link rel="preload" href="/css/main.css?version=2026-08-17T07:39:27.311+00:00" as="style">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    
+    <!-- Academicons (single source - jsDelivr CDN) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    
+    <link rel="stylesheet" href="/css/main.css?version=2026-08-17T07:39:27.311+00:00">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
     <link type="application/atom+xml" rel="alternate" href="https://maximvdw.be/feed.xml" title="" >
 
     
@@ -49,6 +67,9 @@
 <link rel="manifest" href="/manifest.webmanifest">
 
     <meta name="theme-color" content="#284cb5">
+
+    <!-- Homepage Person Schema (JSON-LD) -->
+    
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BQZFG2FMWN"></script>
@@ -395,6 +416,74 @@ presented POSO ontology</p>
     </div>
 </div>
 <script src="/scripts/publications.js"></script>
+
+<!-- ScholarlyArticle Structured Data (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "headline": "POSO: A Generic Positioning System Ontology",
+  "description": "Van de Wynckel, M., &amp; Signer, B. (2022). POSO: A Generic Positioning System Ontology. The Semantic Web – ISWC 2022, 231–247. https://doi.org/10.1007/978-3-031-19433-7_14
+",
+  "datePublished": "2022-10-23T00:00:00Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Maxim Van de Wynckel"
+    }
+    ,
+    {
+      "@type": "Person",
+      "name": "Maxim Van de Wynckel"
+    }
+    ,
+    {
+      "@type": "Person",
+      "name": "Beat Signer"
+    }
+    
+  ],
+  "image": "/publications/2022/iswc2022.png",
+  "articleBody": "Van de Wynckel, M., &amp; Signer, B. (2022). POSO: A Generic Positioning System Ontology. The Semantic Web – ISWC 2022, 231–247. https://doi.org/10.1007/978-3-031-19433-7_14
+",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://maximvdw.be/publications/2022/iswc2022/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "maximvdw.be"
+  }
+}
+</script>
+
+<!-- BreadcrumbList Structured Data (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://maximvdw.be/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Publications",
+      "item": "https://maximvdw.be/publications/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "POSO: A Generic Positioning System Ontology"
+    }
+  ]
+}
+</script>
+
     </section>
 
     <footer>
@@ -417,5 +506,28 @@ presented POSO ontology</p>
     </div>
 </footer>
 
+
+    <!-- Site-wide BreadcrumbList (JSON-LD) - excluded on homepage -->
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://maximvdw.be/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "POSO: A Generic Positioning System Ontology"
+        }
+      ]
+    }
+    </script>
+    
   </body>
 </html>

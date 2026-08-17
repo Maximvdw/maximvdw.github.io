@@ -1,1 +1,8 @@
 User-agent: *
+Allow: /
+Disallow: /cv/
+Disallow: /templates/
+Disallow: /scripts/lib/
+Disallow: /*.bib$
+
+Sitemap: https://maximvdw.be/sitemap.xml
