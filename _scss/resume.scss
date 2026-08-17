@@ -158,6 +158,14 @@
     color: #284cb5;
   }
 
+  h3.entry-title {
+    margin: 0;
+    font-size: 1.1em;
+    font-weight: 300;
+    color: #284cb5;
+    border-bottom: none;
+  }
+
   strong {
     display: inline-block;
     font-weight: bold;
@@ -218,7 +226,8 @@
     font-size: 0.7em;
     text-align: center;
   }
-  div.row .content h4 {
+  div.row .content h4,
+  div.row .content h3.entry-title {
     width: calc(100% - 90px);
     font-size: 1em;
   }

@@ -1,22 +1,22 @@
 <div class="gallery" itemprop="image">
 {% for image in images %}
     <div class="gallery-item">
-        <img src="{{ image.url }}" alt="{{ image.alt }}" onclick="openImagePopup(this)">
+        <img src="{{ image.url }}" alt="{{ image.alt }}" onclick="openImagePopup(this)" loading="lazy" decoding="async">
     </div>
 {% endfor %}
 </div>
 
 <div id="image-popup" class="hidden">
     <span class="close-popup" onclick="closeImagePopup()">&times;</span>
-    <img class="popup-image" src="" alt="">
+    <img class="popup-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="">
 </div>
 
 <script>
 function openImagePopup(img) {
     const popup = document.getElementById('image-popup');
-    const popupImage = document.querySelector('#image-popup .popup-image');
+    const popupImage = popup.querySelector('.popup-image');
     popupImage.src = img.src;
-    popupImage.alt = img.alt;
+    popupImage.alt = img.alt || '';
     popup.classList.remove('hidden');
 
     // Close on ESC key
@@ -41,8 +41,9 @@ function handleEscapeKey(event) {
 }
 
 function handleOutsideClick(event) {
-    const popupImage = document.querySelector('#image-popup .popup-image');
-    if (!popupImage.contains(event.target)) {
+    const popup = document.getElementById('image-popup');
+    const popupImage = popup.querySelector('#image-popup .popup-image');
+    if (!popup.contains(event.target)) {
         closeImagePopup();
     }
 }

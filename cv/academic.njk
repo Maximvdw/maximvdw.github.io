@@ -66,7 +66,7 @@ eleventyExcludeFromCollections: true
         {% if edu.start %}
         <li>
           <div class="content">
-            <h4>{{ edu.degree }}</h4>
+            <h3 class="entry-title">{{ edu.degree }}</h3>
             <strong>{{ edu.university.name }}</strong> ({{
             edu.university.address.city }}, {{
             edu.university.address.country.label }}) {% if edu.grade.latin %}
@@ -112,7 +112,7 @@ eleventyExcludeFromCollections: true
         {%- endfor -%}
         <li>
           <div class="content">
-            <h4>{{ entry.organization.name }}</h4>
+            <h3 class="entry-title">{{ entry.organization.name }}</h3>
             {%- if positionsByTitle | length > 1 -%}
               <ul class="timeline">
                 {%- for item in positionsByTitle %}
@@ -244,7 +244,7 @@ eleventyExcludeFromCollections: true
         presentation in presentations %}
         <li>
           <div class="content">
-            <h4>{{ presentation.data.title }}</h4>
+            <h3 class="entry-title">{{ presentation.data.title }}</h3>
             <p>
               <strong>Venue:</strong> {{ presentation.data.venue.name }}, {{
               presentation.data.venue.location }}
@@ -267,7 +267,7 @@ eleventyExcludeFromCollections: true
         reverse=true) %} {% for course in sorted_courses %}
         <li>
           <div class="content">
-            <h4>{{ course.course }} <small>({{ course.code }})</small></h4>
+            <h3 class="entry-title">{{ course.course }} <small>({{ course.code }})</small></h3>
             <div class="detail-line">
               <strong>Level:</strong> <span>{{ course.level }}</span>
               <strong
@@ -292,7 +292,7 @@ eleventyExcludeFromCollections: true
         {% for thesis in teaching.theses %}
         <li>
           <div class="content">
-            <h4>{{ thesis.title }}</h4>
+            <h3 class="entry-title">{{ thesis.title }}</h3>
             <p><strong>Student:</strong> {{ thesis.student.name }}</p>
           </div>
           <div class="date">
@@ -309,7 +309,7 @@ eleventyExcludeFromCollections: true
         {% for service in services %}
         <li>
           <div class="content">
-            <h4>{{ service.task}} of the {{ service.name }}</h4>
+            <h3 class="entry-title">{{ service.task}} of the {{ service.name }}</h3>
             <p>{{ service.description }}</p>
           </div>
           <div class="date">

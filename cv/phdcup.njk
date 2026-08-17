@@ -86,7 +86,7 @@ eleventyExcludeFromCollections: true
           {%- endfor -%}
           <li>
             <div class="content">
-              <h4>{{ entry.organization.name }}</h4>
+              <h3 class="entry-title">{{ entry.organization.name }}</h3>
               {%- if positionsByTitle | length > 1 -%}
                 <ul class="timeline">
                   {%- for item in positionsByTitle %}
@@ -126,7 +126,7 @@ eleventyExcludeFromCollections: true
           {% if edu.start %}
           <li>
             <div class="content">
-              <h4>{{ edu.degree }}</h4>
+              <h3 class="entry-title">{{ edu.degree }}</h3>
               <strong>{{ edu.university.name }}</strong> <small>({{
               edu.university.address.city }}, {{
               edu.university.address.country.labelNL }})</small> {% if edu.grade.latin %}
@@ -205,14 +205,14 @@ eleventyExcludeFromCollections: true
           {% for presentation in presentations %}
           <li>
             <div class="content">
-              <h4>
+              <h3 class="entry-title">
                 {# Translate "Presentation at" and "Conference presentation at" to Dutch #}
                 {{ presentation.data.title
                   | replace("Conference presentation at", "Conferentiepresentatie op")
                   | replace("Presentation at", "Presentatie op")
                   | replace("Poster presentation at", "Posterpresentatie op")
                 }}
-              </h4>
+              </h3>
               <p>
                 <strong>Locatie:</strong> {{ presentation.data.venue.name }}, {{
                 presentation.data.venue.locationNL }}
@@ -237,7 +237,7 @@ eleventyExcludeFromCollections: true
           {% if project.data.cv %}
           <li>
             <div class="content">
-              <h4>{{ project.data.title }}</h4>
+              <h3 class="entry-title">{{ project.data.title }}</h3>
               <p class="description">
                 {{ project.data.beschrijving | safe }}
                 <a href="{{ project.data.website }}"
@@ -261,9 +261,9 @@ eleventyExcludeFromCollections: true
         {% for service in services %}
         <li>
           <div class="content">
-            <h4>
+            <h3 class="entry-title">
               {{ service.taskNL or service.task }} van de {{ service.nameNL or service.name }}
-            </h4>
+            </h3>
             <p>{{ service.beschrijving }}</p>
           </div>
           <div class="date">

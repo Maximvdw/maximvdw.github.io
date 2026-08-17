@@ -1,10 +1,11 @@
 ---
 layout: main.njk
 title: 'Maxim Van de Wynckel'
+ogtype: 'website'
 ---
 <div id="me" class="row" itemscope itemtype="http://schema.org/Person">
   <div class="col-sm-2">
-    <img src="/images/profile/maxim2.jpg" alt="Maxim Van de Wynckel" class="img-fluid rounded-circle" itemprop="image">
+    <img src="/images/profile/maxim_2025.jpg" alt="Maxim Van de Wynckel" class="img-fluid rounded-circle" itemprop="image" width="300" height="375" loading="eager" fetchpriority="high" decoding="async">
   </div>
   <div class="col-sm-10 typography">
     <meta itemprop="name" content="Maxim Van de Wynckel">
@@ -16,7 +17,6 @@ title: 'Maxim Van de Wynckel'
     <meta itemprop="familyName" content="Van de Wynckel">
     <meta itemprop="sameAs" content="https://solid.maximvdw.be/profile/card#me">
     <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-      <meta itemprop="streetAddress" content="{{ personal.address.street}}">
       <meta itemprop="addressLocality" content="{{ personal.address.city }}">
       <meta itemprop="addressRegion" content="{{ personal.address.region }}">
       <meta itemprop="postalCode" content="{{ personal.address.postalCode }}">
@@ -57,7 +57,7 @@ title: 'Maxim Van de Wynckel'
       <ol reversed class="postlist">
       {% for post in collections.posts | reverse | head(3) %}
         <li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
-          <img class="postlist-image" alt="{{ post.data.title }}" src="{{ post.data.thumbnail }}"/>
+          <img class="postlist-image" alt="{{ post.data.title }}" src="{{ post.data.thumbnail }}" width="200" height="150" loading="lazy" decoding="async"/>
           <div class="postlist-content">
             <a href="{{ post.url | url }}" class="postlist-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
             <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
@@ -77,7 +77,7 @@ title: 'Maxim Van de Wynckel'
           <meta itemprop="abstract" content="{{ post.data.content }}">
           <meta itemprop="headline" content="{{ post.data.title }}">
           <meta itemprop="datePublished" content="{{ post.date | htmlDateString }}T00:00:00Z">
-          <img class="postlist-image" alt="{{ post.data.title }}" src="{{ post.data.thumbnail }}" itemprop="image"/>
+          <img class="postlist-image" alt="{{ post.data.title }}" src="{{ post.data.thumbnail }}" width="200" height="150" loading="lazy" decoding="async" itemprop="image"/>
           <div class="postlist-content">
             <a href="{{ post.url | url }}" class="postlist-link" itemprop="url">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
             <span class="badge badge-{{ post.data.type }}">{{ post.data.type }}</span><time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>

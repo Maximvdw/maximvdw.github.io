@@ -1,10 +1,7 @@
 {
     "name": "maximvdw.be",
-    "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:0-14",
+    "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:2-22",
     "features": {
-        "ghcr.io/devcontainers/features/node:1": {
-            "version": "22"
-        },
         "ghcr.io/devcontainers/features/git-lfs:1": {},
         "ghcr.io/devcontainers/features/docker-in-docker:2": {}
     },

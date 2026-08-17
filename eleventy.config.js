@@ -104,14 +104,12 @@ export default async function (el) {
                 sourceMap: true
             }
         }, {
-            rev: true,
             when: { ELEVENTY_ENV: "stage" }
         }, {
             sass: {
                 style: "compressed",
                 sourceMap: false
             },
-            rev: true,
             when: [ { ELEVENTY_ENV: "production" }, { ELEVENTY_ENV: false } ]
         }
     ]);

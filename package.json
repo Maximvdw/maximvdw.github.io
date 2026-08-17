@@ -16,7 +16,9 @@
   "scripts": {
     "clean": "rimraf ./_site",
     "start": "eleventy --serve",
-    "build": "eleventy"
+    "build": "eleventy && node scripts/optimize-images.js",
+    "optimize-images": "node scripts/optimize-images.js",
+    "generate-favicons": "node scripts/generate-favicons.js"
   },
   "dependencies": {
     "@11ty/eleventy": "^3.1.2",
@@ -24,10 +26,10 @@
     "@11ty/eleventy-img": "^6.0.4",
     "@11ty/eleventy-navigation": "^1.0.4",
     "@11ty/eleventy-plugin-rss": "^2",
-    "@citation-js/core": "^0.7.21",
-    "@citation-js/plugin-bibtex": "^0.7.21",
-    "@citation-js/plugin-csl": "^0.7.21",
-    "@citation-js/plugin-doi": "^0.7.21",
+    "@citation-js/core": "^0.8.2",
+    "@citation-js/plugin-bibtex": "^0.8.2",
+    "@citation-js/plugin-csl": "^0.8.2",
+    "@citation-js/plugin-doi": "^0.8.2",
     "@pdftron/pdfjs-express-viewer": "^8.7.5",
     "@quasibit/eleventy-plugin-sitemap": "^2.2.0",
     "eleventy-plugin-gen-favicons": "^1.1.3",

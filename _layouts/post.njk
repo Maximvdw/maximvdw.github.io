@@ -4,37 +4,78 @@ layout: default.njk
 
 <div class="container main">
   <div class="row">
-    <div class="col-sm-2">
-      <nav class="navigation">
-        {% for year, posts in collections.posts_year %}
-          <h3>{{ year }}</h3>
-          <ul>
-            {% for post in posts | reverse %}
-              <li {% if page.url == post.url %}class="selected"{% endif %}>
-                <a href="{{ post.url }}" {% if page.url == post.url %}class="current"{% endif %}>{{ post.data.date | readableDate }}</a>
-              </li>
-            {% endfor %}
-          </ul>
-        {% endfor %}
-      </nav>
-    </div>
-    <div class="col-sm-10 typography">
-      {% if original %}
-        <div class="alert alert-info">
-          This post was originally published <a href="{{ original }}" target="_blank">here</a>. The layout might look different.
-        </div>
+    <div class="col-sm-12 typography">
+      {% if thumbnail %}
+        <img src="{{ thumbnail }}" alt="{{ title }}" class="img-fluid mb-3" style="max-height: 400px; object-fit: cover;">
       {% endif %}
-
+      
       <h1>{{ title }}</h1>
+      <time datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>
+      
+      {% if tags and tags.length > 0 %}
+      <div class="mt-2">
+        {% for tag in tags %}
+          <span class="badge badge-secondary">{{ tag }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+      
       {{ content | safe }}
-
-      <hr>
-      <ul>
-        {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
-        {%- if nextPost %}<li>Next: <a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a></li>{% endif %}
-        {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
-        {%- if previousPost %}<li>Previous: <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></li>{% endif %}
-      </ul>
     </div>
   </div>
 </div>
+
+<!-- BlogPosting Structured Data (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{ title }}",
+  "description": "{% if excerpt %}{{ excerpt | truncate(200) }}{% else %}{{ title }}{% endif %}",
+  "datePublished": "{{ date | htmlDateString }}T00:00:00Z",
+  "author": {
+    "@type": "Person",
+    "name": "Maxim Van de Wynckel"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "maximvdw.be",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://maximvdw.be/images/logo/maximvdw-logo.png"
+    }
+  },
+  {% if thumbnail %}"image": "{{ thumbnail }}",{% endif %}
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ page.url | url | absoluteUrl('https://maximvdw.be') }}"
+  }
+}
+</script>
+
+<!-- BreadcrumbList Structured Data (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://maximvdw.be/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://maximvdw.be/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "{{ title }}"
+    }
+  ]
+}
+</script>

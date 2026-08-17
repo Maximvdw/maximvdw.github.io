@@ -2,7 +2,7 @@
 layout: default.njk
 ---
 
-<div class="container main" itemscope itemtype="http://schema.org/ScholarlyArticle">
+<div class="container main" itemscope itemtype="http://schema.org/CreativeWork">
     <div class="row">
         <div class="col-sm-3">
             <nav class="navigation">
@@ -27,3 +27,44 @@ layout: default.njk
         </div>
     </div>
 </div>
+
+<!-- Project Structured Data (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "{% if github or website %}SoftwareApplication{% else %}CreativeWork{% endif %}",
+  "name": "{{ title }}",
+  {% if excerpt %}"description": "{{ excerpt | replace('&rsquo;', "'") | truncate(200) }}",{% endif %}
+  {% if start %}"dateCreated": "{{ start }}",{% endif %}
+  {% if ongoing %}"status": "ActiveProject",{% endif %}
+  {% if website or github %}"url": "{{ website | default('') }}"{% endif %},
+  {% if github %}"sameAs": ["{{ github }}"]{% endif %}
+}
+</script>
+
+<!-- BreadcrumbList Structured Data (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://maximvdw.be/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Portfolio",
+      "item": "https://maximvdw.be/portfolio/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "{{ title }}"
+    }
+  ]
+}
+</script>

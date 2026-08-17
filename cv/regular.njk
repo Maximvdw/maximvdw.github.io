@@ -92,7 +92,7 @@ eleventyExcludeFromCollections: true
           {%- endfor -%}
           <li>
             <div class="content">
-              <h4>{{ entry.organization.name }}</h4>
+              <h3 class="entry-title">{{ entry.organization.name }}</h3>
               {%- if positionsByTitle | length > 1 -%}
                 <ul class="timeline">
                   {%- for item in positionsByTitle %}
@@ -132,7 +132,7 @@ eleventyExcludeFromCollections: true
           {% if edu.start %}
           <li>
             <div class="content">
-              <h4>{{ edu.degree }}</h4>
+              <h3 class="entry-title">{{ edu.degree }}</h3>
               <strong>{{ edu.university.name }}</strong> <small>({{
               edu.university.address.city }}, {{
               edu.university.address.country.label }})</small> {% if edu.grade.latin %}
@@ -205,7 +205,7 @@ eleventyExcludeFromCollections: true
         {% if project.data.cv %}
         <li>
           <div class="content">
-            <h4>{{ project.data.title }}</h4>
+            <h3 class="entry-title">{{ project.data.title }}</h3>
             <p class="description">
               {{ project.data.excerpt | safe }}
               <a href="{{ project.data.website }}"

@@ -7,7 +7,6 @@ layout: main.njk
   <meta itemprop="familyName" content="Van de Wynckel">
   <meta itemprop="sameAs" content="https://solid.maximvdw.be/profile/card#me">
   <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-    <meta itemprop="streetAddress" content="{{ personal.address.street}}">
     <meta itemprop="addressLocality" content="{{ personal.address.city }}">
     <meta itemprop="addressRegion" content="{{ personal.address.region }}">
     <meta itemprop="postalCode" content="{{ personal.address.postalCode }}">
@@ -42,7 +41,7 @@ layout: main.njk
         <button class="btn btn-secondary dropdown-toggle" type="button" id="cvDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-download"></i> Download CV
         </button>
-        <div class="dropdown-menu" aria-labelledby="cvDropdown">
+        <div class="dropdown-menu">
           <a class="dropdown-item" href="/cv/europass">Europass</a>
           <a class="dropdown-item" href="/cv/academic">Academic CV</a>
           <a class="dropdown-item" href="/cv/regular">Regular CV</a>
@@ -218,12 +217,6 @@ layout: main.njk
   </div>
 </div>
 <script src="/scripts/about.js"></script>
-<style>
-/* Hide student jobs by default */
-.employment-item.student-job.d-none {
-  display: none;
-}
-</style>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   var studentJobs = document.querySelectorAll('.employment-item.student-job');

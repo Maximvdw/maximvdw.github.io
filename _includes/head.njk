@@ -5,19 +5,113 @@
 
     {% seo "" %}
 
-    <meta name="keywords" content="maxim van de wynckel, researcher, indoor positioning, navigation systems, interoperability, linked data, semantic web, location-based services">
+    <!-- Dynamic meta keywords based on page tags -->
+    {% if page.data.tags %}
+        <meta name="keywords" content="{{ page.data.tags | join(', ') }}">
+    {% else %}
+        <meta name="keywords" content="maxim van de wynckel, researcher, indoor positioning, navigation systems, interoperability, linked data, semantic web, location-based services">
+    {% endif %}
 
+    <!-- Language alternates (hreflang) -->
+    <link rel="alternate" hreflang="en" href="https://maximvdw.be/">
+    <link rel="alternate" hreflang="x-default" href="https://maximvdw.be/">
+
+    <!-- Resource hints for third-party CDNs -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+    <!-- Preload main stylesheet -->
+    <link rel="preload" href="/css/main.css?version={{ build.timestamp }}" as="style">
+
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    
+    <!-- Academicons (single source - jsDelivr CDN) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    
     <link rel="stylesheet" href="/css/main.css?version={{ build.timestamp }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
-    
+
     <link type="application/atom+xml" rel="alternate" href="{% canonicalURL '/feed.xml' %}" title="{{ site.title }}" >
 
     {% favicons './images/favicon.png', appleIconPadding=0 %}
     <meta name="theme-color" content="#284cb5">
+
+    <!-- Homepage Person Schema (JSON-LD) -->
+    {% if url == '/' or url == '/about/' %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Maxim Van de Wynckel",
+      "alternateName": ["Maxim VandeWynckel", "M. Van de Wynckel"],
+      "url": "https://maximvdw.be/",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://maximvdw.be/images/profile/maxim_2025.jpg",
+        "width": 1458,
+        "height": 1823
+      },
+      "description": "Tech lead, researcher and consultant specializing in indoor positioning, interoperability, linked data, semantic web, and location-based services.",
+      "jobTitle": "Researcher & Technical Team Lead",
+      "worksFor": [
+        {
+          "@type": "Organization",
+          "name": "Vrije Universiteit Brussel (VUB)",
+          "url": "https://vub.be"
+        },
+        {
+          "@type": "Organization",
+          "name": "Vlaanderen Connect",
+          "url": "https://vlaanderenconnect.be"
+        }
+      ],
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Erasmushogeschool Brussels (EHB)",
+          "url": "https://www.erasmushogeschool.be"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Vrije Universiteit Brussel (VUB)"
+        }
+      ],
+      "knowsAbout": [
+        "Indoor Positioning Systems",
+        "Hybrid Positioning",
+        "Real-Time Locating Systems",
+        "Interoperability",
+        "Linked Open Data",
+        "Semantic Web",
+        "Location-Based Services",
+        "Data Spaces",
+        "Sensor Fusion",
+        "BLE Beacons",
+        "Open Source Software"
+      ],
+      "email": "me@maximvdw.be",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Aalst",
+        "addressRegion": "East Flanders",
+        "postalCode": "9300",
+        "addressCountry": "BE"
+      },
+      "sameAs": [
+        "https://orcid.org/0000-0003-0314-7107",
+        "https://www.linkedin.com/in/maximvdw",
+        "https://github.com/Maximvdw",
+        "https://mas.to/@maximvdw",
+        "https://bsky.app/profile/maximvdw.be",
+        "https://scholar.google.com/citations?user=NB6760YAAAAJ",
+        "https://solid.maximvdw.be/profile/card#me"
+      ]
+    }
+    </script>
+    {% endif %}
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BQZFG2FMWN"></script>
