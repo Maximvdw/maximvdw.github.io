@@ -67,13 +67,50 @@ const upload = async (file, page) => {
 
         // Click "Use the standard CV builder" so the CV opens in the legacy editor
         console.log('\tClicking on "Use the standard CV builder" button...');
-        await page.evaluate(() => {
-            document.querySelector("#select-legacy-editor-btn button").click();
-        });
+        await selectStandardBuilder(page);
     } catch (error) {
         console.error("Error uploading the CV XML:", error);
         throw error;
     }
+};
+
+const selectStandardBuilder = async (page) => {
+    const btnSelector = "#select-legacy-editor-btn button";
+
+    for (let i = 1; i <= 2; i++) {
+        // A real mouse click (CDP) is more reliable than a synthetic .click()
+        // from page.evaluate for these design-system buttons.
+        const handle = await page.$(btnSelector);
+        if (handle) {
+            await handle.click();
+        } else {
+            await page.evaluate((sel) => document.querySelector(sel).click(), btnSelector);
+        }
+
+        // Confirm the "Start from Europass CV" dialog closed (flow advanced).
+        try {
+            await page.waitForFunction(
+                () => !document.querySelector("#select-legacy-editor-btn"),
+                { timeout: 60000 }
+            );
+            return;
+        } catch (error) {
+            console.log(`\tBuilder dialog did not advance (click attempt ${i}/2)`);
+        }
+    }
+
+    // Dump what is on screen so a changed UI is easy to debug.
+    try {
+        const html = await page.evaluate(() => {
+            const el = document.querySelector("#select-legacy-editor-btn")
+                ?.closest("eportfolio-dialog, [role='dialog'], .eui-dialog, .eui-modal");
+            return el ? el.outerHTML : document.body.innerHTML.slice(0, 6000);
+        });
+        console.error("\tBuilder dialog still open. Relevant HTML:\n", html);
+    } catch (dumpError) {
+        console.error("\tCould not dump builder dialog HTML:", dumpError);
+    }
+    throw new Error('Could not advance past the "Start from Europass CV" dialog');
 };
 
 const download = async (page) => {
