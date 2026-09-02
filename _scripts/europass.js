@@ -183,10 +183,14 @@ const runOnce = async () => {
     page.setDefaultTimeout(defaultTimeout);
 
     try {
+        const xmlPath = path.join(__dirname, "..", "_site", "cv/europass.xml");
+        if (!fs.existsSync(xmlPath) || fs.statSync(xmlPath).size === 0) {
+            throw new Error(`Europass XML missing or empty at ${xmlPath}; run the site build first`);
+        }
         console.log("Creating Europass CV...");
         await prepare(page);
         console.log("Uploading Europass XML...");
-        await upload(path.join(__dirname, "..", "_site", "cv/europass.xml"), page);
+        await upload(xmlPath, page);
         console.log("Downloading Europass PDF...");
         await download(page);
 
