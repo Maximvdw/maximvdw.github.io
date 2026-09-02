@@ -77,40 +77,56 @@ const upload = async (file, page) => {
 const selectStandardBuilder = async (page) => {
     const btnSelector = "#select-legacy-editor-btn button";
 
-    for (let i = 1; i <= 2; i++) {
-        // A real mouse click (CDP) is more reliable than a synthetic .click()
-        // from page.evaluate for these design-system buttons.
+    // Try a real CDP mouse click; fall back to a synthetic click if it can't.
+    try {
         const handle = await page.$(btnSelector);
         if (handle) {
             await handle.click();
         } else {
             await page.evaluate((sel) => document.querySelector(sel).click(), btnSelector);
         }
-
-        // Confirm the "Start from Europass CV" dialog closed (flow advanced).
-        try {
-            await page.waitForFunction(
-                () => !document.querySelector("#select-legacy-editor-btn"),
-                { timeout: 60000 }
-            );
-            return;
-        } catch (error) {
-            console.log(`\tBuilder dialog did not advance (click attempt ${i}/2)`);
-        }
+    } catch (clickError) {
+        console.log(`\tReal click failed (${clickError.message}); falling back to synthetic click`);
+        await page.evaluate((sel) => document.querySelector(sel).click(), btnSelector);
     }
 
-    // Dump what is on screen so a changed UI is easy to debug.
+    // Confirm the "Start from Europass CV" dialog closed (flow advanced).
     try {
-        const html = await page.evaluate(() => {
-            const el = document.querySelector("#select-legacy-editor-btn")
-                ?.closest("eportfolio-dialog, [role='dialog'], .eui-dialog, .eui-modal");
-            return el ? el.outerHTML : document.body.innerHTML.slice(0, 6000);
+        await page.waitForFunction(
+            () => !document.querySelector("#select-legacy-editor-btn"),
+            { timeout: 20000 }
+        );
+        return;
+    } catch (error) {
+        dumpBuilderDialog(page);
+        throw new Error('Could not advance past the "Start from Europass CV" dialog');
+    }
+};
+
+const dumpBuilderDialog = async (page) => {
+    try {
+        const info = await page.evaluate(() => {
+            const wrap = document.querySelector("#select-legacy-editor-btn");
+            const btn = document.querySelector("#select-legacy-editor-btn button");
+            const rect = btn ? btn.getBoundingClientRect() : null;
+            const dialog = wrap
+                ? wrap.closest("eportfolio-dialog, [role='dialog'], .eui-dialog, .eui-modal")
+                : null;
+            return {
+                wrapExists: !!wrap,
+                btnExists: !!btn,
+                btnTag: btn ? btn.tagName : null,
+                btnDisabled: btn ? btn.disabled : null,
+                btnRect: rect
+                    ? { w: Math.round(rect.width), h: Math.round(rect.height), top: Math.round(rect.top), left: Math.round(rect.left) }
+                    : null,
+                dialogHTML: dialog ? dialog.outerHTML.slice(0, 6000) : document.body.innerHTML.slice(0, 6000),
+            };
         });
-        console.error("\tBuilder dialog still open. Relevant HTML:\n", html);
+        console.error("\tBuilder dialog still open. Diagnostics:", JSON.stringify(info, null, 2));
     } catch (dumpError) {
         console.error("\tCould not dump builder dialog HTML:", dumpError);
     }
-    throw new Error('Could not advance past the "Start from Europass CV" dialog');
 };
 
 const download = async (page) => {
