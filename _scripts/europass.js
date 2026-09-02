@@ -7,6 +7,9 @@ const DEBUG = false;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const delay = 8000;    // Should not need this
+const maxAttempts = 3;          // full-flow retries for the flaky live site
+const retryWaitMs = 15000;      // pause between attempts
+const defaultTimeout = 120000;  // ms, per-selector/page action timeout
 
 const prepare = async (page) => {
     try {
@@ -130,6 +133,7 @@ const download = async (page) => {
 
         await page.waitForSelector("cv-download-button");
         console.log('\tClicking on "Download" button ...');
+        fs.mkdirSync(path.join(__dirname, "downloads"), { recursive: true });
         const client = await page.createCDPSession();
         await client.send("Page.setDownloadBehavior", {
             behavior: "allow",
@@ -150,7 +154,7 @@ const download = async (page) => {
         // Wait for the download to complete
         console.log("\tWaiting for download to complete ...");
         // Check __dirname + 'downloads' for the file
-        const timeout = 15000; // 15 seconds
+        const timeout = 60000; // 60 seconds (server-side PDF generation can be slow)
         const startTime = Date.now();
 
         while (!fs.existsSync(downloadPath)) {
@@ -165,7 +169,7 @@ const download = async (page) => {
     }
 };
 
-async function create() {
+const runOnce = async () => {
     const browser = await puppeteer.launch({
         headless: !DEBUG,
         devtools: DEBUG,
@@ -176,7 +180,7 @@ async function create() {
         slowMo: DEBUG ? 250 : 0
     });
     const page = await browser.newPage();
-    page.setDefaultTimeout(60000);
+    page.setDefaultTimeout(defaultTimeout);
 
     try {
         console.log("Creating Europass CV...");
@@ -203,7 +207,25 @@ async function create() {
     } finally {
         await browser.close();
     }
-}
+};
+
+const create = async () => {
+    let lastError;
+    for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+        if (attempt > 1) {
+            console.log(`Retrying Europass CV creation (attempt ${attempt}/${maxAttempts}) in ${retryWaitMs / 1000}s...`);
+            await new Promise((resolve) => setTimeout(resolve, retryWaitMs));
+        }
+        try {
+            await runOnce();
+            return;
+        } catch (error) {
+            lastError = error;
+            console.error(`Attempt ${attempt}/${maxAttempts} failed:`, error);
+        }
+    }
+    throw lastError;
+};
 
 create().catch((error) => {
     console.error("Europass CV creation failed:", error);
