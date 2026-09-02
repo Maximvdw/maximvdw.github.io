@@ -22,6 +22,30 @@ const prepare = async (page) => {
         // Wait for the wizard to render (also lets the session cookies get set)
         await page.waitForSelector("eportfolio-wizard-action-button");
 
+        // The CV preview is rendered client-side (PDF.js). The app's Save step
+        // can be left in a broken state (POST /cv/undefined -> 500) which keeps
+        // the "Download" button permanently disabled, so we capture the PDF Blob
+        // the app generates and pull its bytes directly instead of relying on
+        // the (possibly disabled) download button.
+        await page.evaluate(() => {
+            window.__pdfBlobs = [];
+            const note = (blob) => {
+                try { if (blob && (blob.type || "").includes("pdf")) window.__pdfBlobs.push({ type: blob.type, size: blob.size, blob }); } catch (e) {}
+            };
+            const OrigBlob = window.Blob;
+            window.Blob = function (parts, opts) {
+                const b = new OrigBlob(parts, opts);
+                note(b);
+                return b;
+            };
+            window.Blob.prototype = OrigBlob.prototype;
+            const origCreate = URL.createObjectURL;
+            URL.createObjectURL = function (blob) {
+                note(blob);
+                return origCreate.call(this, blob);
+            };
+        });
+
         const cookies = await page.cookies();
         const xsrfCookie = cookies.find((cookie) => cookie.name === "XSRF-TOKEN");
 
@@ -151,12 +175,117 @@ const clickWhenVisible = async (page, selector) => {
     }
 };
 
-const download = async (page) => {
+const activeStep = async (page) => page.evaluate(() => {
+    const a = document.querySelector('div[role="tab"].eui-wizard-step--active');
+    return a ? a.getAttribute("aria-label") : "none";
+});
+
+const logStep = async (page, label) => {
+    const step = await activeStep(page);
+    console.log(`\t[${label}] active step = "${step}"`);
+    return step;
+};
+
+const gotoStep = async (page, tabLabel) => {
+    // The wizard's "Next" button lives in a fixed-bottom footer that the step
+    // card overlaps, so clicking it is unreliable; the step tabs always work.
+    await clickWhenVisible(page, `div[role="tab"][aria-label="${tabLabel}"]`);
+    await page.waitForSelector(`div[role="tab"][aria-label="${tabLabel}"].eui-wizard-step--active`, { timeout: 30000 });
+};
+
+const waitForCvId = async (net, timeoutMs) => {
+    // The editor autosaves the imported CV a few seconds after the Edit step
+    // opens, and only then does it know the CV's id. Leaving the Edit step
+    // before that happens makes the Save step POST to /eprofile/cv/undefined,
+    // which 500s and leaves the step permanently broken: no preview is ever
+    // rendered and the Download button stays disabled.
+    const deadline = Date.now() + timeoutMs;
+    while (Date.now() < deadline) {
+        if (net.cvId()) return net.cvId();
+        await new Promise((resolve) => setTimeout(resolve, 500));
+    }
+    return null;
+};
+
+const captureClientPdf = async (page, outPath) => {
+    const result = await page.evaluate(async () => {
+        const blobs = (window.__pdfBlobs || []).filter((x) => x.size > 1000);
+        if (!blobs.length) return null;
+        blobs.sort((a, b) => b.size - a.size);
+        const target = blobs[0].blob;
+        const dataUrl = await new Promise((resolve, reject) => {
+            const fr = new FileReader();
+            fr.onload = () => resolve(fr.result);
+            fr.onerror = () => reject(fr.error);
+            fr.readAsDataURL(target);
+        });
+        return { size: target.size, dataUrl };
+    });
+    if (!result) return false;
+    const base64 = result.dataUrl.slice(result.dataUrl.indexOf(",") + 1);
+    const bytes = Buffer.from(base64, "base64");
+    if (bytes.subarray(0, 5).toString("latin1") !== "%PDF-") {
+        console.log("\tCaptured Blob is not a PDF; ignoring it");
+        return false;
+    }
+    fs.mkdirSync(path.dirname(outPath), { recursive: true });
+    fs.writeFileSync(outPath, bytes);
+    console.log(`\tCaptured client-side PDF (${bytes.length} bytes)`);
+    return true;
+};
+
+const rasterizePreview = async (page, outPath) => {
+    // The app renders the CV to PDF in-browser (PDF.js) and the Download button
+    // can be left disabled by the wizard's save-state. We can still capture the
+    // already-rendered page canvases and reassemble them into a PDF.
+    let found = false;
     try {
-        // Click two times on the next button when available
+        await page.waitForFunction(
+            () => Array.from(document.querySelectorAll("cv-preview-pdf canvas")).some((c) => c.width > 100 && c.height > 100),
+            { timeout: 45000 }
+        );
+        found = true;
+    } catch (e) {
+        found = false;
+    }
+    console.log(`\tPreview canvases present: ${found}`);
+    if (!found) return false;
+    const pages = await page.evaluate(() => {
+        const canvases = Array.from(document.querySelectorAll("cv-preview-pdf canvas"));
+        return canvases
+            .filter((c) => c.width > 100 && c.height > 100)
+            .map((c) => ({ dataUrl: c.toDataURL("image/png"), w: c.width, h: c.height }));
+    });
+    if (!pages.length) return false;
+    console.log(`\tFound ${pages.length} rendered preview page(s)`);
+    const pdfPage = await page.browser().newPage();
+    const body = pages
+        .map((p) => `<div style="width:210mm;height:297mm;page-break-after:always;overflow:hidden;">` +
+            `<img src="${p.dataUrl}" style="width:210mm;height:297mm;object-fit:contain;display:block;"></div>`)
+        .join("");
+    await pdfPage.setContent(`<html><body style="margin:0">${body}</body></html>`, { waitUntil: "networkidle0" });
+    fs.mkdirSync(path.dirname(outPath), { recursive: true });
+    await pdfPage.pdf({ path: outPath, width: "210mm", height: "297mm", printBackground: true });
+    await pdfPage.close();
+    console.log(`\tReassembled preview into ${outPath}`);
+    return true;
+};
+
+const download = async (page, net) => {
+    try {
         console.log('\tWaiting for "Edit" tab ...');
         await page.waitForSelector('div[role="tab"][aria-label="Edit "].eui-wizard-step--active'); // Edit tab
         await page.waitForSelector("cv-language-selector-wrapper"); // Edit tab contents
+        await logStep(page, "start");
+
+        // Stay on the Edit step until the editor has autosaved the CV; leaving
+        // early is what breaks the Save step (see waitForCvId).
+        console.log("\tWaiting for the CV to be saved server-side ...");
+        const cvId = await waitForCvId(net, 90000);
+        if (!cvId) {
+            throw new Error("The editor never created the CV server-side (no POST /eprofile/cv -> 201)");
+        }
+        console.log(`\tCV saved as ${cvId}`);
 
         // Check for discrepancies
         console.log("\tChecking for discrepancies...");
@@ -172,40 +301,54 @@ const download = async (page) => {
                     okButton.click();
                 }
             });
-            
+
             await new Promise((resolve) => setTimeout(resolve, delay));
         }
 
         console.log('\tAdvancing to "Select template" step ...');
-        // The wizard "Next" button can be unresponsive; navigate via the step tab.
-        await clickWhenVisible(page, 'div[role="tab"][aria-label="Select template "]');
-
-        console.log('\tWaiting for "Select template" tab ...');
-        await page.waitForSelector('div[role="tab"][aria-label="Select template "].eui-wizard-step--active'); // Template
+        await gotoStep(page, 'Select template ');
+        await logStep(page, "after template nav");
         await page.waitForSelector("eportfolio-html-preview"); // Template tab contents
-        console.log('\tAdvancing to "Save" step ...');
-        await clickWhenVisible(page, 'div[role="tab"][aria-label="Save "]');
 
-        // Wait for the download button to be available
+        console.log('\tAdvancing to "Save" step ...');
+        await gotoStep(page, 'Save ');
+        await logStep(page, "after save nav");
+
+        // The Save step renders the CV to PDF client-side (PDF.js). Wait for
+        // either the generated Blob or the rendered page canvases.
         console.log('\tWaiting for "CV preview" ...');
-        await new Promise((resolve) => setTimeout(resolve, delay));
-        await page.evaluate(() => {
-            console.log(document.documentElement.innerHTML);
-        });
         await page.waitForSelector("cv-preview-pdf");
-        // The preview PDF is generated server-side and can lag; wait for it to render.
         try {
             await page.waitForFunction(
-                () => {
-                    const p = document.querySelector("cv-preview-pdf");
-                    return p && (p.querySelector("iframe, embed, object, canvas, img") !== null || (p.innerHTML || "").trim().length > 0);
-                },
-                { timeout: 60000 }
+                () => (window.__pdfBlobs || []).some((b) => b.size > 1000) ||
+                    Array.from(document.querySelectorAll("cv-preview-pdf canvas")).some((c) => c.width > 100 && c.height > 100),
+                { timeout: 120000 }
             );
             console.log("\tCV preview rendered");
         } catch (previewError) {
-            console.log("\tCV preview did not render within 60s; attempting download anyway");
+            console.log("\tCV preview did not render within 120s; attempting download anyway");
         }
+
+        // The preview PDF is the CV rendered client-side. Capture it directly —
+        // this bypasses the Download button, which the app can leave disabled.
+        const outDir = path.join(__dirname, "downloads");
+        const outPath = path.join(outDir, "europass.pdf");
+        const captured = await captureClientPdf(page, outPath).catch((e) => {
+            console.log(`\tClient PDF capture failed: ${e.message}`);
+            return false;
+        });
+        if (captured) {
+            return;
+        }
+        // No Blob hook hit; capture the already-rendered preview canvases.
+        const rasterized = await rasterizePreview(page, outPath).catch((e) => {
+            console.log(`\tPreview rasterization failed: ${e.message}`);
+            return false;
+        });
+        if (rasterized) {
+            return;
+        }
+        console.log('\tNo client-side PDF captured; falling back to the Download button ...');
         console.log("\tInputting CV name ...");
         await new Promise((resolve) => setTimeout(resolve, delay));
         await page.evaluate(() => {
@@ -215,6 +358,27 @@ const download = async (page) => {
         });
 
         await page.waitForSelector("cv-download-button");
+        await logStep(page, "before download");
+        // The button is disabled while the app (re)generates the CV; clicking it
+        // then is a no-op that only surfaces as a download timeout.
+        try {
+            await page.waitForFunction(
+                () => {
+                    const b = document.querySelector("cv-download-button button");
+                    return b !== null && !b.disabled;
+                },
+                { timeout: 60000 }
+            );
+        } catch (enableError) {
+            console.log("\tDownload button still disabled after 60s; clicking anyway");
+        }
+        const dlState = await page.evaluate(() => {
+            const b = document.querySelector("cv-download-button button");
+            return b
+                ? { disabled: b.disabled, ariaDisabled: b.getAttribute("aria-disabled"), visible: b.offsetParent !== null, text: (b.textContent || "").trim() }
+                : "no-button";
+        });
+        console.log('\tDownload button state:', JSON.stringify(dlState));
         console.log('\tClicking on "Download" button ...');
         fs.mkdirSync(path.join(__dirname, "downloads"), { recursive: true });
         const client = await page.createCDPSession();
@@ -223,7 +387,6 @@ const download = async (page) => {
             downloadPath: path.join(__dirname, "downloads"),
         });
 
-        // Click the download button
         const downloadPath = path.join(__dirname, "downloads/europass.pdf");
         const dlDir = path.join(__dirname, "downloads");
         // Remove any leftover PDFs so we can detect a fresh download by any name.
@@ -257,13 +420,23 @@ const download = async (page) => {
 
 const attachNetworkLogger = (page) => {
     const lines = [];
+    let cvId = null;
     const log = (r) => ["xhr", "fetch", "document", "other", "media"].includes(r.resourceType());
     page.on("request", (req) => {
         if (log(req)) lines.push(`> ${req.method()} [${req.resourceType()}] ${req.url()}`);
     });
-    page.on("response", (res) => {
+    page.on("response", async (res) => {
         const req = res.request();
         if (log(req)) lines.push(`< ${res.status()} [${req.resourceType()}] ${req.url()}`);
+        if (req.method() === "POST" && new URL(res.url()).pathname.endsWith("/eprofile/cv") && res.status() === 201) {
+            try {
+                const body = await res.text();
+                lines.push(`@@ CV CREATED (201) body: ${body.slice(0, 400)}`);
+                cvId = JSON.parse(body).id ?? cvId;
+            } catch (e) {
+                lines.push("@@ CV CREATED (201) body: <unreadable>");
+            }
+        }
     });
     page.on("requestfailed", (req) => {
         if (log(req)) lines.push(`! FAILED ${req.method()} [${req.resourceType()}] ${req.url()} :: ${req.failure()?.errorText ?? "unknown"}`);
@@ -274,10 +447,10 @@ const attachNetworkLogger = (page) => {
     page.on("popup", (p) => {
         lines.push(`@@ POPUP opened: ${p.url()}`);
     });
-    return () => lines.join("\n");
+    return { dump: () => lines.join("\n"), cvId: () => cvId };
 };
 
-const saveFailureArtifacts = async (page, getNetworkLog) => {
+const saveFailureArtifacts = async (page, net) => {
     const dir = path.join(__dirname, "downloads");
     fs.mkdirSync(dir, { recursive: true });
     try {
@@ -294,7 +467,7 @@ const saveFailureArtifacts = async (page, getNetworkLog) => {
         console.error("Could not save failure HTML:", e);
     }
     try {
-        fs.writeFileSync(path.join(dir, "europass-network.log"), getNetworkLog());
+        fs.writeFileSync(path.join(dir, "europass-network.log"), net.dump());
         console.log("Network log saved to downloads/europass-network.log");
     } catch (e) {
         console.error("Could not save network log:", e);
@@ -313,7 +486,7 @@ const runOnce = async () => {
     });
     const page = await browser.newPage();
     page.setDefaultTimeout(defaultTimeout);
-    const getNetworkLog = attachNetworkLogger(page);
+    const net = attachNetworkLogger(page);
 
     try {
         const xmlPath = path.join(__dirname, "..", "_site", "cv/europass.xml");
@@ -325,12 +498,12 @@ const runOnce = async () => {
         console.log("Uploading Europass XML...");
         await upload(xmlPath, page);
         console.log("Downloading Europass PDF...");
-        await download(page);
+        await download(page, net);
 
         console.log("Europass CV created successfully!");
     } catch (error) {
         // Capture what the page looks like when the flow breaks
-        await saveFailureArtifacts(page, getNetworkLog);
+        await saveFailureArtifacts(page, net);
         throw error;
     } finally {
         await browser.close();
