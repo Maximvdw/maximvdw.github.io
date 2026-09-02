@@ -74,7 +74,7 @@ eleventyExcludeFromCollections: true
       <section>
         <h2>Employment</h2>
         <ul>
-          {% for entry in employment %}
+          {% for entry in employment | rejectattr("volunteer") %}
           {%- set startYear = entry.positions[entry.positions | length - 1].start | date("yyyy") -%}
           {%- set endYear = entry.positions[0].end | date("yyyy") -%}
           {%- set positionsByTitle = [] -%}
@@ -159,6 +159,34 @@ eleventyExcludeFromCollections: true
         </ul>
       </section>
     </div>
+
+    <section id="volunteer">
+      <h2>Volunteer Work</h2>
+      <ul>
+        {% for entry in employment | selectattr("volunteer") %}
+        {%- set startYear = entry.positions[entry.positions | length - 1].start | date("yyyy") -%}
+        {%- set endYear = entry.positions[0].end | date("yyyy") -%}
+        <li>
+          <div class="content">
+            <h3 class="entry-title">{{ entry.organization.name }}</h3>
+            {%- for position in entry.positions %}
+            <strong>{{ position.title }}{% if position.note %} <small>({{ position.note }})</small>{% endif %}</strong>
+            <p class="description">
+              {{ position.summary | safe }}
+            </p>
+            {%- endfor %}
+          </div>
+          <div class="date">
+            {%- if startYear == endYear -%}
+            <span>{{ startYear }}</span>
+            {%- else -%}
+              <span>{{ startYear }}</span> - <span>{% if entry.positions[0].ongoing %}now{% else %}{{ endYear }}{% endif %}</span>
+            {%- endif -%}
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
 
     <section id="skills">
       <h2>Key Skills<span class="note">The following is a summary of key skills, including digital, social and language skills.</span></h2>

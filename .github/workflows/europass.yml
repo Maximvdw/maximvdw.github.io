@@ -36,3 +36,11 @@ jobs:
           xdg-utils wget
         node ./_scripts/europass.js
         cp ./_scripts/downloads/europass.pdf ./_site/cv/europass.pdf
+
+    - name: Upload failure screenshot
+      if: failure()
+      uses: actions/upload-artifact@v4
+      with:
+        name: europass-failure
+        path: ./_scripts/downloads/
+        if-no-files-found: ignore

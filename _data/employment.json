@@ -21,8 +21,8 @@
                 "titel": "Technisch Team Lead",
                 "start": "2025-10-01",
                 "ongoing": true,
-                "beschrijving": "Via Vlaanderen connect. werk ik in het Departement Omgeving",
-                "summary": "Via Vlaanderen connect. I work in the Department of Environment and Spatial Development"
+                "beschrijving": "Via Vlaanderen connect. werk ik in het Departement Omgeving en ben ik voornamelijk bezig met het ontwerpen van de data-architectuur en implementatie voor de industriële emissieportaalregelgeving.",
+                "summary": "Via Vlaanderen connect. I work in the Department of Environment and Spatial Development primarily focussing on designing the data architecture and implementation for the industrial emissions portal regulation."
             }
         ],
         "contact": {
@@ -68,6 +68,7 @@
         }
     },
     {
+        "volunteer": true,
         "organization": {
             "name": "V.U.B. Diving Center vzw",
             "url": "https://www.vubdivingcenter.be",
@@ -272,7 +273,7 @@
                 "summary": "eID cloud authentication thesis preparatory training. Security testing and protocol analysis.",
                 "student": true,
                 "note": "student job"
-            }, 
+            },
             {
                 "title": "Software developer",
                 "start": "2015-08-01",

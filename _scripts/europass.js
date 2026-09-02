@@ -12,11 +12,12 @@ const prepare = async (page) => {
     try {
         // Perform a GET request to retrieve cookies
         await page.goto(
-            "https://europa.eu/europass/eportfolio/screen/cv-editor?lang=en"
+            "https://europa.eu/europass/eportfolio/screen/cv-editor?lang=en",
+            { waitUntil: "networkidle2", timeout: 90000 }
         );
 
-        // Wait for the necessary JavaScript to execute and set the cookies
-        await page.waitForSelector("cv-wizard-select-existing-file-button"); // Adjust the selector as needed
+        // Wait for the wizard to render (also lets the session cookies get set)
+        await page.waitForSelector("eportfolio-wizard-action-button");
 
         const cookies = await page.cookies();
         const xsrfCookie = cookies.find((cookie) => cookie.name === "XSRF-TOKEN");
@@ -25,7 +26,8 @@ const prepare = async (page) => {
             throw new Error("XSRF-TOKEN cookie not found");
         }
     } catch (error) {
-        console.error("Error making POST request:", error);
+        console.error("Error in prepare step:", error);
+        throw error;
     }
 };
 
@@ -49,13 +51,25 @@ const upload = async (file, page) => {
             input.click(),
         ]);
         await fileChooser.accept([file]);
-        // Click the save button
-        console.log('\tClicking on "Save" button...');
+
+        // Wait until the XML has been uploaded and the builder choice is enabled
+        console.log('\tWaiting for the builder choice to become available ...');
+        await page.waitForFunction(
+            () => {
+                const b = document.querySelector("#select-legacy-editor-btn button");
+                return b !== null && !b.disabled;
+            },
+            { timeout: 120000 }
+        );
+
+        // Click "Use the standard CV builder" so the CV opens in the legacy editor
+        console.log('\tClicking on "Use the standard CV builder" button...');
         await page.evaluate(() => {
-            document.querySelectorAll("#select-legacy-editor-btn button")[0].click();
+            document.querySelector("#select-legacy-editor-btn button").click();
         });
     } catch (error) {
-        console.error("Error making POST request:", error);
+        console.error("Error uploading the CV XML:", error);
+        throw error;
     }
 };
 
@@ -147,6 +161,7 @@ const download = async (page) => {
         }
     } catch (error) {
         console.error("Error downloading the CV:", error);
+        throw error;
     }
 };
 
@@ -163,15 +178,34 @@ async function create() {
     const page = await browser.newPage();
     page.setDefaultTimeout(60000);
 
-    console.log("Creating Europass CV...");
-    await prepare(page);
-    console.log("Uploading Europass XML...");
-    await upload(path.join(__dirname, "..", "_site", "cv/europass.xml"), page);
-    console.log("Downloading Europass PDF...");
-    await download(page);
+    try {
+        console.log("Creating Europass CV...");
+        await prepare(page);
+        console.log("Uploading Europass XML...");
+        await upload(path.join(__dirname, "..", "_site", "cv/europass.xml"), page);
+        console.log("Downloading Europass PDF...");
+        await download(page);
 
-    console.log("Europass CV created successfully!");
-    await browser.close();
+        console.log("Europass CV created successfully!");
+    } catch (error) {
+        // Capture what the page looks like when the flow breaks
+        try {
+            fs.mkdirSync(path.join(__dirname, "downloads"), { recursive: true });
+            await page.screenshot({
+                path: path.join(__dirname, "downloads", "europass-failed.png"),
+                fullPage: true,
+            });
+            console.log("Failure screenshot saved to downloads/europass-failed.png");
+        } catch (screenshotError) {
+            console.error("Could not save failure screenshot:", screenshotError);
+        }
+        throw error;
+    } finally {
+        await browser.close();
+    }
 }
 
-create();
+create().catch((error) => {
+    console.error("Europass CV creation failed:", error);
+    process.exit(1);
+});
