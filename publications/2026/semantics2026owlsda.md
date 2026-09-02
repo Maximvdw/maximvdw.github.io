@@ -6,10 +6,10 @@ date: 2026-09-15
 github: https://github.com/milieuinfo/owl-sda
 publisher: ceur
 type: poster
-pdf: https://solid.maximvdw.be/publications/2026/TODO
-bib: /publications/2026/TODO.bib
+status: in-press
+bib: /publications/2026/vandewynckel2026owlsda.bib
 #link: https://ceur-ws.org/Vol-3947/short2.pdf
-thumbnail: "/publications/2024/sosy2024maxim.png"
+thumbnail: "/publications/2026/semantics2026owlsda.png"
 website: https://purl.org/owl-sda
 summary: In this paper, we present OWL-SDA, an OWL-based synthetic data generator using a multi-agent architecture for documenting and evaluating ontologies.
 ---

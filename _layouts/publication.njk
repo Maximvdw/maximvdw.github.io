@@ -23,6 +23,11 @@ layout: default.njk
                     This is not an academic publication.
                 </div>
             {% endif %}
+            {% if status == 'in-press' %}
+                <div class="alert alert-info">
+                    This publication is in press and has not been published yet.
+                </div>
+            {% endif %}
 
             <h1 itemprop="headline">{{ title }}</h1>
             <meta itemprop="author" content="{{ author }}">

@@ -6,10 +6,10 @@ date: 2026-09-15
 github: https://github.com/milieuinfo/oddtoolkit
 publisher: ceur
 type: poster
-pdf: https://solid.maximvdw.be/publications/2026/TODO
-bib: /publications/2026/TODO.bib
+status: in-press
+bib: /publications/2026/vandewynckel2026oddtoolkit.bib
 #link: https://ceur-ws.org/Vol-3947/short2.pdf
-thumbnail: "/publications/2024/sosy2024maxim.png"
+thumbnail: "/publications/2026/semantics2026oddtoolkit.png"
 website: https://purl.org/oddtoolkit
 summary: In this paper, we present ODDToolkit, an open-source toolkit for generating developer-facing artefacts such as diagrams and Java classes from a governed ontology.
 ---

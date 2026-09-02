@@ -274,6 +274,7 @@ eleventyExcludeFromCollections: true
             {{ pub.data.excerpt | replace("Van de Wynckel, M.", "<strong
               >Van de Wynckel, M.</strong
             >") | safe }}
+            {% if pub.data.status == 'in-press' %}<small class="note">(in press)</small>{% endif %}
             {% if pub.data.link %}
             <p class="description">
               {% if pub.data.pdf %}
