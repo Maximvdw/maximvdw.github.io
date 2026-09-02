@@ -74,59 +74,38 @@ const upload = async (file, page) => {
     }
 };
 
-const clickAndWait = async (page, handle) => {
-    try {
-        await handle.click();
-    } catch (clickError) {
-        // Fall back to a synthetic click if the real one can't dispatch.
-        await handle.evaluate((el) => el.click());
-    }
+const selectStandardBuilder = async (page) => {
+    // The ECL buttons render as zero-area boxes, so a CDP mouse click cannot
+    // target them (boundingBox() is 0x0 and handle.click() throws). Dispatch a
+    // full pointer/mouse/click sequence via JS, which does not depend on layout.
+    const result = await page.evaluate(() => {
+        const host = document.querySelector("#select-legacy-editor-btn");
+        if (!host) return "no-host";
+        const btn = host.querySelector("button") || host;
+        const opts = { bubbles: true, cancelable: true, view: window, button: 0 };
+        const fire = (el) => {
+            for (const type of ["pointerdown", "mousedown", "pointerup", "mouseup", "click"]) {
+                el.dispatchEvent(new MouseEvent(type, opts));
+            }
+            el.click();
+        };
+        fire(btn);
+        fire(host);
+        return `host=${host.tagName} btn=${btn.tagName}`;
+    });
+    console.log(`\tDispatched builder click (${result})`);
+
+    // Confirm the "Start from Europass CV" dialog closed (flow advanced).
     try {
         await page.waitForFunction(
             () => !document.querySelector("#select-legacy-editor-btn"),
-            { timeout: 20000 }
+            { timeout: 30000 }
         );
-        return true;
+        return;
     } catch (error) {
-        return false;
+        dumpBuilderDialog(page);
+        throw new Error('Could not advance past the "Start from Europass CV" dialog');
     }
-};
-
-const selectStandardBuilder = async (page) => {
-    // The inner "button" of the builder choice can be zero-sized; try each
-    // candidate and only click the ones that are actually visible.
-    const candidates = [
-        "#select-legacy-editor-btn",
-        "#select-legacy-editor-btn button",
-        "#select-legacy-editor-btn [role='button']",
-        "#select-legacy-editor-btn a",
-    ];
-
-    for (const selector of candidates) {
-        const handle = await page.$(selector);
-        if (!handle) continue;
-        const box = await handle.boundingBox();
-        if (!box || box.width === 0 || box.height === 0) continue;
-        console.log(`\tClicking "${selector}" ...`);
-        if (await clickAndWait(page, handle)) return;
-    }
-
-    // Last resort: click the visible control that reads "Use the standard CV builder".
-    const textHandle = await page.evaluateHandle(() =>
-        Array.from(document.querySelectorAll("button, [role='button'], a"))
-            .find((el) => /standard cv builder/i.test(el.textContent || ""))
-    );
-    const textEl = textHandle ? await textHandle.asElement() : null;
-    if (textEl) {
-        const box = await textEl.boundingBox();
-        if (box && box.width > 0 && box.height > 0) {
-            console.log('\tClicking "Use the standard CV builder" (by text) ...');
-            if (await clickAndWait(page, textEl)) return;
-        }
-    }
-
-    dumpBuilderDialog(page);
-    throw new Error('Could not advance past the "Start from Europass CV" dialog');
 };
 
 const dumpBuilderDialog = async (page) => {
