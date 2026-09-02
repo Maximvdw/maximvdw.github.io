@@ -74,58 +74,85 @@ const upload = async (file, page) => {
     }
 };
 
-const selectStandardBuilder = async (page) => {
-    const btnSelector = "#select-legacy-editor-btn button";
-
-    // Try a real CDP mouse click; fall back to a synthetic click if it can't.
+const clickAndWait = async (page, handle) => {
     try {
-        const handle = await page.$(btnSelector);
-        if (handle) {
-            await handle.click();
-        } else {
-            await page.evaluate((sel) => document.querySelector(sel).click(), btnSelector);
-        }
+        await handle.click();
     } catch (clickError) {
-        console.log(`\tReal click failed (${clickError.message}); falling back to synthetic click`);
-        await page.evaluate((sel) => document.querySelector(sel).click(), btnSelector);
+        // Fall back to a synthetic click if the real one can't dispatch.
+        await handle.evaluate((el) => el.click());
     }
-
-    // Confirm the "Start from Europass CV" dialog closed (flow advanced).
     try {
         await page.waitForFunction(
             () => !document.querySelector("#select-legacy-editor-btn"),
             { timeout: 20000 }
         );
-        return;
+        return true;
     } catch (error) {
-        dumpBuilderDialog(page);
-        throw new Error('Could not advance past the "Start from Europass CV" dialog');
+        return false;
     }
+};
+
+const selectStandardBuilder = async (page) => {
+    // The inner "button" of the builder choice can be zero-sized; try each
+    // candidate and only click the ones that are actually visible.
+    const candidates = [
+        "#select-legacy-editor-btn",
+        "#select-legacy-editor-btn button",
+        "#select-legacy-editor-btn [role='button']",
+        "#select-legacy-editor-btn a",
+    ];
+
+    for (const selector of candidates) {
+        const handle = await page.$(selector);
+        if (!handle) continue;
+        const box = await handle.boundingBox();
+        if (!box || box.width === 0 || box.height === 0) continue;
+        console.log(`\tClicking "${selector}" ...`);
+        if (await clickAndWait(page, handle)) return;
+    }
+
+    // Last resort: click the visible control that reads "Use the standard CV builder".
+    const textHandle = await page.evaluateHandle(() =>
+        Array.from(document.querySelectorAll("button, [role='button'], a"))
+            .find((el) => /standard cv builder/i.test(el.textContent || ""))
+    );
+    const textEl = textHandle ? await textHandle.asElement() : null;
+    if (textEl) {
+        const box = await textEl.boundingBox();
+        if (box && box.width > 0 && box.height > 0) {
+            console.log('\tClicking "Use the standard CV builder" (by text) ...');
+            if (await clickAndWait(page, textEl)) return;
+        }
+    }
+
+    dumpBuilderDialog(page);
+    throw new Error('Could not advance past the "Start from Europass CV" dialog');
 };
 
 const dumpBuilderDialog = async (page) => {
     try {
         const info = await page.evaluate(() => {
-            const wrap = document.querySelector("#select-legacy-editor-btn");
-            const btn = document.querySelector("#select-legacy-editor-btn button");
-            const rect = btn ? btn.getBoundingClientRect() : null;
-            const dialog = wrap
-                ? wrap.closest("eportfolio-dialog, [role='dialog'], .eui-dialog, .eui-modal")
-                : null;
+            const host = document.querySelector("#select-legacy-editor-btn");
+            const hostRect = host ? host.getBoundingClientRect() : null;
+            const size = (r) => (r ? { w: Math.round(r.width), h: Math.round(r.height), top: Math.round(r.top), left: Math.round(r.left) } : null);
             return {
-                wrapExists: !!wrap,
-                btnExists: !!btn,
-                btnTag: btn ? btn.tagName : null,
-                btnDisabled: btn ? btn.disabled : null,
-                btnRect: rect
-                    ? { w: Math.round(rect.width), h: Math.round(rect.height), top: Math.round(rect.top), left: Math.round(rect.left) }
-                    : null,
-                dialogHTML: dialog ? dialog.outerHTML.slice(0, 6000) : document.body.innerHTML.slice(0, 6000),
+                hostExists: !!host,
+                hostTag: host ? host.tagName : null,
+                hostRect: size(hostRect),
+                hostHTML: host ? host.outerHTML.slice(0, 1200) : null,
+                clickableInventory: Array.from(document.querySelectorAll("button, [role='button'], a"))
+                    .filter((el) => (el.textContent || "").trim())
+                    .slice(0, 25)
+                    .map((el) => ({
+                        text: (el.textContent || "").trim().slice(0, 40),
+                        id: el.id || null,
+                        rect: size(el.getBoundingClientRect()),
+                    })),
             };
         });
         console.error("\tBuilder dialog still open. Diagnostics:", JSON.stringify(info, null, 2));
     } catch (dumpError) {
-        console.error("\tCould not dump builder dialog HTML:", dumpError);
+        console.error("\tCould not dump builder dialog:", dumpError);
     }
 };
 
