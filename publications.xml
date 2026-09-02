@@ -4,12 +4,48 @@
   <subtitle>Publications of Maxim Van de Wynckel</subtitle>
   <link href="https://maximvdw.be/publications.xml" rel="self"/>
   <link href="https://maximvdw.be/publications"/>
-  <updated>2025-07-08T00:00:00Z</updated>
+  <updated>2026-09-15T00:00:00Z</updated>
   <id>https://maximvdw.be/publications</id>
   <author>
     <name>Maxim Van de Wynckel</name>
     <email>me@maximvdw.be</email>
   </author>
+  
+  <entry>
+    <title>OWL-SDA: A Multi-Agent System for Generating Synthetic Data to Support Ontology Evaluation</title>
+    <link href="https://maximvdw.be/publications/2026/semantics2026owlsda/"/>
+    <updated>2026-09-15T00:00:00Z</updated>
+    <id>https://maximvdw.be/publications/2026/semantics2026owlsda/</id>
+    
+    <media:thumbnail url="https://maximvdw.be/publications/2026/semantics2026owlsda.png" />
+    
+    <content type="text">Van de Wynckel, M., &amp; De Roock, E. (2026). OWL-SDA: A Multi-Agent System for Generating Synthetic Data to Support Ontology Evaluation. Posters, Demos, Blue Sky, and Tutorials at SEMANTiCS 2026.
+</content>
+  </entry>
+  
+  <entry>
+    <title>ODDToolkit: An Open-Source Toolkit to Help Bridge the Developer Gap in Ontology Driven Design</title>
+    <link href="https://maximvdw.be/publications/2026/semantics2026oddtoolkit/"/>
+    <updated>2026-09-15T00:00:00Z</updated>
+    <id>https://maximvdw.be/publications/2026/semantics2026oddtoolkit/</id>
+    
+    <media:thumbnail url="https://maximvdw.be/publications/2026/semantics2026oddtoolkit.png" />
+    
+    <content type="text">Van de Wynckel, M., &amp; Van Haute, G. (2026). ODDToolkit: An Open-Source Toolkit to Help Bridge the Developer Gap in Ontology Driven Design. Posters, Demos, Blue Sky, and Tutorials at SEMANTiCS 2026.
+</content>
+  </entry>
+  
+  <entry>
+    <title>Chemical Identity Lost in Regulation: A Study of Semantic Interoperability in European Chemical Substance Data</title>
+    <link href="https://maximvdw.be/publications/2026/semantics2026chemicalsubstance/"/>
+    <updated>2026-09-15T00:00:00Z</updated>
+    <id>https://maximvdw.be/publications/2026/semantics2026chemicalsubstance/</id>
+    
+    <media:thumbnail url="https://maximvdw.be/publications/2026/semantics2026chemicalsubstance.png" />
+    
+    <content type="text">Van Haute, G., Goedertier, S., Fannes, P., &amp; Van de Wynckel, M. (2026). Chemical Identity Lost in Regulation: A Study of Semantic Interoperability in European Chemical Substance Data. Posters, Demos, Blue Sky, and Tutorials at SEMANTiCS 2026.
+</content>
+  </entry>
   
   <entry>
     <title>VUB researcher teaches systems that determine the location of people or objects within buildings to work together</title>
