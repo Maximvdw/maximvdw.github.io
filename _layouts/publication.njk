@@ -41,6 +41,9 @@ layout: default.njk
             {% if presentation %}
             <a href="{{ presentation }}" class="btn btn-green btn-icon" data-title="Download presentation"><i class="fa fa-regular fa-file-powerpoint"></i></a>
             {% endif %}
+            {% if poster %}
+            <a href="{{ poster }}" class="btn btn-green btn-icon" data-title="Download poster PDF"><i class="fa fa-regular fa-image"></i></a>
+            {% endif %}
             {% if video %}
             <a href="{{ video }}" class="btn btn-blue btn-icon" data-title="Download video"><i class="fa fa-regular fa-file-video"></i></a>
             {% endif %}

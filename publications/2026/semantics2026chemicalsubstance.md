@@ -8,6 +8,8 @@ publisher: ceur
 type: poster
 status: in-press
 bib: /publications/2026/vanhaute2026.bib
+pdf: https://solid.maximvdw.be/publications/2026/paper_semantics2026_chemicalsubstance.pdf
+poster: https://solid.maximvdw.be/publications/2026/poster_semantics2026_chemicalsubstance.pdf
 thumbnail: "/publications/2026/semantics2026chemicalsubstance.png"
 summary: European regulatory datasets represent chemical substances heterogeneously. We analyse 18 ECHA-based datasets with a seven-tier linkability taxonomy and show that CAS numbers prove unreliable as unique identifiers, arguing that semantic interoperability requires structural changes at the level of regulatory data modelling and legislation.
 ---

@@ -8,6 +8,8 @@ publisher: ceur
 type: poster
 status: in-press
 bib: /publications/2026/vandewynckel2026oddtoolkit.bib
+pdf: https://solid.maximvdw.be/publications/2026/paper_semantics2026_oddtoolkit.pdf
+poster: https://solid.maximvdw.be/publications/2026/poster_semantics2026_oddtoolkit.pdf
 #link: https://ceur-ws.org/Vol-3947/short2.pdf
 thumbnail: "/publications/2026/semantics2026oddtoolkit.png"
 website: https://purl.org/oddtoolkit
