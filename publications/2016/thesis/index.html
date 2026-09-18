@@ -45,7 +45,7 @@
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 
     <!-- Preload main stylesheet -->
-    <link rel="preload" href="/css/main.css?version=2026-09-08T19:31:07.062+00:00" as="style">
+    <link rel="preload" href="/css/main.css?version=2026-09-18T07:29:59.793+00:00" as="style">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
@@ -53,7 +53,7 @@
     <!-- Academicons (single source - jsDelivr CDN) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     
-    <link rel="stylesheet" href="/css/main.css?version=2026-09-08T19:31:07.062+00:00">
+    <link rel="stylesheet" href="/css/main.css?version=2026-09-18T07:29:59.793+00:00">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <link type="application/atom+xml" rel="alternate" href="https://maximvdw.be/feed.xml" title="" >
@@ -313,6 +313,12 @@
                 </div>
             
             
+            
+                <div class="alert alert-award">
+                    <i class="fa-solid fa-award"></i>
+                    <strong>Best Bachelor Thesis</strong> &mdash; Erasmushogeschool Brussel
+                </div>
+            
 
             <h1 itemprop="headline">Bachelor thesis: eID IO - Applicatie besturing</h1>
             <meta itemprop="author" content="Maxim Van de Wynckel">
@@ -384,6 +390,69 @@
                 }, document.getElementById('viewer'));
                 </script>
             
+
+            
+                <h2>Award</h2>
+                <p class="award-description">My bachelor thesis was awarded the best thesis of the class of 2016.</p>
+                
+                    
+                    <div class="gallery" itemprop="image">
+
+    <div class="gallery-item">
+        <img src="/awards/2016/2016_bachelorproef.jpg" alt="Best bachelor thesis award certificate from Erasmushogeschool Brussel" onclick="openImagePopup(this)" loading="lazy" decoding="async">
+    </div>
+
+    <div class="gallery-item">
+        <img src="/awards/2016/finalwork.jpg" alt="Receiving the best bachelor thesis award at Erasmushogeschool Brussel" onclick="openImagePopup(this)" loading="lazy" decoding="async">
+    </div>
+
+</div>
+
+<div id="image-popup" class="hidden">
+    <span class="close-popup" onclick="closeImagePopup()">&times;</span>
+    <img class="popup-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="">
+</div>
+
+<script>
+function openImagePopup(img) {
+    const popup = document.getElementById('image-popup');
+    const popupImage = popup.querySelector('.popup-image');
+    popupImage.src = img.src;
+    popupImage.alt = img.alt || '';
+    popup.classList.remove('hidden');
+
+    // Close on ESC key
+    document.addEventListener('keydown', handleEscapeKey);
+    // Close on clicking outside
+    popup.addEventListener('click', handleOutsideClick);
+}
+
+function closeImagePopup() {
+    const popup = document.getElementById('image-popup');
+    popup.classList.add('hidden');
+
+    // Remove event listeners
+    document.removeEventListener('keydown', handleEscapeKey);
+    popup.removeEventListener('click', handleOutsideClick);
+}
+
+function handleEscapeKey(event) {
+    if (event.key === 'Escape') {
+        closeImagePopup();
+    }
+}
+
+function handleOutsideClick(event) {
+    const popup = document.getElementById('image-popup');
+    const popupImage = popup.querySelector('#image-popup .popup-image');
+    if (!popup.contains(event.target)) {
+        closeImagePopup();
+    }
+}
+</script>
+
+                
+            
         </div>
     </div>
 </div>
@@ -404,6 +473,7 @@
     }
     
   ],
+  "award": "Best Bachelor Thesis (Erasmushogeschool Brussel)",
   "image": "/publications/2016/thesis.png",
   "articleBody": "My bachelor thesis was to provide remote actions for eID authentication. It was awarded the best thesis of the class of 2016.",
   "mainEntityOfPage": {
