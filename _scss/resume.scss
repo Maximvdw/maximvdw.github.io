@@ -130,10 +130,11 @@
     margin-left: 10px;
     color: #fff;
     background: rgb(32, 38, 58);
-    padding: 2px 3px;
+    padding: 3px 3px 0;
     border-radius: 3px;
     font-style: italic;
     font-size: 0.9em;
+    line-height: 1.05;
   }
 
   .date.wide {
@@ -234,8 +235,9 @@
   div.row .timeline {
     font-size: 0.7em;
   }
-  div.row .timeline span {
-    display: none;
+  div.row .timeline li span.muted {
+    flex: 0 0 70px;
+    font-size: 0.7rem;
   }
   div.row p.graduated {
     font-size: 0.8em;
@@ -293,9 +295,34 @@
   }
 
   .timeline li {
+    display: block;
     position: relative;
     padding-left: 30px;
     margin-bottom: 5px;
+  }
+
+  .timeline li .entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 6px;
+  }
+
+  .timeline li .entry-header strong {
+    flex: 1;
+  }
+
+  .timeline li span.muted {
+    flex: 0 0 100px;
+    text-align: center;
+    color: #fff;
+    background: rgb(32, 38, 58);
+    padding: 3px 3px 0;
+    border-radius: 3px;
+    font-style: italic;
+    font-size: 0.9rem;
+    line-height: 1.05;
+    white-space: nowrap;
   }
 
   .timeline li::before {

@@ -106,7 +106,12 @@ eleventyExcludeFromCollections: true
                 <ul class="timeline">
                   {%- for item in positionsByTitle %}
                   <li>
-                    <span class="muted">{{ item.positions[0].start | date("MMM, yyyy") }} - {% if item.positions[0].ongoing %}now{% else %}{{ item.positions[0].end | date("MMM, yyyy") }}{% endif %}</span><strong>{{ item.title }}{% if item.positions[0].note %} <small>({{ item.positions[0].note }})</small>{% endif %}</strong>
+                    {%- set startDate = item.positions[0].start | date("yyyy") -%}
+                    {%- set endDate = item.positions[0].end | date("yyyy") -%}
+                    <div class="entry-header">
+                      <strong>{{ item.title }}{% if item.positions[0].note %} <small>({{ item.positions[0].note }})</small>{% endif %}</strong>
+                      <span class="muted">{% if item.positions[0].ongoing %}{{ startDate }} - now{% elif startDate == endDate %}{{ startDate }}{% else %}{{ startDate }} - {{ endDate }}{% endif %}</span>
+                    </div>
                     <p class="description">
                       {{ item.positions[0].summary | safe }}
                     </p>
@@ -122,6 +127,7 @@ eleventyExcludeFromCollections: true
                 {%- endfor %}
               {%- endif -%}
             </div>
+            {%- if positionsByTitle | length <= 1 -%}
             <div class="date">
               {%- if startYear == endYear -%}
               <span>{{ startYear }}</span>
@@ -129,6 +135,7 @@ eleventyExcludeFromCollections: true
                 <span>{{ startYear }}</span> - <span>{% if entry.positions[0].ongoing %}now{% else %}{{ endYear }}{% endif %}</span>
               {%- endif -%}
             </div>
+            {%- endif -%}
           </li>
           {% endfor %}
         </ul>

@@ -91,7 +91,12 @@ eleventyExcludeFromCollections: true
                 <ul class="timeline">
                   {%- for item in positionsByTitle %}
                   <li>
-                    <span class="muted">{{ item.positions[0].start | date("MMM, yyyy", "nl") }} - {% if item.positions[0].ongoing %}nu{% else %}{{ item.positions[0].end | date("MMM, yyyy") }}{% endif %}</span><strong>{{ item.title }}{% if item.positions[0].note %} <small>({{ item.positions[0].note }})</small>{% endif %}</strong>
+                    {%- set startDate = item.positions[0].start | date("yyyy") -%}
+                    {%- set endDate = item.positions[0].end | date("yyyy") -%}
+                    <div class="entry-header">
+                      <strong>{{ item.title }}{% if item.positions[0].note %} <small>({{ item.positions[0].note }})</small>{% endif %}</strong>
+                      <span class="muted">{% if item.positions[0].ongoing %}{{ startDate }} - nu{% elif startDate == endDate %}{{ startDate }}{% else %}{{ startDate }} - {{ endDate }}{% endif %}</span>
+                    </div>
                     <p class="description">
                       {{ item.positions[0].beschrijving | safe }}
                     </p>
