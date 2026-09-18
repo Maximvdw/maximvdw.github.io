@@ -28,6 +28,12 @@ layout: default.njk
                     This publication is in press and has not been published yet.
                 </div>
             {% endif %}
+            {% if award %}
+                <div class="alert alert-award">
+                    <i class="fa-solid fa-award"></i>
+                    <strong>{{ award.title }}</strong>{% if award.event %} &mdash; {{ award.event }}{% endif %}
+                </div>
+            {% endif %}
 
             <h1 itemprop="headline">{{ title }}</h1>
             <meta itemprop="author" content="{{ author }}">
@@ -135,6 +141,15 @@ layout: default.njk
                 }, document.getElementById('viewer'));
                 </script>
             {% endif %}
+
+            {% if award %}
+                <h2>Award</h2>
+                <p class="award-description">{{ award.description }}</p>
+                {% if award.images %}
+                    {% set images = award.images %}
+                    {% include "gallery.njk" %}
+                {% endif %}
+            {% endif %}
         </div>
     </div>
 </div>
@@ -160,6 +175,7 @@ layout: default.njk
     }
     {% endfor %}
   ],
+  {% if award %}"award": "{{ award.title }}{% if award.event %} ({{ award.event }}){% endif %}",{% endif %}
   {% if thumbnail %}"image": "{{ thumbnail }}",{% endif %}
   {% if pdf %}"articleBody": "{% if excerpt %}{{ excerpt | truncate(500) | replace('"', "'") }}{% endif %}",{% endif %}
   "mainEntityOfPage": {

@@ -7,7 +7,9 @@ pdf: https://solid.maximvdw.be/publications/2013/GIP-Maxim%20Van%20de%20Wynckel.
 type: other
 thumbnail: "/publications/2013/gip.bmp"
 excerpt: WisaReg is an application that provides newly registered students from the Wisa database with accounts for various services. It was awarded the best final work of 2013.
-award: Best final work
+award:
+  title: Best Final Work
+  description: My final work was awarded the best final work of 2013.
 project: /portfolio/wisareg/
 summary: My final work during the last year of my highschool was a database migration tool for migrating the Flemish student database to other platforms used by students.
 ---

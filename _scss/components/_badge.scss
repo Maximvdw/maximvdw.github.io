@@ -92,4 +92,15 @@
     &.badge-in-press {
         background-color: #20c997;
     }
+
+    &.badge-award {
+        background-color: #d4a017;
+        color: #fff;
+        margin-right: 1em;
+        cursor: help;
+
+        i {
+            margin: 0;
+        }
+    }
 }

@@ -7,7 +7,15 @@ pdf: https://solid.maximvdw.be/publications/2016/FinalWork_MaximVandeWynckel.pdf
 type: other
 thumbnail: "/publications/2016/thesis.png"
 excerpt: My bachelor thesis was to provide remote actions for eID authentication. It was awarded the best thesis of the class of 2016.
-award: Best final work
+award:
+  title: Best Bachelor Thesis
+  event: Erasmushogeschool Brussel
+  description: My bachelor thesis was awarded the best thesis of the class of 2016.
+  images:
+    - url: /awards/2016/2016_bachelorproef.jpg
+      alt: Best bachelor thesis award certificate from Erasmushogeschool Brussel
+    - url: /awards/2016/finalwork.jpg
+      alt: Receiving the best bachelor thesis award at Erasmushogeschool Brussel
 project: /portfolio/eidio/
 summary: My bachelor thesis was designed for the company BITPOWER. Using the European Identity card (eID), remote authorisation access could be granted via a mobile application.
 ---

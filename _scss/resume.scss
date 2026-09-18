@@ -404,3 +404,39 @@ small.note {
   font-style: italic;
   width: 100%;
 }
+
+.cv-actions {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  padding: 10px 8mm;
+}
+
+.cv-actions .cv-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  padding: 5px 12px;
+  border-radius: 3px;
+  font-size: 0.85em;
+  color: #fff;
+  text-decoration: none;
+}
+
+.cv-actions .cv-action:hover {
+  opacity: 0.85;
+}
+
+.cv-actions .cv-action-pdf {
+  background-color: #9c0000;
+}
+
+.cv-actions .cv-action-html {
+  background-color: #284cb5;
+}
+
+@media print {
+  .cv-actions {
+    display: none;
+  }
+}
