@@ -59,8 +59,25 @@ jobs:
     - name: Generate CV PDFs
       run: node ./_scripts/cv-pdf.js
 
+    # Europass is an external service that changes without notice; never let it
+    # block the deploy. On failure, keep the previously deployed PDF instead.
+    - name: Generate Europass PDF
+      id: europass
+      continue-on-error: true
+      run: |
+        node ./_scripts/europass.js
+        cp ./_scripts/downloads/europass.pdf ./_site/cv/europass.pdf
+
+    - name: Keep previous Europass PDF
+      if: steps.europass.outcome != 'success'
+      run: |
+        echo "::warning::Europass PDF generation failed; reusing the previously deployed PDF"
+        git fetch --depth=1 origin gh-pages
+        git show FETCH_HEAD:cv/europass.pdf > ./_site/cv/europass.pdf \
+          || { rm -f ./_site/cv/europass.pdf; echo "::warning::No previous Europass PDF on gh-pages"; }
+
     - name: Upload failure screenshot
-      if: failure()
+      if: failure() || steps.europass.outcome == 'failure'
       uses: actions/upload-artifact@v4
       with:
         name: cv-pdf-failure
