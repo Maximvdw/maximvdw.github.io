@@ -45,7 +45,7 @@
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 
     <!-- Preload main stylesheet -->
-    <link rel="preload" href="/css/main.css?version=2026-09-18T09:24:45.352+00:00" as="style">
+    <link rel="preload" href="/css/main.css?version=2026-10-11T10:09:40.025+00:00" as="style">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
@@ -53,7 +53,7 @@
     <!-- Academicons (single source - jsDelivr CDN) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     
-    <link rel="stylesheet" href="/css/main.css?version=2026-09-18T09:24:45.352+00:00">
+    <link rel="stylesheet" href="/css/main.css?version=2026-10-11T10:09:40.025+00:00">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <link type="application/atom+xml" rel="alternate" href="https://maximvdw.be/feed.xml" title="" >
@@ -280,45 +280,209 @@ locations.</p>
 
 <div id="image-popup" class="hidden">
     <span class="close-popup" onclick="closeImagePopup()">&times;</span>
-    <img class="popup-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="">
+    <div class="popup-zoom-controls" role="group" aria-label="Zoom controls">
+        <button type="button" class="popup-zoom-btn" onclick="zoomImagePopup(1.25)" aria-label="Zoom in" title="Zoom in"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></button>
+        <button type="button" class="popup-zoom-btn" onclick="zoomImagePopup(0.8)" aria-label="Zoom out" title="Zoom out"><i class="fa-solid fa-magnifying-glass-minus" aria-hidden="true"></i></button>
+        <button type="button" class="popup-zoom-btn" onclick="fitImagePopup()" aria-label="Fit to screen" title="Fit to screen"><i class="fa-solid fa-compress" aria-hidden="true"></i></button>
+    </div>
+    <div class="popup-image-container">
+        <img class="popup-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="">
+    </div>
 </div>
 
 <script>
-function openImagePopup(img) {
+(function () {
     const popup = document.getElementById('image-popup');
+    if (popup.dataset.zoomReady) {
+        return;
+    }
+    popup.dataset.zoomReady = 'true';
+
+    const container = popup.querySelector('.popup-image-container');
     const popupImage = popup.querySelector('.popup-image');
-    popupImage.src = img.src;
-    popupImage.alt = img.alt || '';
-    popup.classList.remove('hidden');
 
-    // Close on ESC key
-    document.addEventListener('keydown', handleEscapeKey);
-    // Close on clicking outside
-    popup.addEventListener('click', handleOutsideClick);
-}
+    let baseScale = 1;
+    let currentScale = 1;
+    let isPanning = false;
+    let panStartX = 0;
+    let panStartY = 0;
+    let panScrollLeft = 0;
+    let panScrollTop = 0;
 
-function closeImagePopup() {
-    const popup = document.getElementById('image-popup');
-    popup.classList.add('hidden');
-
-    // Remove event listeners
-    document.removeEventListener('keydown', handleEscapeKey);
-    popup.removeEventListener('click', handleOutsideClick);
-}
-
-function handleEscapeKey(event) {
-    if (event.key === 'Escape') {
-        closeImagePopup();
+    function clampScale(scale) {
+        return Math.min(Math.max(scale, 0.1), 8);
     }
-}
 
-function handleOutsideClick(event) {
-    const popup = document.getElementById('image-popup');
-    const popupImage = popup.querySelector('#image-popup .popup-image');
-    if (!popup.contains(event.target)) {
-        closeImagePopup();
+    function setImageScale(scale) {
+        if (!popupImage.naturalWidth) {
+            return;
+        }
+        currentScale = clampScale(scale);
+        popupImage.style.width = popupImage.naturalWidth * currentScale + 'px';
     }
-}
+
+    function applyFitScale() {
+        if (!popupImage.naturalWidth) {
+            return;
+        }
+        baseScale = Math.min(
+            container.clientWidth / popupImage.naturalWidth,
+            container.clientHeight / popupImage.naturalHeight,
+            1
+        );
+        setImageScale(baseScale);
+    }
+
+    window.openImagePopup = function (img) {
+        popupImage.onload = applyFitScale;
+        popupImage.src = img.src;
+        popupImage.alt = img.alt || '';
+        popup.classList.remove('hidden');
+        if (popupImage.complete && popupImage.naturalWidth) {
+            applyFitScale();
+        }
+
+        // Close on ESC key
+        document.addEventListener('keydown', handleEscapeKey);
+        // Close on clicking outside
+        popup.addEventListener('click', handleOutsideClick);
+        container.addEventListener('wheel', handleWheelZoom, { passive: false });
+        container.addEventListener('mousedown', startPan);
+        window.addEventListener('mousemove', pan);
+        window.addEventListener('mouseup', stopPan);
+    };
+
+    window.closeImagePopup = function () {
+        popup.classList.add('hidden');
+        stopPan();
+        popupImage.onload = null;
+        popupImage.style.width = '';
+        popupImage.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
+        container.scrollLeft = 0;
+        container.scrollTop = 0;
+
+        // Remove event listeners
+        document.removeEventListener('keydown', handleEscapeKey);
+        popup.removeEventListener('click', handleOutsideClick);
+        container.removeEventListener('wheel', handleWheelZoom);
+        container.removeEventListener('mousedown', startPan);
+        window.removeEventListener('mousemove', pan);
+        window.removeEventListener('mouseup', stopPan);
+    };
+
+    function handleEscapeKey(event) {
+        if (event.key === 'Escape') {
+            closeImagePopup();
+        }
+    }
+
+    function handleOutsideClick(event) {
+        if (!popup.contains(event.target)) {
+            closeImagePopup();
+        }
+    }
+
+    function zoomAt(px, py, factor) {
+        const oldScale = currentScale;
+        const newScale = clampScale(oldScale * factor);
+        if (newScale === oldScale) {
+            return;
+        }
+        const ratio = newScale / oldScale;
+        container.scrollLeft = (container.scrollLeft + px) * ratio - px;
+        container.scrollTop = (container.scrollTop + py) * ratio - py;
+        setImageScale(newScale);
+    }
+
+    function isMouseWheel(event) {
+        // Trackpad/touch pinch gestures arrive as ctrl (or meta) wheel events
+        if (event.ctrlKey || event.metaKey) {
+            return true;
+        }
+        // Discrete mouse wheel steps: line units, or pixel deltas in multiples of 100/120
+        if (event.deltaMode !== 0) {
+            return true;
+        }
+        const delta = Math.abs(event.deltaY);
+        return delta > 0 && (delta % 100 === 0 || delta % 120 === 0);
+    }
+
+    function canScrollInDirection(deltaY) {
+        if (deltaY > 0) {
+            return container.scrollTop < container.scrollHeight - container.clientHeight - 1;
+        }
+        if (deltaY < 0) {
+            return container.scrollTop > 1;
+        }
+        return false;
+    }
+
+    function handleWheelZoom(event) {
+        if (!popupImage.naturalWidth) {
+            return;
+        }
+        if (!isMouseWheel(event)) {
+            // Touchpad scroll: let the container scroll natively to pan,
+            // but don't let it chain to the page behind
+            if (event.deltaY && !canScrollInDirection(event.deltaY)) {
+                event.preventDefault();
+            }
+            return;
+        }
+        event.preventDefault();
+        const rect = container.getBoundingClientRect();
+        zoomAt(
+            event.clientX - rect.left,
+            event.clientY - rect.top,
+            event.deltaY < 0 ? 1.15 : 1 / 1.15
+        );
+    }
+
+    window.zoomImagePopup = function (factor) {
+        if (!popupImage.naturalWidth) {
+            return;
+        }
+        zoomAt(container.clientWidth / 2, container.clientHeight / 2, factor);
+    };
+
+    window.fitImagePopup = function () {
+        if (popupImage.naturalWidth) {
+            setImageScale(baseScale);
+            container.scrollLeft = 0;
+            container.scrollTop = 0;
+        }
+    };
+
+    function startPan(event) {
+        if (event.button !== 0) {
+            return;
+        }
+        isPanning = true;
+        panStartX = event.clientX;
+        panStartY = event.clientY;
+        panScrollLeft = container.scrollLeft;
+        panScrollTop = container.scrollTop;
+        container.classList.add('grabbing');
+        event.preventDefault();
+    }
+
+    function pan(event) {
+        if (!isPanning) {
+            return;
+        }
+        container.scrollLeft = panScrollLeft - (event.clientX - panStartX);
+        container.scrollTop = panScrollTop - (event.clientY - panStartY);
+    }
+
+    function stopPan() {
+        isPanning = false;
+        container.classList.remove('grabbing');
+    }
+
+    popupImage.addEventListener('dragstart', function (event) {
+        event.preventDefault();
+    });
+})();
 </script>
 
         </div>

@@ -1239,7 +1239,37 @@
             </Publication>
             
             <Publication>
-                <hr:FormattedPublicationDescription>Maxim Van de Wynckel aims to make indoor positioning technology as universal as GPS, with a focus on interoperability, adaptability, and privacy</hr:FormattedPublicationDescription>
+                <hr:FormattedPublicationDescription>Nesdoo — Les systèmes de positionnement intérieur interopérables permettent de localiser des personnes et des objets au sein des bâtiments, grâce à des solutions comme POSO, SemBeacon et OpenHPS.</hr:FormattedPublicationDescription>
+                <Title>Les systèmes de positionnement intérieur interopérables permettent de localiser des personnes et des objets au sein des bâtiments</Title>
+                <Year>2025</Year><Reference>(Press article)</Reference>
+                
+                <DOI>
+                  <Link>https://nesdoo.com/les-systemes-de-positionnement-interieur-interoperables-permettent-de-localiser-des-personnes-et-des-objets-au-sein-des-batiments/</Link>
+                </DOI>
+                
+                
+                
+                <Link>https://nesdoo.com/les-systemes-de-positionnement-interieur-interoperables-permettent-de-localiser-des-personnes-et-des-objets-au-sein-des-batiments/</Link>
+                
+            </Publication>
+            
+            <Publication>
+                <hr:FormattedPublicationDescription>Info HighTech — Maxim Van de Wynckel vise à rendre la technologie de positionnement intérieur aussi universelle que le GPS, en mettant l&#39;accent sur l&#39;interopérabilité, l&#39;adaptabilité et la confidentialité.</hr:FormattedPublicationDescription>
+                <Title>Les systèmes de positionnement intérieur interopérables peuvent déterminer l&#39;emplacement des personnes et des objets à l&#39;intérieur des bâtiments</Title>
+                <Year>2025</Year><Reference>(Press article)</Reference>
+                
+                <DOI>
+                  <Link>https://infohightech.com/les-systemes-de-positionnement-interieur-interoperables-peuvent-determiner-lemplacement-des-personnes-et-des-objets-a-linterieur-des-batiments/</Link>
+                </DOI>
+                
+                
+                
+                <Link>https://infohightech.com/les-systemes-de-positionnement-interieur-interoperables-peuvent-determiner-lemplacement-des-personnes-et-des-objets-a-linterieur-des-batiments/</Link>
+                
+            </Publication>
+            
+            <Publication>
+                <hr:FormattedPublicationDescription>Vrije Universiteit Brussel (VUB) — Maxim Van de Wynckel aims to make indoor positioning technology as universal as GPS, with a focus on interoperability, adaptability, and privacy</hr:FormattedPublicationDescription>
                 <Title>VUB researcher teaches systems that determine the location of people or objects within buildings to work together</Title>
                 <Year>2025</Year><Reference>(Press article)</Reference>
                 
@@ -1250,6 +1280,51 @@
                 
                 
                 <Link>https://press.vub.ac.be/vub-researcher-teaches-systems-that-determine-the-location-of-people-or-objects-within-buildings-to-work-together</Link>
+                
+            </Publication>
+            
+            <Publication>
+                <hr:FormattedPublicationDescription>Vrije Universiteit Brussel (VUB) — Maxim Van de Wynckel wil binnenlocatie-technologie even universeel maken als GPS, met aandacht voor samenwerking, aanpasbaarheid en privacy.</hr:FormattedPublicationDescription>
+                <Title>VUB-onderzoeker leert systemen die de locatie van mensen of objecten in gebouwen bepalen, samenwerken</Title>
+                <Year>2025</Year><Reference>(Press article)</Reference>
+                
+                <DOI>
+                  <Link>https://press.vub.ac.be/vub-onderzoeker-leert-systemen-die-de-locatie-van-mensen-of-objecten-in-gebouwen-bepalen-samen-werken</Link>
+                </DOI>
+                
+                
+                
+                <Link>https://press.vub.ac.be/vub-onderzoeker-leert-systemen-die-de-locatie-van-mensen-of-objecten-in-gebouwen-bepalen-samen-werken</Link>
+                
+            </Publication>
+            
+            <Publication>
+                <hr:FormattedPublicationDescription>TechXplore — Maxim Van de Wynckel, a researcher at the WISE lab of the Vrije Universiteit Brussel (VUB), successfully defended his Ph.D. in computer science on 30 June 2025. Over six years, he explored a major challenge facing many modern technologies: how can indoor positioning systems — which determine the location of people or objects inside buildings — work better together?</hr:FormattedPublicationDescription>
+                <Title>Interoperable indoor positioning systems can determine locations of people or objects inside buildings</Title>
+                <Year>2025</Year><Reference>(Press article)</Reference>
+                
+                <DOI>
+                  <Link>https://techxplore.com/news/2025-07-interoperable-indoor-positioning-people.html</Link>
+                </DOI>
+                
+                
+                
+                <Link>https://techxplore.com/news/2025-07-interoperable-indoor-positioning-people.html</Link>
+                
+            </Publication>
+            
+            <Publication>
+                <hr:FormattedPublicationDescription>Life Technology — Researcher Maxim Van de Wynckel from Vrije Universiteit Brussel defends Ph.D. in computer science, focusing on improving indoor positioning systems collaboration.</hr:FormattedPublicationDescription>
+                <Title>Researcher Maxim Van De Wynckel Defends Ph.D. on Indoor Positioning Systems</Title>
+                <Year>2025</Year><Reference>(Press article)</Reference>
+                
+                <DOI>
+                  <Link>https://www.lifetechnology.com/blogs/life-technology-technology-news/researcher-maxim-van-de-wynckel-defends-ph-d-on-indoor-positioning-systems</Link>
+                </DOI>
+                
+                
+                
+                <Link>https://www.lifetechnology.com/blogs/life-technology-technology-news/researcher-maxim-van-de-wynckel-defends-ph-d-on-indoor-positioning-systems</Link>
                 
             </Publication>
             
@@ -1302,7 +1377,7 @@
             </Publication>
             
             <Publication>
-                <hr:FormattedPublicationDescription>&#39;Locatiegegevens zijn big business&#39;, zegt doctoraatsonderzoeker Maxim Van de Wynckel. Zulke data worden door een hele rist aan applicaties en andere diensten opgeslagen. &#39;Denk aan navigatie- en fitnessapps, maar ook aan wifi- en bluetooth-signalen. Gebruikers zijn zich vaak niet bewust van die onzichtbare vormen van dataverzameling&#39;. Recente gebeurtenissen tonen aan hoe kwetsbaar locatiegegevens zijn.</hr:FormattedPublicationDescription>
+                <hr:FormattedPublicationDescription>Knack — &#39;Locatiegegevens zijn big business&#39;, zegt doctoraatsonderzoeker Maxim Van de Wynckel. Zulke data worden door een hele rist aan applicaties en andere diensten opgeslagen. &#39;Denk aan navigatie- en fitnessapps, maar ook aan wifi- en bluetooth-signalen. Gebruikers zijn zich vaak niet bewust van die onzichtbare vormen van dataverzameling&#39;. Recente gebeurtenissen tonen aan hoe kwetsbaar locatiegegevens zijn.</hr:FormattedPublicationDescription>
                 <Title>Jong Talent: Maxim Van de Wynckel (30) zoekt oplossingen om gebruikers meer controle te geven over hun locatiegegevens</Title>
                 <Year>2025</Year><Reference>(Press article)</Reference>
                 
