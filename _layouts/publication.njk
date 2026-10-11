@@ -5,12 +5,13 @@ layout: default.njk
     <div class="row">
         <div class="col-sm-3 mobile-hide">
             <nav class="navigation">
-            {% for year, posts in collections.publications_year %}
+            {% for year, groups in collections.publications_year_groups %}
                 <h3>{{ year }}</h3>
                 <ul>
-                {% for post in posts | reverse %}
-                    <li {% if page.url == post.url %}class="selected"{% endif %}>
-                    <a href="{{ post.url }}" {% if page.url == post.url %}class="current"{% endif %}>{{ post.data.title }}</a>
+                {% for group in groups | reverse %}
+                {% set alt = group | inGroup(page.url) %}
+                    <li {% if alt %}class="selected"{% endif %}>
+                    <a href="{{ group.primary.url }}" {% if alt %}class="current"{% endif %}>{{ group.primary.data.title }}</a>
                     </li>
                 {% endfor %}
                 </ul>
@@ -36,6 +37,14 @@ layout: default.njk
             {% endif %}
 
             <h1 itemprop="headline">{{ title }}</h1>
+            {% set alternates = collections.publications_groups | findGroup(page.url) %}
+            {% if alternates and alternates.group.variants | length > 0 %}
+                {% if alternates.role == "primary" %}
+                <p class="post-alternates">Also available in: {% for variant in alternates.group.variants %}<a href="{{ variant.url | url }}">{{ variant.data.lang_label or variant.data.lang | langName }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>
+                {% else %}
+                <p class="post-alternates">{{ (alternates.group.primary.data.lang or "en") | langName }} version: <a href="{{ alternates.group.primary.url | url }}">{{ alternates.group.primary.data.title }}</a></p>
+                {% endif %}
+            {% endif %}
             <meta itemprop="author" content="{{ author }}">
             <meta itemprop="citation" content="{{ excerpt }}">
             <meta itemprop="image" content="{{ thumbnail }}">
@@ -128,6 +137,11 @@ layout: default.njk
                     <p>{{ summary | safe }}</p>
                 {% endif %}
             </div>
+
+            {% if images %}
+                <h2>{% if images | length > 1 %}Screenshots{% else %}Screenshot{% endif %}</h2>
+                {% include "gallery.njk" %}
+            {% endif %}
 
             {% if pdf %}
                 <script src='/scripts/lib/webviewer/webviewer.min.js'></script>

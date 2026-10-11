@@ -21,18 +21,102 @@
     display: none;
 }
 
-#image-popup img {
-    max-width: 90%;
-    max-height: 90%;
+.popup-image-container {
+    width: 90%;
+    height: 90%;
+    overflow: auto;
+    display: flex;
+    cursor: grab;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.popup-image-container.grabbing {
+    cursor: grabbing;
+}
+
+.popup-image-container img {
+    display: block;
+    margin: auto;
+    max-width: none;
+    max-height: none;
+    -webkit-user-drag: none;
 }
 
 #image-popup .close-popup {
     position: absolute;
     top: 20px;
     right: 20px;
-    font-size: 30px;
-    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    font-size: 22px;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(20, 20, 20, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
     cursor: pointer;
+    z-index: 1001;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+#image-popup .close-popup:hover,
+#image-popup .close-popup:focus-visible {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+    outline: none;
+}
+
+.popup-zoom-controls {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    background-color: rgba(20, 20, 20, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    z-index: 1001;
+}
+
+.popup-zoom-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.85);
+    border: none;
+    border-right: 1px solid rgba(255, 255, 255, 0.12);
+    font-size: 16px;
+    line-height: 1;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.popup-zoom-btn:last-child {
+    border-right: none;
+}
+
+.popup-zoom-btn:hover,
+.popup-zoom-btn:focus-visible {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+    outline: none;
+}
+
+.popup-zoom-btn:active {
+    background-color: rgba(255, 255, 255, 0.25);
 }
 
 .gallery-item {

@@ -58,6 +58,24 @@
     float: right;
     display: inline;
 }
+.postlist-languages {
+    display: block;
+    font-size: 0.8125em; /* 13px /16 */
+    color: rgb(158, 158, 158);
+}
+.postlist-languages a {
+    color: rgb(158, 158, 158);
+    text-decoration: none;
+    font-weight: 600;
+}
+.postlist-languages a:hover {
+    text-decoration: underline;
+}
+.post-alternates {
+    font-size: 0.9em;
+    margin-top: -0.5em;
+    margin-bottom: 1.5em;
+}
 img.postlist-image {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     width: 4em;

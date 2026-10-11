@@ -310,7 +310,21 @@ eleventyExcludeFromCollections: true
       </ul>
       <h3>Supervised Theses</h3>
       <ul>
-        {% for thesis in teaching.theses %}
+        {% for thesis in teaching.theses | filter(attribute="role", value="supervisor") %}
+        <li>
+          <div class="content">
+            <h3 class="entry-title">{{ thesis.title }}</h3>
+            <p><strong>Student:</strong> {{ thesis.student.name }}</p>
+          </div>
+          <div class="date">
+            <span>{{ thesis.start }} - {{ thesis.end }}</span>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+      <h3>Thesis Jury Member</h3>
+      <ul>
+        {% for thesis in teaching.theses | filter(attribute="role", value="jury") %}
         <li>
           <div class="content">
             <h3 class="entry-title">{{ thesis.title }}</h3>

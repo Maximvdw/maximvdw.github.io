@@ -148,6 +148,43 @@
     ],
     "theses": [
         {
+            "title": "Contextual Note-taking in Scholarly Workflows",
+            "student": {
+                "name": "Elliott Octave"
+            },
+            "start": "2025",
+            "end": "2026",
+            "grade": "master",
+            "url": "https://wise.vub.ac.be/thesis/contextual-note-taking-scholarly-workflows",
+            "supervisors": [
+                {
+                    "name": "Prof. Dr. Beat Signer",
+                    "url": "https://beatsigner.com"
+                },
+                {
+                    "name": "Qi Xu"
+                }
+            ],
+            "role": "jury"
+        },
+        {
+            "title": "WebPresenter: A Customisable Presentation Control",
+            "student": {
+                "name": "Rob Leemans"
+            },
+            "start": "2025",
+            "end": "2026",
+            "grade": "master",
+            "url": "https://wise.vub.ac.be/thesis/webpresenter-customisable-presentation-control",
+            "supervisors": [
+                {
+                    "name": "Prof. Dr. Beat Signer",
+                    "url": "https://beatsigner.com"
+                }
+            ],
+            "role": "jury"
+        },
+        {
             "title": "ExcerptManager: A Local-first Plugin for Excerpt-Level Scholary Information Management Based on the Resource-Selector-Link Metamodel",
             "student": {
                 "name": "Zakaria Rabahi"

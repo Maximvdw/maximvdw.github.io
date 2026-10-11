@@ -58,8 +58,11 @@ eleventyNavigation:
     <div class="col-sm-9 typography">
       <h1>Publications</h1>
       <ol reversed class="postlist">
-        {% for post in collections.publications | reverse %}
-          <li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}" itemscope itemtype="http://schema.org/ScholarlyArticle" data-type="{{ post.data.type }}">
+        {% for group in collections.publications_groups %}
+        {% set post = group.primary %}
+        {% set active = post.url == url %}
+        {% for variant in group.variants %}{% if variant.url == url %}{% set active = true %}{% endif %}{% endfor %}
+          <li class="postlist-item{% if active %} postlist-item-active{% endif %}" itemscope itemtype="http://schema.org/ScholarlyArticle" data-type="{{ post.data.type }}">
             <meta itemprop="abstract" content="{{ post.data.content }}">
             <meta itemprop="headline" content="{{ post.data.title }}">
             <meta itemprop="datePublished" content="{{ post.date | htmlDateString }}T00:00:00Z">
@@ -67,7 +70,10 @@ eleventyNavigation:
             <div class="postlist-content">
               <a href="{{ post.url | url }}" class="postlist-link" itemprop="url">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
               <span class="badge badge-{{ post.data.type }}">{{ post.data.type }}</span>{% if post.data.status == 'in-press' %}<span class="badge badge-in-press">In press</span>{% endif %}{% if post.data.award %}<span class="badge badge-award" title="{{ post.data.award.title }}{% if post.data.award.event %} &ndash; {{ post.data.award.event }}{% endif %}"><i class="fa-solid fa-award"></i></span>{% endif %}<time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-              <span class="postlist-description" itemprop="description">{{ post.data.excerpt }}</span>
+              {% if group.variants | length > 0 %}
+              <span class="postlist-languages">Also in: {% for variant in group.variants %}<a href="{{ variant.url | url }}" title="{{ variant.data.title }}">{{ variant.data.lang_label or variant.data.lang | langName }}</a>{% if not loop.last %} &middot; {% endif %}{% endfor %}</span>
+              {% endif %}
+              <span class="postlist-description" itemprop="description">{{ post.data.excerpt or post.data.summary }}</span>
             </div>
             {% for author in post.data.authors %}
               <div itemprop="author" itemscope itemtype="http://schema.org/Person">

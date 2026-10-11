@@ -37,7 +37,7 @@
     {% if publication.data.thumbnail %}
     <media:thumbnail url="{{ publication.data.thumbnail | url | absoluteUrl(metadata.url) }}" />
     {% endif %}
-    <content type="text">{{ publication.data.excerpt }}</content>
+    <content type="text">{{ publication.data.excerpt or publication.data.summary }}</content>
   </entry>
   {%- endfor %}
 </feed>

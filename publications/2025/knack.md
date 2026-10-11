@@ -7,8 +7,9 @@ link: https://www.knack.be/nieuws/technologie/jong-talent-maxim-van-de-wynckel-3
 publisher: other
 type: press
 thumbnail: "/publications/2025/knack-thumbnail.png"
-summary: "'Locatiegegevens zijn big business', zegt doctoraatsonderzoeker Maxim Van de Wynckel. Zulke data worden door een hele rist aan applicaties en andere diensten opgeslagen. 'Denk aan navigatie- en fitnessapps, maar ook aan wifi- en bluetooth-signalen. Gebruikers zijn zich vaak niet bewust van die onzichtbare vormen van dataverzameling'. Recente gebeurtenissen tonen aan hoe kwetsbaar locatiegegevens zijn."
+summary: "Knack — 'Locatiegegevens zijn big business', zegt doctoraatsonderzoeker Maxim Van de Wynckel. Zulke data worden door een hele rist aan applicaties en andere diensten opgeslagen. 'Denk aan navigatie- en fitnessapps, maar ook aan wifi- en bluetooth-signalen. Gebruikers zijn zich vaak niet bewust van die onzichtbare vormen van dataverzameling'. Recente gebeurtenissen tonen aan hoe kwetsbaar locatiegegevens zijn."
 images:
+    - /publications/2025/images/knack-screenshot.png
     - /publications/2025/images/knack_instagram.jpg
     - /publications/2025/images/knack_printed.jpg
 ---

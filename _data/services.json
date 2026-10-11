@@ -1,5 +1,15 @@
 [
     {
+        "type": "supervision",
+        "task": "Advisory member",
+        "taskNL": "Advieslid",
+        "name": "PhD of Jan Boonants",
+        "nameNL": "doctoraatsproef van Jan Boonants",
+        "start": "2025",
+        "end": "present",
+        "description": "Advisory member of the PhD thesis of Jan Boonants.",
+        "beschrijving": "Advieslid van de doctoraatsproef van Jan Boonants."
+    }, {
         "type": "reviewer",
         "task": "Reviewer",
         "taskNL": "Reviewer",

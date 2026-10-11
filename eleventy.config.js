@@ -205,6 +205,44 @@ async function configureCollections(el) {
             .reverse()
             .value();
     });
+    // Publications grouped by `group` frontmatter (language variants of the same article).
+    // Each entry is { primary, variants }: primary is the language-less (default) member,
+    // variants are the other language versions sorted by language code.
+    const buildPublicationGroups = (collection) => {
+        const posts = collection.getFilteredByTag("publications").sort((a, b) => b.date - a.date);
+        const byGroup = new Map();
+        const result = [];
+        for (const post of posts) {
+            const id = post.data.group;
+            if (!id) {
+                result.push({ primary: post, variants: [] });
+                continue;
+            }
+            if (!byGroup.has(id)) {
+                byGroup.set(id, []);
+                result.push({ id, primary: null, variants: [] });
+            }
+            byGroup.get(id).push(post);
+        }
+        for (const entry of result) {
+            if (entry.primary !== null) continue;
+            const members = byGroup.get(entry.id);
+            entry.primary = members.find(m => !m.data.lang) || members[0];
+            entry.variants = members
+                .filter(m => m !== entry.primary)
+                .sort((a, b) => (a.data.lang || "").localeCompare(b.data.lang || ""));
+        }
+        return result;
+    };
+    el.addCollection("publications_groups", buildPublicationGroups);
+    el.addCollection("publications_year_groups", (collection) => {
+        const groups = buildPublicationGroups(collection).sort((a, b) => a.primary.date - b.primary.date);
+        return _.chain(groups)
+            .groupBy((group) => group.primary.date.getFullYear())
+            .toPairs()
+            .reverse()
+            .value();
+    });
     el.addCollection("portfolio", (collection) => {
         return collection.getFilteredByTag("portfolio").sort((a, b) => {
             if (a.data.ongoing && !b.data.ongoing) {
@@ -223,6 +261,38 @@ async function configureCollections(el) {
 async function configureFilters(el) {
     el.addFilter("readableDate", dateObj => {
         return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("cccc, dd LLL yyyy");
+    });
+
+    const langNames = {
+        "en": "English",
+        "nl": "Nederlands",
+        "fr": "Français",
+        "es": "Español",
+        "de": "Deutsch",
+        "it": "Italiano",
+        "pt": "Português"
+    };
+    el.addFilter("langName", (code) => {
+        return langNames[code] || code;
+    });
+
+    el.addFilter("inGroup", (group, pageUrl) => {
+        if (group.primary.url === pageUrl) return true;
+        return group.variants.some(v => v.url === pageUrl);
+    });
+
+    el.addFilter("findGroup", (groups, pageUrl) => {
+        for (const group of groups) {
+            if (group.primary.url === pageUrl) {
+                return { group, role: "primary" };
+            }
+            for (const variant of group.variants) {
+                if (variant.url === pageUrl) {
+                    return { group, role: "variant" };
+                }
+            }
+        }
+        return null;
     });
 
     el.addFilter('htmlDateString', (dateObj) => {
