@@ -6,11 +6,10 @@ date: 2026-09-15
 github: https://github.com/milieuinfo/owl-sda
 publisher: ceur
 type: poster
-status: in-press
 bib: /publications/2026/vandewynckel2026owlsda.bib
 pdf: https://solid.maximvdw.be/publications/2026/paper_semantics2026_owlsda.pdf
 poster: https://solid.maximvdw.be/publications/2026/poster_semantics2026_owlsda.pdf
-#link: https://ceur-ws.org/Vol-3947/short2.pdf
+link: https://ceur-ws.org/Vol-4293/paper44.pdf
 thumbnail: "/publications/2026/semantics2026owlsda.png"
 website: https://purl.org/owl-sda
 image: /publications/2026/semantics2026owlsda-social.png

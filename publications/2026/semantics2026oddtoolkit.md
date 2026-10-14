@@ -6,11 +6,10 @@ date: 2026-09-15
 github: https://github.com/milieuinfo/oddtoolkit
 publisher: ceur
 type: poster
-status: in-press
 bib: /publications/2026/vandewynckel2026oddtoolkit.bib
 pdf: https://solid.maximvdw.be/publications/2026/paper_semantics2026_oddtoolkit.pdf
 poster: https://solid.maximvdw.be/publications/2026/poster_semantics2026_oddtoolkit.pdf
-#link: https://ceur-ws.org/Vol-3947/short2.pdf
+link: https://ceur-ws.org/Vol-4293/paper46.pdf
 thumbnail: "/publications/2026/semantics2026oddtoolkit.png"
 website: https://purl.org/oddtoolkit
 image: /publications/2026/semantics2026oddtoolkit-social.png
