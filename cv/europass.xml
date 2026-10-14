@@ -1205,8 +1205,12 @@
             <Publication>
                 <hr:FormattedPublicationDescription>In this paper, we present OWL-SDA, an OWL-based synthetic data generator using a multi-agent architecture for documenting and evaluating ontologies.</hr:FormattedPublicationDescription>
                 <Title>OWL-SDA: A Multi-Agent System for Generating Synthetic Data to Support Ontology Evaluation</Title>
-                <Year>2026</Year><Reference>Van de Wynckel, M., &amp; De Roock, E. (2026). OWL-SDA: A Multi-Agent System for Generating Synthetic Data to Support Ontology Evaluation. Posters, Demos, Blue Sky, and Tutorials at SEMANTiCS 2026.
+                <Year>2026</Year><Reference>Van de Wynckel, M., &amp; De Roock, E. (2026). OWL-SDA: A Multi-Agent System for Generating Synthetic Data to Support Ontology Evaluation. Posters, Demos, Blue Sky, and Tutorials at SEMANTiCS 2026, 4293. https://ceur-ws.org/Vol-4293/paper44.pdf
 </Reference>
+                
+                <DOI>
+                  <Link>https://ceur-ws.org/Vol-4293/paper44.pdf</Link>
+                </DOI>
                 
                 
                 
@@ -1217,8 +1221,12 @@
             <Publication>
                 <hr:FormattedPublicationDescription>In this paper, we present ODDToolkit, an open-source toolkit for generating developer-facing artefacts such as diagrams and Java classes from a governed ontology.</hr:FormattedPublicationDescription>
                 <Title>ODDToolkit: An Open-Source Toolkit to Help Bridge the Developer Gap in Ontology Driven Design</Title>
-                <Year>2026</Year><Reference>Van de Wynckel, M., &amp; Van Haute, G. (2026). ODDToolkit: An Open-Source Toolkit to Help Bridge the Developer Gap in Ontology Driven Design. Posters, Demos, Blue Sky, and Tutorials at SEMANTiCS 2026.
+                <Year>2026</Year><Reference>Van de Wynckel, M., &amp; Van Haute, G. (2026). ODDToolkit: An Open-Source Toolkit to Help Bridge the Developer Gap in Ontology Driven Design. Posters, Demos, Blue Sky, and Tutorials at SEMANTiCS 2026, 4293. https://ceur-ws.org/Vol-4293/paper46.pdf
 </Reference>
+                
+                <DOI>
+                  <Link>https://ceur-ws.org/Vol-4293/paper46.pdf</Link>
+                </DOI>
                 
                 
                 
@@ -1229,8 +1237,11 @@
             <Publication>
                 <hr:FormattedPublicationDescription>European regulatory datasets represent chemical substances heterogeneously. We analyse 18 ECHA-based datasets with a seven-tier linkability taxonomy and show that CAS numbers prove unreliable as unique identifiers, arguing that semantic interoperability requires structural changes at the level of regulatory data modelling and legislation.</hr:FormattedPublicationDescription>
                 <Title>Chemical Identity Lost in Regulation: A Study of Semantic Interoperability in European Chemical Substance Data</Title>
-                <Year>2026</Year><Reference>Van Haute, G., Goedertier, S., Fannes, P., &amp; Van de Wynckel, M. (2026). Chemical Identity Lost in Regulation: A Study of Semantic Interoperability in European Chemical Substance Data. Posters, Demos, Blue Sky, and Tutorials at SEMANTiCS 2026.
-</Reference>
+                <Year>2026</Year><Reference>Van Haute, G., Goedertier, S., Fannes, P., &amp; Van de Wynckel, M. (2026). Chemical Identity Lost in Regulation: A Study of Semantic Interoperability in European Chemical Substance Data. Posters, Demos, Blue Sky, and Tutorials at SEMANTiCS 2026, 4293.</Reference>
+                
+                <DOI>
+                  <Link>https://ceur-ws.org/Vol-4293/paper48.pdf</Link>
+                </DOI>
                 
                 
                 
